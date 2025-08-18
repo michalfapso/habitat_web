@@ -1,0 +1,123 @@
+<IfModule mod_rewrite.c>
+Options -Indexes
+
+# Required for the root directory (eg. the homepage of the CMS)
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
+
+# redirect /index to root
+RewriteRule ^index$ /$1 [NC,R=301,L]
+RewriteRule ^index.html$ /$1 [NC,R=301,L]
+
+# redirect existing .html files to url without .html and with trailing slash
+RewriteCond %{ENV:REDIRECT_STATUS} !200
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} !/404.html$
+RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
+
+# Abort early if a file is requested directly
+# (Regardless of whether that file includes a file extension.)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule . - [L]
+
+# If a directory is requested, which is missing the trailing slash then append it
+RewriteCond %{DOCUMENT_ROOT}/$1 -d
+RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
+
+# Test if "<url>.html" exists and rewrite if so
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^.]*[^/])/?$ $1.html [L]
+
+# Optimisation: If a directory is not requested then skip the next 3 rules
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . - [S=3]
+
+# Check for "DirectoryIndex" documents in order: index.html, index.htm and  index.php
+# NB: Directories end in a trailing slash (enforced above)
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+)/$ $1.html [L]
+</IfModule>
+
+### marker BROWSER CACHE start ###
+<IfModule mod_expires.c>
+
+ExpiresActive on
+ExpiresByType application/pdf A31557600
+ExpiresByType image/x-icon A31557600
+ExpiresByType image/vnd.microsoft.icon A31557600
+ExpiresByType image/svg+xml A31557600
+
+ExpiresByType image/jpg A31557600
+ExpiresByType image/jpeg A31557600
+ExpiresByType image/png A31557600
+ExpiresByType image/gif A31557600
+ExpiresByType image/webp A31557600
+
+ExpiresByType video/ogg A31557600
+ExpiresByType audio/ogg A31557600
+ExpiresByType video/mp4 A31557600
+ExpiresByType video/webm A31557600
+
+ExpiresByType text/css A31557600
+ExpiresByType text/javascript A31557600
+ExpiresByType application/javascript A31557600
+ExpiresByType application/x-javascript A31557600
+
+ExpiresByType application/x-font-ttf A31557600
+ExpiresByType application/x-font-woff A31557600
+ExpiresByType application/font-woff A31557600
+ExpiresByType application/font-woff2 A31557600
+ExpiresByType application/vnd.ms-fontobject A31557600
+ExpiresByType font/ttf A31557600
+ExpiresByType font/woff A31557600
+ExpiresByType font/woff2 A31557600
+
+</IfModule>
+### marker BROWSER CACHE end ###
+
+# ----------------------------------------------------------------------
+# | Character encodings                                                |
+# ----------------------------------------------------------------------
+
+# Serve all resources labeled as `text/html` or `text/plain`
+# with the media type `charset` parameter set to `UTF-8`.
+#
+# https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
+
+AddDefaultCharset utf-8
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Serve the following file types with the media type `charset`
+# parameter set to `UTF-8`.
+#
+# https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset
+
+<IfModule mod_mime.c>
+    AddCharset utf-8 .appcache \
+                     .bbaw \
+                     .css \
+                     .htc \
+                     .ics \
+                     .js \
+                     .json \
+                     .manifest \
+                     .map \
+                     .markdown \
+                     .md \
+                     .mjs \
+                     .topojson \
+                     .vtt \
+                     .vcard \
+                     .vcf \
+                     .webmanifest \
+                     .xloc
+</IfModule>

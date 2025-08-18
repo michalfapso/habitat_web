@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "ecomailcz/ecomail": "^1.2"
+    }
+}
