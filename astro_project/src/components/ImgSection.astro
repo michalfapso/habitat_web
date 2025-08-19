@@ -1,0 +1,21 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'div'> {
+}
+
+const { id } = Astro.props;
+---
+
+<div class="img-section" id={id}>
+    <div class="grid-container bg-cream">
+        <div class="grid-x">
+            <div class="img-section__img cell medium-6 large-7">
+                <slot name="img"/>
+            </div>
+            <div class="img-section__content cell medium-6 large-5">
+                <slot name="content"/>
+            </div>
+        </div>
+    </div>
+</div>

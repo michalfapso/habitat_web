@@ -1,0 +1,21 @@
+<div class="hero hero--home">
+	<div class="grid-x">
+		<div class="hero__img cell medium-6 large-7">
+			<img src="/assets/img/hero-768w.jpg" 
+				srcset="/assets/img/hero-768w.jpg 768w,
+				/assets/img/hero-1024w.jpg 1024w,
+				/assets/img/hero-1400w.jpg 1400w,
+				/assets/img/hero-2100w.jpg 2100w,
+				/assets/img/hero-2800w.jpg 2800w" 
+				sizes="(min-width: 40em) 58vw, (min-width: 35em) 110vw, 38.75rem" alt="Vizualizácia domu">
+			<div class="overlay"></div>
+			<a class="hero__arrow" href="#sluzby" data-smooth-scroll data-animation-easing="swing" data-offset="-24" title="Prejsť na obsah">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"><path d="m38.562 28.061-13.5 13.5a1.498 1.498 0 0 1-2.122 0l-13.5-13.5a1.501 1.501 0 0 1 2.122-2.122l10.939 10.94V7.5a1.5 1.5 0 0 1 3 0v29.38L36.44 25.938a1.5 1.5 0 0 1 2.122 2.122Z" fill="#023333"/></svg>
+			</a>
+		</div>
+		<div class="hero__content cell medium-6 large-5">
+			<h1><slot /></h1>
+			<div class="overlay"></div>
+		</div>
+	</div>
+</div>

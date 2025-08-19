@@ -1,0 +1,29 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'div'> {
+    title: string;
+    button: string;
+}
+
+const { title, button } = Astro.props;
+---
+
+<div class="cta-section">
+    <div class="grid-container">
+        <div class="cta bg-lime">
+            <div class="grid-x grid-margin-x align-middle">
+                <div class="cell medium-7 large-8">
+                    <h2>{title}</h2>
+                    <slot/>
+                </div>
+                <div class="cell medium-5 large-4 text-right">
+                    <button data-open="contact-modal" class="secondary button has-arrow small-expanded">
+                        <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
+                        {button}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

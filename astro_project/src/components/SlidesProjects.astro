@@ -1,0 +1,82 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Label {
+    text: string;
+    color: string;
+}
+
+interface Project {
+    title: string;
+    href: string;
+    img: {
+        src: string;
+        srcset: string;
+        alt: string;
+    };
+    labels: Label[];
+}
+
+export interface Props extends HTMLAttributes<'div'> {
+    title: string;
+    all: string;
+    projects: Project[];
+}
+
+const { title, all, projects } = Astro.props;
+---
+
+<div class="section" style="overflow-x:hidden">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x section__title">
+            <div class="cell medium-auto">
+                <h2>{title}</h2>
+            </div>
+            <div class="cell medium-shrink show-for-medium">
+                <div class="swiper-navigation swiper-navigation--square show-for-large">
+                    <div class="swiper-button swiper-button-prev--projects">
+                        <svg class="icon icon-arrow-prev"><use xlink:href="#icon-arrow-prev"></use></svg>
+                    </div>
+                    <div class="swiper-button swiper-button-next--projects">
+                        <svg class="icon icon-arrow-next"><use xlink:href="#icon-arrow-next"></use></svg>
+                    </div>
+                </div>
+                <a href="/projekty/" class="hollow secondary button has-arrow small-expanded">
+                    <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
+                    {all}
+                </a>
+            </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-12">
+                <div class="swiper swiper--projects">
+                    <div class="swiper-wrapper">
+                        {projects.map((project, idx) => (
+                            <a class="swiper-slide project" href={project.href}>
+                                <div class="project__img">
+                                    <img src={project.img.src} srcset={project.img.srcset} alt={project.img.alt}>
+                                </div>
+                                <h3 class="has-arrow">
+                                    <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
+                                    {project.title}
+                                </h3>
+                                <ul class="project-labels">
+                                    {project.labels.map(label => (
+                                        <li class={label.color}>{label.text}</li>
+                                    ))}
+                                </ul>
+                            </a>
+                        ))}
+                    </div>
+                    <div class="swiper-pagination hide-for-large"></div>
+                </div>
+            </div>
+            <div class="cell small-12 hide-for-medium">
+                <a href="/projekty/" class="hollow secondary button has-arrow small-expanded mt-40">
+                    <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
+                    {all}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

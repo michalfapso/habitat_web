@@ -1,4 +1,8 @@
 ---
+import CallToAction from '../components/CallToAction.astro';
+import Footer from '../components/Footer.astro';
+import ModalContactForm from '../components/ModalContactForm.astro';
+
 interface Props {
 	title: string;
 	description: string;
@@ -150,6 +154,14 @@ const { title, description } = Astro.props;
 	</nav>
 
     <slot />
+
+	<CallToAction title="Máte záujem?" button="Mám záujem">
+		<p><strong>Budeme vašim partnerom</strong> a&nbsp;prevedieme vás celým procesom od&nbsp;prvej skice až po&nbsp;odovzdanie stavby. Nenecháme vás v&nbsp;tom, <strong>môžete sa spoľahnúť</strong>.</p>
+	</CallToAction>
+
+	<Footer/>
+
+	<ModalContactForm id="contact-modal"/>
 
 	<script is:inline src="/assets/js/app.js?v=20240810"></script>
 </body>

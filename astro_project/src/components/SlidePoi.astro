@@ -1,0 +1,51 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Point {
+    leftPercent: number;
+    topPercent: number;
+    text: string;
+}
+
+export interface Props extends HTMLAttributes<'div'> {
+    imgSrc: string;
+    imgSrcSet: string;
+    imgAlt: string;
+    points: Point[];
+}
+
+const { id, imgSrc, imgSrcSet, imgAlt, points } = Astro.props;
+---
+
+<div class="swiper-slide">
+    <div class="poi">
+        <div class="poi__img">
+            <img src={imgSrc} srcset={imgSrcSet} alt={imgAlt}>
+            <div class="poi_points show-for-medium">
+                {points.map((point, idx) => (
+                    <span class="point" style={`left:${point.leftPercent}%;top:${point.topPercent}%;`} data-toggle={`${id}-${idx}`} data-transform={`translate(-${point.leftPercent}%, -${point.topPercent}%) scale(2)`}></span>
+                ))}
+            </div>
+            <div class="poi_points hide-for-medium">
+                {points.map((point, idx) => (
+                    <span class={`point ${idx === 0 ? 'is-active' : ''}`} style={`left:${point.leftPercent}%;top:${point.topPercent}%;`} data-open={`${id}-m-${idx}`}></span>
+                ))}
+            </div>
+        </div>
+        <div class="poi__info hide-for-medium">
+            {points.map((point, idx) => (
+                <div class={`poi__info__item ${idx > 0 ? 'is-hidden' : ''}`} id={`${id}-m-${idx}`}>
+                    <p set:html={point.text}></p>
+                </div>
+            ))}
+        </div>
+    </div>
+    {points.map((point, idx) => (
+		<div class="dropdown-pane poi__pane" id={`${id}-${idx}`} data-dropdown data-closable data-v-offset="-2" data-h-offset="70">
+			<button class="close-button" data-close>
+				<svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
+			</button>
+			<p set:html={point.text}></p>
+		</div>
+    ))}
+</div>

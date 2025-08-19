@@ -1,0 +1,47 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Step {
+    title: string;
+    text: string;
+}
+
+export interface Props extends HTMLAttributes<'div'> {
+    title: string;
+    steps: Step[];
+}
+
+const { title, steps } = Astro.props;
+---
+
+<div class="section section--steps" style="overflow-x:hidden;">
+    <div class="grid-container">
+        <div class="grid-x">
+            <div class="cell large-6 xlarge-5 cell--content">
+                <h2>{title}</h2>
+                <div class="swiper-navigation swiper-navigation--square show-for-large">
+                    <div class="swiper-button swiper-button-prev--steps">
+                        <svg class="icon icon-arrow-prev"><use xlink:href="#icon-arrow-prev"></use></svg>
+                    </div>
+                    <div class="swiper-button swiper-button-next--steps">
+                        <svg class="icon icon-arrow-next"><use xlink:href="#icon-arrow-next"></use></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="cell large-6 xlarge-7 cell--swiper">
+                <div class="swiper swiper--steps">
+                    <div class="swiper-wrapper">
+                        {steps.map((step, idx) => (
+                            <div class="swiper-slide card card--step">
+                                <span class="progress">{idx + 1}<span>/{steps.length}</span></span>
+                                <h3>{step.title}</h3>
+                                <p set:html={step.text}></p>
+                            </div>
+                        ))}
+                    </div>
+                    <div class="swiper-pagination hide-for-large"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'div'> {
+    imgSrc: string;
+    imgSrcSet: string;
+    imgAlt: string;
+    title: string;
+    text: string;
+    button: string;
+}
+
+const { id, imgSrc, imgSrcSet, imgAlt, title, text, button } = Astro.props;
+---
+
+<div class="bg-section section--manifest grid-container" id={id} data-toggler=".is-expanded">
+    <img class="bg-section__img" src={imgSrc} srcset={imgSrcSet} alt={imgAlt}>
+    <div class="grid-x grid-margin-x">
+        <div class="cell large-6 cell--content">
+            <h2 set:html={title}></h2>
+            <p set:html={text}></p>
+        </div>
+        <div class="cell large-6">
+            <div class="manifest" id="manifest-block" data-toggler=".is-expanded">
+                <button class="manifest__toggle" data-toggle="manifest manifest-block">
+                    {button}
+                    <svg class="plus" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M49 28C49 28.4641 48.8156 28.9093 48.4874 29.2374C48.1592 29.5656 47.7141 29.75 47.25 29.75H29.75V47.25C29.75 47.7141 29.5656 48.1592 29.2374 48.4874C28.9093 48.8156 28.4641 49 28 49C27.5359 49 27.0908 48.8156 26.7626 48.4874C26.4344 48.1592 26.25 47.7141 26.25 47.25V29.75H8.75C8.28587 29.75 7.84075 29.5656 7.51256 29.2374C7.18437 28.9093 7 28.4641 7 28C7 27.5359 7.18437 27.0908 7.51256 26.7626C7.84075 26.4344 8.28587 26.25 8.75 26.25H26.25V8.75C26.25 8.28587 26.4344 7.84075 26.7626 7.51256C27.0908 7.18437 27.5359 7 28 7C28.4641 7 28.9093 7.18437 29.2374 7.51256C29.5656 7.84075 29.75 8.28587 29.75 8.75V26.25H47.25C47.7141 26.25 48.1592 26.4344 48.4874 26.7626C48.8156 27.0908 49 27.5359 49 28Z" fill="#023333"/>
+                    </svg>
+                    <svg class="minus" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M49 28C49 28.4641 48.8156 28.9092 48.4874 29.2374C48.1592 29.5656 47.7141 29.75 47.25 29.75H8.75C8.28587 29.75 7.84075 29.5656 7.51256 29.2374C7.18437 28.9092 7 28.4641 7 28C7 27.5359 7.18437 27.0908 7.51256 26.7626C7.84075 26.4344 8.28587 26.25 8.75 26.25H47.25C47.7141 26.25 48.1592 26.4344 48.4874 26.7626C48.8156 27.0908 49 27.5359 49 28Z" fill="#023333"/>
+                    </svg>
+                </button>
+                <div class="manifest__content">
+                    <slot/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

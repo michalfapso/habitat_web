@@ -1,0 +1,38 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'div'> {
+    id: string;
+    title: string;
+    button: string;
+    close: string;
+}
+
+const { id, title, button, close } = Astro.props;
+---
+
+<div class="reveal reveal--service" id={id} data-reveal>
+    <div class="grid-x grid-margin-x">
+        <div class="cell large-5 cell--left">
+            <div class="service-icon">
+                <slot name="icon"/>
+            </div>
+            <h3>{title}</h3>
+            <button data-open="contact-modal" class="primary button has-arrow show-for-large">
+                <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
+                {button}
+            </button>
+        </div>
+        <div class="cell large-7">
+            <slot name="content"/>
+
+            <button data-open="contact-modal" class="primary button has-arrow hide-for-large">
+                <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
+                {button}
+            </button>
+        </div>
+    </div>
+    <button class="close-button" data-close aria-label={close} type="button">
+        <svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
+    </button>
+</div>
