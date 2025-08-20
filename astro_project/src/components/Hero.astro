@@ -1,4 +1,13 @@
-<div class="hero hero--home">
+---
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'div'> {
+	className?: string;
+}
+
+const { id, className="" } = Astro.props;
+---
+<div class={`hero ${className}`}>
 	<div class="grid-x">
 		<div class="hero__img cell medium-6 large-7">
 			<img src="/assets/img/hero-768w.jpg" 

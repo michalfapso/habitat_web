@@ -1,0 +1,61 @@
+---
+// src/pages/projects/index.astro
+import { getCollection } from "astro:content";
+import { projectTags } from '../../data/tags'; // Import your projectTags object
+import Layout from "../../layouts/Layout.astro";
+
+const allProjects = await getCollection("projects"); // Get all projects [1, 2]
+
+// Sort projects by publish date, newest first
+allProjects.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<Layout title="Projekty pasívnych domov" bodyClass="home" topbarClass="topbar--bright">
+    <div class="hero hero--projects">
+        <div class="grid-x">
+            <div class="hero__img cell medium-6 large-7">
+                <img
+                    src="/assets/img/hero-projekty-1024w.jpg"
+                    srcset="/assets/img/hero-projekty-1024w.jpg 1024w, /assets/img/hero-projekty-1536w.jpg 1536w, /assets/img/hero-projekty-2048w.jpg 2048w, /assets/img/hero-projekty-2800w.jpg 2800w"
+                    sizes="(min-width: 40em) 50vw, (min-width: 64em) 58.33333vw, 100vw"
+                    alt="Projekty"
+                    style="object-position:50% center"
+                />
+                <div class="overlay"></div>
+            </div>
+            <div class="hero__content cell medium-6 large-5">
+                <h1>Projekty <br />pasívnych <br />domov</h1>
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </div>
+	<a id="main"></a>
+	
+	<div class="section section--projects">
+		<div class="grid-container">
+			<div class="grid-x grid-margin-x projects-list">
+            {
+                allProjects.map((project) => (
+                    <a class="cell medium-6 project" href={`/projekty/${project.slug}/`}>
+                        <div class="project__img">
+                            <img src={project.data.imageThumb} srcset={project.data.imageThumbSet} alt={project.data.title}/>
+                        </div>
+                        <h3 class="has-arrow">
+                            <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
+                            {project.data.title}
+                        </h3>
+                        <ul class="project-labels">
+                            {project.data.tags.map(tagName => {
+                              const tag = projectTags[tagName];
+                              return tag ? (
+                                <li class={tag.color}>{tag.name}</li>
+                              ) : null;
+                            })}
+                        </ul>
+                    </a>
+                ))
+            }
+			</div>
+		</div>
+    </div>
+</Layout>

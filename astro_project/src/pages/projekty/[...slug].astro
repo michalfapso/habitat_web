@@ -1,0 +1,200 @@
+---
+import { getCollection, getEntry } from 'astro:content'; // getEntry is useful if you need to fetch by a specific ID/slug [1]
+import { projectTags } from '../../data/tags';
+import Layout from '../../layouts/Layout.astro';
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const projects = await getCollection('projects'); // Get all entries from the 'projects' collection [1, 2, 7, 8, 9]
+
+  return projects.map(project => ({
+    params: { slug: project.slug }, // Use project.slug to create the URL (e.g., /projects/my-first-project) [1, 3, 4]
+    props: { project }, // Pass the entire project entry as a prop to the page [1, 7, 12]
+  }));
+}
+
+// 2. Get the project data from Astro.props
+const { project } = Astro.props;
+const { Content } = await project.render(); // Render the Markdown/MDX content to HTML [1, 4, 7, 12]
+
+const allProjects = await getCollection('projects');
+// Function to shuffle an array (Fisher-Yates algorithm)
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+const shuffledProjects = shuffleArray(allProjects);
+// Get the first 3 projects from the shuffled array
+const randomProjects = shuffledProjects.slice(0, 3);
+---
+
+<Layout title={project.data.title}>
+
+    <div class="hero hero--project">
+        <div class="hero__img">
+            <img src={project.data.image} 
+              srcset={project.data.imageSet} 
+              alt={project.data.title}>
+        </div>
+        <div class="hero__content grid-container grid-x">
+            <div class="cell large-8 large-offset-4">
+                <a href="/projekty/" class="backlink hide-for-large">
+                    <span class="arrow">
+                        <svg class="icon icon-arrow-prev">
+                            <use xlink:href="#icon-arrow-prev"></use>
+                        </svg>
+                    </span>
+                    Späť na projekty
+                </a>
+                    <ul class="project-labels">
+                        {project.data.tags.map(tagName => {
+                          const tag = projectTags[tagName];
+                          return tag ? (
+                            <li class={tag.color}>{tag.name}</li>
+                          ) : null;
+                        })}
+                    </ul>
+                <h1>{project.data.title}</h1>
+            </div>
+        </div>
+        <a href="/projekty/" class="backlink show-for-large">
+            <span class="arrow">
+                <svg class="icon icon-arrow-prev">
+                    <use xlink:href="#icon-arrow-prev"></use>
+                </svg>
+            </span>
+            Späť na projekty
+        </a>
+    </div>
+    <a id="main"></a>
+    
+    <div class="section section--detail pb-0">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell medium-4">
+                        <h2>O projekte</h2>
+                </div>
+                <div class="cell medium-8">
+                    <p set:html={project.data.description}></p>
+                </div>
+            </div>
+                <div class="grid-x grid-margin-x info-cards small-up-2 medium-up-4 large-up-4">
+                    {project.data.lokalita && (
+                        <div class="cell card card--info">
+                            <h3>Lokalita</h3>
+                            <div class="stat">{project.data.lokalita}</div>
+                        </div>
+                    )}
+                    {project.data.vykurovanaPlocha && (
+                        <div class="cell card card--info">
+                            <h3>Vykurovaná plocha</h3>
+                            <div class="stat">{project.data.vykurovanaPlocha} m<sup>2</sup></div>
+                        </div>
+                    )}
+                    {project.data.uzitkovaPlocha && (
+                        <div class="cell card card--info">
+                            <h3>Celková úžitková plocha</h3>
+                            <div class="stat">{project.data.uzitkovaPlocha} m<sup>2</sup></div>
+                        </div>
+                    )}
+                    {project.data.pocetIzieb && (
+                        <div class="cell card card--info">
+                            <h3>Počet izieb</h3>
+                            <div class="stat">{project.data.pocetIzieb}</div>
+                        </div>
+                    )}
+                    {project.data.rozmeryDomu && (
+                        <div class="cell card card--info">
+                            <h3>Rozmery domu</h3>
+                            <div class="stat">{project.data.rozmeryDomu}</div>
+                        </div>
+                    )}
+                </div>
+        </div>
+    </div>
+    
+    <div class="gallery-section" style="overflow-x:hidden">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x align-justify align-center">
+                <div class="cell medium-6">
+                    <h2>Galéria</h2>
+                </div>
+                    <div class="cell shrink show-for-medium">
+                        <div class="swiper-navigation swiper-navigation--square">
+                            <div class="swiper-button swiper-button-prev--gallery">
+                                <svg class="icon icon-arrow-prev">
+                                    <use xlink:href="#icon-arrow-prev"></use>
+                                </svg>
+                            </div>
+                            <div class="swiper-button swiper-button-next--gallery">
+                                <svg class="icon icon-arrow-next">
+                                    <use xlink:href="#icon-arrow-next"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+                <div class="swiper swiper--gallery">
+                    <div class="swiper-wrapper">
+                            <a class="swiper-slide gallery_item" href="/assets/img/projekt/18/dom-l-tehlovy-obklad-header.jpg" data-fancybox="gallery">
+                                <img src="/assets/img/projekt/18/dom-l-tehlovy-obklad-header-480h.jpg" srcset="/assets/img/projekt/18/dom-l-tehlovy-obklad-header-960h.jpg 2x" alt="Dom L s tehlovým obkladom">
+                            </a>
+                            <a class="swiper-slide gallery_item" href="/assets/img/projekt/18/dom-l-tehlovy-obklad-podorys.jpg" data-fancybox="gallery">
+                                <img src="/assets/img/projekt/18/dom-l-tehlovy-obklad-podorys-480h.jpg" srcset="/assets/img/projekt/18/dom-l-tehlovy-obklad-podorys-960h.jpg 2x" alt="Dom L s tehlovým obkladom">
+                            </a>
+                    </div>
+                    <div class="swiper-pagination hide-for-medium"></div>
+                </div>
+        </div>
+    </div>
+
+
+    <div class="section section--detail pt-0">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell medium-4">
+                        <h2>Koncept návrhu</h2>
+                </div>
+                <div class="cell medium-8">
+                    <Content/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section pt-0" style="overflow-x:hidden">
+        <div class="grid-container">
+            <h2 class="h3">Ďalšie projekty</h2>
+            <div class="swiper swiper--projects-3">
+                <div class="swiper-wrapper">
+                {
+                    randomProjects.map((project) => (
+                        <a class="swiper-slide project" href={`/projekty/${project.slug}/`}>
+                            <div class="project__img">
+                                <img src={project.data.imageThumb} srcset={project.data.imageThumbSet} alt={project.data.title}>
+                            </div>
+                            <h3 class="has-arrow">
+                                <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
+                                {project.data.title}
+                            </h3>
+                            <ul class="project-labels">
+                                {project.data.tags.map(tagName => {
+                                  const tag = projectTags[tagName];
+                                  return tag ? (
+                                    <li class={tag.color}>{tag.name}</li>
+                                  ) : null;
+                                })}
+                            </ul>
+                        </a>
+                    ))
+                }
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+</Layout>
