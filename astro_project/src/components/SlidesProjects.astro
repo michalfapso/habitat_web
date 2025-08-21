@@ -1,26 +1,12 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-
-interface Label {
-    text: string;
-    color: string;
-}
-
-interface Project {
-    title: string;
-    href: string;
-    img: {
-        src: string;
-        srcset: string;
-        alt: string;
-    };
-    labels: Label[];
-}
+import type { CollectionEntry } from 'astro:content';
+import CardProject from './CardProject.astro';
 
 export interface Props extends HTMLAttributes<'div'> {
     title: string;
     all: string;
-    projects: Project[];
+    projects: CollectionEntry<'projects'>[];
 }
 
 const { title, all, projects } = Astro.props;
@@ -52,20 +38,7 @@ const { title, all, projects } = Astro.props;
                 <div class="swiper swiper--projects">
                     <div class="swiper-wrapper">
                         {projects.map((project, idx) => (
-                            <a class="swiper-slide project" href={project.href}>
-                                <div class="project__img">
-                                    <img src={project.img.src} srcset={project.img.srcset} alt={project.img.alt}>
-                                </div>
-                                <h3 class="has-arrow">
-                                    <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
-                                    {project.title}
-                                </h3>
-                                <ul class="project-labels">
-                                    {project.labels.map(label => (
-                                        <li class={label.color}>{label.text}</li>
-                                    ))}
-                                </ul>
-                            </a>
+                            <CardProject project={project} className="swiper-slide"/>
                         ))}
                     </div>
                     <div class="swiper-pagination hide-for-large"></div>

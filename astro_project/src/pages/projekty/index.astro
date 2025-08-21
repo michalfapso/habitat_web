@@ -1,9 +1,9 @@
 ---
 // src/pages/projects/index.astro
-import { getCollection } from "astro:content";
 import { getAugmentedProjects } from '../../utils/getProjectImageMetadata'; // Import the new utility
 import { projectTags } from '../../data/tags'; // Import your projectTags object
 import Layout from "../../layouts/Layout.astro";
+import CardProject from '../../components/CardProject.astro';
 
 // const allProjects = await getCollection("projects"); // Get all projects [1, 2]
 const allProjects = await getAugmentedProjects();
@@ -38,23 +38,7 @@ allProjects.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 			<div class="grid-x grid-margin-x projects-list">
             {
                 allProjects.map((project) => (
-                    <a class="cell medium-6 project" href={`/projekty/${project.slug}/`}>
-                        <div class="project__img">
-                            <img src={project.data.imageThumb} srcset={project.data.imageThumbSet} alt={project.data.title}/>
-                        </div>
-                        <h3 class="has-arrow">
-                            <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
-                            {project.data.title}
-                        </h3>
-                        <ul class="project-labels">
-                            {project.data.tags.map(tagName => {
-                              const tag = projectTags[tagName];
-                              return tag ? (
-                                <li class={tag.color}>{tag.name}</li>
-                              ) : null;
-                            })}
-                        </ul>
-                    </a>
+                    <CardProject project={project} className="cell medium-6"/>
                 ))
             }
 			</div>

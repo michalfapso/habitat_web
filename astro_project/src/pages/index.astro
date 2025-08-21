@@ -1,4 +1,6 @@
 ---
+import { getAugmentedProjects } from '../utils/getProjectImageMetadata';
+
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
@@ -10,6 +12,26 @@ import SlidesSteps from '../components/SlidesSteps.astro';
 import SectionExpandable from '../components/SectionExpandable.astro';
 import SlidesProjects from '../components/SlidesProjects.astro';
 
+const selectedProjectTitles = [
+	"Dom s pavlačou",
+	"Usadlosť na Červenej Hore",
+	"Dom s mestským nádychom",
+	"Dom s bazénom v Rusovciach",
+	"Dom za mestom",
+	"Dom s cortenom pri Piešťanoch",
+	"Dom so saunou na Považí",
+];
+
+const normalizeWhitespace = (str) => {
+    if (typeof str !== 'string') return str;
+    return str.replace(/\s+/g, ' ').trim();
+};
+const normalizedSelectedProjectTitles = selectedProjectTitles.map(normalizeWhitespace);
+const allProjects = await getAugmentedProjects();
+const selectedProjects = allProjects.filter(project => {
+    const normalizedProjectTitle = normalizeWhitespace(project.data.title);
+    return normalizedSelectedProjectTitles.includes(normalizedProjectTitle);
+});
 ---
 
 <Layout 
@@ -276,78 +298,7 @@ import SlidesProjects from '../components/SlidesProjects.astro';
 	<SlidesProjects
 		title="Projekty"
 		all="Všetky projekty"
-		projects={[
-			{
-				href: "/projekty/dom-s-pavlacou/",
-				img: {
-					src: "/assets/img/projekt/23/dom-s-pavlacou-thumb.jpg",
-					srcset: "/assets/img/projekt/23/dom-s-pavlacou-thumb@2x.jpg 2x",
-					alt: "Dom s pavlačou"
-				},
-				title: "Dom s pavlačou",
-				labels: [{ text: "Habitat konfigurátor", color: "bg-pale" }]
-			},
-			{
-				href: "/projekty/usadlost-na-cervenej-hore/",
-				img: {
-					src: "/assets/img/projekt/01/usadlost-na-cervenej-hore-thumb.jpg",
-					srcset: "/assets/img/projekt/01/usadlost-na-cervenej-hore-thumb@2x.jpg 2x",
-					alt: "Usadlosť na Červenej Hore",
-				},
-				title: "Usadlosť na Červenej Hore",
-				labels: [{ text: "Domov na mieru", color: "bg-cream"}]
-			},
-			{
-				href: "/projekty/dom-s-mestskym-nadychom/",
-				img: {
-					src: "/assets/img/projekt/29/dom-s-mestskym-nadychom-thumb.jpg",
-					srcset: "/assets/img/projekt/29/dom-s-mestskym-nadychom-thumb@2x.jpg 2x",
-					alt: "Dom s mestským nádychom",
-				},
-				title: "Dom s mestským nádychom",
-				labels: [{ text: "Habitat konfigurátor", color: "bg-pale" }]
-			},
-			{
-				href: "/projekty/dom-s-bazenom-v-rusovciach/",
-				img: {
-					src: "/assets/img/projekt/03/dom-s-bazenom-v-rusovciach-thumb.jpg",
-					srcset: "/assets/img/projekt/03/dom-s-bazenom-v-rusovciach-thumb@2x.jpg 2x",
-					alt: "Dom s bazénom v Rusovciach",
-				},
-				title: "Dom s bazénom v Rusovciach",
-				labels: [{ text: "Domov na mieru", color: "bg-cream"}]
-			},
-			{
-				href: "/projekty/dom-za-mestom/",
-				img: {
-					src: "/assets/img/projekt/27/dom-za-mestom-thumb.jpg",
-					srcset: "/assets/img/projekt/27/dom-za-mestom-thumb@2x.jpg 2x",
-					alt: "Dom za mestom",
-				},
-				title: "Dom za mestom",
-				labels: [{ text: "Habitat konfigurátor", color: "bg-pale"}]
-			},
-			{
-				href: "/projekty/dom-s-cortenom-pri-piestanoch/",
-				img: {
-					src: "/assets/img/projekt/07/dom-s-cortenom-pri-piestanoch-thumb.jpg",
-					srcset: "/assets/img/projekt/07/dom-s-cortenom-pri-piestanoch-thumb@2x.jpg 2x",
-					alt: "Dom s cortenom pri Piešťanoch",
-				},
-				title: "Dom s cortenom pri Piešťanoch",
-				labels: [{ text: "Domov na mieru", color: "bg-cream"}]
-			},
-			{
-				href: "/projekty/dom-so-saunou-na-povazi/",
-				img: {
-					src: "/assets/img/projekt/09/dom-so-saunou-na-povazi-thumb.jpg",
-					srcset: "/assets/img/projekt/09/dom-so-saunou-na-povazi-thumb@2x.jpg 2x",
-					alt: "Dom so saunou na Považí",
-				},
-				title: "Dom so saunou na Považí",
-				labels: [{ text: "Domov na mieru", color: "bg-cream"}]
-			},
-		]}
+		projects={selectedProjects}
 	/>
 		
 </Layout>

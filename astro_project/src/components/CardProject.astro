@@ -1,0 +1,22 @@
+---
+import { projectTags } from '../data/tags';
+
+const { project, className } = Astro.props;
+---
+<a class={`${className} project`} href={`/projekty/${project.slug}/`}>
+    <div class="project__img">
+        <img src={project.data.imageThumb} srcset={project.data.imageThumbSet} alt={project.data.title}>
+    </div>
+    <h3 class="has-arrow">
+        <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
+        {project.data.title}
+    </h3>
+    <ul class="project-labels">
+        {project.data.tags.map(tagName => {
+          const tag = projectTags[tagName];
+          return tag ? (
+            <li class={tag.color}>{tag.name}</li>
+          ) : null;
+        })}
+    </ul>
+</a>

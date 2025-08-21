@@ -1,9 +1,9 @@
 ---
-import { getCollection, getEntry } from 'astro:content'; // getEntry is useful if you need to fetch by a specific ID/slug [1]
-import { getAugmentedProjects } from '../../utils/getProjectImageMetadata'; // Import the new utility
-import { getImage } from 'astro:assets'; // Essential for image optimization
+import { getAugmentedProjects } from '../../utils/getProjectImageMetadata';
+import { getImage } from 'astro:assets';
 import { projectTags } from '../../data/tags';
 import Layout from '../../layouts/Layout.astro';
+import CardProject from '../../components/CardProject.astro';
 
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -206,23 +206,7 @@ const randomProjects = shuffledProjects.slice(0, 3);
                 <div class="swiper-wrapper">
                 {
                     randomProjects.map((project) => (
-                        <a class="swiper-slide project" href={`/projekty/${project.slug}/`}>
-                            <div class="project__img">
-                                <img src={project.data.imageThumb} srcset={project.data.imageThumbSet} alt={project.data.title}>
-                            </div>
-                            <h3 class="has-arrow">
-                                <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
-                                {project.data.title}
-                            </h3>
-                            <ul class="project-labels">
-                                {project.data.tags.map(tagName => {
-                                  const tag = projectTags[tagName];
-                                  return tag ? (
-                                    <li class={tag.color}>{tag.name}</li>
-                                  ) : null;
-                                })}
-                            </ul>
-                        </a>
+                        <CardProject project={project} className="swiper-slide"/>
                     ))
                 }
                 </div>
