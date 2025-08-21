@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// The 'frontmatter' prop contains all the variables from the MD or MDX file's frontmatter.
+const { frontmatter } = Astro.props;
+---
+
+<Layout 
+    title={frontmatter.title}
+	bodyClass="page"
+    topbarClass="topbar--bright topbar--dark"
+>
+
+	<div class="section">
+	    <div class="grid-container">
+	        <div class="grid-x grid-margin-x align-center">
+	            <div class="cell medium-9 large-7 h-article">
+                    <slot/>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
