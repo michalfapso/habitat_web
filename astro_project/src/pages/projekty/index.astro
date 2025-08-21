@@ -1,10 +1,12 @@
 ---
 // src/pages/projects/index.astro
 import { getCollection } from "astro:content";
+import { getAugmentedProjects } from '../../utils/getProjectImageMetadata'; // Import the new utility
 import { projectTags } from '../../data/tags'; // Import your projectTags object
 import Layout from "../../layouts/Layout.astro";
 
-const allProjects = await getCollection("projects"); // Get all projects [1, 2]
+// const allProjects = await getCollection("projects"); // Get all projects [1, 2]
+const allProjects = await getAugmentedProjects();
 
 // Sort projects by publish date, newest first
 allProjects.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());

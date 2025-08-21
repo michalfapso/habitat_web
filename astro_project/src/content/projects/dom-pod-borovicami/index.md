@@ -1,10 +1,6 @@
 ---
 title: Dom pod borovicami
 description: Návrh domu v lukratívnej lokalite vo svahu nad Bratislavou. Zadaním od klienta bolo zhodnotiť a dopracovať existujúcu architektonickú štúdiu. Sústredili sme sa hlavne na optimalizáciu energetiky a dispozície, pri ktorej sa nám podarilo úpravami ušetriť 55 m<sup>2</sup> z vykurovaných priestorov a plochu chodieb zmenšiť na polovicu. Následne sme sa dohodli na ďalšej spolupráci pri projekčnej činnosti a aktuálne je stavba v povoľovacom procese.
-image: /assets/img/projekt/02/dom-pod-borovicami-header-1024w.jpg
-imageSet: /assets/img/projekt/02/dom-pod-borovicami-header-1024w.jpg 1024w, /assets/img/projekt/02/dom-pod-borovicami-header-1536w.jpg 1536w, /assets/img/projekt/02/dom-pod-borovicami-header.jpg 2100w
-imageThumb: /assets/img/projekt/02/dom-pod-borovicami-thumb.jpg
-imageThumbSet: /assets/img/projekt/02/dom-pod-borovicami-thumb@2x.jpg 2x
 tags: ["Domov na mieru"]
 pubDate: 2025-08-20
 

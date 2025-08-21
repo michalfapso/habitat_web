@@ -1,11 +1,14 @@
 ---
 import { getCollection, getEntry } from 'astro:content'; // getEntry is useful if you need to fetch by a specific ID/slug [1]
+import { getAugmentedProjects } from '../../utils/getProjectImageMetadata'; // Import the new utility
+import { getImage } from 'astro:assets'; // Essential for image optimization
 import { projectTags } from '../../data/tags';
 import Layout from '../../layouts/Layout.astro';
 
-// 1. Generate a new path for every collection entry
+// Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const projects = await getCollection('projects'); // Get all entries from the 'projects' collection [1, 2, 7, 8, 9]
+//   const projects = await getCollection('projects'); // Get all entries from the 'projects' collection [1, 2, 7, 8, 9]
+  const projects = await getAugmentedProjects();
 
   return projects.map(project => ({
     params: { slug: project.slug }, // Use project.slug to create the URL (e.g., /projects/my-first-project) [1, 3, 4]
@@ -13,11 +16,39 @@ export async function getStaticPaths() {
   }));
 }
 
-// 2. Get the project data from Astro.props
 const { project } = Astro.props;
 const { Content } = await project.render(); // Render the Markdown/MDX content to HTML [1, 4, 7, 12]
 
-const allProjects = await getCollection('projects');
+const allGalleryImageLoaders = import.meta.glob('../../content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
+// console.log('allGalleryImageLoaders:', allGalleryImageLoaders);
+let galleryImages = [];
+if (project) {
+    const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, loader]) => {
+        // console.log('path:', path);
+        const valid = path.includes(`/content/projects/${project.slug}/gallery/`);
+        // console.log('valid:', valid);
+        return valid;
+    });
+
+    // Process each found image module
+    for (const [path, loader] of projectImages) {
+        const imgModule = await loader();
+        // Use getImage to generate optimized versions of the image
+        const imgFull = await getImage({ src: imgModule.default, width: 3000, format: 'jpg' });
+        const img480h = await getImage({ src: imgModule.default, height: 480, format: 'jpg' });
+        const img960h = await getImage({ src: imgModule.default, height: 960, format: 'jpg' });
+
+        galleryImages.push({
+            href: imgFull.src, // Link to the larger version for the lightbox
+            src: img480h.src,
+            srcset: `${img960h.src} 2x`, // High-DPI version
+            alt: `${project.data.title || project.slug}`,
+        });
+    }
+    // console.log('galleryImages:', galleryImages);
+}
+
+const allProjects = await getAugmentedProjects();
 // Function to shuffle an array (Fisher-Yates algorithm)
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -57,7 +88,7 @@ const randomProjects = shuffledProjects.slice(0, 3);
                           ) : null;
                         })}
                     </ul>
-                <h1>{project.data.title}</h1>
+                <h1>{project.data.titleBreak}</h1>
             </div>
         </div>
         <a href="/projekty/" class="backlink show-for-large">
@@ -91,19 +122,19 @@ const randomProjects = shuffledProjects.slice(0, 3);
                     {project.data.vykurovanaPlocha && (
                         <div class="cell card card--info">
                             <h3>Vykurovaná plocha</h3>
-                            <div class="stat">{project.data.vykurovanaPlocha} m<sup>2</sup></div>
+                            <div class="stat">{project.data.vykurovanaPlocha} m<sup>2</sup> {project.data.vykurovanaPlochaSuffix}</div>
                         </div>
                     )}
                     {project.data.uzitkovaPlocha && (
                         <div class="cell card card--info">
                             <h3>Celková úžitková plocha</h3>
-                            <div class="stat">{project.data.uzitkovaPlocha} m<sup>2</sup></div>
+                            <div class="stat">{project.data.uzitkovaPlocha} m<sup>2</sup> {project.data.uzitkovaPlochaSuffix}</div>
                         </div>
                     )}
                     {project.data.pocetIzieb && (
                         <div class="cell card card--info">
                             <h3>Počet izieb</h3>
-                            <div class="stat">{project.data.pocetIzieb}</div>
+                            <div class="stat">{project.data.pocetIzieb} {project.data.pocetIziebSuffix}</div>
                         </div>
                     )}
                     {project.data.rozmeryDomu && (
@@ -137,17 +168,20 @@ const randomProjects = shuffledProjects.slice(0, 3);
                         </div>
                     </div>
             </div>
-                <div class="swiper swiper--gallery">
-                    <div class="swiper-wrapper">
-                            <a class="swiper-slide gallery_item" href="/assets/img/projekt/18/dom-l-tehlovy-obklad-header.jpg" data-fancybox="gallery">
-                                <img src="/assets/img/projekt/18/dom-l-tehlovy-obklad-header-480h.jpg" srcset="/assets/img/projekt/18/dom-l-tehlovy-obklad-header-960h.jpg 2x" alt="Dom L s tehlovým obkladom">
+            <div class="swiper swiper--gallery">
+                <div class="swiper-wrapper">
+                    {galleryImages.length > 0 ? (
+                        galleryImages.map((image) => (
+                            <a class="swiper-slide gallery_item" href={image.href} data-fancybox="gallery">
+                                <img src={image.src} srcset={image.srcset} alt={image.alt}>
                             </a>
-                            <a class="swiper-slide gallery_item" href="/assets/img/projekt/18/dom-l-tehlovy-obklad-podorys.jpg" data-fancybox="gallery">
-                                <img src="/assets/img/projekt/18/dom-l-tehlovy-obklad-podorys-480h.jpg" srcset="/assets/img/projekt/18/dom-l-tehlovy-obklad-podorys-960h.jpg 2x" alt="Dom L s tehlovým obkladom">
-                            </a>
-                    </div>
-                    <div class="swiper-pagination hide-for-medium"></div>
+                        ))
+                    ) : (
+                        <p>No gallery images found for this project.</p>
+                    )}
                 </div>
+                <div class="swiper-pagination hide-for-medium"></div>
+            </div>
         </div>
     </div>
 
