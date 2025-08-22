@@ -41,10 +41,12 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
     // If frontmatter fields are not all defined, search for the first gallery image.
     // The path for import.meta.glob is relative to the project root.
     const allGalleryImageLoaders = import.meta.glob('/src/content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
+    
+    const projectSlug = project.slug.substring(3); // Remove 'sk/' or 'cz/' prefix
 
     const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, _]) => {
         // Filter images belonging to the current project's gallery
-        return path.includes(`/src/content/projects/${project.slug}/gallery/`);
+        return path.includes(`/src/content/projects/${projectSlug}/gallery/`);
     }).sort(([pathA, _], [pathB, __]) => pathA.localeCompare(pathB)); // Sort to ensure a consistent "first" image
 
     if (projectImages.length === 0) {
@@ -74,13 +76,16 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
 }
 
 /**
- * Fetches all projects, augments their data with image paths derived from their galleries
- * (or existing frontmatter), and sorts them by publish date.
+ * Fetches all projects for a given locale, augments their data with image paths,
+ * and sorts them by publish date.
  *
+ * @param {string} locale - The locale to filter projects by (e.g., 'sk', 'cz').
  * @returns A promise resolving to an array of augmented project data.
  */
-export async function getAugmentedProjects(): Promise<AugmentedProjectData[]> {
-    const allProjects = await getCollection("projects");
+export async function getAugmentedProjects(locale: string): Promise<AugmentedProjectData[]> {
+    const allProjects = await getCollection("projects", ({ id }) => {
+        return id.endsWith(`.${locale}.md`);
+    });
 
     const augmentedProjects: AugmentedProjectData[] = [];
 

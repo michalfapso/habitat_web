@@ -1,5 +1,4 @@
 ---
-layout: '../layouts/LayoutMarkdownPage.astro'
 title: 'Zásady spracúvania súborov cookie'
 ---
 

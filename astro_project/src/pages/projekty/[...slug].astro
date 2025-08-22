@@ -1,55 +1,53 @@
 ---
+import { getCollection, getEntry } from 'astro:content';
 import { getAugmentedProjects } from '../../utils/getProjectImageMetadata';
 import { getImage } from 'astro:assets';
 import { projectTags } from '../../data/tags';
 import Layout from '../../layouts/Layout.astro';
 import CardProject from '../../components/CardProject.astro';
+import { useTranslations } from '../../i18n/utils';
 
-// Generate a new path for every collection entry
 export async function getStaticPaths() {
-//   const projects = await getCollection('projects'); // Get all entries from the 'projects' collection [1, 2, 7, 8, 9]
-  const projects = await getAugmentedProjects();
-
-  return projects.map(project => ({
-    params: { slug: project.slug }, // Use project.slug to create the URL (e.g., /projects/my-first-project) [1, 3, 4]
-    props: { project }, // Pass the entire project entry as a prop to the page [1, 7, 12]
-  }));
+  const projects = await getCollection('projects');
+  const paths = projects.map(project => {
+    const [lang, ...slugParts] = project.slug.split('/');
+    return {
+      params: { slug: slugParts.join('/') },
+      props: { lang, slug: project.slug },
+    };
+  });
+  return paths;
 }
 
-const { project } = Astro.props;
-const { Content } = await project.render(); // Render the Markdown/MDX content to HTML [1, 4, 7, 12]
+const { lang, slug } = Astro.props;
+const project = await getEntry('projects', slug);
+const { Content } = await project.render();
+const t = useTranslations(lang as 'sk' | 'cz');
 
 const allGalleryImageLoaders = import.meta.glob('../../content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
-// console.log('allGalleryImageLoaders:', allGalleryImageLoaders);
 let galleryImages = [];
 if (project) {
+    const projectSlug = project.slug.substring(3); // Remove 'sk/' or 'cz/' prefix
     const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, loader]) => {
-        // console.log('path:', path);
-        const valid = path.includes(`/content/projects/${project.slug}/gallery/`);
-        // console.log('valid:', valid);
-        return valid;
+        return path.includes(`/content/projects/${projectSlug}/gallery/`);
     });
 
-    // Process each found image module
     for (const [path, loader] of projectImages) {
         const imgModule = await loader();
-        // Use getImage to generate optimized versions of the image
         const imgFull = await getImage({ src: imgModule.default, width: 3000, format: 'jpg' });
         const img480h = await getImage({ src: imgModule.default, height: 480, format: 'jpg' });
         const img960h = await getImage({ src: imgModule.default, height: 960, format: 'jpg' });
 
         galleryImages.push({
-            href: imgFull.src, // Link to the larger version for the lightbox
+            href: imgFull.src,
             src: img480h.src,
-            srcset: `${img960h.src} 2x`, // High-DPI version
+            srcset: `${img960h.src} 2x`,
             alt: `${project.data.title || project.slug}`,
         });
     }
-    // console.log('galleryImages:', galleryImages);
 }
 
-const allProjects = await getAugmentedProjects();
-// Function to shuffle an array (Fisher-Yates algorithm)
+const allProjects = await getAugmentedProjects(lang);
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -58,7 +56,6 @@ function shuffleArray(array) {
   return array;
 }
 const shuffledProjects = shuffleArray(allProjects);
-// Get the first 3 projects from the shuffled array
 const randomProjects = shuffledProjects.slice(0, 3);
 ---
 
@@ -78,7 +75,7 @@ const randomProjects = shuffledProjects.slice(0, 3);
                             <use xlink:href="#icon-arrow-prev"></use>
                         </svg>
                     </span>
-                    Späť na projekty
+                    {t('projects.back')}
                 </a>
                     <ul class="project-labels">
                         {project.data.tags.map(tagName => {
@@ -97,7 +94,7 @@ const randomProjects = shuffledProjects.slice(0, 3);
                     <use xlink:href="#icon-arrow-prev"></use>
                 </svg>
             </span>
-            Späť na projekty
+            {t('projects.back')}
         </a>
     </div>
     <a id="main"></a>
@@ -106,7 +103,7 @@ const randomProjects = shuffledProjects.slice(0, 3);
         <div class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell medium-4">
-                        <h2>O projekte</h2>
+                        <h2>{t('projects.about')}</h2>
                 </div>
                 <div class="cell medium-8">
                     <p set:html={project.data.description}></p>
@@ -151,7 +148,7 @@ const randomProjects = shuffledProjects.slice(0, 3);
         <div class="grid-container">
             <div class="grid-x grid-margin-x align-justify align-center">
                 <div class="cell medium-6">
-                    <h2>Galéria</h2>
+                    <h2>{t('projects.gallery')}</h2>
                 </div>
                     <div class="cell shrink show-for-medium">
                         <div class="swiper-navigation swiper-navigation--square">
@@ -190,7 +187,7 @@ const randomProjects = shuffledProjects.slice(0, 3);
         <div class="grid-container">
             <div class="grid-x grid-margin-x">
                 <div class="cell medium-4">
-                        <h2>Koncept návrhu</h2>
+                        <h2>{t('projects.concept')}</h2>
                 </div>
                 <div class="cell medium-8">
                     <Content/>
@@ -201,7 +198,7 @@ const randomProjects = shuffledProjects.slice(0, 3);
     
     <div class="section pt-0" style="overflow-x:hidden">
         <div class="grid-container">
-            <h2 class="h3">Ďalšie projekty</h2>
+            <h2 class="h3">{t('projects.more')}</h2>
             <div class="swiper swiper--projects-3">
                 <div class="swiper-wrapper">
                 {

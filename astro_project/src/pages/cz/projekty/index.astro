@@ -1,9 +1,9 @@
 ---
 // src/pages/projects/index.astro
-import { getAugmentedProjects } from '../../utils/getProjectImageMetadata'; // Import the new utility
-import { useTranslations } from '../../i18n/utils';
-import Layout from "../../layouts/Layout.astro";
-import CardProject from '../../components/CardProject.astro';
+import { getAugmentedProjects } from '../../../utils/getProjectImageMetadata'; // Import the new utility
+import { useTranslations } from '../../../i18n/utils';
+import Layout from "../../../layouts/Layout.astro";
+import CardProject from '../../../components/CardProject.astro';
 
 const t = useTranslations(Astro.currentLocale as 'sk' | 'cz');
 const allProjects = await getAugmentedProjects(Astro.currentLocale);
