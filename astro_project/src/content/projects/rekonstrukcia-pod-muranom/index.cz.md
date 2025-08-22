@@ -1,0 +1,19 @@
+---
+title: Rekonštrukcia <br>pod Muráňom
+description: Návrh rekonštrukcie a dostavby rodinného domu vo výnimočnej lokalite plnej výhľadov na okolité prírodné pamiatky. Klienti chceli vytvoriť miesto pre stretávania širokej rodiny a príležitostné prenajímanie turistom. Výzvou bolo zladiť priority rôznych generácii, stálych obyvateľov domu a nárazových návštev. Veľkosť zadania zároveň umožnila zaujímavú prácu s dostavbou a jej umiestnením, či s výškovým rozdielom medzi existujúcou dispozíciou a záhradou.
+tags: ["Domov na mieru"]
+pubDate: 2025-08-20
+
+vykurovanaPlocha: 206
+uzitkovaPlocha: 244
+pocetIzieb: 6
+lokalita: Muráň, okres Revúca
+---
+
+Rekonštrukcia rieši najväčšiu nevýhodu pôvodného stavu – chýbajúce interiérové či exteriérové priestory v priamom kontakte so záhradou. Tento zámer sa výborne dopĺňa s rozšírením obytnej kapacity domu a vytvorením spoločenského priestoru pre 12 ľudí. Koncept návrhu zachováva existujúce konštrukcie rodinného domu po úroveň podlahy prvého nadzemného podlažia - v polozapustenom suteréne je zachovaná drevárska dielňa aj skladové priestory.
+
+Na obryse pôvodného rodinného domu je navrhnutá hmota s dvoma nadzemnými podlažiami, zastrešená sedlovou strechou s vikierom. Dopĺňa ju vegetačná fasáda, ktorá pomáha chrániť konštrukcie pred teplotnými výkyvmi a reaguje na prírodný charakter lokality. Sú tu umiestnené vstupné priestory, zázemie domu a spálne. Hlavný spoločenský priestor kvôli svojej nadštandardnej veľkosti presahuje smerom do záhrady - návrh využíva zaujímavý moment výškového rozdielu v rámci interiéru. Tým je dosiahnutá čiastočne oddelená dispozícia obývačky na hornom polpodlaží a kuchyne s jedálňou na úrovni okolitého terénu. Nová hmota je koncipovaná ako moderná dostavba s plochou pochôdznou strechou a nadštandardnými preskleniami. Interiérové priestory plynulo prechádzajú na veľkú krytú terasu s krbom. Prístavba je navrhnutá s kamenným obkladom z vápenca, ktorý reprezentuje okolité geologické podmienky.
+
+Funkčne je nová dispozícia rozdelená na dve prevádzky: časť určenú pre stálych obyvateľov domu a časť pre návštevy, prípadne ubytovaných hostí. Pri izbách na poschodí je osobitý dôraz kladený na výhľady do okolitej krajiny, sú v nich na viaceré strany navrhnuté veľké okná. Pri navrhovaní prebehla presná analýza zatienenia pozemku okolitými kopcami, z ktorej jednoznačne vyšlo, že prehrievanie domu nehrozí ani pri nadštandardne veľkých preskleniach.
+
+

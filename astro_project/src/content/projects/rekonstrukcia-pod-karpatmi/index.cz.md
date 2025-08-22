@@ -1,0 +1,19 @@
+---
+title: Rekonštrukcia <br>pod Karpatmi
+description: Návrh komplexnej rekonštrukcie domu pre rozrastajúcu sa rodinu, ktorá kladie dôraz na ekológiu. Projekt sme zastrešovali od architektonickej štúdie, cez podklady pre úrady, až po podrobnú realizačnú dokumentáciu a autorský dozor na stavbe. Ide o jedinečný projekt, v ktorom sa rekonštrukciou podarilo znížiť potrebu tepla na vykurovanie na nižšie hodnoty, než definujú pasívny štandard pre novostavby. Klienti v tohtoročnej sezóne minuli na všetku prevádzku domu do 120 eur mesačne, čo je položka porovnateľná s dvojizbovým bytom.
+tags: ["Domov na mieru"]
+pubDate: 2025-08-20
+
+vykurovanaPlocha: 246
+uzitkovaPlocha: 312
+pocetIzieb: 5
+lokalita: Modra – Harmónia, okres Pezinok
+---
+
+Zámerom klientov bolo vytvoriť moderné bývanie rešpektujúce pôvodnú architektúru. Keďže veľkosť domu bola dostatočná, zastavaná plocha sa navýšila iba o hrúbku tepelnej izolácie. Taktiež bolo možné vyčleniť suterén z tepelno-izolačnej obálky, čím klienti ušetrili pri realizácii a ďalšej prevádzke nemalé finančné prostriedky.
+
+Dispozícia domu bola pôvodne rozdelená na drobné priestory a orientovaná iba smerom do ulice. Odstránením priečok a presunutím schodiska vznikol na prízemí jednotný obytný priestor, ktorý komunikuje na dve strany - do ulice je orientované obývačkové sedenie, do záhrady kuchyňa s východom priamo na novú terasu. Týmto zásahom markantne stúpol komfort bývania bez zväčšenia domu.
+
+Zachované sú prvky pôvodnej architektúry - materiálové riešenie škridlovej strechy s presahom, lemovanie otvorov šambránami, rímsy, či farebné rozlíšenie soklu. Moderné drevohliníkové okná určené pre pasívne domy umožnili zväčšenie pôvodných otvorov - výborné izolačné vlastnosti zabezpečujú plusovú energetickú bilanciu, teda dom nimi viac energie získa než stratí. Praktickým prínosom je aj lepšie presvetlenie interiéru a viac výhľadov do okolia. Solárne zisky pomáhajú vykurovať interiér v zime, zároveň je eliminované letné prehrievanie - v tomto prípade sú okná prirodzene tienené listnatým stromom a presahom balkóna. Navrhnuté boli aj exteriérové žalúzie, ktoré chránia niektoré okná pred nízkym ranným slnkom.
+
+
