@@ -1,10 +1,6 @@
 ---
 title: Dom L s tehlovým obkladom
 description: Návrh štýlového domu pre trojčlennú rodinu. V rámci Habitat konfigurátora sme vybrali moderné stvárnenie architektúry a luxusné detaily, ako je nadštandardná výška presklení alebo tehlový obklad. Pri konkrétnej orientácii a lokalite pozemku stačilo pre zamedzenie letného prehrievania čiastočné vyloženie plochej vegetačnej strechy pred južnú fasádu.
-image: /assets/img/projekt/18/dom-l-tehlovy-obklad-header1024w.jpg
-imageSet: /assets/img/projekt/18/dom-l-tehlovy-obklad-header1024w.jpg 1024w, /assets/img/projekt/18/dom-l-tehlovy-obklad-header.jpg 1575w
-imageThumb: /assets/img/projekt/18/dom-l-tehlovy-obklad-thumb.jpg
-imageThumbSet: /assets/img/projekt/18/dom-l-tehlovy-obklad-thumb@2x.jpg 2x
 tags: ["Habitat konfigurátor"]
 pubDate: 2025-08-20
 
