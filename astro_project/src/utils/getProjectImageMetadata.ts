@@ -41,8 +41,8 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
     // If frontmatter fields are not all defined, search for the first gallery image.
     // The path for import.meta.glob is relative to the project root.
     const allGalleryImageLoaders = import.meta.glob('/src/content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
-    
-    const projectSlug = project.slug.substring(3); // Remove 'sk/' or 'cz/' prefix
+
+    const projectSlug = project.slug.replace(/\/.*/, ''); // Remove 'sk/' or 'cz/' prefix
 
     const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, _]) => {
         // Filter images belonging to the current project's gallery
@@ -50,7 +50,7 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
     }).sort(([pathA, _], [pathB, __]) => pathA.localeCompare(pathB)); // Sort to ensure a consistent "first" image
 
     if (projectImages.length === 0) {
-        console.warn(`No gallery images found for project: ${project.slug} and frontmatter image fields are empty. Using fallback images.`);
+        console.warn(`No gallery images found for project: ${projectSlug} and frontmatter image fields are empty. Using fallback images.`);
         return null;
     }
 
