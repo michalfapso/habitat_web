@@ -15,26 +15,19 @@ import SlidesProjects from '../components/SlidesProjects.astro';
 
 const t = useTranslations(Astro.currentLocale as 'sk' | 'cz');
 
-const selectedProjectTitles = [
-	"Dom s pavlačou",
-	"Usadlosť na Červenej Hore",
-	"Dom s mestským nádychom",
-	"Dom s bazénom v Rusovciach",
-	"Dom za mestom",
-	"Dom s cortenom pri Piešťanoch",
-	"Dom so saunou na Považí",
+const selectedProjectSlugs = [
+	"dom-s-pavlacou",
+	"usadlost-na-cervenej-hore",
+	"dom-s-mestskym-nadychom",
+	"dom-s-bazenom-v-rusovciach",
+	"dom-za-mestom",
+	"dom-s-cortenom-pri-piestanoch",
+	"dom-so-saunou-na-povazi",
 ];
 
-const normalizeWhitespace = (str) => {
-    if (typeof str !== 'string') return str;
-    return str.replace(/\s+/g, ' ').trim();
-};
-const normalizedSelectedProjectTitles = selectedProjectTitles.map(normalizeWhitespace);
 const allProjects = await getAugmentedProjects(Astro.currentLocale);
-const selectedProjects = allProjects.filter(project => {
-    const normalizedProjectTitle = normalizeWhitespace(project.data.title);
-    return normalizedSelectedProjectTitles.includes(normalizedProjectTitle);
-});
+const projectsBySlug = new Map(allProjects.map(p => [p.slug.replace(/\/.*/, ''), p]));
+const selectedProjects = selectedProjectSlugs.map(slug => projectsBySlug.get(slug)).filter(Boolean);
 ---
 
 <Layout 
