@@ -5,8 +5,9 @@ import { useTranslations } from '../../../i18n/utils';
 import Layout from "../../../layouts/Layout.astro";
 import CardProject from '../../../components/CardProject.astro';
 
-const t = useTranslations(Astro.currentLocale as 'sk' | 'cz');
-const allProjects = await getAugmentedProjects(Astro.currentLocale);
+const lang = Astro.currentLocale as keyof typeof import('../../../i18n/utils').languages;
+const t = useTranslations(lang);
+const allProjects = await getAugmentedProjects(lang);
 
 // Sort projects by publish date, newest first
 allProjects.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());

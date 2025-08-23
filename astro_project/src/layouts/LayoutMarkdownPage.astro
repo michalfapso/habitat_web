@@ -1,12 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-// The 'frontmatter' prop contains all the variables from the MD or MDX file's frontmatter.
+// When used as a layout for a markdown file, Astro passes a `frontmatter` prop.
+// When used as a component, props can be passed directly. This handles both cases.
 const { frontmatter } = Astro.props;
+const allProps = frontmatter || Astro.props;
 ---
 
-<Layout 
-    title={frontmatter.title}
+<Layout
+    title={allProps.title}
 	bodyClass="page"
     topbarClass="topbar--bright topbar--dark"
 >

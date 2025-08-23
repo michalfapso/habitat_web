@@ -1,0 +1,203 @@
+---
+import { getImage } from 'astro:assets';
+import { projectTags } from '../data/tags';
+import CardProject from './CardProject.astro';
+import { useTranslations, useTranslatedPath } from '../i18n/utils';
+import { getAugmentedProjects } from '../utils/getProjectImageMetadata';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+    project: CollectionEntry<'projects'>;
+    lang: 'sk' | 'cz';
+    allProjects: CollectionEntry<'projects'>[];
+}
+
+const { project, lang, allProjects } = Astro.props;
+const { Content } = await project.render();
+const t = useTranslations(lang);
+const translatedPath = useTranslatedPath(lang);
+
+const allGalleryImageLoaders = import.meta.glob('/src/content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
+let galleryImages = [];
+if (project) {
+    const projectSlug = project.slug.replace(/\/index..*$/, '');
+    const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, loader]) => {
+        return path.includes(`/src/content/projects/${projectSlug}/gallery/`);
+    });
+
+    for (const [path, loader] of projectImages) {
+        const imgModule = await loader();
+        const imgFull = await getImage({ src: imgModule.default, width: 3000, format: 'jpg' });
+        const img480h = await getImage({ src: imgModule.default, height: 480, format: 'jpg' });
+        const img960h = await getImage({ src: imgModule.default, height: 960, format: 'jpg' });
+
+        galleryImages.push({
+            href: imgFull.src,
+            src: img480h.src,
+            srcset: `${img960h.src} 2x`,
+            alt: `${project.data.title || project.slug}`,
+        });
+    }
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+const shuffledProjects = shuffleArray(allProjects);
+const randomProjects = shuffledProjects.slice(0, 3);
+---
+
+<div class="hero hero--project">
+    <div class="hero__img">
+        <img src={project.data.image} 
+          srcset={project.data.imageSet} 
+          alt={project.data.title}>
+    </div>
+    <div class="hero__content grid-container grid-x">
+        <div class="cell large-8 large-offset-4">
+            <a href={translatedPath('/projekty/')} class="backlink hide-for-large">
+                <span class="arrow">
+                    <svg class="icon icon-arrow-prev">
+                        <use xlink:href="#icon-arrow-prev"></use>
+                    </svg>
+                </span>
+                {t('projects.back')}
+            </a>
+                <ul class="project-labels">
+                    {project.data.tags.map(tagName => {
+                      const tag = projectTags[tagName];
+                      return tag ? (
+                        <li class={tag.color}>{t(tag.nameKey)}</li>
+                      ) : null;
+                    })}
+                </ul>
+            <h1>{project.data.titleBreak}</h1>
+        </div>
+    </div>
+    <a href={translatedPath('/projekty/')} class="backlink show-for-large">
+        <span class="arrow">
+            <svg class="icon icon-arrow-prev">
+                <use xlink:href="#icon-arrow-prev"></use>
+            </svg>
+        </span>
+        {t('projects.back')}
+    </a>
+</div>
+<a id="main"></a>
+
+<div class="section section--detail pb-0">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell medium-4">
+                    <h2>{t('projects.about')}</h2>
+            </div>
+            <div class="cell medium-8">
+                <p set:html={project.data.description}></p>
+            </div>
+        </div>
+            <div class="grid-x grid-margin-x info-cards small-up-2 medium-up-4 large-up-4">
+                {project.data.lokalita && (
+                    <div class="cell card card--info">
+                        <h3>{t('projects.location')}</h3>
+                        <div class="stat">{project.data.lokalita}</div>
+                    </div>
+                )}
+                {project.data.vykurovanaPlocha && (
+                    <div class="cell card card--info">
+                        <h3>{t('projects.heated-area')}</h3>
+                        <div class="stat">{project.data.vykurovanaPlocha} m<sup>2</sup> {project.data.vykurovanaPlochaSuffix}</div>
+                    </div>
+                )}
+                {project.data.uzitkovaPlocha && (
+                    <div class="cell card card--info">
+                        <h3>{t('projects.usable-area')}</h3>
+                        <div class="stat">{project.data.uzitkovaPlocha} m<sup>2</sup> {project.data.uzitkovaPlochaSuffix}</div>
+                    </div>
+                )}
+                {project.data.pocetIzieb && (
+                    <div class="cell card card--info">
+                        <h3>{t('projects.rooms')}</h3>
+                        <div class="stat">{project.data.pocetIzieb} {project.data.pocetIziebSuffix}</div>
+                    </div>
+                )}
+                {project.data.rozmeryDomu && (
+                    <div class="cell card card--info">
+                        <h3>{t('projects.house-dimensions')}</h3>
+                        <div class="stat">{project.data.rozmeryDomu}</div>
+                    </div>
+                )}
+            </div>
+    </div>
+</div>
+
+<div class="gallery-section" style="overflow-x:hidden">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-justify align-center">
+            <div class="cell medium-6">
+                <h2>{t('projects.gallery')}</h2>
+            </div>
+                <div class="cell shrink show-for-medium">
+                    <div class="swiper-navigation swiper-navigation--square">
+                        <div class="swiper-button swiper-button-prev--gallery">
+                            <svg class="icon icon-arrow-prev">
+                                <use xlink:href="#icon-arrow-prev"></use>
+                            </svg>
+                        </div>
+                        <div class="swiper-button swiper-button-next--gallery">
+                            <svg class="icon icon-arrow-next">
+                                <use xlink:href="#icon-arrow-next"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="swiper swiper--gallery">
+            <div class="swiper-wrapper">
+                {galleryImages.length > 0 ? (
+                    galleryImages.map((image) => (
+                        <a class="swiper-slide gallery_item" href={image.href} data-fancybox="gallery">
+                            <img src={image.src} srcset={image.srcset} alt={image.alt}>
+                        </a>
+                    ))
+                ) : (
+                    <p>No gallery images found for this project.</p>
+                )}
+            </div>
+            <div class="swiper-pagination hide-for-medium"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section section--detail pt-0">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell medium-4">
+                    <h2>{t('projects.concept')}</h2>
+            </div>
+            <div class="cell medium-8">
+                <Content/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section pt-0" style="overflow-x:hidden">
+    <div class="grid-container">
+        <h2 class="h3">{t('projects.more')}</h2>
+        <div class="swiper swiper--projects-3">
+            <div class="swiper-wrapper">
+            {
+                randomProjects.map((project) => (
+                    <CardProject project={project} className="swiper-slide"/>
+                ))
+            }
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>

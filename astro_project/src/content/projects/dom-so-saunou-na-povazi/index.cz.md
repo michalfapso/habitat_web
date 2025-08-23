@@ -1,7 +1,7 @@
 ---
-title: Dom so saunou <br>na Považí
-description: Návrh domu pre mladú štvorčlennú rodinu. Pri spolupráci s klientmi sme najskôr dopodrobna prebrali a zhodnotili potrebu či veľkosť jednotlivých priestorov, aby sme spoločne zladili očakávania a rozpočet stavby. Následne bol celý návrh riešený s ohľadom na jednoduchosť konštrukčných a architektonických prvkov - vznikol tak racionálny, ale proporčne a výrazovo vkusný rodinný dom.
-tags: ["Domov na mieru"]
+title: Dům se saunou <br>na Pováží
+description: Návrh domu pro mladou čtyřčlennou rodinu. Při spolupráci s klienty jsme nejprve podrobně probrali a zhodnotili potřebu či velikost jednotlivých prostor, abychom společně sladili očekávání a rozpočet stavby. Následně byl celý návrh řešen s ohledem na jednoduchost konstrukčních a architektonických prvků - vznikl tak racionální, ale proporčně a výrazově vkusný rodinný dům.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 138
@@ -10,10 +10,8 @@ pocetIzieb: 5
 lokalita: Stupné, okres Považská Bystrica
 ---
 
-Rodinný dom je navrhnutý ako jednoduchý biely kváder so zelenou strechou, ktorý je ozvláštnený odobratím hmoty hlavnej terasy. Toto juho-západné vybratie je akcentované zmenou štruktúry a farby omietky. Princíp bieleho obalu a pieskového vnútra podčiarkuje architektonické stvárnenie pergoly, chrániacej terasu pred dažďom a veľké presklené plochy pred nežiaducim letným slnkom.
+Rodinný dům je navržen jako jednoduchý bílý kvádr se zelenou střechou, který je ozvláštněn odebráním hmoty hlavní terasy. Toto jiho-západní vybrání je akcentováno změnou struktury a barvy omítky. Princip bílého obalu a pískového vnitřku podtrhuje architektonické ztvárnění pergoly, chránící terasu před deštěm a velké prosklené plochy před nežádoucím letním sluncem.
 
-Vzhľadom na optimalizáciu ceny stavby je dispozícia rozvrhnutá centrálne, čím s minimom chodbových priestorov napĺňa požadovaný rozsah izieb. Jediná chodba je zároveň navrhnutá ako priechodný šatník, ktorý sa posuvnými dverami dá jednoducho prepojiť so zvyškom domu.
+Vzhledem k optimalizaci ceny stavby je dispozice rozvržena centrálně, čímž s minimem chodbových prostor naplňuje požadovaný rozsah pokojů. Jediná chodba je zároveň navržena jako průchozí šatník, který lze posuvnými dveřmi jednoduše propojit se zbytkem domu.
 
-Zaujímavosťou je návrh vstavanej fínskej sauny - kvôli výkyvom teplôt pri prevádzke je podstatné vyčleniť ju z tepelno-izolačnej obálky domu. Navrhli sme ju v rámci hmoty nevykurovaných skladových priestorov a garáže, s vlastnou oddychovou terasou v maximálnom súkromí. Prístupná je zo záhrady alebo cez hlavnú kúpeľňu, ktorá slúži aj ako ochladzovňa.
-
-
+Zajímavostí je návrh vestavěné finské sauny - kvůli výkyvům teplot při provozu je podstatné vyčlenit ji z tepelně-izolační obálky domu. Navrhli jsme ji v rámci hmoty nevytápěných skladových prostor a garáže, s vlastní odpočinkovou terasou v maximálním soukromí. Přístupná je ze zahrady nebo přes hlavní koupelnu, která slouží i jako ochlazovna.

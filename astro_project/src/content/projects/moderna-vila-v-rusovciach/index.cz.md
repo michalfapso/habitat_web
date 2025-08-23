@@ -1,7 +1,7 @@
 ---
-title: Moderná vila <br>v Rusovciach
-description: Návrh modernej vily v lukratívnej lokalite, určený pre rozrastajúcu sa rodinu, ktorá preferuje funkčný minimalizmus a tvarovú jednoduchosť. S klientom sme začali spoluprácu pri architektonickej štúdii a následne prešli kompletným procesom projekcie až po realizáciu.
-tags: ["Domov na mieru"]
+title: Moderní vila <br>v Rusovcích
+description: Návrh moderní vily v lukrativní lokalitě, určený pro rozrůstající se rodinu, která preferuje funkční minimalismus a tvarovou jednoduchost. S klientem jsme zahájili spolupráci na architektonické studii a následně prošli kompletním procesem projekce až po realizaci.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 175
@@ -10,10 +10,8 @@ pocetIzieb: 5
 lokalita: Bratislava, Rusovce
 ---
 
-Vila svojou výškou a tvarom nadväzuje na susednú zástavbu. Dve plné podlažia a kompaktné usporiadanie vykurovaných priestorov domu vytvárajú skvelý koncept pre stavbu v pasívnom štandarde. Táto jednoduchá hmota je doplnená o samostatne stojacu garáž, prekrytie vstupu nadväzujúce na balkón a konštrukciu bioklimatickej pergoly. Všetky tieto prvky sú mimo tepelnej obálky domu a umožňujú rozohrať architektúru bez vplyvu na energetickú úsporu.
+Vila svou výškou a tvarem navazuje na sousední zástavbu. Dvě plná podlaží a kompaktní uspořádání vytápěných prostor domu vytvářejí skvělý koncept pro stavbu v pasivním standardu. Tato jednoduchá hmota je doplněna o samostatně stojící garáž, překrytí vstupu navazující na balkon a konstrukci bioklimatické pergoly. Všechny tyto prvky jsou mimo tepelnou obálku domu a umožňují rozehrát architekturu bez vlivu na energetickou úsporu.
 
-Smerom do ulice je architektúra introvertná, poskytujúc svojím usporiadaním súkromie na záhrade.  Fasáda do záhrady je naopak maximálne otvorená kvôli solárnym ziskom a kontaktu interiéru s exteriérom. Veľké presklenia prepájajúce terasu s obývačkou sú chránené pred letným slnkom konštrukciou balkóna, na oknách na druhom nadzemnom podlaží sú proti prehrievaniu navrhnuté exteriérové žalúzie.
+Směrem do ulice je architektura introvertní, poskytujíc svým uspořádáním soukromí na zahradě. Fasáda do zahrady je naopak maximálně otevřená kvůli solárním ziskům a kontaktu interiéru s exteriérem. Velká prosklení propojující terasu s obývacím pokojem jsou chráněna před letním sluncem konstrukcí balkonu, na oknech ve druhém nadzemním podlaží jsou proti přehřívání navrženy exteriérové žaluzie.
 
-Na fasáde sú kombinované dva druhy omietky - biela v odtieni Antique a sivá v prevedení štruktúry jemného prírodného betónu. Štruktúrovanou omietkou sú zvýraznené konštrukcie balkóna či pergoly a niektoré plochy medzi oknami. Jasné línie dopĺňa a zjemňuje zeleň na vegetačných strechách.
-
-
+Na fasádě jsou kombinovány dva druhy omítky - bílá v odstínu Antique a šedá v provedení struktury jemného přírodního betonu. Strukturovanou omítkou jsou zvýrazněny konstrukce balkonu či pergoly a některé plochy mezi okny. Jasné linie doplňuje a zjemňuje zeleň na vegetačních střechách.

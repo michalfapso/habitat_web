@@ -1,77 +1,77 @@
 ---
-title: 'Zásady spracúvania súborov cookie'
+title: 'Zásady zpracování souborů cookie'
 ---
 
-# Zásady spracúvania súborov cookie
+# Zásady zpracování souborů cookie
 
-Tieto informácie sa vzťahujú na údaje ktoré sú spracúvané prostredníctvom webovej stránky
-    www.habitat.sk (ďalej len webová stránka). Prevádzkovateľom webovej stránky je spoločnosť Ateliér
-    Habitat s. r. o. so sídlom Ulica Závodu Matador 4030/4 851 01 Bratislava - mestská časť Petržalka
-    IČO: 51 915 146 zapísaná v Obchodnom registri Mestského súdu Bratislava III oddiel: Sro vložka č.:
-    131233/B (ďalej len ako prevádzkovateľ“).
+Tyto informace se vztahují na údaje, které jsou zpracovávány prostřednictvím webové stránky
+    www.habitat.sk (dále jen webová stránka). Provozovatelem webové stránky je společnost Ateliér
+    Habitat s. r. o. se sídlem Ulica Závodu Matador 4030/4 851 01 Bratislava - městská část Petržalka
+    IČO: 51 915 146 zapsaná v Obchodním rejstříku Městského soudu Bratislava III oddíl: Sro vložka č.:
+    131233/B (dále jen jako provozovatel“).
 
-## Čo sú súbory cookie?
+## Co jsou soubory cookie?
 
-Súbor cookie je malý textový súbor, ktorý webové sídlo ukladá vo vašom počítači alebo mobilnom
-    zariadení v momente, keď dané sídlo navštívite. 
+Soubor cookie je malý textový soubor, který webové sídlo ukládá ve vašem počítači nebo mobilním
+    zařízení v momentě, kdy dané sídlo navštívíte. 
 
- Pri každej návšteve webovej stránky sa zobrazí výzva, aby ste prijali alebo odmietli súbory cookie.
-    Účelom je umožniť, aby si webová stránka na určitý čas uchovala informácie o vašich nastaveniach.
-    Vďaka tomu ich pri prehliadaní webovej stránky nemusíte opätovne zadávať.
+ Při každé návštěvě webové stránky se zobrazí výzva, abyste přijali nebo odmítli soubory cookie.
+    Účelem je umožnit, aby si webová stránka na určitý čas uchovala informace o vašich nastaveních.
+    Díky tomu je při prohlížení webové stránky nemusíte opětovně zadávat.
 
 
-## Aké súbory cookie spracúvame?
-### Potrebné cookies
-Niektoré súbory cookie musíme používať preto, aby sme zabezpečili fungovanie prevádzky našej webovej
-    stránky. V súvislosti so spracúvaním týchto cookie sa preto nevyžaduje Váš súhlas so spracúvaním
-    osobných údajov.
+## Jaké soubory cookie zpracováváme?
+### Nezbytné cookies
+Některé soubory cookie musíme používat proto, abychom zajistili fungování provozu naší webové
+    stránky. V souvislosti se zpracováním těchto cookie se proto nevyžaduje Váš souhlas se zpracováním
+    osobních údajů.
 
-- **Účel spracúvania** - Spracúvanie nevyhnutných súborov cookies za účelom zabezpečenia fungovania prevádzky webovej stránky
-- **Právny základ** - oprávnený záujem v zmysle čl. 6 ods. 1 písm. f) Nariadenia GDPR. Hlavným oprávneným záujmom je zabezpečenie riadnej a bezchybnej prevádzky webovej stránky.  
-- **Kategória dotknutých osôb** - Návštevníci webovej stránky
-- **Kategória osobných údajov** - Jedinečný identifikátor ktorý je súčasťou cookie
-- **Kategórie príjemcov** - Poverené osoby v zmluvnom vzťahu s prevádzkovateľom, správca webovej stránky
-- **Lehota na výmaz osobných údajov** - Údaje budú spracúvané po dobu nevyhnutnú pre splnenie požiadaviek t. j. po dobu trvania spojenia pri prehliadaní webovej stránky. Exspirácia cookies je uvedená sekcií „nastavenia cookies“.
-- **Prenos osobných údajov do tretích krajín alebo medzinárodným organizáciám** - Neuskutočňuje sa
+- **Účel zpracování** - Zpracování nezbytných souborů cookies za účelem zajištění fungování provozu webové stránky
+- **Právní základ** - oprávněný zájem ve smyslu čl. 6 odst. 1 písm. f) Nařízení GDPR. Hlavním oprávněným zájmem je zajištění řádného a bezchybného provozu webové stránky.  
+- **Kategorie dotčených osob** - Návštěvníci webové stránky
+- **Kategorie osobních údajů** - Jedinečný identifikátor, který je součástí cookie
+- **Kategorie příjemců** - Pověřené osoby ve smluvním vztahu s provozovatelem, správce webové stránky
+- **Lhůta pro výmaz osobních údajů** - Údaje budou zpracovávány po dobu nezbytnou pro splnění požadavků t. j. po dobu trvání spojení při prohlížení webové stránky. Expirace cookies je uvedena v sekci „nastavení cookies“.
+- **Přenos osobních údajů do třetích zemí nebo mezinárodním organizacím** - Neprovádí se
 
 <script id="CookieDeclaration" src="https://consent.cookiebot.com/6df18b46-7ce6-482a-8ebb-6aa0f0c6538f/cd.js" type="text/javascript" async></script>
 
-Právnym základom
-    spracúvania týchto cookie súborov je čl. 6 ods. 1 písm. a) Nariadenia GDPR čo znamená že tieto
-    súbory cookie budeme spracúvať za predpokladu že nám k takémuto spracúvaniu udelíte váš slobodný
-    súhlas. Súhlas so spracúvaním môžete udeliť „kliknutím“ v paneli so súbormi cookies v závislosti od
-    vášho preferovaného nastavenia. Súhlas môžete odvolať opätovným „kliknutím“ v paneli so súbormi
-    cookie v závislosti od vašej preferencie týkajúcej sa zastavenia spracúvania vybraných cookie
-    súborov. Táto informačná povinnosť priamo nadväzuje na informácie uvedené v cookie lište
-    nachádzajúcej sa v päte webovej stránky. Uvedená cookie lišta obsahuje doplňujúce informácie pre
-    zabezpečenie transparentného plnenia informačnej povinnosti.
+Právním základem
+    zpracování těchto cookie souborů je čl. 6 odst. 1 písm. a) Nařízení GDPR, což znamená, že tyto
+    soubory cookie budeme zpracovávat za předpokladu, že nám k takovému zpracování udělíte váš svobodný
+    souhlas. Souhlas se zpracováním můžete udělit „kliknutím“ v panelu se soubory cookies v závislosti na
+    vašem preferovaném nastavení. Souhlas můžete odvolat opětovným „kliknutím“ v panelu se soubory
+    cookie v závislosti na vaší preferenci týkající se zastavení zpracování vybraných cookie
+    souborů. Tato informační povinnost přímo navazuje na informace uvedené v cookie liště
+    nacházející se v patě webové stránky. Uvedená cookie lišta obsahuje doplňující informace pro
+    zajištění transparentního plnění informační povinnosti.
 
-V uvedenom prípade môžu byť príjemcami osobných údajov: 
+V uvedeném případě mohou být příjemci osobních údajů: 
     
-- Správca webovej stránky
+- Správce webové stránky
 
-## Ako môžete spravovať súbory cookie?
+## Jak můžete spravovat soubory cookie?
 
-Súbory cookie nastavené a používané na našej webovej stránke môžete spravovať výberom vami
-    preferovaného nastavenia v paneli na udelenie súhlasu so súbormi cookie. Ak budete chcieť neskôr
-    upraviť svoje nastavenia súborov cookie vrátane zrušenia súhlasu s nimi môžete tak urobiť kedykoľvek
-    kliknutím na odkaz Spravovať súbory cookie ktorý nájdete v päte webovej stránky prípadne
-    prostredníctvom internetového prehliadača. Súbory cookie nastavené na základe predchádzajúcich
-    výberov ostanú uložené v prehliadači po zrušení súhlasu sa však nebudú používať. Tieto súbory cookie
-    si môžete zobraziť alebo vymazať manuálne v nastaveniach prehliadača.
+Soubory cookie nastavené a používané na naší webové stránce můžete spravovat výběrem vámi
+    preferovaného nastavení v panelu pro udělení souhlasu se soubory cookie. Pokud budete chtít později
+    upravit svá nastavení souborů cookie včetně zrušení souhlasu s nimi, můžete tak učinit kdykoli
+    kliknutím na odkaz Spravovat soubory cookie, který naleznete v patě webové stránky, případně
+    prostřednictvím internetového prohlížeče. Soubory cookie nastavené na základě předchozích
+    voleb zůstanou uloženy v prohlížeči, po zrušení souhlasu se však nebudou používat. Tyto soubory cookie
+    si můžete zobrazit nebo vymazat manuálně v nastaveních prohlížeče.
 
-### Odstránenie súborov cookie zo zariadenia
-Vymazaním histórie prehliadania vo svojom prehliadači môžete odstrániť všetky súbory cookie ktoré sa
-    vo vašom zariadení nachádzajú. V takomto prípade však môžete prísť o niektoré uložené informácie.
+### Odstranění souborů cookie ze zařízení
+Vymazáním historie prohlížení ve svém prohlížeči můžete odstranit všechny soubory cookie, které se
+    ve vašem zařízení nacházejí. V takovém případě však můžete přijít o některé uložené informace.
 
 
-### Blokovanie súborov cookie
-Väčšinu moderných prehliadačov môžete nastaviť tak aby zabránili ukladaniu všetkých súborov cookie do
-    vášho zariadenia v takom prípade však niektoré preferencie možno budete musieť upravovať manuálne
-    pri každej návšteve webovej stránky. Niektoré služby a funkcie navyše vôbec nemusia fungovať
-    správne.
+### Blokování souborů cookie
+Většinu moderních prohlížečů můžete nastavit tak, aby zabránily ukládání všech souborů cookie do
+    vašeho zařízení, v takovém případě však některé preference možná budete muset upravovat manuálně
+    při každé návštěvě webové stránky. Některé služby a funkce navíc vůbec nemusí fungovat
+    správně.
 
-### Viac informácii o tom ako je možné spravovať cookies policy najviac používanými prehliadačmi sa dozviete:
+### Více informací o tom, jak je možné spravovat cookies policy nejvíce používanými prohlížeči, se dozvíte:
 - [Google Chrome](https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en)
 - [Microsoft Edge](https://support.microsoft.com/sk-sk/help/4468242/microsoft-edge-browsing-data-and-privacy-microsoft-privacy)
 - [Mozilla Firefox](https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences)
@@ -79,17 +79,17 @@ Väčšinu moderných prehliadačov môžete nastaviť tak aby zabránili uklada
 - [Opera](https://help.opera.com/cs/latest/)
 - [Apple Safari](https://support.apple.com/en-gb/safari)
 
-## Akými právami disponujete v postavení dotknutej osoby?
-- **Právo na prístup** - máte právo na poskytnutie informácie o tom ako Vaše osobné údaje používame (bližšie čl. 15 Nariadenia GDPR).
-- **Právo na opravu** – ak si myslíte že údaje ktorými disponujeme sú nepresné neúplné alebo neaktuálne prosím neváhajte nás požiadať aby sme tieto informácie upravili aktualizovali alebo doplnili (bližšie čl. 16 Nariadenia GDPR).
-- **Právo na výmaz (na zabudnutie)** – máte právo nás požiadať o vymazanie Vašich osobných údajov (bližšie čl. 17 Nariadenia GDPR).
-- **Odvolať súhlas** – v prípadoch kedy Vaše osobné údaje spracúvame na základe Vášho súhlasu máte právo tento súhlas kedykoľvek odvolať. Odvolanie súhlasu nemá vplyv na zákonnosť spracúvania osobných údajov ktoré sme na jeho základe o Vás spracúvali (bližšie čl. 7 Nariadenia GDPR).
-- **Právo na obmedzenie spracúvania** – za určitých okolností ste oprávnený nás požiadať aby sme prestali používať Vaše osobné údaje (bližšie čl. 18 Nariadenia GDPR).
-- **Právo na prenosnosť údajov** – za určitých okolností máte právo požiadať nás o prenos osobných údajov ktoré ste nám poskytli na inú tretiu stranu podľa Vášho výberu (bližšie čl. 20 Nariadenia GDPR).
-- **Právo namietať** – máte právo namietať voči spracúvaniu osobných údajov ktoré je založené na našich legitímnych oprávnených záujmoch (bližšie čl. 21 Nariadenia GDPR).
-- **Právo na to aby sa na Vás nevzťahovalo automatizované individuálne rozhodovanie vrátane profilovania** (bližšie čl. 22 Nariadenia GDPR).
-- **Právo podať návrh na začatie konania o ochrane osobných údajov** – ak sa domnievate že Vaše osobné údaje spracúvame nespravodlivo alebo nezákonne môžete podať sťažnosť na dozorný orgán ktorým je Úrad na ochranu osobných údajov Slovenskej republiky.
+## Jakými právy disponujete v postavení dotčené osoby?
+- **Právo na přístup** - máte právo na poskytnutí informace o tom, jak Vaše osobní údaje používáme (blíže čl. 15 Nařízení GDPR).
+- **Právo na opravu** – pokud si myslíte, že údaje, kterými disponujeme, jsou nepřesné, neúplné nebo neaktuální, prosím neváhejte nás požádat, abychom tyto informace upravili, aktualizovali nebo doplnili (blíže čl. 16 Nařízení GDPR).
+- **Právo na výmaz (na zapomenutí)** – máte právo nás požádat o vymazání Vašich osobních údajů (blíže čl. 17 Nařízení GDPR).
+- **Odvolat souhlas** – v případech, kdy Vaše osobní údaje zpracováváme na základě Vašeho souhlasu, máte právo tento souhlas kdykoli odvolat. Odvolání souhlasu nemá vliv na zákonnost zpracování osobních údajů, které jsme na jeho základě o Vás zpracovávali (blíže čl. 7 Nařízení GDPR).
+- **Právo na omezení zpracování** – za určitých okolností jste oprávněn nás požádat, abychom přestali používat Vaše osobní údaje (blíže čl. 18 Nařízení GDPR).
+- **Právo na přenositelnost údajů** – za určitých okolností máte právo požádat nás o přenos osobních údajů, které jste nám poskytli, na jinou třetí stranu podle Vašeho výběru (blíže čl. 20 Nařízení GDPR).
+- **Právo namítat** – máte právo namítat proti zpracování osobních údajů, které je založeno na našich legitimních oprávněných zájmech (blíže čl. 21 Nařízení GDPR).
+- **Právo na to, aby se na Vás nevztahovalo automatizované individuální rozhodování včetně profilování** (blíže čl. 22 Nařízení GDPR).
+- **Právo podat návrh na zahájení řízení o ochraně osobních údajů** – pokud se domníváte, že Vaše osobní údaje zpracováváme nespravedlivě nebo nezákonně, můžete podat stížnost u dozorového úřadu, kterým je Úřad pro ochranu osobních údajů Slovenské republiky.
 
-V prípade podania námietky týkajúcej sa spracúvania Vašich osobných údajov máte právo podať podnet
-    alebo žiadosť písomne na adresu sídla spoločnosti: Ulica Závodu Matador 4030/4 851 01 Bratislava -
-    mestská časť Petržalka alebo na e-mail: info@habitat.sk.
+V případě podání námitky týkající se zpracování Vašich osobních údajů máte právo podat podnět
+    nebo žádost písemně na adresu sídla společnosti: Ulica Závodu Matador 4030/4 851 01 Bratislava -
+    městská část Petržalka nebo na e-mail: info@habitat.sk.

@@ -1,7 +1,7 @@
 ---
-title: Rekonštrukcia <br>pod Muráňom
-description: Návrh rekonštrukcie a dostavby rodinného domu vo výnimočnej lokalite plnej výhľadov na okolité prírodné pamiatky. Klienti chceli vytvoriť miesto pre stretávania širokej rodiny a príležitostné prenajímanie turistom. Výzvou bolo zladiť priority rôznych generácii, stálych obyvateľov domu a nárazových návštev. Veľkosť zadania zároveň umožnila zaujímavú prácu s dostavbou a jej umiestnením, či s výškovým rozdielom medzi existujúcou dispozíciou a záhradou.
-tags: ["Domov na mieru"]
+title: Rekonstrukce <br>pod Muráněm
+description: Návrh rekonstrukce a dostavby rodinného domu ve výjimečné lokalitě plné výhledů na okolní přírodní památky. Klienti chtěli vytvořit místo pro setkávání široké rodiny a příležitostné pronajímání turistům. Výzvou bylo sladit priority různých generací, stálých obyvatel domu a nárazových návštěv. Velikost zadání zároveň umožnila zajímavou práci s dostavbou a jejím umístěním, či s výškovým rozdílem mezi stávající dispozicí a zahradou.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 206
@@ -10,10 +10,8 @@ pocetIzieb: 6
 lokalita: Muráň, okres Revúca
 ---
 
-Rekonštrukcia rieši najväčšiu nevýhodu pôvodného stavu – chýbajúce interiérové či exteriérové priestory v priamom kontakte so záhradou. Tento zámer sa výborne dopĺňa s rozšírením obytnej kapacity domu a vytvorením spoločenského priestoru pre 12 ľudí. Koncept návrhu zachováva existujúce konštrukcie rodinného domu po úroveň podlahy prvého nadzemného podlažia - v polozapustenom suteréne je zachovaná drevárska dielňa aj skladové priestory.
+Rekonstrukce řeší největší nevýhodu původního stavu – chybějící interiérové či exteriérové prostory v přímém kontaktu se zahradou. Tento záměr se výborně doplňuje s rozšířením obytné kapacity domu a vytvořením společenského prostoru pro 12 lidí. Koncept návrhu zachovává stávající konstrukce rodinného domu po úroveň podlahy prvního nadzemního podlaží - v polozapuštěném suterénu je zachována dřevařská dílna i skladové prostory.
 
-Na obryse pôvodného rodinného domu je navrhnutá hmota s dvoma nadzemnými podlažiami, zastrešená sedlovou strechou s vikierom. Dopĺňa ju vegetačná fasáda, ktorá pomáha chrániť konštrukcie pred teplotnými výkyvmi a reaguje na prírodný charakter lokality. Sú tu umiestnené vstupné priestory, zázemie domu a spálne. Hlavný spoločenský priestor kvôli svojej nadštandardnej veľkosti presahuje smerom do záhrady - návrh využíva zaujímavý moment výškového rozdielu v rámci interiéru. Tým je dosiahnutá čiastočne oddelená dispozícia obývačky na hornom polpodlaží a kuchyne s jedálňou na úrovni okolitého terénu. Nová hmota je koncipovaná ako moderná dostavba s plochou pochôdznou strechou a nadštandardnými preskleniami. Interiérové priestory plynulo prechádzajú na veľkú krytú terasu s krbom. Prístavba je navrhnutá s kamenným obkladom z vápenca, ktorý reprezentuje okolité geologické podmienky.
+Na obrysu původního rodinného domu je navržena hmota se dvěma nadzemními podlažími, zastřešená sedlovou střechou s vikýřem. Doplňuje ji vegetační fasáda, která pomáhá chránit konstrukce před teplotními výkyvy a reaguje na přírodní charakter lokality. Jsou zde umístěny vstupní prostory, zázemí domu a ložnice. Hlavní společenský prostor kvůli své nadstandardní velikosti přesahuje směrem do zahrady - návrh využívá zajímavý moment výškového rozdílu v rámci interiéru. Tím je dosažena částečně oddělená dispozice obývacího pokoje na horním polopodlaží a kuchyně s jídelnou na úrovni okolního terénu. Nová hmota je koncipována jako moderní dostavba s plochou pochozí střechou a nadstandardními proskleními. Interiérové prostory plynule přecházejí na velkou krytou terasu s krbem. Přístavba je navržena s kamenným obkladem z vápence, který reprezentuje okolní geologické podmínky.
 
-Funkčne je nová dispozícia rozdelená na dve prevádzky: časť určenú pre stálych obyvateľov domu a časť pre návštevy, prípadne ubytovaných hostí. Pri izbách na poschodí je osobitý dôraz kladený na výhľady do okolitej krajiny, sú v nich na viaceré strany navrhnuté veľké okná. Pri navrhovaní prebehla presná analýza zatienenia pozemku okolitými kopcami, z ktorej jednoznačne vyšlo, že prehrievanie domu nehrozí ani pri nadštandardne veľkých preskleniach.
-
-
+Funkčně je nová dispozice rozdělena na dva provozy: část určenou pro stálé obyvatele domu a část pro návštěvy, případně ubytované hosty. U pokojů v patře je zvláštní důraz kladen na výhledy do okolní krajiny, jsou v nich na více stran navržena velká okna. Při navrhování proběhla přesná analýza zastínění pozemku okolními kopci, z níž jednoznačně vyšlo, že přehřívání domu nehrozí ani při nadstandardně velkých proskleních.

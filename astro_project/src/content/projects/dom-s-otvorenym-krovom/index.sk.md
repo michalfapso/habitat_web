@@ -1,7 +1,7 @@
 ---
 title: Dom s otvoreným krovom
 description: Návrh nadštandardného domu pre troj- až štvorčlennú rodinu. Tvarovo kombinuje plochú vegetačnú strechu a trakt so sedlovou strechou s priznaným krovom v interiéri. Pri návrhu sme využili Habitat konfigurátor a po definovaní architektúry overili energetickú bilanciu domu na konkrétnej parcele.
-tags: ["Habitat konfigurátor"]
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 126

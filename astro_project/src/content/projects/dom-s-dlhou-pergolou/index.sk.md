@@ -1,7 +1,7 @@
 ---
 title: Dom s dlhou pergolou
 description: Návrh cenovo dostupného domu pre trojčlennú rodinu. Pri návrhu v Habitat konfigurátore sme kládli dôraz na architektonické prvky s jednoduchou realizáciou a menším zaťažením rozpočtu. Dom pred prehrievaním chráni drevená pergola, ktorej rozmery boli pri konfigurácii na pozemok presne vypočítané - tak, aby v lete tienila vysoké slnko a v zime ho naopak vpustila do interiéru.
-tags: ["Habitat konfigurátor"]
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 101

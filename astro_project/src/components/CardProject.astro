@@ -1,9 +1,16 @@
 ---
 import { projectTags } from '../data/tags';
+import { useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
+const t = useTranslations(lang);
+const path = useTranslatedPath(lang);
 
 const { project, className } = Astro.props;
+
+const projectSlug = project.slug.replace(/\/index..$/, '');
 ---
-<a class={`${className} project`} href={`/projekty/${project.slug}/`}>
+<a class={`${className} project`} href={path(`/projekty/${projectSlug}/`)}>
     <div class="project__img">
         <img src={project.data.imageThumb} srcset={project.data.imageThumbSet} alt={project.data.title}>
     </div>
@@ -15,7 +22,7 @@ const { project, className } = Astro.props;
         {project.data.tags.map(tagName => {
           const tag = projectTags[tagName];
           return tag ? (
-            <li class={tag.color}>{tag.name}</li>
+            <li class={tag.color}>{t(tag.nameKey)}</li>
           ) : null;
         })}
     </ul>

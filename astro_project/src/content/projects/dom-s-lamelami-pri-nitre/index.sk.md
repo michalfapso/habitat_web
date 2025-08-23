@@ -1,7 +1,7 @@
 ---
 title: Dom s lamelami <br>pri Nitre
 description: Návrh rodinného domu pre mladú rodinu - stavbu aktuálne realizujú čiastočne svojpomocne. Klienti nás oslovili s hotovým projektom pre stavebné povolenie, ktorý ale výrazne nespĺňal požiadavky na rozpočet a nezohľadňoval energetiku v návrhu stavebných konštrukcií. Po analýze sme sa dohodli, že sa spoločne vrátime o krok späť a nanovo sme zadefinovali materiály aj architektúru domu. Po optimalizácii dispozície a pretvorení kľúčových prvkov návrhu do jednoduchšej podoby sme veľkosť domu zo 170 m<sup>2</sup> vykurovanej podlahovej plochy zmenšili na 130 m<sup>2</sup> a napriek rozpočtovým limitom vytvorili zaujímavé bývanie s vlastnou identitou.
-tags: ["Domov na mieru"]
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 130

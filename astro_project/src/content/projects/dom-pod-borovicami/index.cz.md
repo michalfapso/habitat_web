@@ -1,7 +1,7 @@
 ---
-title: Dom pod borovicami
-description: Návrh domu v lukratívnej lokalite vo svahu nad Bratislavou. Zadaním od klienta bolo zhodnotiť a dopracovať existujúcu architektonickú štúdiu. Sústredili sme sa hlavne na optimalizáciu energetiky a dispozície, pri ktorej sa nám podarilo úpravami ušetriť 55 m<sup>2</sup> z vykurovaných priestorov a plochu chodieb zmenšiť na polovicu. Následne sme sa dohodli na ďalšej spolupráci pri projekčnej činnosti a aktuálne je stavba v povoľovacom procese.
-tags: ["Domov na mieru"]
+title: Dům pod borovicemi
+description: Návrh domu v lukrativní lokalitě ve svahu nad Bratislavou. Zadáním od klienta bylo zhodnotit a dopracovat existující architektonickou studii. Soustředili jsme se hlavně na optimalizaci energetiky a dispozice, při které se nám podařilo úpravami ušetřit 55 m<sup>2</sup> z vytápěných prostor a plochu chodeb zmenšit na polovinu. Následně jsme se dohodli na další spolupráci při projekční činnosti a aktuálně je stavba v povolovacím procesu.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 156
@@ -10,8 +10,8 @@ pocetIzieb: 5
 lokalita: Bratislava, Záhorská Bystrica - Plánky
 ---
 
-Návrh vychádza z existujúcej architektonickej štúdie a nadväzuje na priestorové rozvrhnutie objektu na pozemku. Dom je rozdelený na tri krídla, ktoré na seba nadväzujú v atypických uhloch. Pri zachovaní špecifík pôvodného návrhu je dom umiestnený tak, aby napriek svojej veľkosti nenarúšal mierku prostredia. Vďaka čiastočnému zapusteniu do terénu a optimálne definovanej výške vstupu pôsobí smerom k ulici nenápadne, nechávajúc priestor pôvodnej zeleni a vysokým stromom.
+Návrh vychází z existující architektonické studie a navazuje na prostorové rozvržení objektu na pozemku. Dům je rozdělen na tři křídla, která na sebe navazují v atypických úhlech. Při zachování specifik původního návrhu je dům umístěn tak, aby navzdory své velikosti nenarušoval měřítko prostředí. Díky částečnému zapuštění do terénu a optimálně definované výšce vstupu působí směrem k ulici nenápadně, nechávajíc prostor původní zeleni a vysokým stromům.
 
-Architektonicky návrh používa moderné tvaroslovie (plochá vegetačná strecha, nadštandardné presklené plochy na získanie solárnych ziskov), ktoré je ale zasadené do kontextu pozemku. Zvolené materiály (drevo, omietka piesková / biela, kameň, vegetačná fasáda) reagujú na jeho prírodný charakter a inšpirujú sa vo farebnosti borovíc, ktoré mu dominujú.
+Architektonický návrh používá moderní tvarosloví (plochá vegetační střecha, nadstandardní prosklené plochy pro získání solárních zisků), které je ale zasazeno do kontextu pozemku. Zvolené materiály (dřevo, omítka písková / bílá, kámen, vegetační fasáda) reagují na jeho přírodní charakter a inspirují se v barevnosti borovic, které mu dominují.
 
-Jednotlivé trakty sú odlíšené materiálovo aj výškovo - spoločenská časť má väčšiu svetlú aj konštrukčnú výšku a nadštandardne vysoké presklenia. Jednotlivé hmoty zjednocuje veľká drevená pergola, ktorá tieni terasu umiestnenú v strede polo-átria. Pergola je navrhnutá ako čiastočne plná (prekrytie priestoru pred hlavným vstupom) a čiastočne prevetrávaná. Táto časť je určená na porastenie popínavou zeleňou a slúži na zamedzenie letného prehrievania interiéru.
+Jednotlivé trakty jsou odlišeny materiálově i výškově - společenská část má větší světlou i konstrukční výšku a nadstandardně vysoké prosklení. Jednotlivé hmoty sjednocuje velká dřevěná pergola, která stíní terasu umístěnou ve středu polo-atria. Pergola je navržena jako částečně plná (překrytí prostoru před hlavním vstupem) a částečně provětrávaná. Tato část je určena k porostení popínavou zelení a slouží k zamezení letního přehřívání interiéru.

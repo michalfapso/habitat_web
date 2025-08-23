@@ -1,5 +1,9 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
+import { useTranslations } from '../i18n/utils';
+
+const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
+const t = useTranslations(lang);
 
 export interface Props extends HTMLAttributes<'div'> {
 }
@@ -8,28 +12,28 @@ const { id } = Astro.props;
 ---
 
 <div class="reveal reveal--contact" id={id} data-reveal>
-    <h3>Získajte nezáväznú konzultáciu</h3>
-    <p>Budeme vašim partnerom a prevedieme vás celým procesom od prvej skice až po odovzdanie stavby. Nenecháme vás v tom, môžete sa spoľahnúť. Vyplňte formulár, čoskoro sa vám ozveme.</p>
+    <h3>{t('contact-form.title')}</h3>
+    <p>{t('contact-form.text')}</p>
 
     <form class="contact-form" action="/inc/post.php" method="post" data-form-type="contact">
-        <input type="text" name="form[name]" placeholder="Meno a priezvisko*">
+        <input type="text" name="form[name]" placeholder={t('contact-form.placeholder-name')}>
         <div class="group">
             <div>
-                <input type="email" name="form[email]" placeholder="E-mailová adresa*">
+                <input type="email" name="form[email]" placeholder={t('contact-form.placeholder-email')}>
             </div>
             <div>
-                <input type="tel" name="form[phone]" placeholder="Tel. číslo">
+                <input type="tel" name="form[phone]" placeholder={t('contact-form.placeholder-phone')}>
             </div>
         </div>
-        <textarea name="form[text]" rows="4" placeholder="Popíšte projekt"></textarea>
+        <textarea name="form[text]" rows="4" placeholder={t('contact-form.placeholder-description')}></textarea>
         <label class="checkbox">
             <input type="checkbox" name="form[consent]" value="1">
-            <span>K spracúvaniu osobných údajov dochádza za účelom vybavenia Vašej žiadosti. Bližšie informácie sú dostupné <a href="/zasady-spracuvania-osobnych-udajov" target="_blank">TU</a>.</span>
+            <span set:html={t('contact-form.spracovanie-udajov')}></span>
         </label>
         <div class="contact-form__response"></div>
         <button class="secondary button has-arrow" type="submit">
             <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
-            <span>Odoslať</span>
+            <span>{t('contact-form.submit')}</span>
         </button>
     </form>
 

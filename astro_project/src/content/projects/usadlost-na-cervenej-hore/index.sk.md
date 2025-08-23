@@ -1,7 +1,7 @@
 ---
 title: Usadlosť <br>na Červenej Hore
 description: Návrh nového bývania pre päťčlennú rodinu, ktorá sa z mesta presťahovala na stredoslovenské lazy. Dom citlivo reaguje na miestnu architektúru a nemá za cieľ ju modernými prvkami pretvárať, ale dotvárať.  S klientmi sme spolupracovali od výberu pozemku, cez architektonickú štúdiu a projekčné práce až po autorský dozor pri realizácii stavby.
-tags: ["Domov na mieru"]
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 138

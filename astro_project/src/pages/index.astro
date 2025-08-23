@@ -13,7 +13,8 @@ import SlidesSteps from '../components/SlidesSteps.astro';
 import SectionExpandable from '../components/SectionExpandable.astro';
 import SlidesProjects from '../components/SlidesProjects.astro';
 
-const t = useTranslations(Astro.currentLocale as 'sk' | 'cz');
+const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
+const t = useTranslations(lang);
 
 const selectedProjectSlugs = [
 	"dom-s-pavlacou",
@@ -25,7 +26,7 @@ const selectedProjectSlugs = [
 	"dom-so-saunou-na-povazi",
 ];
 
-const allProjects = await getAugmentedProjects(Astro.currentLocale);
+const allProjects = await getAugmentedProjects(lang);
 const projectsBySlug = new Map(allProjects.map(p => [p.slug.replace(/\/.*/, ''), p]));
 const selectedProjects = selectedProjectSlugs.map(slug => projectsBySlug.get(slug)).filter(Boolean);
 ---

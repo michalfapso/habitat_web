@@ -1,7 +1,7 @@
 ---
-title: Dom s dlhou pergolou
-description: Návrh cenovo dostupného domu pre trojčlennú rodinu. Pri návrhu v Habitat konfigurátore sme kládli dôraz na architektonické prvky s jednoduchou realizáciou a menším zaťažením rozpočtu. Dom pred prehrievaním chráni drevená pergola, ktorej rozmery boli pri konfigurácii na pozemok presne vypočítané - tak, aby v lete tienila vysoké slnko a v zime ho naopak vpustila do interiéru.
-tags: ["Habitat konfigurátor"]
+title: Dům s dlouhou pergolou
+description: Návrh cenově dostupného domu pro tříčlennou rodinu. Při návrhu v Habitat konfigurátoru jsme kladli důraz na architektonické prvky s jednoduchou realizací a menším zatížením rozpočtu. Dům před přehříváním chrání dřevěná pergola, jejíž rozměry byly při konfiguraci na pozemek přesně vypočítány - tak, aby v létě stínila vysoké slunce a v zimě ho naopak vpustila do interiéru.
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 101
@@ -10,7 +10,6 @@ pocetIzieb: 3
 rozmeryDomu: 14,85m x 8,5m
 ---
 
-Dom je nakonfigurovaný z dvoch traktov – základom je centrálna obývačka do tvaru L, na ktorú je napojený súkromný trakt so spálňou, detskou izbou a hygienickým zázemím. Všetky izby sú orientované na juh, s východom na širokú terasu. Architektúra pracuje s cenovo dostupnými riešeniami – dom je prestrešený zbíjaným krovom mimo tepelnej obálky, presklenia majú štandardnú výšku a na fasáde je použitá kombinácia omietok. Tienenie je riešené drevenou pergolou, ktorá sa dá v prípade potreby zrealizovať aj ako samonosná v neskoršej fáze výstavby.
+Dům je nakonfigurován ze dvou traktů – základem je centrální obývací pokoj do tvaru L, na který je napojen soukromý trakt s ložnicí, dětským pokojem a hygienickým zázemím. Všechny pokoje jsou orientovány na jih, s východem na širokou terasu. Architektura pracuje s cenově dostupnými řešeními – dům je přestřešen sbíjeným krovem mimo tepelnou obálku, prosklení mají standardní výšku a na fasádě je použita kombinace omítek. Stínění je řešeno dřevěnou pergolou, která se dá v případě potřeby zrealizovat i jako samonosná v pozdější fázi výstavby.
 
-Návrh domu vznikol s využitím služby <strong>Habitat konfigurátor</strong>. Ak by vás zaujímalo, aké ďalšie možnosti dispozície konfigurátor otvára alebo koľko stvárnení architektúry ponúka na daný pôdorys, neváhajte sa ozvať.
-
+Návrh domu vznikl s využitím služby <strong>Habitat konfigurátor</strong>. Pokud by vás zajímalo, jaké další možnosti dispozice konfigurátor otevírá nebo kolik ztvárnění architektury nabízí na daný půdorys, neváhejte se ozvat.

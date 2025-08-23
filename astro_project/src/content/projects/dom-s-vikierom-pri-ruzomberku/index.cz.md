@@ -1,7 +1,7 @@
 ---
-title: Dom s vikierom <br>pri Ružomberku
-description: Návrh rodinného domu v srdci Slovenska, ktorý pracuje s tradičným i moderným tvaroslovím a nepopiera atmosféru lokality. Určený je pre mladú rodinu, ktorá vďaka našim podrobným realizačným výkresom zrealizovala pasívny dom v spolupráci s miestnymi staviteľmi.
-tags: ["Domov na mieru"]
+title: Dům s vikýřem <br>u Ružomberku
+description: Návrh rodinného domu v srdci Slovenska, který pracuje s tradičním i moderním tvaroslovím a nepopírá atmosféru lokality. Určen je pro mladou rodinu, která díky našim podrobným realizačním výkresům zrealizovala pasivní dům ve spolupráci s místními staviteli.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 172
@@ -10,10 +10,8 @@ pocetIzieb: 6
 lokalita: Štiavnička, okres Ružomberok
 ---
 
-Rodinný dom je navrhnutý ako jednopodlažný s obytným podkrovím, ktoré je vďaka veľkému vikieru takmer plnohodnotne využiteľné. Dispozícia domu je rozdelená vertikálne na nočnú a dennú. Tieto zóny sú prepojené jednoramenným schodiskom, nachádzajúcim sa v srdci domu - hale otvorenej cez dve podlažia, osvetlenej strešnými oknami.
+Rodinný dům je navržen jako jednopodlažní s obytným podkrovím, které je díky velkému vikýři téměř plnohodnotně využitelné. Dispozice domu je rozdělena vertikálně na noční a denní. Tyto zóny jsou propojeny jednoramenným schodištěm, nacházejícím se v srdci domu - hale otevřené přes dvě podlaží, osvětlené střešními okny.
 
-Architektúra je tvorená tradičnou hmotou dedinského domu so sedlovou strechou a hrubozrnnou bielou omietkou, ktorá je doplnená jednopodlažným traktom s plochou vegetačnou strechou. Tento trakt je stvárnený s dreveným obkladom a plynulo nadväzuje na drevené prekrytie terasy, sauny a tieniacu pergolu pred preskleniami do jedálne a obývačky. Prienik medzi tradičnou hmotou domu a moderným jednopodlažným traktom s tienením je akcentovaný iným typom omietky - je tu navrhnutá štruktúrovaná škrabaná omietka v hnedom odtieni.
+Architektura je tvořena tradiční hmotou vesnického domu se sedlovou střechou a hrubozrnnou bílou omítkou, která je doplněna jednopodlažním traktem s plochou vegetační střechou. Tento trakt je ztvárněn s dřevěným obkladem a plynule navazuje na dřevěné překrytí terasy, sauny a stínící pergolu před proskleními do jídelny a obývacího pokoje. Průnik mezi tradiční hmotou domu a moderním jednopodlažním traktem se stíněním je akcentován jiným typem omítky - je zde navržena strukturovaná škrábaná omítka v hnědém odstínu.
 
-Rozmery drevených pergol sú presne vypočítané s ohľadom na orientáciu domu a zamedzenie letného prehrievania interiéru. Horizontálna časť chráni okná pred vysokým južným slnkom, vertikálne lamely s popínavou zeleňou zase pred nízkym východným a západným slnkom. Pri návrhu bol zohľadnený aj vplyv okolitých objektov na solárne zisky - umiestnenie samostatne stojacej garáže na juh od domu bolo podrobené analýze a jej vzdialenosť navrhnutá tak, aby nemala v zime negatívny vplyv na energetickú bilanciu domu.
-
-
+Rozměry dřevěných pergol jsou přesně vypočítány s ohledem na orientaci domu a zamezení letního přehřívání interiéru. Horizontální část chrání okna před vysokým jižním sluncem, vertikální lamely s popínavou zelení zase před nízkým východním a západním sluncem. Při návrhu byl zohledněn i vliv okolních objektů na solární zisky - umístění samostatně stojící garáže na jih od domu bylo podrobeno analýze a její vzdálenost navržena tak, aby neměla v zimě negativní vliv na energetickou bilanci domu.

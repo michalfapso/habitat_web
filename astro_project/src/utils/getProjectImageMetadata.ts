@@ -27,6 +27,7 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
     imageThumb: string;
     imageThumbSet: string;
 } | null> {
+    // console.log('project:', project);
     // Prioritize existing frontmatter image data if available.
     // This allows manual overrides in the markdown files.
     if (project.data.image && project.data.imageSet && project.data.imageThumb && project.data.imageThumbSet) {
@@ -43,11 +44,13 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
     const allGalleryImageLoaders = import.meta.glob('/src/content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
 
     const projectSlug = project.slug.replace(/\/.*/, ''); // Remove 'sk/' or 'cz/' prefix
+    // console.log('project id:', project.id, ' projectSlug:', projectSlug);
 
     const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, _]) => {
         // Filter images belonging to the current project's gallery
         return path.includes(`/src/content/projects/${projectSlug}/gallery/`);
     }).sort(([pathA, _], [pathB, __]) => pathA.localeCompare(pathB)); // Sort to ensure a consistent "first" image
+    // console.log('projectImages:', projectImages);
 
     if (projectImages.length === 0) {
         console.warn(`No gallery images found for project: ${projectSlug} and frontmatter image fields are empty. Using fallback images.`);
@@ -67,12 +70,14 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
     const thumbSrc   = await getImage({ src: imgModule.default, width:  712, height: 440, format: 'jpg', fit: 'cover', position: 'center'});
     const thumbSrc2x = await getImage({ src: imgModule.default, width: 1424, height: 880, format: 'jpg', fit: 'cover', position: 'center'});
 
-    return {
+    const res = {
         image: img1024w.src,
         imageSet: `${img1024w.src} 1024w, ${img1575w.src} 1575w, ${img2048w.src} 2048w, ${img2560w.src} 2560w`,
         imageThumb: thumbSrc.src,
         imageThumbSet: `${thumbSrc2x.src} 2x`,
     };
+    // console.log('res:', res);
+    return res;
 }
 
 /**
@@ -84,12 +89,14 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
  */
 export async function getAugmentedProjects(locale: string): Promise<AugmentedProjectData[]> {
     const allProjects = await getCollection("projects", ({ id }) => {
+        // console.log('getAugmentedProjects() id:', id);
         return id.endsWith(`.${locale}.md`);
     });
 
     const augmentedProjects: AugmentedProjectData[] = [];
 
     for (const project of allProjects) {
+        // console.log('Processing project id:', project.id, " title:", project.data.title);
         const imageMetadata = await getFirstGalleryImageMetadata(project);
         if (!project.data.titleBreak) {
             project.data.titleBreak = project.data.title;
@@ -120,6 +127,7 @@ export async function getAugmentedProjects(locale: string): Promise<AugmentedPro
             });
         }
     }
+    // console.log(`augmentedProjects:`, augmentedProjects);
 
     // Sort projects by publish date, newest first
     augmentedProjects.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());

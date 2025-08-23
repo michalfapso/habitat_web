@@ -2,6 +2,11 @@
 import CallToAction from '../components/CallToAction.astro';
 import Footer from '../components/Footer.astro';
 import ModalContactForm from '../components/ModalContactForm.astro';
+import { useTranslations, useTranslatedPath } from '../i18n/utils';
+
+const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
+const t = useTranslations(lang);
+const path = useTranslatedPath(lang);
 
 interface Props {
 	title?: string;
@@ -23,6 +28,7 @@ const {
 // Astro.site should be configured in astro.config.mjs for production URLs
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const titleFull = title ? `${title} | ${siteTitle}` : siteTitle;
+
 ---
 
 <!doctype html>
@@ -92,29 +98,29 @@ const titleFull = title ? `${title} | ${siteTitle}` : siteTitle;
 			</symbol>
 		</defs>
 	</svg>
-	<a href="/" rel="home" class="topbar__square-logo" title="Úvod">
+	<a href={path("/")} rel="home" class="topbar__square-logo" title="Úvod">
 		<svg width="142" height="32" viewBox="0 0 142 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M130.43 3.196h5.994v6.169h5.158v5.326h-5.158v11.54h5.29v5.326h-4.982c-4.099 0-6.302-2.087-6.302-6.348V3.196Zm-16.045 23.79c3.66 0 5.643-2.886 5.643-6.525 0-3.639-1.983-6.525-5.643-6.525-3.659 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.641 6.525Zm-1.322-18.064c2.82 0 5.376 1.065 7.052 3.595l.486-3.152h5.422v22.192h-5.422l-.486-3.152c-1.676 2.53-4.232 3.595-7.052 3.595-6.038 0-10.491-4.484-10.491-11.54 0-7.054 4.453-11.538 10.491-11.538Zm-23.14-5.726h5.993v6.169h5.158v5.326h-5.157v11.54h5.289v5.326h-4.982c-4.1 0-6.302-2.087-6.302-6.348V3.196ZM82.162 0c2.027 0   3.527 1.508 3.527 3.552 0 2.043-1.498 3.552-3.527 3.552-2.03 0-3.527-1.509-3.527-3.552C78.636 1.508 80.134 0 82.163 0Zm-6.348 9.365h9.697v22.192h-5.994V14.69h-3.703V9.365Zm-12.87 17.62c3.659 0 5.64-2.885 5.64-6.524 0-3.639-1.984-6.525-5.64-6.525-3.658 0-5.644 2.886-5.644 6.525 0 3.639 1.983 6.525 5.643 6.525ZM51.308 1.376h5.994v11.007c1.676-2.397 4.189-3.463 6.966-3.463 6.037 0 10.49 4.484 10.49 11.54 0 7.055-4.453 11.539-10.49 11.539-2.82 0-5.379-1.066-7.052-3.596l-.486 3.152h-5.422V1.376Zm-16.045 25.61c3.66 0 5.643-2.885 5.643-6.524 0-3.639-1.983-6.525-5.643-6.525-3.66 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.64 6.525ZM33.94 8.923c2.82 0 5.38 1.065 7.053 3.595l.485-3.152H46.9v22.192h-5.42l-.485-3.152C39.318 30.935 36.762 32 33.94 32c-6.037 0-10.49-4.484-10.49-11.54 0-7.054 4.453-11.538 10.49-11.538ZM0 1.375h5.994v12.561l6.877-6.924 7.495 7.546v16.999H14.37V14.558H5.994v16.999H0V1.375Z" fill="#023333"/></svg>
 		<div class="overlay"></div>
 	</a>
 	<div class="topbar-container">
 		<div class={`topbar ${topbarClass}`}>
-			<a href="/" rel="home" class="topbar__logo" title="Úvod">
+			<a href={path("/")} rel="home" class="topbar__logo" title="Úvod">
 				<svg width="142" height="32" viewBox="0 0 142 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M130.43 3.196h5.994v6.169h5.158v5.326h-5.158v11.54h5.29v5.326h-4.982c-4.099 0-6.302-2.087-6.302-6.348V3.196Zm-16.045 23.79c3.66 0 5.643-2.886 5.643-6.525 0-3.639-1.983-6.525-5.643-6.525-3.659 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.641 6.525Zm-1.322-18.064c2.82 0 5.376 1.065 7.052 3.595l.486-3.152h5.422v22.192h-5.422l-.486-3.152c-1.676 2.53-4.232 3.595-7.052 3.595-6.038 0-10.491-4.484-10.491-11.54 0-7.054 4.453-11.538 10.491-11.538Zm-23.14-5.726h5.993v6.169h5.158v5.326h-5.157v11.54h5.289v5.326h-4.982c-4.1 0-6.302-2.087-6.302-6.348V3.196ZM82.162 0c2.027 0   3.527 1.508 3.527 3.552 0 2.043-1.498 3.552-3.527 3.552-2.03 0-3.527-1.509-3.527-3.552C78.636 1.508 80.134 0 82.163 0Zm-6.348 9.365h9.697v22.192h-5.994V14.69h-3.703V9.365Zm-12.87 17.62c3.659 0 5.64-2.885 5.64-6.524 0-3.639-1.984-6.525-5.64-6.525-3.658 0-5.644 2.886-5.644 6.525 0 3.639 1.983 6.525 5.643 6.525ZM51.308 1.376h5.994v11.007c1.676-2.397 4.189-3.463 6.966-3.463 6.037 0 10.49 4.484 10.49 11.54 0 7.055-4.453 11.539-10.49 11.539-2.82 0-5.379-1.066-7.052-3.596l-.486 3.152h-5.422V1.376Zm-16.045 25.61c3.66 0 5.643-2.885 5.643-6.524 0-3.639-1.983-6.525-5.643-6.525-3.66 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.64 6.525ZM33.94 8.923c2.82 0 5.38 1.065 7.053 3.595l.485-3.152H46.9v22.192h-5.42l-.485-3.152C39.318 30.935 36.762 32 33.94 32c-6.037 0-10.49-4.484-10.49-11.54 0-7.054 4.453-11.538 10.49-11.538ZM0 1.375h5.994v12.561l6.877-6.924 7.495 7.546v16.999H14.37V14.558H5.994v16.999H0V1.375Z" fill="#023333"/></svg>
 			</a>
 			<button class="primary button has-arrow" data-open="contact-modal">
 				<svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
-				Mám záujem
+				{t('nav.iam-interested')}
 			</button>
 			<button class="topbar__toggle" data-toggle="site-nav" title="Otvoriť navigáciu"></button>
 		</div>
 	</div>
 		<div class={`topbar topbar--fixed ${topbarClass}`}>
-			<a href="/" rel="home" class="topbar__logo" title="Úvod">
+			<a href={path("/")} rel="home" class="topbar__logo" title="Úvod">
 				<svg width="142" height="32" viewBox="0 0 142 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M130.43 3.196h5.994v6.169h5.158v5.326h-5.158v11.54h5.29v5.326h-4.982c-4.099 0-6.302-2.087-6.302-6.348V3.196Zm-16.045 23.79c3.66 0 5.643-2.886 5.643-6.525 0-3.639-1.983-6.525-5.643-6.525-3.659 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.641 6.525Zm-1.322-18.064c2.82 0 5.376 1.065 7.052 3.595l.486-3.152h5.422v22.192h-5.422l-.486-3.152c-1.676 2.53-4.232 3.595-7.052 3.595-6.038 0-10.491-4.484-10.491-11.54 0-7.054 4.453-11.538 10.491-11.538Zm-23.14-5.726h5.993v6.169h5.158v5.326h-5.157v11.54h5.289v5.326h-4.982c-4.1 0-6.302-2.087-6.302-6.348V3.196ZM82.162 0c2.027 0   3.527 1.508 3.527 3.552 0 2.043-1.498 3.552-3.527 3.552-2.03 0-3.527-1.509-3.527-3.552C78.636 1.508 80.134 0 82.163 0Zm-6.348 9.365h9.697v22.192h-5.994V14.69h-3.703V9.365Zm-12.87 17.62c3.659 0 5.64-2.885 5.64-6.524 0-3.639-1.984-6.525-5.64-6.525-3.658 0-5.644 2.886-5.644 6.525 0 3.639 1.983 6.525 5.643 6.525ZM51.308 1.376h5.994v11.007c1.676-2.397 4.189-3.463 6.966-3.463 6.037 0 10.49 4.484 10.49 11.54 0 7.055-4.453 11.539-10.49 11.539-2.82 0-5.379-1.066-7.052-3.596l-.486 3.152h-5.422V1.376Zm-16.045 25.61c3.66 0 5.643-2.885 5.643-6.524 0-3.639-1.983-6.525-5.643-6.525-3.66 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.64 6.525ZM33.94 8.923c2.82 0 5.38 1.065 7.053 3.595l.485-3.152H46.9v22.192h-5.42l-.485-3.152C39.318 30.935 36.762 32 33.94 32c-6.037 0-10.49-4.484-10.49-11.54 0-7.054 4.453-11.538 10.49-11.538ZM0 1.375h5.994v12.561l6.877-6.924 7.495 7.546v16.999H14.37V14.558H5.994v16.999H0V1.375Z" fill="#023333"/></svg>
 			</a>
 			<button class="primary button has-arrow" data-open="contact-modal">
 				<svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
-				Mám záujem
+				{t('nav.iam-interested')}
 			</button>
 			<button class="topbar__toggle" data-toggle="site-nav" title="Otvoriť navigáciu"></button>
 		</div>
@@ -122,18 +128,18 @@ const titleFull = title ? `${title} | ${siteTitle}` : siteTitle;
 		<button class="close-button" data-toggle="site-nav" title="Zavrieť navigáciu">
 			<svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
 		</button>
-		<a href="/" rel="home" class="site-nav__logo" title="Úvod">
+		<a href={path("/")} rel="home" class="site-nav__logo" title={t('nav.home')}>
 			<svg width="142" height="32" viewBox="0 0 142 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M130.43 3.196h5.994v6.169h5.158v5.326h-5.158v11.54h5.29v5.326h-4.982c-4.099 0-6.302-2.087-6.302-6.348V3.196Zm-16.045 23.79c3.66 0 5.643-2.886 5.643-6.525 0-3.639-1.983-6.525-5.643-6.525-3.659 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.641 6.525Zm-1.322-18.064c2.82 0 5.376 1.065 7.052 3.595l.486-3.152h5.422v22.192h-5.422l-.486-3.152c-1.676 2.53-4.232 3.595-7.052 3.595-6.038 0-10.491-4.484-10.491-11.54 0-7.054 4.453-11.538 10.491-11.538Zm-23.14-5.726h5.993v6.169h5.158v5.326h-5.157v11.54h5.289v5.326h-4.982c-4.1 0-6.302-2.087-6.302-6.348V3.196ZM82.162 0c2.027 0   3.527 1.508 3.527 3.552 0 2.043-1.498 3.552-3.527 3.552-2.03 0-3.527-1.509-3.527-3.552C78.636 1.508 80.134 0 82.163 0Zm-6.348 9.365h9.697v22.192h-5.994V14.69h-3.703V9.365Zm-12.87 17.62c3.659 0 5.64-2.885 5.64-6.524 0-3.639-1.984-6.525-5.64-6.525-3.658 0-5.644 2.886-5.644 6.525 0 3.639 1.983 6.525 5.643 6.525ZM51.308 1.376h5.994v11.007c1.676-2.397 4.189-3.463 6.966-3.463 6.037 0 10.49 4.484 10.49 11.54 0 7.055-4.453 11.539-10.49 11.539-2.82 0-5.379-1.066-7.052-3.596l-.486 3.152h-5.422V1.376Zm-16.045 25.61c3.66 0 5.643-2.885 5.643-6.524 0-3.639-1.983-6.525-5.643-6.525-3.66 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.64 6.525ZM33.94 8.923c2.82 0 5.38 1.065 7.053 3.595l.485-3.152H46.9v22.192h-5.42l-.485-3.152C39.318 30.935 36.762 32 33.94 32c-6.037 0-10.49-4.484-10.49-11.54 0-7.054 4.453-11.538 10.49-11.538ZM0 1.375h5.994v12.561l6.877-6.924 7.495 7.546v16.999H14.37V14.558H5.994v16.999H0V1.375Z" fill="#023333"/></svg>
 		</a>
 		<div class="grid-x">
 			<div class="cell medium-6 large-5 medium-order-2 site-nav__right">
 				<ul class="vertical menu site-nav__menu" data-smooth-scroll data-animation-easing="swing" data-offset="80">
-					<li><a href="/#sluzby">Služby</a></li>
-					<li><a href="/#preco-habitat">Prečo Habitat</a></li>
-					<li><a href="/#manifest">Manifest</a></li>
-					<li><a href="/projekty/">Projekty</a></li>
-					<li><a href="/#kontakt">Kontakt</a></li>
-					<li><a href="https://medium.com/@habitat_architekti" target="_blank">Blog</a></li>
+					<li><a href={path("/#sluzby")}>{t('nav.services')}</a></li>
+					<li><a href={path("/#preco-habitat")}>{t('nav.why-habitat')}</a></li>
+					<li><a href={path("/#manifest")}>{t('nav.manifest')}</a></li>
+					<li><a href={path("/projekty/")}>{t('nav.projekty')}</a></li>
+					<li><a href={path("/#kontakt")}>{t('nav.kontakt')}</a></li>
+					<li><a href="https://medium.com/@habitat_architekti" target="_blank">{t('nav.blog')}</a></li>
 				</ul>
 			</div>
 			<div class="cell medium-6 large-7 medium-order-1 site-nav__left">
@@ -169,8 +175,8 @@ const titleFull = title ? `${title} | ${siteTitle}` : siteTitle;
 
     <slot />
 
-	<CallToAction title="Máte záujem?" button="Mám záujem">
-		<p><strong>Budeme vašim partnerom</strong> a&nbsp;prevedieme vás celým procesom od&nbsp;prvej skice až po&nbsp;odovzdanie stavby. Nenecháme vás v&nbsp;tom, <strong>môžete sa spoľahnúť</strong>.</p>
+	<CallToAction title={t('nav.are-you-interested')} button={t('nav.iam-interested')}>
+		<p set:html={t('nav.interest-text')}></p>
 	</CallToAction>
 
 	<Footer/>

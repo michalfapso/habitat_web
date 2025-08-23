@@ -1,7 +1,7 @@
 ---
-title: Dom s dreveným obkladom
-description: Návrh domu pre štvorčlennú rodinu, ktorá preferuje prírodné materiály. Architektúra vychádza z možností Habitat konfigurátora – dom je zložený s tradičnej hmoty so sedlovou strechou a moderného krídla s plochou vegetačnou strechou. Tieto hmoty sú odlíšené stvárnením fasády – veľkoplošný drevený obklad alebo biela omietka s jemnou líniovou štruktúrou. Terasa je krytá bioklimatickou pergolou, ktorá zároveň chráni dom pred letným prehrievaním.
-tags: ["Habitat konfigurátor"]
+title: Dům s dřevěným obkladem
+description: Návrh domu pro čtyřčlennou rodinu, která preferuje přírodní materiály. Architektura vychází z možností Habitat konfigurátoru – dům je složen z tradiční hmoty se sedlovou střechou a moderního křídla s plochou vegetační střechou. Tyto hmoty jsou odlišeny ztvárněním fasády – velkoplošný dřevěný obklad nebo bílá omítka s jemnou liniovou strukturou. Terasa je krytá bioklimatickou pergolou, která zároveň chrání dům před letním přehříváním.
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 133
@@ -11,10 +11,8 @@ rozmeryDomu: 16,875m x 11,875m
 ---
 
 
-Dom je nakonfigurovaný z troch traktov – základom je centrálna obývačka do tvaru L, na ktorú je napojený rodičovský trakt so samostatnou kúpeľňou a trakt pre deti a návštevy. Obývačka, jedáleň a spálňa sú prestrešené sedlovou strechou, zatiaľ čo zbytok dispozície tieto priestory obklopuje hmotou s plochou vegetačnou strechou. Chodba v detskej časti domu je na obývačku napojená dvomi posuvnými dverami, ktoré pri otvorenej polohe vytvárajú dojem rozšíreného obytného priestoru. Z podlahovej plochy domu 133 m<sup>2</sup> tvorí vďaka dômyselnej dispozícii chodba len 8 m<sup>2</sup>, a aj tie sú využiteľné ako spoločný šatník alebo úložný priestor.
+Dům je nakonfigurován ze tří traktů – základem je centrální obývací pokoj do tvaru L, na který je napojen rodičovský trakt se samostatnou koupelnou a trakt pro děti a návštěvy. Obývací pokoj, jídelna a ložnice jsou zastřešeny sedlovou střechou, zatímco zbytek dispozice tyto prostory obklopuje hmotou s plochou vegetační střechou. Chodba v dětské části domu je na obývací pokoj napojena dvěma posuvnými dveřmi, které při otevřené poloze vytvářejí dojem rozšířeného obytného prostoru. Z podlahové plochy domu 133 m<sup>2</sup> tvoří díky důmyslné dispozici chodba jen 8 m<sup>2</sup>, a i ty jsou využitelné jako společná šatna nebo úložný prostor.
 
-Všetky hlavné presklenia sú orientované na juhovýchod. Predsadenie traktu s detskými izbami pred fasádu „drevenej“ hmoty nám v lete pomáha odtieniť časť nepotrebných solárnych ziskov, nechávajúc priestor na obedné a večerné presvetlenie obývačky.
+Všechna hlavní prosklení jsou orientována na jihovýchod. Předsazení traktu s dětskými pokoji před fasádu „dřevěné“ hmoty nám v létě pomáhá odstínit část nepotřebných solárních zisků, nechávajíc prostor pro polední a večerní prosvětlení obývacího pokoje.
 
-Návrh domu vznikol s využitím služby <strong>Habitat konfigurátor</strong>. Ak by vás zaujímalo, aké ďalšie možnosti dispozície konfigurátor otvára alebo koľko stvárnení architektúry ponúka na daný pôdorys, neváhajte sa ozvať.
-
-
+Návrh domu vznikl s využitím služby <strong>Habitat konfigurátor</strong>. Pokud by vás zajímalo, jaké další možnosti dispozice konfigurátor otevírá nebo kolik ztvárnění architektury nabízí na daný půdorys, neváhejte se ozvat.

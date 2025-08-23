@@ -1,7 +1,7 @@
 ---
-title: Dom s nadčasovým dizajnom
-description: Návrh dvojpodlažného domu pre päťčlennú rodinu, ktorá má rada minimalizmus. V Habitat konfigurátore sme vyskladali funkčne prehľadný a veľkostne optimalizovaný pôdorys, ktorý sme doplnili univerzálnymi dizajnovými prvkami a vkusnou kombináciou bielej omietky s dreveným obkladom. Zelená strecha nad prvým podlažím plynulo prechádza do hmoty balkóna, ktorý čiastočne kryje terasu pred dažďom a chráni južné presklenia pred letným prehrievaním. 
-tags: ["Habitat konfigurátor"]
+title: Dům s nadčasovým designem
+description: Návrh dvoupodlažního domu pro pětičlennou rodinu, která má ráda minimalismus. V Habitat konfigurátoru jsme vyskládali funkčně přehledný a velikostně optimalizovaný půdorys, který jsme doplnili univerzálními designovými prvky a vkusnou kombinací bílé omítky s dřevěným obkladem. Zelená střecha nad prvním podlažím plynule přechází do hmoty balkonu, který částečně kryje terasu před deštěm a chrání jižní prosklení před letním přehříváním.
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 149
@@ -10,10 +10,8 @@ pocetIzieb: 5
 rozmeryDomu: 10m x 15,685m
 ---
 
-Dom je nakonfigurovaný z dvoch traktov – základom je centrálna obývačka do tvaru L, na ktorú je napojená súkromná zóna, rozvrhnutá na dvoch podlažiach. Obsahuje tri detské izby, spálňu s osobitným šatníkom a hygienické zázemie umiestnené prakticky vedľa schodiska.  V  dispozícii sa funkčným rozdelením podarilo dosiahnuť orientáciu všetkých izieb smerom do záhrady, zatiaľ čo okná vedľajších a technických priestorov sú smerované do ulice. Vďaka centrálnemu usporiadaniu pôdorysu tvoria chodby na oboch podlažiach spolu iba 8m2 z celej podlahovej plochy domu. 
+Dům je nakonfigurován ze dvou traktů – základem je centrální obývací pokoj do tvaru L, na který je napojena soukromá zóna, rozvržená na dvou podlažích. Obsahuje tři dětské pokoje, ložnici s oddělenou šatnou a hygienické zázemí umístěné prakticky vedle schodiště. V dispozici se funkčním rozdělením podařilo dosáhnout orientace všech pokojů směrem do zahrady, zatímco okna vedlejších a technických prostor jsou směřována do ulice. Díky centrálnímu uspořádání půdorysu tvoří chodby na obou podlažích dohromady pouze 8m2 z celé podlahové plochy domu.
 
-Dom je na pozemku osadený v juho-východnej orientácii, hlavnými preskleniami otvorený smerom do záhrady. Architektúru domu tvorí jednoduchá obdĺžniková hmota s odsadeným druhým nadzemným podlažím. Pohľad zo záhrady ozvláštňujú plné bočnice a drevený akcent zapustenej fasády. Čisté minimalistické línie sú doplnené premyslenými detailmi. Nadštandardná výška presklenia, akcent dreveného obkladu, plochá vegetačná strecha, tienenie a prekrytie terasy riešené v rámci hmoty architektúry – to všetko spolu tvorí moderné a zároveň útulné rodinné bývanie.
+Dům je na pozemku osazen v jihovýchodní orientaci, hlavními proskleními otevřený směrem do zahrady. Architekturu domu tvoří jednoduchá obdélníková hmota s odsazeným druhým nadzemním podlažím. Pohled ze zahrady ozvláštňují plné bočnice a dřevěný akcent zapuštěné fasády. Čisté minimalistické linie jsou doplněny promyšlenými detaily. Nadstandardní výška prosklení, akcent dřevěného obkladu, plochá vegetační střecha, stínění a překrytí terasy řešené v rámci hmoty architektury – to vše dohromady tvoří moderní a zároveň útulné rodinné bydlení.
 
-Návrh domu vznikol s využitím služby <strong>Habitat konfigurátor</strong>. Ak by vás zaujímalo, aké ďalšie možnosti dispozície konfigurátor otvára alebo koľko stvárnení architektúry ponúka na daný pôdorys, neváhajte sa ozvať. 
-
-
+Návrh domu vznikl s využitím služby <strong>Habitat konfigurátor</strong>. Pokud by vás zajímalo, jaké další možnosti dispozice konfigurátor otevírá nebo kolik ztvárnění architektury nabízí pro daný půdorys, neváhejte se ozvat.

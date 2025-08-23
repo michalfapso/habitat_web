@@ -1,7 +1,7 @@
 ---
-title: Rekonštrukcia <br>pod Karpatmi
-description: Návrh komplexnej rekonštrukcie domu pre rozrastajúcu sa rodinu, ktorá kladie dôraz na ekológiu. Projekt sme zastrešovali od architektonickej štúdie, cez podklady pre úrady, až po podrobnú realizačnú dokumentáciu a autorský dozor na stavbe. Ide o jedinečný projekt, v ktorom sa rekonštrukciou podarilo znížiť potrebu tepla na vykurovanie na nižšie hodnoty, než definujú pasívny štandard pre novostavby. Klienti v tohtoročnej sezóne minuli na všetku prevádzku domu do 120 eur mesačne, čo je položka porovnateľná s dvojizbovým bytom.
-tags: ["Domov na mieru"]
+title: Rekonstrukce <br>pod Karpaty
+description: Návrh komplexní rekonstrukce domu pro rozrůstající se rodinu, která klade důraz na ekologii. Projekt jsme zastřešovali od architektonické studie, přes podklady pro úřady, až po podrobnou realizační dokumentaci a autorský dozor na stavbě. Jedná se o jedinečný projekt, ve kterém se rekonstrukcí podařilo snížit potřebu tepla na vytápění na nižší hodnoty, než definují pasivní standard pro novostavby. Klienti v letošní sezóně utratili za veškerý provoz domu do 120 eur měsíčně, což je položka srovnatelná s dvoupokojovým bytem.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 246
@@ -10,10 +10,8 @@ pocetIzieb: 5
 lokalita: Modra – Harmónia, okres Pezinok
 ---
 
-Zámerom klientov bolo vytvoriť moderné bývanie rešpektujúce pôvodnú architektúru. Keďže veľkosť domu bola dostatočná, zastavaná plocha sa navýšila iba o hrúbku tepelnej izolácie. Taktiež bolo možné vyčleniť suterén z tepelno-izolačnej obálky, čím klienti ušetrili pri realizácii a ďalšej prevádzke nemalé finančné prostriedky.
+Záměrem klientů bylo vytvořit moderní bydlení respektující původní architekturu. Jelikož velikost domu byla dostatečná, zastavěná plocha se navýšila pouze o tloušťku tepelné izolace. Taktéž bylo možné vyčlenit suterén z tepelně-izolační obálky, čímž klienti ušetřili při realizaci a dalším provozu nemalé finanční prostředky.
 
-Dispozícia domu bola pôvodne rozdelená na drobné priestory a orientovaná iba smerom do ulice. Odstránením priečok a presunutím schodiska vznikol na prízemí jednotný obytný priestor, ktorý komunikuje na dve strany - do ulice je orientované obývačkové sedenie, do záhrady kuchyňa s východom priamo na novú terasu. Týmto zásahom markantne stúpol komfort bývania bez zväčšenia domu.
+Dispozice domu byla původně rozdělena na drobné prostory a orientována pouze směrem do ulice. Odstraněním příček a přesunutím schodiště vznikl v přízemí jednotný obytný prostor, který komunikuje na dvě strany - do ulice je orientováno obývací sezení, do zahrady kuchyně s východem přímo na novou terasu. Tímto zásahem markantně stoupl komfort bydlení bez zvětšení domu.
 
-Zachované sú prvky pôvodnej architektúry - materiálové riešenie škridlovej strechy s presahom, lemovanie otvorov šambránami, rímsy, či farebné rozlíšenie soklu. Moderné drevohliníkové okná určené pre pasívne domy umožnili zväčšenie pôvodných otvorov - výborné izolačné vlastnosti zabezpečujú plusovú energetickú bilanciu, teda dom nimi viac energie získa než stratí. Praktickým prínosom je aj lepšie presvetlenie interiéru a viac výhľadov do okolia. Solárne zisky pomáhajú vykurovať interiér v zime, zároveň je eliminované letné prehrievanie - v tomto prípade sú okná prirodzene tienené listnatým stromom a presahom balkóna. Navrhnuté boli aj exteriérové žalúzie, ktoré chránia niektoré okná pred nízkym ranným slnkom.
-
-
+Zachovány jsou prvky původní architektury - materiálové řešení taškové střechy s přesahem, lemování otvorů šambránami, římsy či barevné rozlišení soklu. Moderní dřevohliníková okna určená pro pasivní domy umožnila zvětšení původních otvorů - výborné izolační vlastnosti zajišťují plusovou energetickou bilanci, tedy dům jimi více energie získá než ztratí. Praktickým přínosem je i lepší prosvětlení interiéru a více výhledů do okolí. Solární zisky pomáhají vytápět interiér v zimě, zároveň je eliminováno letní přehřívání - v tomto případě jsou okna přirozeně stíněna listnatým stromem a přesahem balkonu. Navrženy byly i exteriérové žaluzie, které chrání některá okna před nízkým ranním sluncem.

@@ -1,7 +1,7 @@
 ---
 title: Dom s nadčasovým dizajnom
 description: Návrh dvojpodlažného domu pre päťčlennú rodinu, ktorá má rada minimalizmus. V Habitat konfigurátore sme vyskladali funkčne prehľadný a veľkostne optimalizovaný pôdorys, ktorý sme doplnili univerzálnymi dizajnovými prvkami a vkusnou kombináciou bielej omietky s dreveným obkladom. Zelená strecha nad prvým podlažím plynulo prechádza do hmoty balkóna, ktorý čiastočne kryje terasu pred dažďom a chráni južné presklenia pred letným prehrievaním. 
-tags: ["Habitat konfigurátor"]
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 149

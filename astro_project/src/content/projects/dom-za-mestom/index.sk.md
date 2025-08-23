@@ -1,7 +1,7 @@
 ---
 title: Dom za mestom
 description: Návrh kompaktného domu pre trojčlennú rodinu. Habitat konfigurátor nám umožnil jednoducho skombinovať veľkostne optimalizovaný pôdorys s elegantným zovňajškom domu. Nadštandardná výška presklenia, akcenty dreveného obkladu, plochá vegetačná strecha, tienenie a prekrytie terasy riešené v rámci hmoty architektúry – to všetko spolu tvorí moderné a zároveň útulné rodinné bývanie.
-tags: ["Habitat konfigurátor"]
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 99

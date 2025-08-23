@@ -1,7 +1,7 @@
 ---
-title: Dom s bazénom <br>v Rusovciach
-description: Návrh rodinného domu pre štvorčlennú rodinu v tesnej blízkosti Rusovského parku. Projekt sme zastrešovali kompletne - od architektonickej štúdie, cez výkresovú dokumentáciu až po úspešnú realizáciu, kde prebehol kontrolný blow-door test a potvrdil kvalitu stavby.
-tags: ["Domov na mieru"]
+title: Dům s bazénem <br>v Rusovcích
+description: Návrh rodinného domu pro čtyřčlennou rodinu v těsné blízkosti Rusovského parku. Projekt jsme zajišťovali kompletně - od architektonické studie, přes výkresovou dokumentaci až po úspěšnou realizaci, kde proběhl kontrolní blow-door test a potvrdil kvalitu stavby.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 143
@@ -11,9 +11,8 @@ lokalita: Bratislava, Rusovce
 ---
 
 
-Návrh rodinného domu pracuje s tradičným tvaroslovím, nepopierajúc atmosféru lokality. Toto tvaroslovie kombinuje s modernými prvkami, ktoré sa objavujú napríklad v rôznej farebnosti omietok alebo využití nadštandardných presklení a konštrukcií ich tienenia.
+Návrh rodinného domu pracuje s tradičním tvaroslovím, nepopírajíc atmosféru lokality. Toto tvarosloví kombinuje s moderními prvky, které se objevují například v různé barevnosti omítek nebo využití nadstandardních prosklení a konstrukcí jejich stínění.
 
-Rodinný dom je navrhnutý ako jednopodlažný so sedlovou strechou. Tvar je prispôsobený rozsahu zadania a optimalizácii solárnych ziskov - L s orientáciou hlavných presklení na juho-západ. Dom má centrálnu dispozíciu, ktorá minimalizuje rozsah chodieb. Hlavný obytný priestor je orientovaný do záhrady, prepojený s exteriérom panoramatickým presklením s dvomi posuvnými krídlami. Priestor medzi ramenami dispozície je využitý na priestrannú terasu, prekrytú bioklimatickou pergolou. Tá vytvára svojimi otočnými lamelami príjemné pobytové prostredie počas celého roka a chráni veľké presklenia v lete pred nadmerným prehrievaním. Priamo z terasy je prístupný exteriérový bazén.
+Rodinný dům je navržen jako jednopodlažní se sedlovou střechou. Tvar je přizpůsoben rozsahu zadání a optimalizaci solárních zisků - L s orientací hlavních prosklení na jiho-západ. Dům má centrální dispozici, která minimalizuje rozsah chodeb. Hlavní obytný prostor je orientován do zahrady, propojen s exteriérem panoramatickým prosklením se dvěma posuvnými křídly. Prostor mezi rameny dispozice je využit na prostornou terasu, překrytou bioklimatickou pergolou. Ta vytváří svými otočnými lamelami příjemné pobytové prostředí během celého roku a chrání velká prosklení v létě před nadměrným přehříváním. Přímo z terasy je přístupný exteriérový bazén.
 
-Akcent terasy a prekrytia pergolou je doplnený zmenou štruktúry a farby omietky - pod doplňujúcimi exteriérovými konštrukciami je navrhnutá hrubozrnná štruktúrovaná omietka v hnedom odtieni. Táto farebnosť dopĺňa taktiež priestor pri krytom parkovaní a prepája niektoré okenné otvory.
-
+Akcent terasy a překrytí pergolou je doplněn změnou struktury a barvy omítky - pod doplňujícími exteriérovými konstrukcemi je navržena hrubozrnná strukturovaná omítka v hnědém odstínu. Tato barevnost doplňuje také prostor u krytého parkování a propojuje některé okenní otvory.

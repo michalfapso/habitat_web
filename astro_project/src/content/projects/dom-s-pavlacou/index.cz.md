@@ -1,7 +1,7 @@
 ---
-title: Dom s pavlačou
-description: Návrh domu pre päť- až šesťčlennú rodinu, ktorý kombinuje tradičné tvaroslovie s nadštandardnými detailmi vysokých presklení a dreveného obkladu. V Habitat konfigurátore sme vytvorili priestranný pozdĺžny pôdorys, umiestený na širokom pozemku. Dom definuje presah sedlovej strechy pred južnú fasádu, ktorý popri terase vytvára pavlač a tieni presklenia pred vysokým letným slnkom.
-tags: ["Habitat konfigurátor"]
+title: Dům s pavlačí
+description: Návrh domu pro pěti- až šestičlennou rodinu, který kombinuje tradiční tvarosloví s nadstandardními detaily vysokých prosklení a dřevěného obkladu. V Habitat konfigurátoru jsme vytvořili prostorný podélný půdorys, umístěný na širokém pozemku. Dům definuje přesah sedlové střechy před jižní fasádu, který podél terasy vytváří pavlač a stíní prosklení před vysokým letním sluncem.
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 131
@@ -10,10 +10,8 @@ pocetIzieb: 5
 rozmeryDomu: 19,465m x 10m
 ---
 
-Dom je nakonfigurovaný z troch traktov – základom je centrálna obývačka do tvaru L, na ktorú je napojený rodičovský trakt so samostatnou kúpeľňou a veľký trakt pre tri až štyri deti. Tento trakt obsahuje hygienické zázemie s kúpeľňou a oddeleným wc. Väčšina izieb je orientovaná preskleniami do záhrady, s priamym východom na pavlač a spoločnú terasu.
+Dům je nakonfigurován ze tří traktů – základem je centrální obývací pokoj do tvaru L, na který je napojen rodičovský trakt se samostatnou koupelnou a velký trakt pro tři až čtyři děti. Tento trakt obsahuje hygienické zázemí s koupelnou a odděleným wc. Většina pokojů je orientována prosklením do zahrady, s přímým východem na pavlač a společnou terasu.
 
-Architektúru domu tvorí jednoduchá obdĺžniková hmota so sedlovou strechou. Pohľad zo záhrady ozvláštňujú plné bočnice a drevený akcent zapustenej fasády. Vďaka konštrukcii vykonzolovaného zbíjaného krovu mimo tepelnej obálky ide o technicky jednoduché riešenie, ktoré bez dodatočných stĺpov vytvára dizajnové tienenie okien a sčasti chráni terasu pred dažďom.
+Architekturu domu tvoří jednoduchá obdélníková hmota se sedlovou střechou. Pohled ze zahrady ozvláštňují plné bočnice a dřevěný akcent zapuštěné fasády. Díky konstrukci vykonzolovaného sbíjeného krovu mimo tepelnou obálku jde o technicky jednoduché řešení, které bez dodatečných sloupů vytváří designové stínění oken a zčásti chrání terasu před deštěm.
 
-Návrh domu vznikol s využitím služby Habitat konfigurátor. Ak by vás zaujímalo, aké ďalšie možnosti dispozície konfigurátor otvára alebo koľko stvárnení architektúry ponúka na daný pôdorys, neváhajte sa ozvať.
-
-
+Návrh domu vznikl s využitím služby Habitat konfigurátor. Pokud by vás zajímalo, jaké další možnosti dispozice konfigurátor otevírá nebo kolik ztvárnění architektury nabízí na daný půdorys, neváhejte se ozvat.

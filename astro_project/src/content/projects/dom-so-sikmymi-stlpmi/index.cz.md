@@ -1,7 +1,7 @@
 ---
-title: Dom so šikmými stĺpmi
-description: Návrh štýlového domu pre štvorčlennú rodinu. V Habitat konfigurátore sme skombinovali optimalizovanú centrálnu dispozíciu a luxusné stvárnenie architektúry. Všetky presklenia smerom do záhrady majú nadštandarné rozmery, ktoré nadväzujú na výšku tienenia a prekrytia terasy. Na fasáde je použitá kombinácia tehlového obkladu s bielou omietkou, doplnenou antracitovými rámami okien.
-tags: ["Habitat konfigurátor"]
+title: Dům se šikmými sloupy
+description: Návrh stylového domu pro čtyřčlennou rodinu. V Habitat konfigurátoru jsme zkombinovali optimalizovanou centrální dispozici a luxusní ztvárnění architektury. Všechna prosklení směrem do zahrady mají nadstandardní rozměry, které navazují na výšku stínění a překrytí terasy. Na fasádě je použita kombinace cihlového obkladu s bílou omítkou, doplněnou antracitovými rámy oken.
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 134
@@ -10,10 +10,8 @@ pocetIzieb: 5
 rozmeryDomu: 16,875m x 11,875m
 ---
 
-Dom je nakonfigurovaný z troch traktov – základom je centrálna obývačka do tvaru L, na ktorú je napojený rodičovský trakt so samostatnou kúpeľňou a trakt pre deti a návštevy. Chodba v detskej časti domu je na obývačku prepojená dvomi posuvnými dverami, ktoré pri otvorenej polohe vytvárajú dojem rozšíreného obytného priestoru. Z podlahovej plochy domu 134 m<sup>2</sup> tvorí vďaka dômyselnej dispozícii chodba len 8m m<sup>2</sup>, a aj tie sú využiteľné ako spoločný šatník alebo úložný priestor.
+Dům je nakonfigurován ze tří traktů – základem je centrální obývací pokoj do tvaru L, na který je napojen rodičovský trakt se samostatnou koupelnou a trakt pro děti a návštěvy. Chodba v dětské části domu je na obývací pokoj propojena dvěma posuvnými dveřmi, které při otevřené poloze vytvářejí dojem rozšířeného obytného prostoru. Z podlahové plochy domu 134 m<sup>2</sup> tvoří díky důmyslné dispozici chodba jen 8m m<sup>2</sup>, a i ty jsou využitelné jako společná šatna nebo úložný prostor.
 
-Dom je prestrešený plochou vegetačnou strechou, ktorá pomáha udržovať teplotnú stabilitu miestností a zlepšuje mikroklímu okolia. Predsadenie detských izieb pred hlavnú fasádu umožňuje zakomponovať prekrytie terasy do hmoty domu a chrániť najväčšie presklenia pred prehrievaním samotnou architektúrou. Priestranná krytá terasa ponúka široké využitie, priamy prístup z obývačky a spálne, a svojim umiestnením zároveň nenarúša súkromie detských izieb.
+Dům je zastřešen plochou vegetační střechou, která pomáhá udržovat teplotní stabilitu místností a zlepšuje mikroklima okolí. Předsazení dětských pokojů před hlavní fasádu umožňuje zakomponovat překrytí terasy do hmoty domu a chránit největší prosklení před přehříváním samotnou architekturou. Prostorná krytá terasa nabízí široké využití, přímý přístup z obývacího pokoje a ložnice, a svým umístěním zároveň nenarušuje soukromí dětských pokojů.
 
-Návrh domu vznikol s využitím služby <strong>Habitat konfigurátor</strong>. Ak by vás zaujímalo, aké ďalšie možnosti dispozície konfigurátor otvára alebo koľko stvárnení architektúry ponúka na daný pôdorys, neváhajte sa ozvať.
-
-   
+Návrh domu vznikl s využitím služby <strong>Habitat konfigurátor</strong>. Pokud by vás zajímalo, jaké další možnosti dispozice konfigurátor otevírá nebo kolik ztvárnění architektury nabízí na daný půdorys, neváhejte se ozvat.

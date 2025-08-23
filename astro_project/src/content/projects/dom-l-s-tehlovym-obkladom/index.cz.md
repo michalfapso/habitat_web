@@ -1,7 +1,7 @@
 ---
-title: Dom L s tehlovým obkladom
-description: Návrh štýlového domu pre trojčlennú rodinu. V rámci Habitat konfigurátora sme vybrali moderné stvárnenie architektúry a luxusné detaily, ako je nadštandardná výška presklení alebo tehlový obklad. Pri konkrétnej orientácii a lokalite pozemku stačilo pre zamedzenie letného prehrievania čiastočné vyloženie plochej vegetačnej strechy pred južnú fasádu.
-tags: ["Habitat konfigurátor"]
+title: Dům L s cihlovým obkladem
+description: Návrh stylového domu pro tříčlennou rodinu. V rámci Habitat konfigurátoru jsme vybrali moderní ztvárnění architektury a luxusní detaily, jako je nadstandardní výška prosklení nebo cihlový obklad. Při konkrétní orientaci a lokalitě pozemku stačilo pro zamezení letního přehřívání částečné vyložení ploché vegetační střechy před jižní fasádu.
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 114
@@ -10,8 +10,8 @@ pocetIzieb: 4
 rozmeryDomu: 16,35m x 14,8m
 ---
 
-Dom je nakonfigurovaný z dvoch traktov, ktoré sa stretávajú vo vstupných priestoroch a vytvárajú pôdorys v tvare L. Na pozemok je osadený v juho-západnej orientácii, smerujúc hlavné presklenia do vnútorného dvora. Dispozícia domu je rozdelená na spoločenskú a súkromnú zónu. Trakt súkromnej zóny obsahuje spálňu so šatníkom, detskú izbu, pracovňu a hygienické zázemie. Spoločenskú zónu tvorí veľký priestor obývačky s kuchyňou a jedálňou, ktorý je preskleniami prepojený so záhradou a krytou terasou. Tá je prístupná aj z chodby v súkromnej zóne, ktorú zároveň nadštandardne presvetľuje a opticky skracuje. Umiestnením krytej terasy v srdci dispozície je vytvorený pocit poloátria a maximálneho súkromia.
+Dům je nakonfigurován ze dvou traktů, které se setkávají ve vstupních prostorách a vytvářejí půdorys ve tvaru L. Na pozemek je osazen v jiho-západní orientaci, směřujíc hlavní prosklení do vnitřního dvora. Dispozice domu je rozdělena na společenskou a soukromou zónu. Trakt soukromé zóny obsahuje ložnici se šatnou, dětský pokoj, pracovnu a hygienické zázemí. Společenskou zónu tvoří velký prostor obývacího pokoje s kuchyní a jídelnou, který je proskleními propojen se zahradou a krytou terasou. Ta je přístupná i z chodby v soukromé zóně, kterou zároveň nadstandardně prosvětluje a opticky zkracuje. Umístěním kryté terasy v srdci dispozice je vytvořen pocit poloatria a maximálního soukromí.
 
-Terasa je prekrytá bioklimatickou pergolou s otočnými lamelami, takže v prípade potreby vie prepúšťať rozptýlené svetlo hlboko do interiéru domu. Všetky presklenia smerom do záhrady majú nadštandarnú výšku, ktorá nadväzuje na výšku tienenia a prekrytia terasy. Tienenie je riešené vyložením stropnej dosky a vegetačnej strechy, bez potreby dodatočných stĺpov.
+Terasa je překryta bioklimatickou pergolou s otočnými lamelami, takže v případě potřeby umí propouštět rozptýlené světlo hluboko do interiéru domu. Všechna prosklení směrem do zahrady mají nadstandardní výšku, která navazuje na výšku stínění a překrytí terasy. Stínění je řešeno vyložením stropní desky a vegetační střechy, bez potřeby dodatečných sloupů.
 
-Návrh domu vznikol s využitím služby **Habitat konfigurátor**. Ak by vás zaujímalo, aké ďalšie možnosti dispozície konfigurátor otvára alebo koľko stvárnení architektúry ponúka na daný pôdorys, neváhajte sa ozvať.
+Návrh domu vznikl s využitím služby **Habitat konfigurátor**. Pokud by vás zajímalo, jaké další možnosti dispozice konfigurátor otevírá nebo kolik ztvárnění architektury nabízí na daný půdorys, neváhejte se ozvat.

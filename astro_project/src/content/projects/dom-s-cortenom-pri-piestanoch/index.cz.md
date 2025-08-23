@@ -1,7 +1,7 @@
 ---
-title: Dom s cortenom <br>pri Piešťanoch
-description: Návrh rodinného domu s luxusnou kombináciou cortenu a dreva na fasáde. Klientom sme boli oslovení na rýchlu ideovú štúdiu, podľa ktorej si vyberal medzi architektonickými ateliérmi. Keďže ho naše riešenie oslovilo, spolupracovali sme ďalej na dokončení architektúry a výkresoch pre stavebné povolenie. Klient následne dom realizoval čiastočne svojpomocne, pri čom sme mu pomáhali vypracovaním potrebných konštrukčných detailov v realizačnej podrobnosti.
-tags: ["Domov na mieru"]
+title: Dům s cortenem <br>u Piešťan
+description: Návrh rodinného domu s luxusní kombinací cortenu a dřeva na fasádě. Klientem jsme byli osloveni pro rychlou ideovou studii, podle které si vybíral mezi architektonickými ateliéry. Jelikož ho naše řešení oslovilo, spolupracovali jsme dále na dokončení architektury a výkresech pro stavební povolení. Klient následně dům realizoval částečně svépomocí, při čemž jsme mu pomáhali vypracováním potřebných konstrukčních detailů v realizační podrobnosti.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 163
@@ -10,10 +10,8 @@ pocetIzieb: 6
 lokalita: Krakovany, okres Piešťany
 ---
 
-Zámerom klienta bolo vytvoriť jednopodlažné bývanie s moderným architektonickým výrazom. Keďže šírka pozemku bola vhodná skôr pre dvojpodlažný dom, návrh rieši komplexne jeho umiestnenie a dispozíciu, tak aby mali všetky izby kontakt so záhradou a dostatok solárnych ziskov. Architektúru domu definujú dve krídla, ktoré sú rozlíšené použitým obkladom. Obklad z cortenu, ktorý je výraznejším prvkom, akcentuje priečnu časť s hlavným obytným priestorom kuchyňo-obývačky. Súkromný pozdĺžny trakt s dreveným obkladom opticky chráni dvor od najbližšieho suseda a prechádza až do konštrukcie krytých parkovacích miest.
+Záměrem klienta bylo vytvořit jednopodlažní bydlení s moderním architektonickým výrazem. Jelikož šířka pozemku byla vhodná spíše pro dvoupodlažní dům, návrh řeší komplexně jeho umístění a dispozici tak, aby všechny pokoje měly kontakt se zahradou a dostatek solárních zisků. Architekturu domu definují dvě křídla, která jsou rozlišena použitým obkladem. Obklad z cortenu, který je výraznějším prvkem, akcentuje příčnou část s hlavním obytným prostorem kuchyně-obývacího pokoje. Soukromý podélný trakt s dřevěným obkladem opticky chrání dvůr od nejbližšího souseda a přechází až do konstrukce krytých parkovacích míst.
 
-Pri dvojtraktovej dispozícii súkromnej časti vzniká chodba, ktorú čiastočne skracuje výhodné umiestnenie vstupnej haly. K vstupu sa prechádza krytou pavlačou popri technickom zázemí domu. Kvôli limitovanej šírke pozemku kuchyňo-obývačka zasahuje do priestoru pozdĺžneho traktu, čo vytvára zaujímavý moment krytej terasy, ktorá tvorí srdce dispozície domu. Svojim výhodným umiestnením je prepojená priamo na jedáleň a zároveň dodáva chodbe príjemné prirodzené presvetlenie.
+Při dvoutraktové dispozici soukromé části vzniká chodba, kterou částečně zkracuje výhodné umístění vstupní haly. Ke vstupu se prochází krytou pavlačí podél technického zázemí domu. Kvůli limitované šířce pozemku kuchyně-obývací pokoj zasahuje do prostoru podélného traktu, což vytváří zajímavý moment kryté terasy, která tvoří srdce dispozice domu. Svým výhodným umístěním je propojena přímo na jídelnu a zároveň dodává chodbě příjemné přirozené prosvětlení.
 
-Klient chcel akcentovať obývačku vyššou svetlou výškou - návrh to pretavil do dynamického tvaru striech. Kým na pozdĺžnom trakte je šikmina prevedená iba v rovine atiky, na priečnom trakte s cortenom je navrhnutý šikmý strop. Architektúra sa tak v interiéri otvára jednak smerom k obývačkovému sedeniu, jednak k vysokým preskleniam s výhľadom do záhrady.
-
-
+Klient chtěl akcentovat obývací pokoj vyšší světlou výškou - návrh to přetavil do dynamického tvaru střech. Zatímco na podélném traktu je šikmina provedena pouze v rovině atiky, na příčném traktu s cortenem je navržen šikmý strop. Architektura se tak v interiéru otevírá jednak směrem k obývacímu sezení, jednak k vysokým prosklením s výhledem do zahrady.

@@ -1,13 +1,13 @@
 export type Tag = {
-  name: string;
+  nameKey: string;
   color: string;
 };
 
 // Define your fixed set of tags with colors
 // Using an object where keys are tag names for easy lookup
-export const projectTags = {
-  "Domov na mieru": { name: "Domov na mieru", color: "bg-cream" },
-  "Habitat konfigurátor": { name: "Habitat konfigurátor", color: "bg-pale" },
+export const projectTags: { [key: string]: Tag } = {
+  "domov-na-mieru"      : { nameKey: "tags.domov-na-mieru"      , color: "bg-cream" },
+  "habitat-konfigurator": { nameKey: "tags.habitat-konfigurator", color: "bg-pale" },
 };
 
-export const availableTagNames = Object.keys(projectTags);
+export const availableTagKeys = Object.keys(projectTags);

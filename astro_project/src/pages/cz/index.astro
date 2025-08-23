@@ -13,28 +13,23 @@ import SlidesSteps from '../../components/SlidesSteps.astro';
 import SectionExpandable from '../../components/SectionExpandable.astro';
 import SlidesProjects from '../../components/SlidesProjects.astro';
 
-const t = useTranslations(Astro.currentLocale as 'sk' | 'cz');
+const lang = Astro.currentLocale as keyof typeof import('../../i18n/utils').languages;
+const t = useTranslations(lang);
 
-const selectedProjectTitles = [
-	"Dom s pavlačou",
-	"Usadlosť na Červenej Hore",
-	"Dom s mestským nádychom",
-	"Dom s bazénom v Rusovciach",
-	"Dom za mestom",
-	"Dom s cortenom pri Piešťanoch",
-	"Dom so saunou na Považí",
+const selectedProjectSlugs = [
+	"dom-s-pavlacou",
+	"usadlost-na-cervenej-hore",
+	"dom-s-mestskym-nadychom",
+	"dom-s-bazenom-v-rusovciach",
+	"dom-za-mestom",
+	"dom-s-cortenom-pri-piestanoch",
+	"dom-so-saunou-na-povazi",
 ];
 
-const normalizeWhitespace = (str) => {
-    if (typeof str !== 'string') return str;
-    return str.replace(/\s+/g, ' ').trim();
-};
-const normalizedSelectedProjectTitles = selectedProjectTitles.map(normalizeWhitespace);
-const allProjects = await getAugmentedProjects(Astro.currentLocale);
-const selectedProjects = allProjects.filter(project => {
-    const normalizedProjectTitle = normalizeWhitespace(project.data.title);
-    return normalizedSelectedProjectTitles.includes(normalizedProjectTitle);
-});
+const allProjects = await getAugmentedProjects(lang);
+// console.log('allProjects:', allProjects);
+const projectsBySlug = new Map(allProjects.map(p => [p.slug.replace(/\/.*/, ''), p]));
+const selectedProjects = selectedProjectSlugs.map(slug => projectsBySlug.get(slug)).filter(Boolean);
 ---
 
 <Layout 
@@ -42,7 +37,7 @@ const selectedProjects = allProjects.filter(project => {
 >
 
 	<Hero className="hero--home">
-		Architekti <br>pasívnych <br>domov
+		Architekti <br>pasivních <br>domů
 	</Hero>
 	<a id="main"></a>
 	
@@ -53,61 +48,61 @@ const selectedProjects = allProjects.filter(project => {
 		<Service
 			id="service-1"
 			icon=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none"><path d="M34.192 16.214 21.692 4.42a2.5 2.5 0 0 0-3.381-.017l-.017.017L5.808 16.214A2.5 2.5 0 0 0 5 18.054V32.5A2.5 2.5 0 0 0 7.5 35h25a2.5 2.5 0 0 0 2.5-2.5V18.055a2.499 2.499 0 0 0-.808-1.84ZM32.5 32.5h-25V18.055l.017-.016L20 6.25l12.484 11.786.018.016L32.5 32.5Z"/></svg>`
-			title="Domov na&nbsp;mieru"
-			text="Navrhneme vám dom presne podľa vašich potrieb, šitý na&nbsp;mieru pre&nbsp;vás a&nbsp;vašu rodinu. Bez kompromisov."
-			button1="Viac informácií"
-			button2="Mám záujem"
+			title="Domov na&nbsp;míru"
+			text="Navrhneme vám dům přesně podle vašich potřeb, šitý na&nbsp;míru pro&nbsp;vás a&nbsp;vaši rodinu. Bez kompromisů."
+			button1="Více informací"
+			button2="Mám zájem"
 		>
-            <p>Máte vlastnú predstavu ako by malo vyzerať vaše budúce bývanie alebo chcete aby bol váš dom jedinečný originál? Plánujete stavať na pozemku so zložitým tvarom alebo regulatívmi? V strmom svahu, radovej zástavbe alebo na výnimočnej lokalite? Vlastníte dom vhodný na komplexnú rekonštrukciu?</p>
-            <p>V tom prípade je <strong>Domov na mieru</strong> ideálnou voľbou. Ako jeho tvorba prebieha?</p>
-            <p>Prejdeme si spolu podrobne všetky vaše predstavy a nápady. Overíme podmienky výstavby vo vašej lokalite a naživo navštívime pozemok alebo stavbu - kľúčom k dobrému návrhu je pochopiť a podporiť ich potenciál. Či už sa jedná o najkrajšie výhľady, pohyb slnka po pozemku alebo neopakovateľné genius locci.</p>
-            <p>Následne navrhneme dom, ktorý bude zohľadňovať vaše špecifické potreby ako životný štýl, architektonický vkus či stanovený rozpočet. Naše skúsenosti a presné výpočty vám zaručia, že spolu s jedinečnou architektúrou získate aj tú najlepšiu investíciu do budúcnosti. Domov na mieru totiž kreujeme s ohľadom na presnú geografickú polohu, orientáciu pozemku a okolitú zástavbu - tak, aby ste na prevádzku domu míňali minimum z rodinného rozpočtu a zároveň bývali v najvyššom štandarde, aký aktuálne stavebníctvo ponúka.</p>
+            <p>Máte vlastní představu jak by mělo vypadat vaše budoucí bydlení nebo chcete aby byl váš dům jedinečný originál? Plánujete stavět na pozemku se složitým tvarem nebo regulativy? Ve strmém svahu, řadové zástavbě nebo na výjimečné lokalitě? Vlastníte dům vhodný pro komplexní rekonstrukci?</p>
+            <p>V tom případě je <strong>Domov na míru</strong> ideální volbou. Jak jeho tvorba probíhá?</p>
+            <p>Projdeme si spolu podrobně všechny vaše představy a nápady. Ověříme podmínky výstavby ve vaší lokalitě a živě navštívíme pozemek nebo stavbu - klíčem k dobrému návrhu je pochopit a podpořit jejich potenciál. Ať už se jedná o nejkrásnější výhledy, pohyb slunce po pozemku nebo neopakovatelné genius locci.</p>
+            <p>Následně navrhneme dům, který bude zohledňovat vaše specifické potřeby jako životní styl, architektonický vkus či stanovený rozpočet. Naše zkušenosti a přesné výpočty vám zaručí, že spolu s jedinečnou architekturou získáte i tu nejlepší investici do budoucnosti. Domov na míru totiž tvoříme s ohledem na přesnou geografickou polohu, orientaci pozemku a okolní zástavbu - tak, abyste na provoz domu utráceli minimum z rodinného rozpočtu a zároveň bydleli v nejvyšším standardu, jaký aktuálně stavebnictví nabízí.</p>
 		</Service>
 		<Service
 			id="service-2"
 			icon=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none"><path d="M9.998 16.406V6.25a1.25 1.25 0 0 0-2.5 0v10.156a5 5 0 0 0 0 9.688v7.656a1.25 1.25 0 1 0 2.5 0v-7.656a5 5 0 0 0 0-9.688Zm-1.25 7.344a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm12.5-14.844V6.25a1.25 1.25 0 0 0-2.5 0v2.656a5 5 0 0 0 0 9.688V33.75a1.25 1.25 0 0 0 2.5 0V18.594a5 5 0 0 0 0-9.688Zm-1.25 7.344a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm16.25 10a5.01 5.01 0 0 0-3.75-4.844V6.25a1.25 1.25 0 0 0-2.5 0v15.156a5 5 0 0 0 0 9.688v2.656a1.25 1.25 0 0 0 2.5 0v-2.656a5.009 5.009 0 0 0 3.75-4.844Zm-5 2.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>`
 			title="Habitat konfigurátor"
-			text="Unikátny postup tvorby architektúry vášho nového domu. Vyskladáme vám domov z&nbsp;našich overených riešení a&nbsp;ušetríte čas aj peniaze."
-			button1="Viac informácií"
-			button2="Mám záujem"
+			text="Unikátní postup tvorby architektury vašeho nového domu. Sestavíme vám domov z&nbsp;našich ověřených řešení a&nbsp;ušetříte čas i peníze."
+			button1="Více informací"
+			button2="Mám zájem"
 		>
-			<p><strong>Habitat Konfigurátor</strong> je našou odpoveďou na neuspokojivú ponuku katalógových domov na trhu. Tie nezohľadňujú špecifiká pozemku a klienta, sú málo dispozične flexibilné a architektonicky ťažko modifikovateľné. V dobe, kedy stále viac záleží na kvalite vnútorného prostredia a energetike sa katalógové domy nekoncepčne umiestňujú na parcely, bez zohľadnenia orientácie na svetové strany,  energetickej optimalizácie či účinného tienenia.</p>
-			<p><strong>Náš koncept spája to najlepšie z katalógových a individuálnych projektov.</strong></p>
-			<p>Zozbierali sme najčastejšie dispozičné a konštrukčné zadania, pridali naše know-how a vytvorili tak inovatívny systém tvorby rodinných domov. Máme pripravené stovky kombinácií a overených riešení, ktoré následne prispôsobíme presnými výpočtami na váš konkrétny pozemok. Takto vieme ušetriť čas aj peniaze vo fáze architektonického návrhu s istotou, že váš dom bude spĺňať najvyššie nároky na bývanie a energetickú efektívnosť stavby.</p>
-			<p>Ako to prebieha? <br>
-			Váš dom spolu vyskladáme z optimalizovaných a stavebne premyslených modulov. Nemusíte tráviť hodiny prezeraním náhodných projektov, ale na základe vašich požiadaviek a vlastností pozemku vyberieme vhodný typ dispozície a počet izieb. Určite si vyberiete aj spomedzi architektonických stvárnení domu - na každý pôdorys máme pripravené možnosti od najjednoduchšej po najvyšší štandard, od tradičných domov po moderné vily. Ak by sme predsalen nenašli to pravé v Habitat Konfigurátore, radi vám navrhneme Domov na mieru.</p>
+			<p><strong>Habitat Konfigurátor</strong> je naší odpovědí na neuspokojivou nabídku katalogových domů na trhu. Ty nezohledňují specifika pozemku a klienta, jsou málo dispozičně flexibilní a architektonicky těžko modifikovatelné. V době, kdy stále více záleží na kvalitě vnitřního prostředí a energetice se katalogové domy nekoncepčně umísťují na parcely, bez zohlednění orientace na světové strany, energetické optimalizace či účinného stínění.</p>
+			<p><strong>Náš koncept spojuje to nejlepší z katalogových a individuálních projektů.</strong></p>
+			<p>Sesbírali jsme nejčastější dispoziční a konstrukční zadání, přidali naše know-how a vytvořili tak inovativní systém tvorby rodinných domů. Máme připraveny stovky kombinací a ověřených řešení, které následně přizpůsobíme přesnými výpočty pro váš konkrétní pozemek. Takto umíme ušetřit čas i peníze ve fázi architektonického návrhu s jistotou, že váš dům bude splňovat nejvyšší nároky na bydlení a energetickou efektivnost stavby.</p>
+			<p>Jak to probíhá? <br>
+			Váš dům spolu sestavíme z optimalizovaných a stavebně promyšlených modulů. Nemusíte trávit hodiny prohlížením náhodných projektů, ale na základě vašich požadavků a vlastností pozemku vybereme vhodný typ dispozice a počet pokojů. Určitě si vyberete i z architektonických ztvárnění domu - pro každý půdorys máme připraveny možnosti od nejjednodušší po nejvyšší standard, od tradičních domů po moderní vily. Pokud bychom přece jen nenašli to pravé v Habitat Konfigurátoru, rádi vám navrhneme Domov na míru.</p>
 		</Service>
 		<Service
 			id="service-3"
 			icon=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"><path d="M32.561 18.439a1.501 1.501 0 0 1 0 2.122l-10.5 10.5a1.5 1.5 0 0 1-2.122 0l-4.5-4.5a1.5 1.5 0 0 1 2.122-2.122L21 27.879l9.439-9.44a1.498 1.498 0 0 1 2.122 0ZM43.5 24A19.5 19.5 0 1 1 24 4.5 19.52 19.52 0 0 1 43.5 24Zm-3 0A16.5 16.5 0 1 0 24 40.5 16.519 16.519 0 0 0 40.5 24Z"/></svg>`
 			title="Archicheck"
-			text="Prídeme za&nbsp;Vami kamkoľvek. Naživo vám predstavíme zmýšľanie a&nbsp;filozofiu ateliéru. Ukážeme vám potenciál vášho pozemku a&nbsp;budúceho bývania. <strong>Od 290 eur</strong>"
-			button1="Viac informácií"
-			button2="Mám záujem"
+			text="Přijedeme za&nbsp;Vámi kamkoli. Naživo vám představíme smýšlení a&nbsp;filozofii ateliéru. Ukážeme vám potenciál vašeho pozemku a&nbsp;budoucího bydlení. <strong>Od 290 eur</strong>"
+			button1="Více informací"
+			button2="Mám zájem"
 		>
-			<p>Zvažujete kúpu pozemku, stavbu pasívneho domu alebo rekonštrukciu? Potrebujete poradiť ako postupovať pri návrhu a povolovaní stavby? Neviete sa rozhodnúť, či je pre vás vhodný Habitat Konfigurátor alebo Domov na mieru? Chcete prebrať vaše predstavy a nápady a získať názor profesionálov z praxe?</p>
-			<p>Všetky tieto a mnohé ďalšie otázky vám osobne zodpovieme na <strong>Archichecku</strong> - osobnej konzultácií na vašom pozemku alebo stavbe. Ako bonus si overíte chémiu medzi klientom a architektom, čo je dôležitý predpoklad úspešného projektu.</p>
-			<p>Ako to prebieha? <br>
-			Pred stretnutím vám zašleme dotazník na vyplnenie základných informácií o vašom plánovanom projekte. Bude nás zaujímať o aký pozemok alebo stavbu ide, ako je lokalita zaregulovaná, aké sú vaše predstavy a očakávania. Priamo na mieste s vami prejdeme všetky otázky, naše odporúčania a rady z praxe. Rozoberieme si špecifiká vášho pozemku, jeho potenciály a riziká, ktoré môžu ovplyvniť rozpočet stavby. Odhadneme výšku investície a predostrieme, ako by sme váš projekt riešili u nás v ateliéri.</p>
-			<p>Po stretnutí vypracujeme elaborát so zhrnutím základných faktov a odporúčaní, ktorý viete použiť pri ďalšom plánovaní. </p>
+			<p>Zvažujete koupi pozemku, stavbu pasivního domu nebo rekonstrukci? Potřebujete poradit jak postupovat při návrhu a povolování stavby? Nevíte se rozhodnout, zda je pro vás vhodný Habitat Konfigurátor nebo Domov na míru? Chcete probrat vaše představy a nápady a získat názor profesionálů z praxe?</p>
+			<p>Všechny tyto a mnohé další otázky vám osobně zodpovíme na <strong>Archichecku</strong> - osobní konzultaci na vašem pozemku nebo stavbě. Jako bonus si ověříte chemii mezi klientem a architektem, což je důležitý předpoklad úspěšného projektu.</p>
+			<p>Jak to probíhá? <br>
+			Před setkáním vám zašleme dotazník k vyplnění základních informací o vašem plánovaném projektu. Bude nás zajímat o jaký pozemek nebo stavbu jde, jak je lokalita zaregulována, jaké jsou vaše představy a očekávání. Přímo na místě s vámi projdeme všechny otázky, naše doporučení a rady z praxe. Rozebereme si specifika vašeho pozemku, jeho potenciály a rizika, která mohou ovlivnit rozpočet stavby. Odhadneme výši investice a nastíníme, jak bychom váš projekt řešili u nás v ateliéru.</p>
+			<p>Po setkání vypracujeme elaborát se shrnutím základních faktů a doporučení, který můžete použít při dalším plánování. </p>
 		</Service>
 	</Services>
 	
 	<ImgSection id='preco-habitat'>
 		<Fragment slot="img">
-			<img src="/assets/img/preco-habitat-800w.jpg" srcset="/assets/img/preco-habitat-1200w.jpg 1200w, /assets/img/preco-habitat-2400w.jpg 2400w" sizes="(min-width: 40em) 58vw, 100vw" alt="Vizualizácia domu">
+			<img src="/assets/img/preco-habitat-800w.jpg" srcset="/assets/img/preco-habitat-1200w.jpg 1200w, /assets/img/preco-habitat-2400w.jpg 2400w" sizes="(min-width: 40em) 58vw, 100vw" alt="Vizualizace domu">
 		</Fragment>
 		<Fragment slot="content">
-			<h2>Prečo <br>Habitat?</h2>
-			<p>90% nášho času trávime vo&nbsp;vnútri budov. Kvalita vnútorného prostredia stavby je kľúčová. Teplota, vlhkosť, eliminácia vzniku plesní, zdravá hodnota oxidu uhličitého a&nbsp;minimum alergénov vo&nbsp;vzduchu, ktorý dýchame. <strong>Habitat je ZDRAVÉ prostredie</strong>.</p>
-			<p>Viac ako 40% globálnej spotreby energie a&nbsp;jednu tretinu emisií skleníkových plynov tvoria budovy. <strong>Habitat je ZODPOVEDNÁ voľba pre&nbsp;životné prostredie</strong>.</p>
-			<p>Minimálna potreba energie znamená ekonomickú istotu. <strong>Habitat je BEZPEČNÉ prostredie</strong>.</p>
+			<h2>Proč <br>Habitat?</h2>
+			<p>90% našeho času trávíme uvnitř budov. Kvalita vnitřního prostředí stavby je klíčová. Teplota, vlhkost, eliminace vzniku plísní, zdravá hodnota oxidu uhličitého a&nbsp;minimum alergenů ve&nbsp;vzduchu, který dýcháme. <strong>Habitat je ZDRAVÉ prostředí</strong>.</p>
+			<p>Více než 40% globální spotřeby energie a&nbsp;jednu třetinu emisí skleníkových plynů tvoří budovy. <strong>Habitat je ODPOVĚDNÁ volba pro&nbsp;životní prostředí</strong>.</p>
+			<p>Minimální potřeba energie znamená ekonomickou jistotu. <strong>Habitat je BEZPEČNÉ prostředí</strong>.</p>
 		</Fragment>
 	</ImgSection>
 	
 	<div class="section pb-0">
 		<div class="grid-container">
-			<h3>Funkčnosť skrytá v&nbsp;dizajne</h3>
+			<h3>Funkčnost skrytá v&nbsp;designu</h3>
 		</div>
 		<div class="grid-container pi-0">
 			<SlidesPoi>
@@ -120,17 +115,17 @@ const selectedProjects = allProjects.filter(project => {
 						{
 							leftPercent: 38,
 							topPercent: 28.4,
-							text: "Tienenie presahom strechy a&nbsp;balkónom, navrhnuté presne podľa pohybu slnka a&nbsp;orientácie pozemku. Aby sa dom v&nbsp;lete neprehrieval a&nbsp;v&nbsp;zime nízke slnko vykurovalo interiér."
+							text: "Stínění přesahem střechy a&nbsp;balkonem, navržené přesně podle pohybu slunce a&nbsp;orientace pozemku. Aby se dům v&nbsp;létě nepřehříval a&nbsp;v&nbsp;zimě nízké slunce vytápělo interiér."
 						},
 						{
 							leftPercent: 70.5,
 							topPercent: 77,
-							text: "Zapustenie stavby do&nbsp;terénu znižuje potrebu energie na&nbsp;vykurovanie v&nbsp;zime a&nbsp;chladenie v&nbsp;lete."
+							text: "Zapuštění stavby do&nbsp;terénu snižuje potřebu energie na&nbsp;vytápění v&nbsp;zimě a&nbsp;chlazení v&nbsp;létě."
 						},
 						{
 							leftPercent: 52,
 							topPercent: 77,
-							text: "Optimálne rozmery a&nbsp;umiestnenie okien navrhnuté s&nbsp;dôrazom na&nbsp;energetiku, presvetlenie interiéru a&nbsp;výhľady."
+							text: "Optimální rozměry a&nbsp;umístění oken navržené s&nbsp;důrazem na&nbsp;energetiku, prosvětlení interiéru a&nbsp;výhledy."
 						},
 					]}
 				/>
@@ -143,17 +138,17 @@ const selectedProjects = allProjects.filter(project => {
 						{
 							leftPercent: 40,
 							topPercent: 58,
-							text: "Napojenie vonkajších konštrukcií bez&nbsp;tepelných mostov a&nbsp;nebezpečenstva vzniku plesní."
+							text: "Napojení vnějších konstrukcí bez&nbsp;tepelných mostů a&nbsp;nebezpečí vzniku plísní."
 						},
 						{
 							leftPercent: 48,
 							topPercent: 68,
-							text: "Výber kvalitných okenných profilov a&nbsp;vhodného typu trojskla, s&nbsp;presne definovanými vlastnosťami."
+							text: "Výběr kvalitních okenních profilů a&nbsp;vhodného typu trojskla, s&nbsp;přesně definovanými vlastnostmi."
 						},
 						{
 							leftPercent: 55,
 							topPercent: 75.5,
-							text: "Základová doska na&nbsp;tepelnej izolácii je vo&nbsp;vnútri tepelnej obálky domu a&nbsp;pomáha udržovať stálu teplotu v&nbsp;interiéri."
+							text: "Základová deska na&nbsp;tepelné izolaci je uvnitř tepelné obálky domu a&nbsp;pomáhá udržovat stálou teplotu v&nbsp;interiéru."
 						},
 					]}
 				/>
@@ -166,17 +161,17 @@ const selectedProjects = allProjects.filter(project => {
 						{
 							leftPercent: 55.5,
 							topPercent: 47.5,
-							text: "Fasáda z&nbsp;kvalitných materiálov overených v&nbsp;praxi, s&nbsp;presným výpočtom potrebnej hrúbky tepelnej izolácie a&nbsp;difúzie vodnej pary."
+							text: "Fasáda z&nbsp;kvalitních materiálů ověřených v&nbsp;praxi, s&nbsp;přesným výpočtem potřebné tloušťky tepelné izolace a&nbsp;difuze vodní páry."
 						},
 						{
 							leftPercent: 73.5,
 							topPercent: 54,
-							text: "Tienenie pergolami. Horizontálna časť chráni okná pred&nbsp;vysokým južným slnkom, vertikálne lamely zase pred&nbsp;nízkym východným a&nbsp;západným slnkom."
+							text: "Stínění pergolami. Horizontální část chrání okna před&nbsp;vysokým jižním sluncem, vertikální lamely zase před&nbsp;nízkým východním a&nbsp;západním sluncem."
 						},
 						{
 							leftPercent: 11,
 							topPercent: 62,
-							text: "Vplyv okolitých objektov na&nbsp;zimné solárne zisky a&nbsp;letné prehrievanie je presne vypočítaný a&nbsp;zohľadnený do&nbsp;architektonického návrhu."
+							text: "Vliv okolních objektů na&nbsp;zimní solární zisky a&nbsp;letní přehřívání je přesně vypočítán a&nbsp;zohledněn do&nbsp;architektonického návrhu."
 						},
 					]}
 				/>
@@ -189,17 +184,17 @@ const selectedProjects = allProjects.filter(project => {
 						{
 							leftPercent: 34,
 							topPercent: 24,
-							text: "Zelená fasáda chráni omietku pred&nbsp;vplyvom UV žiarenia a&nbsp;znižuje povrchovú teplotu fasády v&nbsp;lete, čím pomáha zabraňovať prehrievaniu."
+							text: "Zelená fasáda chrání omítku před&nbsp;vlivem UV záření a&nbsp;snižuje povrchovou teplotu fasády v&nbsp;létě, čímž pomáhá zabraňovat přehřívání."
 						},
 						{
 							leftPercent: 33,
 							topPercent: 85,
-							text: "Rozšírenie pobytového priestoru prekryté funkčným tienením."
+							text: "Rozšíření pobytového prostoru překryté funkčním stíněním."
 						},
 						{
 							leftPercent: 42,
 							topPercent: 71,
-							text: "Zdravé vnútorné prostredie. Stály prísun čerstveho vzduchu a&nbsp;minimum alergénov vďaka riadenému vetraniu s&nbsp;rekuperáciou tepla."
+							text: "Zdravé vnitřní prostředí. Stálý přísun čerstvého vzduchu a&nbsp;minimum alergenů díky řízenému větrání s&nbsp;rekuperací tepla."
 						},
 					]}
 				/>
@@ -212,17 +207,17 @@ const selectedProjects = allProjects.filter(project => {
 						{
 							leftPercent: 19,
 							topPercent: 65,
-							text: "Exteriérové žalúzie chránia presklenie pred&nbsp;prehrievaním. Ich umiestnenie len na&nbsp;oknách, kde sú podľa výpočtu potrebné, prináša finančnú úsporu."
+							text: "Exteriérové žaluzie chrání prosklení před&nbsp;přehříváním. Jejich umístění pouze na&nbsp;oknech, kde jsou podle výpočtu potřeba, přináší finanční úsporu."
 						},
 						{
 							leftPercent: 36,
 							topPercent: 50,
-							text: "Unikátne architektonické riešenia, ktorých vplyv na&nbsp;energetiku stavby je exaktne analyzovaný počas návrhu."
+							text: "Unikátní architektonická řešení, jejichž vliv na&nbsp;energetiku stavby je exaktně analyzován během návrhu."
 						},
 						{
 							leftPercent: 68,
 							topPercent: 48,
-							text: "Zelená strecha chráni strešný plášť, pomáha udržovať teplotnú stabilitu miestností a&nbsp;zlepšuje mikroklímu okolia."
+							text: "Zelená střecha chrání střešní plášť, pomáhá udržovat teplotní stabilitu místností a&nbsp;zlepšuje mikroklima okolí."
 						},
 					]}
 				/>
@@ -235,17 +230,17 @@ const selectedProjects = allProjects.filter(project => {
 						{
 							leftPercent: 32,
 							topPercent: 63,
-							text: "Veľké južné presklenia, ktoré ponúkajú výhľady do&nbsp;okolitej krajiny, sú v&nbsp;lete zatienené a&nbsp;v&nbsp;zime prinášajú solárne zisky."
+							text: "Velká jižní prosklení, která nabízejí výhledy do&nbsp;okolní krajiny, jsou v&nbsp;létě zastíněna a&nbsp;v&nbsp;zimě přinášejí solární zisky."
 						},
 						{
 							leftPercent: 71,
 							topPercent: 45.5,
-							text: "Kombinácia tienenia drevenou pergolou a&nbsp;presahom plochej strechy. Individuálne riešenie, zohľadňujúce funkčnú prevádzku domu a&nbsp;orientáciu na&nbsp;svetové strany."
+							text: "Kombinace stínění dřevěnou pergolou a&nbsp;přesahem ploché střechy. Individuální řešení, zohledňující funkční provoz domu a&nbsp;orientaci na&nbsp;světové strany."
 						},
 						{
 							leftPercent: 79,
 							topPercent: 28.5,
-							text: "Dom navrhnutý na&nbsp;mieru spája miestnu architektúru a&nbsp;jedinečnost svojich majiteľov."
+							text: "Dům navržený na&nbsp;míru spojuje místní architekturu a&nbsp;jedinečnost svých majitelů."
 						},
 					]}
 				/>
@@ -254,27 +249,27 @@ const selectedProjects = allProjects.filter(project => {
 	</div>
 	
 	<SlidesSteps
-		title="Cesta k&nbsp;pasívnemu domu"
+		title="Cesta k&nbsp;pasivnímu domu"
 		steps={[
 			{
-				title: "Navrhneme architektúru",
-				text: "Na&nbsp;mieru alebo z&nbsp;našich overených riešení navrhneme efektívny a&nbsp;zmysluplný domov pre&nbsp;vás a&nbsp;vašu rodinu.",
+				title: "Navrhneme architekturu",
+				text: "Na&nbsp;míru nebo z&nbsp;našich ověřených řešení navrhneme efektivní a&nbsp;smysluplný domov pro&nbsp;vás a&nbsp;vaši rodinu.",
 			},
 			{
-				title: "Pripravíme podklady pre&nbsp;povolenie stavby",
-				text: "Vypracujeme kompletnú dokumentáciu pre&nbsp;úrady. Všeko, čo budete potrebovať, aby vám umožnili stavať.",
+				title: "Připravíme podklady pro&nbsp;povolení stavby",
+				text: "Vypracujeme kompletní dokumentaci pro&nbsp;úřady. Vše, co budete potřebovat, aby vám umožnili stavět.",
 			},
 			{
-				title: "Detailne naprojektujeme stavbu aj interié",
-				text: "Váš dom dôkladne premyslíme a&nbsp;naprojektujeme v&nbsp;realizačnej podrobnosti. Kvalita sa skrýva v&nbsp;detailoch.",
+				title: "Detailně naprojektujeme stavbu i interiér",
+				text: "Váš dům důkladně promyslíme a&nbsp;naprojektujeme v&nbsp;realizační podrobnosti. Kvalita se skrývá v&nbsp;detailech.",
 			},
 			{
-				title: "Zrealizujem",
-				text: "V&nbsp;spolupráci s&nbsp;našimi partnermi zodpovedne zrealizujeme váš pasívny dom. Dohliadneme na&nbsp;kvalitu.",
+				title: "Zrealizujeme",
+				text: "Ve&nbsp;spolupráci s&nbsp;našimi partnery zodpovědně zrealizujeme váš pasivní dům. Dohlédneme na&nbsp;kvalitu.",
 			},
 			{
-				title: "Sťahujete sa",
-				text: "Až v&nbsp;tomto bode máme hotovo. Užívajte si svoj domov od&nbsp;Habitat.",
+				title: "Stěhujete se",
+				text: "Až v&nbsp;tomto bodě máme hotovo. Užívejte si svůj domov od&nbsp;Habitat.",
 			}
 		]}
 	/>
@@ -285,16 +280,16 @@ const selectedProjects = allProjects.filter(project => {
 		imgSrc="/assets/img/manifest-1600w.jpg"
 		imgSrcSet="/assets/img/manifest-1600w.jpg 1600w, /assets/img/manifest-3200w.jpg 3200w"
 		imgAlt="RD Rusovce"
-		title="Držíme sa <br>svojich zásad"
-		text="Domy plánované ako pasívne od začiatku. <strong>Naschvál.</strong>"
+		title="Držíme se <br>svých zásad"
+		text="Domy plánované jako pasivní od začátku. <strong>Schválně.</strong>"
 		button="Manifest"
 	>
 		<ol>
-			<li>Ako dom navrhneme, tak sa vám bude bývať. Uvedomujeme si svoju <strong>zodpovednosť</strong>.</li>
-			<li>Nenavrhujeme prázdne architektonické gestá. Naše domy sú <strong>efektívne a&nbsp;zmysluplné</strong>.</li>
-			<li>Energetické nároky domu neodhadujeme. Od&nbsp;začiatku návrhu používame <strong>technické dáta a&nbsp;výpočty</strong>.</li>
-			<li>Sme presvedčení, že energetická efektivita dizajn nezväzuje, ale umocňuje jeho <strong>architektonickú a&nbsp;estetickú hodnotu</strong></li>
-			<li>Robíme to čo nás baví, najlepšie ako vieme. Veríme, že len kvalitné, <strong>efektívne a&nbsp;krásne domy</strong> dokážu obhájiť svoju hodnotu v&nbsp;čase.</li>
+			<li>Jak dům navrhneme, tak se vám bude bydlet. Uvědomujeme si svou <strong>odpovědnost</strong>.</li>
+			<li>Nenavrhujeme prázdná architektonická gesta. Naše domy jsou <strong>efektivní a&nbsp;smysluplné</strong>.</li>
+			<li>Energetické nároky domu neodhadujeme. Od&nbsp;začátku návrhu používáme <strong>technická data a&nbsp;výpočty</strong>.</li>
+			<li>Jsme přesvědčeni, že energetická efektivita design nesvazuje, ale umocňuje jeho <strong>architektonickou a&nbsp;estetickou hodnotu</strong></li>
+			<li>Děláme to co nás baví, nejlépe jak umíme. Věříme, že jen kvalitní, <strong>efektivní a&nbsp;krásné domy</strong> dokáží obhájit svou hodnotu v&nbsp;čase.</li>
 		</ol>
 	</SectionExpandable>
 	

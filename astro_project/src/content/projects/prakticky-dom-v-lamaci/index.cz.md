@@ -1,7 +1,7 @@
 ---
-title: Praktický dom <br>v Lamači
-description: Návrh rodinného domu v blízkosti historického centra Lamača. S klientmi sme začali spoluprácu architektonickou štúdiou rekonštrukcie rodinného domu, v ktorej sme navrhovali eliminovať prevádzkové problémy jednoduchou prístavbou smerom do záhrady. Následne sa rozhodli s nami overiť aj možnosť novostavby, ktorá by bez kompromisov naplnila ich aktuálne požiadavky na bývanie a prácu z domu.
-tags: ["Domov na mieru"]
+title: Praktický dům <br>v Lamači
+description: Návrh rodinného domu v blízkosti historického centra Lamače. S klienty jsme zahájili spolupráci architektonickou studií rekonstrukce rodinného domu, ve které jsme navrhovali eliminovat provozní problémy jednoduchou přístavbou směrem do zahrady. Následně se rozhodli s námi ověřit i možnost novostavby, která by bez kompromisů naplnila jejich aktuální požadavky na bydlení a práci z domova.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 162
@@ -10,10 +10,8 @@ pocetIzieb: 5
 lokalita: Bratislava - Lamač
 ---
 
-Lokalita sa vyznačuje uličnou zástavbou so šikmými strechami, v tesnej blízkosti pamiatkovo chránenej zóny. Návrh má ambíciu v priehľadoch od ulice tento charakter podporiť a smerom do záhrady zadefinovať domu novú identitu. Architektonicky je tvorený tradičným tvaroslovím, ktoré dopĺňa moderný trakt s plochou vegetačnou strechou. Hlavná hmota je navrhnutá so sedlovou strechou a obytným podkrovím, ktoré je kvôli využiteľnosti vnútorného priestoru a solárnym ziskom doplnené širokým južným vikierom.
+Lokalita se vyznačuje uliční zástavbou se šikmými střechami, v těsné blízkosti památkově chráněné zóny. Návrh má ambici v průhledech od ulice tento charakter podpořit a směrem do zahrady definovat domu novou identitu. Architektonicky je tvořen tradičním tvaroslovím, které doplňuje moderní trakt s plochou vegetační střechou. Hlavní hmota je navržena se sedlovou střechou a obytným podkrovím, které je kvůli využitelnosti vnitřního prostoru a solárním ziskům doplněno širokým jižním vikýřem.
 
-Dispozične je dom rozčlenený na dve ramená, ktoré sa pretínajú v mieste schodiska a haly. V priečnom krídle je umiestnená aj priestranná pracovňa, atypicky orientovaná spolu s obývačkou na hlavnú terasu. Je prispôsobená na častú prácu z domu a stretnutia s klientmi - vďaka druhým dverám je možný priamy prístup z haly.
+Dispozičně je dům rozčleněn na dvě ramena, která se protínají v místě schodiště a haly. V příčném křídle je umístěna i prostorná pracovna, atypicky orientovaná spolu s obývacím pokojem na hlavní terasu. Je přizpůsobena pro častou práci z domova a setkání s klienty - díky druhým dveřím je možný přímý přístup z haly.
 
-Návrh pracuje so svetlosivou omietkou, ktorá je doplnená hrubozrnnou štruktúrovanou omietkou vo farbe rámov okien (pieskovo-hnedý odtieň). Táto štruktúrovaná omietka akcentuje kompozíciu okenných otvorov na jednotlivých fasádach a opticky prepája presklenia na prízemí medzi dvojpodlažnou a jednopodlažnou hmotou domu. Južné presklenia sú tienené hliníkovou pergolou alebo exteriérovými žalúziami.
-
-
+Návrh pracuje se světle šedou omítkou, která je doplněna hrubozrnnou strukturovanou omítkou v barvě rámů oken (pískově-hnědý odstín). Tato strukturovaná omítka akcentuje kompozici okenních otvorů na jednotlivých fasádách a opticky propojuje prosklení v přízemí mezi dvoupodlažní a jednopodlažní hmotou domu. Jižní prosklení jsou stíněna hliníkovou pergolou nebo exteriérovými žaluziemi.

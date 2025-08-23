@@ -1,7 +1,7 @@
 ---
-title: Dom s výhľadom <br>na Bratislavu
-description: Unikátny rodinný dom umiestnený na pozemku s prevýšením 19 metrov. Pre klienta bol vytvorený návrh v pasívnom štandarde, ktorý sa následne doplnením fotovoltaiky na streche dostane až do plusovej energetickej bilancie v rámci ročnej prevádzky.
-tags: ["Domov na mieru"]
+title: Dům s výhledem <br>na Bratislavu
+description: Unikátní rodinný dům umístěný na pozemku s převýšením 19 metrů. Pro klienta byl vytvořen návrh v pasivním standardu, který se následně doplněním fotovoltaiky na střeše dostane až do plusové energetické bilance v rámci ročního provozu.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 164
@@ -10,10 +10,8 @@ pocetIzieb: 5
 lokalita: Bratislava, Lamač - Zečák
 ---
 
-Zadaním bolo vytvorenie energeticky plusového rodinného domu, ktorý bude spĺňať najmodernejšie požiadavky na kvalitu bývania a zároveň podporí charakter okolitého priestoru s čo najmenšími terénnymi úpravami. Dom je výškovo umiestnený tak, že príjazd a parkovanie prechádza plynulo do vegetačnej strechy. Zároveň sa zasadením do terénu zmenší ochladzovaná plocha fasád a dom dosiahne lepšie výsledky v energetickej úspore a tepelnej stálosti konštrukcií.
+Zadáním bylo vytvoření energeticky plusového rodinného domu, který bude splňovat nejmodernější požadavky na kvalitu bydlení a zároveň podpoří charakter okolního prostoru s co nejmenšími terénními úpravami. Dům je výškově umístěn tak, že příjezd a parkování přechází plynule do vegetační střechy. Zároveň se zasazením do terénu zmenší ochlazovaná plocha fasád a dům dosáhne lepších výsledků v energetické úspoře a tepelné stálosti konstrukcí.
 
-Tvar domu je ovplyvnený minimálnymi odstupovými vzdialenosťami od hraníc a nepravidelným tvarom pozemku. Architektonicky používa moderné tvaroslovie (plochá vegetačná strecha, nadštandardné presklené plochy na získanie solárnych ziskov, tvarový minimalizmus), ktoré je ale zasadené do kontextu pozemku a kontrapunktom vyloženej hornej hmoty zdôrazňuje jeho svahovitosť.
+Tvar domu je ovlivněn minimálními odstupovými vzdálenostmi od hranic a nepravidelným tvarem pozemku. Architektonicky používá moderní tvarosloví (plochá vegetační střecha, nadstandardní prosklené plochy pro získání solárních zisků, tvarový minimalismus), které je ale zasazeno do kontextu pozemku a kontrapunktem vyložené horní hmoty zdůrazňuje jeho svažitost.
 
-Dom je skomponovaný z dvoch hlavných hmôt a ich prelínania - spodnej bielej podstavy a pieskovo-hnedej dominantnej hmoty horného podlažia, ktorá je posadená na podstave a prechádza do vyloženého balkóna. Ten obyvateľom dovoľuje vychutnať si výnimočné výhľady na okolie a vďaka prekrytiu proti dažďu zároveň slúži ako tienenie okien na oboch podlažiach a chráni dom pred letným prehrievaním.
-
-
+Dům je zkomponován ze dvou hlavních hmot a jejich prolínání - spodní bílé podstavy a pískově-hnědé dominantní hmoty horního podlaží, která je posazena na podstavě a přechází do vyloženého balkonu. Ten obyvatelům dovoluje vychutnat si výjimečné výhledy na okolí a díky překrytí proti dešti zároveň slouží jako stínění oken na obou podlažích a chrání dům před letním přehříváním.

@@ -1,7 +1,7 @@
 ---
-title: Dom s otvoreným krovom
-description: Návrh nadštandardného domu pre troj- až štvorčlennú rodinu. Tvarovo kombinuje plochú vegetačnú strechu a trakt so sedlovou strechou s priznaným krovom v interiéri. Pri návrhu sme využili Habitat konfigurátor a po definovaní architektúry overili energetickú bilanciu domu na konkrétnej parcele.
-tags: ["Habitat konfigurátor"]
+title: Dům s otevřeným krovem
+description: Návrh nadstandardního domu pro tří- až čtyřčlennou rodinu. Tvarově kombinuje plochou vegetační střechu a trakt se sedlovou střechou s přiznaným krovem v interiéru. Při návrhu jsme využili Habitat konfigurátor a po definování architektury ověřili energetickou bilanci domu na konkrétní parcele.
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 126
@@ -10,8 +10,6 @@ pocetIzieb: 4
 rozmeryDomu: 16,79m x 11,875m
 ---
 
-Dom je nakonfigurovaný z troch traktov – základom je centrálna obývačka do tvaru L, na ktorú je napojený rodičovský trakt so samostatnou kúpeľňou a trakt pre deti a návštevy. Obývačka a jedáleň sú prestrešené sedlovou strechou s otvoreným krovom, čo robí z tohto priestoru unikátne srdce domu. Chodba v detskej časti domu je na obývačku napojená dvomi posuvnými dverami, ktoré pri otvorenej polohe vytvárajú dojem rozšíreného obytného priestoru. Z podlahovej plochy domu 126 m<sup>2</sup> tvorí vďaka dômyselnej dispozícii chodba len 8 m<sup>2</sup>, a aj tie sú využiteľné ako spoločný šatník alebo úložný priestor. Priestranná krytá terasa ponúka široké využitie a vďaka analýze tienenia vieme, že pri tejto orientácii hlavných presklení neuberá domu nadmerne veľa solárnych ziskov.
+Dům je nakonfigurován ze tří traktů – základem je centrální obývací pokoj do tvaru L, na který je napojen rodičovský trakt se samostatnou koupelnou a trakt pro děti a návštěvy. Obývací pokoj a jídelna jsou zastřešeny sedlovou střechou s otevřeným krovem, což činí z tohoto prostoru unikátní srdce domu. Chodba v dětské části domu je na obývací pokoj napojena dvěma posuvnými dveřmi, které při otevřené poloze vytvářejí dojem rozšířeného obytného prostoru. Z podlahové plochy domu 126 m<sup>2</sup> tvoří díky důmyslné dispozici chodba jen 8 m<sup>2</sup>, a i ty jsou využitelné jako společná šatna nebo úložný prostor. Prostorná krytá terasa nabízí široké využití a díky analýze stínění víme, že při této orientaci hlavních prosklení neubírá domu nadměrně mnoho solárních zisků.
 
-Návrh domu vznikol s využitím služby <strong>Habitat konfigurátor</strong>. Ak by vás zaujímalo, aké ďalšie možnosti dispozície konfigurátor otvára alebo koľko stvárnení architektúry ponúka na daný pôdorys, neváhajte sa ozvať.
-
-
+Návrh domu vznikl s využitím služby <strong>Habitat konfigurátor</strong>. Pokud by vás zajímalo, jaké další možnosti dispozice konfigurátor otevírá nebo kolik ztvárnění architektury nabízí na daný půdorys, neváhejte se ozvat.

@@ -1,7 +1,7 @@
 ---
-title: Rodinný dom L <br>v Seredi
-description: Návrh domu pre štvorčlennú rodinu na okraji novovznikajúcej mestskej štvrte. Rohový pozemok je zložito zaregulovaný - jednak vzdialenosťou výstavby od cesty prvej triedy, jednak ochrannými pásmami sietí, ktoré zásobujú celú lokalitu. Návrh sa musel vysporiadať s týmito komplikovanými požiadavkami a reagovať atypickým tvarom domu aj umiestnením vstupu.
-tags: ["Domov na mieru"]
+title: Rodinný dům L <br>v Seredi
+description: Návrh domu pro čtyřčlennou rodinu na okraji nově vznikající městské čtvrti. Rohový pozemek je složitě regulován - jednak vzdáleností výstavby od silnice první třídy, jednak ochrannými pásmy sítí, které zásobují celou lokalitu. Návrh se musel vypořádat s těmito komplikovanými požadavky a reagovat atypickým tvarem domu i umístěním vstupu.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 126
@@ -10,8 +10,6 @@ pocetIzieb: 5
 lokalita: Sereď
 ---
 
-Stvárnením dom nadväzuje na novú zástavbu v lokalite, ktorá využíva ploché strechy a bielo-antracitovú farebnú kombináciu na fasádach. Umiestnenie rodinného domu reflektuje čo najlepšie naplnenie zadania od klienta s ohľadom na značné obmedzenia vyplývajúce z regulačného plánu. Dispozícia je navrhnutá do tvaru L, aby dom získal pri orientácii pozemku juhozápadné aj juhovýchodné solárne zisky. Tento tvar zároveň využíva maximum z plochy, na ktorej je regulatívmi umožnená zástavba, pri zachovaní dostatočného vnútorného priestoru dvora.
+Ztvárněním dům navazuje na novou zástavbu v lokalitě, která využívá ploché střechy a bílo-antracitovou barevnou kombinaci na fasádách. Umístění rodinného domu reflektuje co nejlepší naplnění zadání od klienta s ohledem na značná omezení vyplývající z regulačního plánu. Dispozice je navržena do tvaru L, aby dům získal při orientaci pozemku jihozápadní i jihovýchodní solární zisky. Tento tvar zároveň využívá maximum z plochy, na které je regulativy umožněna zástavba, při zachování dostatečného vnitřního prostoru dvora.
 
-Kvôli obmedzeným možnostiam zastavanej plochy je vstupná hala navrhnutá medzi dispozičnými traktami, aby sa nemíňali metre štvorcové pre nadbytočné chodbové priestory. Do domu vedie krytá pavlač, ktorá umožňuje prechod suchou nohou od garáže popri preskleniach do obývačky až k vstupným dverám. Pavlač je krytá pergolou s dynamickým stvárnením, ktorá ozvláštňuje architektúru a prechádza až pred okná detských izieb. Táto pergola zároveň slúži ako tienenie presklení pred letným slnkom. Vstup do domu je akcentovaný dreveným obkladom.
-
-
+Kvůli omezeným možnostem zastavěné plochy je vstupní hala navržena mezi dispozičními trakty, aby se neplýtvalo metry čtverečními pro nadbytečné chodbové prostory. Do domu vede krytá pavlač, která umožňuje přechod suchou nohou od garáže podél prosklení do obývacího pokoje až ke vstupním dveřím. Pavlač je krytá pergolou s dynamickým ztvárněním, která ozvláštňuje architekturu a přechází až před okna dětských pokojů. Tato pergola zároveň slouží jako stínění prosklení před letním sluncem. Vstup do domu je akcentován dřevěným obkladem.

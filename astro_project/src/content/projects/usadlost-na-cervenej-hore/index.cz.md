@@ -1,7 +1,7 @@
 ---
-title: Usadlosť <br>na Červenej Hore
-description: Návrh nového bývania pre päťčlennú rodinu, ktorá sa z mesta presťahovala na stredoslovenské lazy. Dom citlivo reaguje na miestnu architektúru a nemá za cieľ ju modernými prvkami pretvárať, ale dotvárať.  S klientmi sme spolupracovali od výberu pozemku, cez architektonickú štúdiu a projekčné práce až po autorský dozor pri realizácii stavby.
-tags: ["Domov na mieru"]
+title: Usedlost <br>na Červené Hoře
+description: Návrh nového bydlení pro pětičlennou rodinu, která se z města přestěhovala na středoslovenské lazy. Dům citlivě reaguje na místní architekturu a nemá za cíl ji moderními prvky přetvářet, ale dotvářet. S klienty jsme spolupracovali od výběru pozemku, přes architektonickou studii a projekční práce až po autorský dozor při realizaci stavby.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 138
@@ -10,10 +10,8 @@ pocetIzieb: 5
 lokalita: Krupina, Červená Hora
 ---
 
-Architektonický koncept domu vychádza z dialógu vidieckeho a moderného. Vidiecke je reprezentované hlavnou hmotou domu - je navrhnutá ako klasická stavba so škridlovou sedlovou strechou, bielou omietkou, priznanými dažďovými žľabmi a oknami olemovanými šambránami. Jediný moderný prvok viditeľný od ulice je stvárnenie nevykurovaného skladu a prekrytia vstupu. Tento moment človeku napovie, že niečo zaujímavé sa bude odohrávať mimo jeho zorného poľa.
+Architektonický koncept domu vychází z dialogu venkovského a moderního. Venkovské je reprezentováno hlavní hmotou domu - je navržena jako klasická stavba s taškovou sedlovou střechou, bílou omítkou, přiznanými dešťovými žlaby a okny olemovanými šambránami. Jediný moderní prvek viditelný od ulice je ztvárnění nevytápěného skladu a překrytí vstupu. Tento moment člověku napoví, že něco zajímavého se bude odehrávat mimo jeho zorné pole.
 
-Prekrytie vstupu a sklad je už súčasťou modernej hmoty domu, ktorá obsahuje obytnú časť pre rodičov a veľkú pracovňu - novodobé krídlo dispozície, navrhnuté s drevenou fasádou a plochou vegetačnou strechou. Táto strecha prekrýva aj juhovýchodnú terasu, týčiacu sa najvyššie nad terén a poskytujúcu panoramatický výhľad na okolie.
+Překrytí vstupu a sklad je již součástí moderní hmoty domu, která obsahuje obytnou část pro rodiče a velkou pracovnu - novodobé křídlo dispozice, navržené s dřevěnou fasádou a plochou vegetační střechou. Tato střecha překrývá i jihovýchodní terasu, tyčící se nejvýše nad terén a poskytující panoramatický výhled na okolí.
 
-Fasáda smerom do záhrady je kombináciou oboch hmôt (drevená fasáda, biela hlinená omietka), s preskleniami až po podlahu (kvôli solárnym ziskom a priamym východom z izieb aj na juhozápadnú terasu). Juhozápadná terasa je tienená pergolou (vhodnou aj na porastenie popínavými rastlinami), ktorá v zime netieni a v lete sa potiahne textíliou, čím sa zamedzí prehrievaniu interiéru. Výškový rozdiel medzi terasou a záhradou je vyriešený hrou klasických a sedacích schodov.
-
-
+Fasáda směrem do zahrady je kombinací obou hmot (dřevěná fasáda, bílá hliněná omítka), s proskleními až po podlahu (kvůli solárním ziskům a přímým východům z pokojů i na jihozápadní terasu). Jihozápadní terasa je stíněna pergolou (vhodnou i pro porost popínavými rostlinami), která v zimě nestíní a v létě se potáhne textilií, čímž se zamezí přehřívání interiéru. Výškový rozdíl mezi terasou a zahradou je vyřešen hrou klasických a sedacích schodů.

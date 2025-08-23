@@ -1,7 +1,7 @@
 ---
-title: Dom s lamelami <br>pri Nitre
-description: Návrh rodinného domu pre mladú rodinu - stavbu aktuálne realizujú čiastočne svojpomocne. Klienti nás oslovili s hotovým projektom pre stavebné povolenie, ktorý ale výrazne nespĺňal požiadavky na rozpočet a nezohľadňoval energetiku v návrhu stavebných konštrukcií. Po analýze sme sa dohodli, že sa spoločne vrátime o krok späť a nanovo sme zadefinovali materiály aj architektúru domu. Po optimalizácii dispozície a pretvorení kľúčových prvkov návrhu do jednoduchšej podoby sme veľkosť domu zo 170 m<sup>2</sup> vykurovanej podlahovej plochy zmenšili na 130 m<sup>2</sup> a napriek rozpočtovým limitom vytvorili zaujímavé bývanie s vlastnou identitou.
-tags: ["Domov na mieru"]
+title: Dům s lamelami <br>u Nitry
+description: Návrh rodinného domu pro mladou rodinu - stavbu aktuálně realizují částečně svépomocí. Klienti nás oslovili s hotovým projektem pro stavební povolení, který ale výrazně nesplňoval požadavky na rozpočet a nezohledňoval energetiku v návrhu stavebních konstrukcí. Po analýze jsme se dohodli, že se společně vrátíme o krok zpět a nově jsme zadefinovali materiály i architekturu domu. Po optimalizaci dispozice a přetvoření klíčových prvků návrhu do jednodušší podoby jsme velikost domu ze 170 m<sup>2</sup> vytápěné podlahové plochy zmenšili na 130 m<sup>2</sup> a navzdory rozpočtovým limitům vytvořili zajímavé bydlení s vlastní identitou.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 130
@@ -11,11 +11,10 @@ lokalita: Jelšovce, okres Nitra
 ---
 
 
-Návrh voľne nadväzuje na pôvodný projekt - rozdelením domu na súkromný a denný trakt, kombináciou plochej a sedlovej strechy s priznaným krovom v interiéri, využitím drevených lamiel na fasáde. Pri optimalizácii dispozície sme sa rozhodli trakty usporiadať do tvaru L so vstupom a technicko-hygienickým zázemím v mieste ich prepojenia. Z energetického hľadiska atypické umiestnenie domu (kvôli susednej zástavbe a preferovaným výhľadom) nám umožnilo orientovať detské izby na juho-východ do kľudovej časti záhrady a navrhnúť celopresvetlenú chodbu vedúcu popri hlavnej terase. Týmto spôsobom sme z bežne zbytočných metrov štvorcových vytvorili zaujímavý moment v dispozícii a navodili dojem polo-átria.
+Návrh volně navazuje na původní projekt - rozdělením domu na soukromý a denní trakt, kombinací ploché a sedlové střechy s přiznaným krovem v interiéru, využitím dřevěných lamel na fasádě. Při optimalizaci dispozice jsme se rozhodli trakty uspořádat do tvaru L se vstupem a technicko-hygienickým zázemím v místě jejich propojení. Z energetického hlediska atypické umístění domu (kvůli sousední zástavbě a preferovaným výhledům) nám umožnilo orientovat dětské pokoje na jiho-východ do klidové části zahrady a navrhnout celoprosvětlenou chodbu vedoucí podél hlavní terasy. Tímto způsobem jsme z běžně zbytečných metrů čtverečních vytvořili zajímavý moment v dispozici a navodili dojem polo-atria.
 
-Denný trakt je kvôli solárnym ziskom otvorený na juho-západ. Kuchyňo - obývačka je stvárnená s nadštandardne vysokým stropom, ktorý kopíruje sedlovú strechu na tomto trakte. Vďaka tomu sme mohli do tohto voľného priestoru umiestniť kubus šatníkovej skrine a špajze, na ktorý sa dá vyliezť, a pod strešnými oknami si vychutnať miesto na hranie alebo oddych.
+Denní trakt je kvůli solárním ziskům otevřen na jiho-západ. Kuchyňo - obývací pokoj je ztvárněn s nadstandardně vysokým stropem, který kopíruje sedlovou střechu na tomto traktu. Díky tomu jsme mohli do tohoto volného prostoru umístit kubus šatní skříně a spíže, na který se dá vylézt, a pod střešními okny si vychutnat místo na hraní nebo odpočinek.
 
-Trakt so sedlovou strechou reaguje na kontext pozemku, je však mierkou dlhší než tradičná okolitá zástavba. Navrhnuté je preto ozvláštnenie pokračovaním konštrukcie krytého parkovania a prístupovej pavlače - drevené lamely vytvárajú súkromie vo vstupných priestoroch domu a zároveň zjemňujú kompaktnú uličnú fasádu.
+Trakt se sedlovou střechou reaguje na kontext pozemku, je však měřítkem delší než tradiční okolní zástavba. Navrženo je proto ozvláštnění pokračováním konstrukce krytého parkování a přístupové pavlače - dřevěné lamely vytvářejí soukromí ve vstupních prostorách domu a zároveň zjemňují kompaktní uliční fasádu.
 
-Spolupráca: Ing. arch. Andrea Dižová
-
+Spolupráce: Ing. arch. Andrea Dižová

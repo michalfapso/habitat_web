@@ -1,7 +1,7 @@
 ---
-title: Rodinné sídlo <br>pod Tatrami
-description: Ideová štúdia rozsiahleho sídla priamo pri turistickom chodníku do jednej z dolín Slovenského Raja. Klienti nás oslovili ohľadom prepracovania architektonickej štúdie, so zámerom overiť si odlišný prístup k zadaniu –  s dôrazom na energetiku a súčasný architektonický štýl.
-tags: ["Domov na mieru"]
+title: Rodinné sídlo <br>pod Tatrami
+description: Ideová studie rozsáhlého sídla přímo u turistického chodníku do jedné z dolin Slovenského Ráje. Klienti nás oslovili ohledně přepracování architektonické studie, se záměrem ověřit si odlišný přístup k zadání – s důrazem na energetiku a současný architektonický styl.
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 433
@@ -11,10 +11,8 @@ pocetIziebSuffix: + wellness
 lokalita: Spišské Bystré, okres Poprad
 ---
 
-Medzi hlavné negatíva pôvodného návrhu patrila mierka architektúry, ktorá nereflektovala charakter a drobnokresbu okolitého prírodného prostredia. Vstupovala do neho 60m dlhým objektom, kompaktne zastrešeným valbovou strechou. Ozvláštnenie monotónnych fasád bolo riešené iba odskokmi, ktoré zväčšovali ochladzované plochy a v zime brali južným preskleniam potrebné solárne zisky. Zároveň boli rozsiahle pomocné a hospodárske priestory umiestnené do tepelno-izolačnej obálky, čím vznikala obrovská potreba energie na vykurovanie.
+Mezi hlavní negativa původního návrhu patřila míra architektury, která nereflektovala charakter a drobnokresbu okolního přírodního prostředí. Vstupovala do něj 60m dlouhým objektem, kompaktně zastřešeným valbovou střechou. Ozvláštnění monotónních fasád bylo řešeno pouze odskoky, které zvětšovaly ochlazované plochy a v zimě braly jižním prosklením potřebné solární zisky. Zároveň byly rozsáhlé pomocné a hospodářské prostory umístěny do tepelně-izolační obálky, čímž vznikala obrovská potřeba energie na vytápění.
 
-Základom nového konceptu bolo optické rozčlenenie veľkej hmoty na jednotlivé funkčné celky, ktoré kombinovaním tvaru striech a materiálov fasád vytvorilo pocit podhorskej usadlosti - viacerých budov so spoločným dvorom. „Usadlosť“ tvoria tri rozdielne natočené objekty s dreveným obkladom a sedlovými strechami (obytná časť, stodola, kryté parkovanie), ktoré sú prepojené časťami s kamenným obkladom a plochou vegetačnou strechou (dvojgaráž, wellness).
+Základem nového konceptu bylo optické rozčlenění velké hmoty na jednotlivé funkční celky, které kombinováním tvaru střech a materiálů fasád vytvořilo pocit podhorské usedlosti - více budov se společným dvorem. „Usedlost“ tvoří tři rozdílně natočené objekty s dřevěným obkladem a sedlovými střechami (obytná část, stodola, kryté parkování), které jsou propojeny částmi s kamenným obkladem a plochou vegetační střechou (dvougaráž, wellness).
 
-Vykurovanú plochu sme po analýze zmenšili takmer na polovicu a prevádzku wellnessu kvôli odlišným požiadavkám na vlhkosť a teplotu oddelili od obytnej časti. Tá je navrhnutá v jednoduchom kompaktnom tvare s obytným podkrovím. Presah strechy pred panoramatické presklenia je výpočtom navrhnutý len v takej miere, aby tienil v lete, ale v zime púšťal slnko do interiéru. Odskoky na fasádach sú tvorené hlavne konštrukciami mimo tepelnej obálky, aby bol dosiahnutý čo najlepší faktor tvaru - teda kompaktný a energeticky efektívny tvar vykurovanej časti stavby.
-
-
+Vytápěnou plochu jsme po analýze zmenšili téměř na polovinu a provoz wellnessu kvůli odlišným požadavkům na vlhkost a teplotu oddělili od obytné části. Ta je navržena v jednoduchém kompaktním tvaru s obytným podkrovím. Přesah střechy před panoramatické prosklení je výpočtem navržen jen v takové míře, aby stínil v létě, ale v zimě pouštěl slunce do interiéru. Odskoky na fasádách jsou tvořeny hlavně konstrukcemi mimo tepelnou obálku, aby byl dosažen co nejlepší faktor tvaru - tedy kompaktní a energeticky efektivní tvar vytápěné části stavby.

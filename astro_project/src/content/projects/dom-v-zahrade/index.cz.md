@@ -1,7 +1,7 @@
 ---
-title: Dom v záhrade
-description: Návrh praktického domu pre trojčlennú rodinu. Habitat konfigurátor nám umožnil jednoducho skombinovať pôdorys bez veľkostných kompromisov s rozpočtovo optimalizovaným zovňajškom domu. V architektúre sme vybrali konštrukčne jednoduché detaily a vkusnú kompozíciu hmôt s plochou alebo sedlovou strechou. Nevykurované podkrovie je využité ako veľký úložný priestor.
-tags: ["Habitat konfigurátor"]
+title: Dům v zahradě
+description: Návrh praktického domu pro tříčlennou rodinu. Habitat konfigurátor nám umožnil jednoduše zkombinovat půdorys bez velikostních kompromisů s rozpočtově optimalizovaným zevnějškem domu. V architektuře jsme vybrali konstrukčně jednoduché detaily a vkusnou kompozici hmot s plochou nebo sedlovou střechou. Nevytápěné podkroví je využito jako velký úložný prostor.
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 99
@@ -10,8 +10,6 @@ pocetIzieb: 3
 rozmeryDomu: 11,975m x 14,8m
 ---
 
-Dom je nakonfigurovaný z dvoch traktov, ktoré sa stretávajú vo vstupných priestoroch a vytvárajú pôdorys v tvare L. Na pozemok je osadený v juho-západnej orientácii, smerujúc hlavné presklenia na spoločnú terasu, chránenú od ulice vyššou hmotou domu. Dispozícia domu je rozdelená na spoločenskú a súkromnú zónu. Trakt súkromnej zóny obsahuje spálňu so šatníkom, detskú izbu a hygienické zázemie. Spoločenskú zónu tvorí veľký priestor obývačky s kuchyňou a jedálňou, opticky prepojený s exteriérom širokým presklením. Tieto presklenia orientované na západ sú tienené exteriérovými žalúziami, južné okná do izieb sú naopak efektívne zatienené drevenou pergolou. Tá sa v prípade optimalizácie rozpočtu dá zrealizovať aj ako samonosná v neskoršej fáze výstavby.
+Dům je nakonfigurován ze dvou traktů, které se setkávají ve vstupních prostorách a vytvářejí půdorys ve tvaru L. Na pozemek je osazen v jiho-západní orientaci, směřujíc hlavní prosklení na společnou terasu, chráněnou od ulice vyšší hmotou domu. Dispozice domu je rozdělena na společenskou a soukromou zónu. Trakt soukromé zóny obsahuje ložnici se šatnou, dětský pokoj a hygienické zázemí. Společenskou zónu tvoří velký prostor obývacího pokoje s kuchyní a jídelnou, opticky propojený s exteriérem širokým prosklením. Tato prosklení orientovaná na západ jsou stíněna exteriérovými žaluziemi, jižní okna do pokojů jsou naopak efektivně zastíněna dřevěnou pergolou. Ta se v případě optimalizace rozpočtu dá zrealizovat i jako samonosná v pozdější fázi výstavby.
 
-Návrh domu vznikol s využitím služby <strong>Habitat konfigurátor</strong>. Ak by vás zaujímalo, aké ďalšie možnosti dispozície konfigurátor otvára alebo koľko stvárnení architektúry ponúka na daný pôdorys, neváhajte sa ozvať.
-
-   
+Návrh domu vznikl s využitím služby <strong>Habitat konfigurátor</strong>. Pokud by vás zajímalo, jaké další možnosti dispozice konfigurátor otevírá nebo kolik ztvárnění architektury nabízí na daný půdorys, neváhejte se ozvat.

@@ -1,16 +1,16 @@
 ---
-import { getAugmentedProjects } from '../../utils/getProjectImageMetadata';
-import Layout from '../../layouts/Layout.astro';
-import ProjectDetail from '../../components/ProjectDetail.astro';
+import { getAugmentedProjects } from '../../../utils/getProjectImageMetadata';
+import Layout from '../../../layouts/Layout.astro';
+import ProjectDetail from '../../../components/ProjectDetail.astro';
 
 export async function getStaticPaths() {
-  const skProjects = await getAugmentedProjects('sk');
+  const czProjects = await getAugmentedProjects('cz');
 
-  const paths = skProjects.map(project => {
+  const paths = czProjects.map(project => {
     const slugForUrl = project.slug.replace(/\/index..*$/, '');
     return {
       params: { slug: slugForUrl },
-      props: { lang: 'sk', slug: project.slug },
+      props: { lang: 'cz', slug: project.slug },
     };
   });
   return paths;

@@ -1,7 +1,7 @@
 ---
 title: Dom s výhľadom <br>na Bratislavu
 description: Unikátny rodinný dom umiestnený na pozemku s prevýšením 19 metrov. Pre klienta bol vytvorený návrh v pasívnom štandarde, ktorý sa následne doplnením fotovoltaiky na streche dostane až do plusovej energetickej bilancie v rámci ročnej prevádzky.
-tags: ["Domov na mieru"]
+tags: ["domov-na-mieru"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 164

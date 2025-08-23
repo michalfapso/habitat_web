@@ -1,7 +1,7 @@
 ---
-title: Dom za mestom
-description: Návrh kompaktného domu pre trojčlennú rodinu. Habitat konfigurátor nám umožnil jednoducho skombinovať veľkostne optimalizovaný pôdorys s elegantným zovňajškom domu. Nadštandardná výška presklenia, akcenty dreveného obkladu, plochá vegetačná strecha, tienenie a prekrytie terasy riešené v rámci hmoty architektúry – to všetko spolu tvorí moderné a zároveň útulné rodinné bývanie.
-tags: ["Habitat konfigurátor"]
+title: Dům za městem
+description: Návrh kompaktního domu pro tříčlennou rodinu. Habitat konfigurátor nám umožnil jednoduše zkombinovat velikostně optimalizovaný půdorys s elegantním zevnějškem domu. Nadstandardní výška prosklení, akcenty dřevěného obkladu, plochá vegetační střecha, stínění a překrytí terasy řešené v rámci hmoty architektury – to vše spolu tvoří moderní a zároveň útulné rodinné bydlení.
+tags: ["habitat-konfigurator"]
 pubDate: 2025-08-20
 
 vykurovanaPlocha: 99
@@ -10,11 +10,8 @@ pocetIzieb: 3
 rozmeryDomu: 11,975m x 14,8m
 ---
 
-Dom je nakonfigurovaný z dvoch traktov, ktoré sa stretávajú vo vstupných priestoroch a vytvárajú pôdorys v tvare L. Na pozemok je osadený v juho-západnej orientácii smerujúc hlavné presklenia na spoločnú terasu a výhľad do záhrady. Dispozícia domu je rozdelená na spoločenskú a súkromnú zónu. Trakt súkromnej zóny obsahuje spálňu so šatníkom, detskú izbu a hygienické zázemie. Spoločenskú zónu tvorí veľký priestor obývačky s kuchyňou a jedálňou, opticky prepojený s exteriérom širokými preskleniami. Tie sú orientované na juh (kvôli výhľadu a solárnym ziskom) a aj na západ, tvoriac plynulé prepojenie medzi jedálňou a veľkou terasou.
+Dům je nakonfigurován ze dvou traktů, které se setkávají ve vstupních prostorách a vytvářejí půdorys ve tvaru L. Na pozemek je osazen v jiho-západní orientaci směřujíc hlavní prosklení na společnou terasu a výhled do zahrady. Dispozice domu je rozdělena na společenskou a soukromou zónu. Trakt soukromé zóny obsahuje ložnici se šatnou, dětský pokoj a hygienické zázemí. Společenskou zónu tvoří velký prostor obývacího pokoje s kuchyní a jídelnou, opticky propojený s exteriérem širokými proskleními. Ty jsou orientovány na jih (kvůli výhledu a solárním ziskům) a také na západ, tvoříc plynulé propojení mezi jídelnou a velkou terasou.
 
-Terasa je chránená pred dažďom veľkým vyložením vegetačnej strechy, ktoré zároveň chráni dom pred letným prehrievaním. Presné rozmery tohto tienenia boli definované pomocou analýzy solárnych ziskov a tepelných strát domu, tak aby bolo dosiahnuté optimálne vnútorne prostredie v priebehu celého roka.
+Terasa je chráněna před deštěm velkým vyložením vegetační střechy, které zároveň chrání dům před letním přehříváním. Přesné rozměry tohoto stínění byly definovány pomocí analýzy solárních zisků a tepelných ztrát domu, tak aby bylo dosaženo optimálního vnitřního prostředí v průběhu celého roku.
 
-Návrh domu vznikol s využitím služby <strong>Habitat konfigurátor</strong>. Ak by vás zaujímalo, aké ďalšie možnosti dispozície konfigurátor otvára alebo koľko stvárnení architektúry ponúka na daný pôdorys, neváhajte sa ozvať.
-
-   
-
+Návrh domu vznikl s využitím služby <strong>Habitat konfigurátor</strong>. Pokud by vás zajímalo, jaké další možnosti dispozice konfigurátor otevírá nebo kolik ztvárnění architektury nabízí na daný půdorys, neváhejte se ozvat.

@@ -1,11 +1,29 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
 import LayoutMarkdownPage from '../layouts/LayoutMarkdownPage.astro';
+import { defaultLang, languages } from '../i18n/utils';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pages');
+  const langKeys = Object.keys(languages);
+  const langRegex = new RegExp(`^(.*?)(${langKeys.join('|')})$`);
   const paths = pages.map(page => {
-    const [slug, lang] = page.slug.split('.');
+    // Match slugs ending in 'sk' or 'cz' to determine language.
+    // e.g., "zasady-cookiescz" -> baseSlug: "zasady-cookies", lang: "cz"
+    const langMatch = page.slug.match(langRegex);
+    let baseSlug, lang;
+
+    if (langMatch) {
+      baseSlug = langMatch[1];
+      lang = langMatch[2];
+    } else {
+      // Default to 'sk' if no language suffix is found
+      baseSlug = page.slug;
+      lang = defaultLang;
+    }
+
+    const slug = lang === defaultLang ? baseSlug : `${lang}/${baseSlug}`;
+
     return {
       params: { slug },
       props: { lang, page },
@@ -14,9 +32,9 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { page } = Astro.props;
+const { page, lang } = Astro.props;
 const { Content } = await page.render();
 ---
-<LayoutMarkdownPage {...page.data}>
+<LayoutMarkdownPage {...page.data} lang={lang}>
   <Content />
 </LayoutMarkdownPage>
