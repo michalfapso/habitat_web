@@ -5,6 +5,7 @@ interface Point {
     leftPercent: number;
     topPercent: number;
     text: string;
+    textPlacement?: 'bottom-right' | 'bottom-left' | 'top-left' | 'top-right';
 }
 
 export interface Props extends HTMLAttributes<'div'> {
@@ -23,7 +24,7 @@ const { id, imgSrc, imgSrcSet, imgAlt, points } = Astro.props;
             <img src={imgSrc} srcset={imgSrcSet} alt={imgAlt}>
             <div class="poi_points show-for-medium">
                 {points.map((point, idx) => (
-                    <span class="point" style={`left:${point.leftPercent}%;top:${point.topPercent}%;`} data-toggle={`${id}-${idx}`} data-transform={`translate(-${point.leftPercent}%, -${point.topPercent}%) scale(2)`}></span>
+                    <span class="point" style={`left:${point.leftPercent}%;top:${point.topPercent}%;`} data-toggle={`${id}-${idx}`} data-transform={`translate(-${point.leftPercent}%, -${point.topPercent}%) scale(2)`} data-placement="left"></span>
                 ))}
             </div>
             <div class="poi_points hide-for-medium">
@@ -34,14 +35,23 @@ const { id, imgSrc, imgSrcSet, imgAlt, points } = Astro.props;
         </div>
         <div class="poi__info hide-for-medium">
             {points.map((point, idx) => (
-                <div class={`poi__info__item ${idx > 0 ? 'is-hidden' : ''}`} id={`${id}-m-${idx}`}>
+                <div class={`poi__info__item has-position-right ${idx > 0 ? 'is-hidden' : ''}`} id={`${id}-m-${idx}`}>
                     <p set:html={point.text}></p>
                 </div>
             ))}
         </div>
     </div>
     {points.map((point, idx) => (
-		<div class="dropdown-pane poi__pane" id={`${id}-${idx}`} data-dropdown data-closable data-v-offset="-2" data-h-offset="70">
+		<div
+            class="dropdown-pane poi__pane"
+            id={`${id}-${idx}`}
+            data-dropdown
+            data-closable
+            data-v-offset="-2"
+            data-h-offset="70"
+            data-position={point.textPlacement ? point.textPlacement.split('-')[0] : (point.topPercent > 50 ? 'top' : 'bottom')}
+            data-alignment={point.textPlacement ? (point.textPlacement.split('-')[1] == 'left' ? 'right' : 'left') : (point.leftPercent > 50 ? 'right' : 'left')}
+        >
 			<button class="close-button" data-close>
 				<svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
 			</button>
