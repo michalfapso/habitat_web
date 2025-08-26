@@ -8897,8 +8897,8 @@ html.with-fancybox body.hide-scrollbar {
 @font-face {
   font-family: Switzer;
   src:
-    url(../../assets/font/Switzer-Regular.woff2) format("woff2"),
-    url(../../assets/font/Switzer-Regular.woff) format("woff");
+    url(/assets/font/Switzer-Regular.woff2) format("woff2"),
+    url(/assets/font/Switzer-Regular.woff) format("woff");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
@@ -8906,8 +8906,8 @@ html.with-fancybox body.hide-scrollbar {
 @font-face {
   font-family: Switzer;
   src:
-    url(../../assets/font/Switzer-Semibold.woff2) format("woff2"),
-    url(../../assets/font/Switzer-Semibold.woff) format("woff");
+    url(/assets/font/Switzer-Semibold.woff2) format("woff2"),
+    url(/assets/font/Switzer-Semibold.woff) format("woff");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
@@ -8915,8 +8915,8 @@ html.with-fancybox body.hide-scrollbar {
 @font-face {
   font-family: "At Hauss Aero";
   src:
-    url(../../assets/font/AtHaussAero-Regular.woff2) format("woff2"),
-    url(../../assets/font/AtHaussAero-Regular.woff) format("woff");
+    url(/assets/font/AtHaussAero-Regular.woff2) format("woff2"),
+    url(/assets/font/AtHaussAero-Regular.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9354,6 +9354,25 @@ body:not(.home) .topbar__square-logo .overlay {
 .topbar--dark .topbar__toggle:hover::after,
 .topbar--dark .topbar__toggle:hover::before {
   background: #fff;
+}
+.topbar__toggle.lang::before,
+.topbar__toggle.lang::after {
+  display: none;
+}
+.topbar__toggle.lang:hover {
+  background: transparent;
+}
+.topbar__toggle.lang {
+  font-size: 1.5rem;
+  width: 5em;
+  border: none;
+  -webkit-transition: none;
+  transition: none;
+}
+@media print, screen and (max-width: 74.99875em) {
+  .topbar__toggle.lang {
+    font-size: 1rem;
+  }
 }
 .topbar .button {
   margin: 0;

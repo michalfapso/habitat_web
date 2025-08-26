@@ -25,7 +25,15 @@ const projectsCollection = defineCollection({
   }),
 });
 
+const pagesCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+  }),
+});
+
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   projects: projectsCollection,
+  pages: pagesCollection,
 };

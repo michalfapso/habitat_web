@@ -75,7 +75,7 @@ const randomProjects = shuffledProjects.slice(0, 3);
                       ) : null;
                     })}
                 </ul>
-            <h1>{project.data.titleBreak}</h1>
+            <h1 set:html={project.data.titleBreak}></h1>
         </div>
     </div>
     <a href={translatedPath('/projekty/')} class="backlink show-for-large">

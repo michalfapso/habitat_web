@@ -34,7 +34,6 @@ const selectedProjects = selectedProjectSlugs.map(slug => projectsBySlug.get(slu
 <Layout 
 	bodyClass="home"
 >
-
 	<Hero className="hero--home">
 		Architekti <br>pasívnych <br>domov
 	</Hero>
@@ -98,7 +97,7 @@ const selectedProjects = selectedProjectSlugs.map(slug => projectsBySlug.get(slu
 			<p>Minimálna potreba energie znamená ekonomickú istotu. <strong>Habitat je BEZPEČNÉ prostredie</strong>.</p>
 		</Fragment>
 	</ImgSection>
-	
+
 	<div class="section pb-0">
 		<div class="grid-container">
 			<h3>Funkčnosť skrytá v&nbsp;dizajne</h3>
@@ -294,8 +293,7 @@ const selectedProjects = selectedProjectSlugs.map(slug => projectsBySlug.get(slu
 	
 	<SlidesProjects
 		title={t('projects.title')}
-		all={t('projects.all')}
 		projects={selectedProjects}
 	/>
-		
+
 </Layout>

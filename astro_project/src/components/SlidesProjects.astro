@@ -2,14 +2,18 @@
 import type { HTMLAttributes } from 'astro/types';
 import type { CollectionEntry } from 'astro:content';
 import CardProject from './CardProject.astro';
+import { useTranslations, useTranslatedPath, defaultLang } from '../i18n/utils';
+
+const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
+const t = useTranslations(lang);
+const path = useTranslatedPath(lang);
 
 export interface Props extends HTMLAttributes<'div'> {
     title: string;
-    all: string;
     projects: CollectionEntry<'projects'>[];
 }
 
-const { title, all, projects } = Astro.props;
+const { title, projects } = Astro.props;
 ---
 
 <div class="section" style="overflow-x:hidden">
@@ -27,9 +31,9 @@ const { title, all, projects } = Astro.props;
                         <svg class="icon icon-arrow-next"><use xlink:href="#icon-arrow-next"></use></svg>
                     </div>
                 </div>
-                <a href="/projekty/" class="hollow secondary button has-arrow small-expanded">
+                <a href={path("/projekty/")} class="hollow secondary button has-arrow small-expanded">
                     <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
-                    {all}
+                    {t('projects.all')}
                 </a>
             </div>
         </div>
@@ -45,9 +49,9 @@ const { title, all, projects } = Astro.props;
                 </div>
             </div>
             <div class="cell small-12 hide-for-medium">
-                <a href="/projekty/" class="hollow secondary button has-arrow small-expanded mt-40">
+                <a href={path("/projekty/")} class="hollow secondary button has-arrow small-expanded mt-40">
                     <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
-                    {all}
+                    {t('projects.all')}
                 </a>
             </div>
         </div>
