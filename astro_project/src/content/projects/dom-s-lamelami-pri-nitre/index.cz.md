@@ -2,7 +2,7 @@
 title: Dům s lamelami <br>u Nitry
 description: Návrh rodinného domu pro mladou rodinu - stavbu aktuálně realizují částečně svépomocí. Klienti nás oslovili s hotovým projektem pro stavební povolení, který ale výrazně nesplňoval požadavky na rozpočet a nezohledňoval energetiku v návrhu stavebních konstrukcí. Po analýze jsme se dohodli, že se společně vrátíme o krok zpět a nově jsme zadefinovali materiály i architekturu domu. Po optimalizaci dispozice a přetvoření klíčových prvků návrhu do jednodušší podoby jsme velikost domu ze 170 m<sup>2</sup> vytápěné podlahové plochy zmenšili na 130 m<sup>2</sup> a navzdory rozpočtovým limitům vytvořili zajímavé bydlení s vlastní identitou.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 15
 
 vykurovanaPlocha: 130
 uzitkovaPlocha: 137

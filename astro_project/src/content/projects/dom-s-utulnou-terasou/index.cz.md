@@ -2,7 +2,7 @@
 title: Dům s útulnou terasou
 description: Návrh domu pro čtyř- až šestičlennou rodinu s moderním a minimalistickým výrazem. V Habitat konfigurátoru jsme zkombinovali prostorný půdorys s rozpočtově optimalizovaným ztvárněním architektury. Dům definuje kombinace bílé a hnědé škrábané omítky, s ozvláštněním v podobě kryté terasy v srdci dispozice.
 tags: ["habitat-konfigurator"]
-pubDate: 2025-08-20
+order: 20
 
 vykurovanaPlocha: 134
 uzitkovaPlocha: 170

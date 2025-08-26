@@ -2,7 +2,7 @@
 title: Rodinné sídlo <br>pod Tatrami
 description: Ideová štúdia rozsiahleho sídla priamo pri turistickom chodníku do jednej z dolín Slovenského Raja. Klienti nás oslovili ohľadom prepracovania architektonickej štúdie, so zámerom overiť si odlišný prístup k zadaniu –  s dôrazom na energetiku a súčasný architektonický štýl.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 27
 
 vykurovanaPlocha: 433
 uzitkovaPlocha: 631

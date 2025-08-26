@@ -2,7 +2,7 @@
 title: Novostavby <br>na Kysuciach
 description: Návrh investičnej výstavby troch rodinných domov. Pre klienta sme vytvorili rozpočtovo optimalizovanú architektúru, ktorá zároveň spĺňa požiadavky na energetickú efektivitu a originalitu. Zadefinovali sme typ zástavby, umiestnenie a počet domov, vyriešili s klientom komplikovanú situáciu z hľadiska dopravného napojenia či blízkosti železnice a následne sme vypracovali projektovú dokumentáciu pre úrady.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 19
 
 vykurovanaPlocha: 99
 vykurovanaPlochaSuffix: / dom

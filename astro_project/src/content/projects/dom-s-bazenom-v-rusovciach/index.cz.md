@@ -2,7 +2,7 @@
 title: Dům s bazénem <br>v Rusovcích
 description: Návrh rodinného domu pro čtyřčlennou rodinu v těsné blízkosti Rusovského parku. Projekt jsme zajišťovali kompletně - od architektonické studie, přes výkresovou dokumentaci až po úspěšnou realizaci, kde proběhl kontrolní blow-door test a potvrdil kvalitu stavby.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 5
 
 vykurovanaPlocha: 143
 uzitkovaPlocha: 143

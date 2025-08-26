@@ -2,7 +2,7 @@
 title: Usedlost <br>na Červené Hoře
 description: Návrh nového bydlení pro pětičlennou rodinu, která se z města přestěhovala na středoslovenské lazy. Dům citlivě reaguje na místní architekturu a nemá za cíl ji moderními prvky přetvářet, ale dotvářet. S klienty jsme spolupracovali od výběru pozemku, přes architektonickou studii a projekční práce až po autorský dozor při realizaci stavby.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 1
 
 vykurovanaPlocha: 138
 uzitkovaPlocha: 147

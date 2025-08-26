@@ -2,7 +2,7 @@
 title: Dom s cortenom <br>pri Piešťanoch
 description: Návrh rodinného domu s luxusnou kombináciou cortenu a dreva na fasáde. Klientom sme boli oslovení na rýchlu ideovú štúdiu, podľa ktorej si vyberal medzi architektonickými ateliérmi. Keďže ho naše riešenie oslovilo, spolupracovali sme ďalej na dokončení architektúry a výkresoch pre stavebné povolenie. Klient následne dom realizoval čiastočne svojpomocne, pri čom sme mu pomáhali vypracovaním potrebných konštrukčných detailov v realizačnej podrobnosti.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 14
 
 vykurovanaPlocha: 163
 uzitkovaPlocha: 163

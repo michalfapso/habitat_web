@@ -2,7 +2,7 @@
 title: Rekonštrukcia <br>na Záhorí
 description: Návrh rekonštrukcie a prístavby rodinného domu pre mladý podnikateľský pár, venujúci sa lokálnemu pestovaniu zeleniny v bio kvalite. Pri spolupráci s klientmi bolo podstatné naplánovať postupnú realizáciu stavebných prác a racionálne pristúpiť k možnostiam vzhľadom na rozpočet. Návrh iba minimálnymi zásahmi do existujúcich konštrukcií napráva dispozičné problémy domu, pridáva potrebné hrúbky tepelnej izolácie a odhaľuje jeho skrytý potenciál – či už vo forme nových výhľadov, presvetlenia interiéru alebo prepojenia so záhradou.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 22
 
 vykurovanaPlocha: 86
 uzitkovaPlocha: 139

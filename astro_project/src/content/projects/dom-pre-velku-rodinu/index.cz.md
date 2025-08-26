@@ -2,7 +2,7 @@
 title: Dům pro <br>velkou rodinu
 description: Návrh dvoupodlažního domu s dostatkem prostoru pro šest a vícečlennou rodinu. V Habitat konfigurátoru jsme vybrali konstrukčně jednoduché detaily a kombinaci hmot s plochou a sedlovou střechou. Díky použití širokého vikýře má dům při pohledu z exteriéru příjemné měřítko a po vstupu dovnitř svou velikostí příjemně překvapí.
 tags: ["habitat-konfigurator"]
-pubDate: 2025-08-20
+order: 8
 
 vykurovanaPlocha: 175
 uzitkovaPlocha: 175

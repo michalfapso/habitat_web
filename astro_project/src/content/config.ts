@@ -12,7 +12,7 @@ const projectsCollection = defineCollection({
     imageThumb: z.string().optional(),
     imageThumbSet: z.string().optional(),
     tags: z.array(z.enum(availableTagKeys as [string, ...string[]])).optional(),
-    pubDate: z.date(), // Publication date (e.g., when the project was completed)
+    order: z.number().default(0),
 
     lokalita: z.string().optional(),
     vykurovanaPlocha: z.number().optional(),

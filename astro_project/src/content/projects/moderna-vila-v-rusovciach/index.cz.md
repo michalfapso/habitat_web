@@ -2,7 +2,7 @@
 title: Moderní vila <br>v Rusovcích
 description: Návrh moderní vily v lukrativní lokalitě, určený pro rozrůstající se rodinu, která preferuje funkční minimalismus a tvarovou jednoduchost. S klientem jsme zahájili spolupráci na architektonické studii a následně prošli kompletním procesem projekce až po realizaci.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 11
 
 vykurovanaPlocha: 175
 uzitkovaPlocha: 196

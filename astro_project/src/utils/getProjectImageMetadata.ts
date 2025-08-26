@@ -129,8 +129,8 @@ export async function getAugmentedProjects(locale: string): Promise<AugmentedPro
     }
     // console.log(`augmentedProjects:`, augmentedProjects);
 
-    // Sort projects by publish date, newest first
-    augmentedProjects.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+    // Sort projects by order
+    augmentedProjects.sort((a, b) => a.data.order - b.data.order);
 
     return augmentedProjects;
 }

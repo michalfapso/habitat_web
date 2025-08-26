@@ -2,7 +2,7 @@
 title: Dům s <br>městským nádechem
 description: Návrh stylového bydlení pro pěti- až šestičlennou rodinu. Pomocí Habitat konfigurátoru jsme vytvořili dvoupodlažní městskou vilu s luxusními detaily a nevšedním půdorysem, který nabízí bohatý výběr výhledů do zahrady a venkovních pobytových ploch. Na fasádě je použita kombinace cihlového obkladu s bílou omítkou, doplněnou antracitovými rámy oken.
 tags: ["habitat-konfigurator"]
-pubDate: 2025-08-20
+order: 16
 
 vykurovanaPlocha: 174
 uzitkovaPlocha: 174

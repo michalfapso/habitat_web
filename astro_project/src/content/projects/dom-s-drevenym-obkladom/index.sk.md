@@ -2,7 +2,7 @@
 title: Dom s dreveným obkladom
 description: Návrh domu pre štvorčlennú rodinu, ktorá preferuje prírodné materiály. Architektúra vychádza z možností Habitat konfigurátora – dom je zložený s tradičnej hmoty so sedlovou strechou a moderného krídla s plochou vegetačnou strechou. Tieto hmoty sú odlíšené stvárnením fasády – veľkoplošný drevený obklad alebo biela omietka s jemnou líniovou štruktúrou. Terasa je krytá bioklimatickou pergolou, ktorá zároveň chráni dom pred letným prehrievaním.
 tags: ["habitat-konfigurator"]
-pubDate: 2025-08-20
+order: 10
 
 vykurovanaPlocha: 133
 uzitkovaPlocha: 133

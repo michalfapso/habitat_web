@@ -2,7 +2,7 @@
 title: Rodinný dom L <br>v Seredi
 description: Návrh domu pre štvorčlennú rodinu na okraji novovznikajúcej mestskej štvrte. Rohový pozemok je zložito zaregulovaný - jednak vzdialenosťou výstavby od cesty prvej triedy, jednak ochrannými pásmami sietí, ktoré zásobujú celú lokalitu. Návrh sa musel vysporiadať s týmito komplikovanými požiadavkami a reagovať atypickým tvarom domu aj umiestnením vstupu.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 28
 
 vykurovanaPlocha: 126
 uzitkovaPlocha: 158

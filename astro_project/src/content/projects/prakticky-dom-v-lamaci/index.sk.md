@@ -2,7 +2,7 @@
 title: Praktický dom <br>v Lamači
 description: Návrh rodinného domu v blízkosti historického centra Lamača. S klientmi sme začali spoluprácu architektonickou štúdiou rekonštrukcie rodinného domu, v ktorej sme navrhovali eliminovať prevádzkové problémy jednoduchou prístavbou smerom do záhrady. Následne sa rozhodli s nami overiť aj možnosť novostavby, ktorá by bez kompromisov naplnila ich aktuálne požiadavky na bývanie a prácu z domu.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 21
 
 vykurovanaPlocha: 162
 uzitkovaPlocha: 162

@@ -2,7 +2,7 @@
 title: Dom s pavlačou
 description: Návrh domu pre päť- až šesťčlennú rodinu, ktorý kombinuje tradičné tvaroslovie s nadštandardnými detailmi vysokých presklení a dreveného obkladu. V Habitat konfigurátore sme vytvorili priestranný pozdĺžny pôdorys, umiestený na širokom pozemku. Dom definuje presah sedlovej strechy pred južnú fasádu, ktorý popri terase vytvára pavlač a tieni presklenia pred vysokým letným slnkom.
 tags: ["habitat-konfigurator"]
-pubDate: 2025-08-20
+order: 17
 
 vykurovanaPlocha: 131
 uzitkovaPlocha: 167

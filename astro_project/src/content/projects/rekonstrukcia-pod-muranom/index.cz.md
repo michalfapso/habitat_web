@@ -2,7 +2,7 @@
 title: Rekonstrukce <br>pod Muráněm
 description: Návrh rekonstrukce a dostavby rodinného domu ve výjimečné lokalitě plné výhledů na okolní přírodní památky. Klienti chtěli vytvořit místo pro setkávání široké rodiny a příležitostné pronajímání turistům. Výzvou bylo sladit priority různých generací, stálých obyvatel domu a nárazových návštěv. Velikost zadání zároveň umožnila zajímavou práci s dostavbou a jejím umístěním, či s výškovým rozdílem mezi stávající dispozicí a zahradou.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 25
 
 vykurovanaPlocha: 206
 uzitkovaPlocha: 244

@@ -2,7 +2,7 @@
 title: Dům s vikýřem <br>u Ružomberku
 description: Návrh rodinného domu v srdci Slovenska, který pracuje s tradičním i moderním tvaroslovím a nepopírá atmosféru lokality. Určen je pro mladou rodinu, která díky našim podrobným realizačním výkresům zrealizovala pasivní dům ve spolupráci s místními staviteli.
 tags: ["domov-na-mieru"]
-pubDate: 2025-08-20
+order: 7
 
 vykurovanaPlocha: 172
 uzitkovaPlocha: 224

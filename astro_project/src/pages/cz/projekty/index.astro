@@ -9,8 +9,8 @@ const lang = Astro.currentLocale as keyof typeof import('../../../i18n/utils').l
 const t = useTranslations(lang);
 const allProjects = await getAugmentedProjects(lang);
 
-// Sort projects by publish date, newest first
-allProjects.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+// Sort projects by order
+allProjects.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout title={t('projects.title')} bodyClass="home" topbarClass="topbar--bright">
