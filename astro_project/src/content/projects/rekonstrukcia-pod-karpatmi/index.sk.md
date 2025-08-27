@@ -2,6 +2,7 @@
 title: Rekonštrukcia <br>pod Karpatmi
 description: Návrh komplexnej rekonštrukcie domu pre rozrastajúcu sa rodinu, ktorá kladie dôraz na ekológiu. Projekt sme zastrešovali od architektonickej štúdie, cez podklady pre úrady, až po podrobnú realizačnú dokumentáciu a autorský dozor na stavbe. Ide o jedinečný projekt, v ktorom sa rekonštrukciou podarilo znížiť potrebu tepla na vykurovanie na nižšie hodnoty, než definujú pasívny štandard pre novostavby. Klienti v tohtoročnej sezóne minuli na všetku prevádzku domu do 120 eur mesačne, čo je položka porovnateľná s dvojizbovým bytom.
 tags: ["domov-na-mieru"]
+otherProjects: ["rekonstrukcia-pod-muranom","rodinne-sidlo-pod-tatrami","dom-s-drevenym-obkladom"]
 order: 24
 
 vykurovanaPlocha: 246

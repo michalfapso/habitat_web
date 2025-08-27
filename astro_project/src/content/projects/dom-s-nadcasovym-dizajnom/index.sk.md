@@ -2,6 +2,7 @@
 title: Dom s nadčasovým dizajnom
 description: Návrh dvojpodlažného domu pre päťčlennú rodinu, ktorá má rada minimalizmus. V Habitat konfigurátore sme vyskladali funkčne prehľadný a veľkostne optimalizovaný pôdorys, ktorý sme doplnili univerzálnymi dizajnovými prvkami a vkusnou kombináciou bielej omietky s dreveným obkladom. Zelená strecha nad prvým podlažím plynulo prechádza do hmoty balkóna, ktorý čiastočne kryje terasu pred dažďom a chráni južné presklenia pred letným prehrievaním. 
 tags: ["habitat-konfigurator"]
+otherProjects: ["vila-s-akvariom-pri-brne","dom-l-s-tehlovym-obkladom","dom-pod-borovicami"]
 order: 3
 
 vykurovanaPlocha: 149

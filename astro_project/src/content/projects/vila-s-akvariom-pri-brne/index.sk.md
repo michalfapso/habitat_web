@@ -2,6 +2,7 @@
 title: Vila s akváriom <br>pri Brne
 description: Návrh nadštandardného bývania na Južnej Morave. Zadaním od klienta bolo vytvoriť jednopodlažný bezbariérový rodinný dom s výnimočnou architektúrou. Zaujímavosťou je zakomponovanie veľkého slanovodného akvária a tomu prispôsobené technologické vybavenie domu. Pri navrhovaní sme sa snažili nájsť balans medzi racionalitou a umeleckým zámerom – všetky atypické prvky boli navrhované s čo najjednoduchším konštrukčným riešením a priebežne analyzované v softvéroch na energetickú optimalizáciu stavby.
 tags: ["domov-na-mieru"]
+otherProjects: ["usadlost-na-cervenej-hore","dom-pod-borovicami","dom-s-utulnou-terasou"]
 order: 29
 
 vykurovanaPlocha: 176

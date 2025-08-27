@@ -2,6 +2,7 @@
 title: Dom so šikmými stĺpmi
 description: Návrh štýlového domu pre štvorčlennú rodinu. V Habitat konfigurátore sme skombinovali optimalizovanú centrálnu dispozíciu a luxusné stvárnenie architektúry. Všetky presklenia smerom do záhrady majú nadštandarné rozmery, ktoré nadväzujú na výšku tienenia a prekrytia terasy. Na fasáde je použitá kombinácia tehlového obkladu s bielou omietkou, doplnenou antracitovými rámami okien.
 tags: ["habitat-konfigurator"]
+otherProjects: ["dom-v-zahrade","dom-za-mestom","dom-so-saunou-na-povazi"]
 order: 23
 
 vykurovanaPlocha: 134

@@ -2,6 +2,7 @@
 title: Dom v záhrade
 description: Návrh praktického domu pre trojčlennú rodinu. Habitat konfigurátor nám umožnil jednoducho skombinovať pôdorys bez veľkostných kompromisov s rozpočtovo optimalizovaným zovňajškom domu. V architektúre sme vybrali konštrukčne jednoduché detaily a vkusnú kompozíciu hmôt s plochou alebo sedlovou strechou. Nevykurované podkrovie je využité ako veľký úložný priestor.
 tags: ["habitat-konfigurator"]
+otherProjects: ["dom-za-mestom","vila-s-akvariom-pri-brne","novostavby-na-kysuciach"]
 order: 26
 
 vykurovanaPlocha: 99

@@ -2,6 +2,7 @@
 title: Rekonštrukcia <br>pod Muráňom
 description: Návrh rekonštrukcie a dostavby rodinného domu vo výnimočnej lokalite plnej výhľadov na okolité prírodné pamiatky. Klienti chceli vytvoriť miesto pre stretávania širokej rodiny a príležitostné prenajímanie turistom. Výzvou bolo zladiť priority rôznych generácii, stálych obyvateľov domu a nárazových návštev. Veľkosť zadania zároveň umožnila zaujímavú prácu s dostavbou a jej umiestnením, či s výškovým rozdielom medzi existujúcou dispozíciou a záhradou.
 tags: ["domov-na-mieru"]
+otherProjects: ["rodinne-sidlo-pod-tatrami","rodinny-dom-l-v-seredi","dom-s-kontrastom"]
 order: 25
 
 vykurovanaPlocha: 206

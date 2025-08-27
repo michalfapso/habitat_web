@@ -2,6 +2,7 @@
 title: Dům s kontrastem
 description: Návrh domu pro čtyřčlennou rodinu, který spojuje přírodní materiály a moderní architekturu. V Habitat konfigurátoru jsme zkombinovali dvě hmoty - tradiční kvádr se sedlovou střechou a dřevěným obkladem a bílé moderní křídlo s plochou vegetační střechou. Tento trakt je obohacen o překrytí terasy vykonzolováním stropní konstrukce, jehož rozměry vycházejí z analýzy proslunění a orientace pozemku.
 tags: ["habitat-konfigurator"]
+otherProjects: ["dom-s-otvorenym-krovom","dom-s-pavlacou","dom-s-vyhladom-na-bratislavu"]
 order: 12
 
 vykurovanaPlocha: 118

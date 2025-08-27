@@ -2,6 +2,7 @@
 title: Dům s otevřeným krovem
 description: Návrh nadstandardního domu pro tří- až čtyřčlennou rodinu. Tvarově kombinuje plochou vegetační střechu a trakt se sedlovou střechou s přiznaným krovem v interiéru. Při návrhu jsme využili Habitat konfigurátor a po definování architektury ověřili energetickou bilanci domu na konkrétní parcele.
 tags: ["habitat-konfigurator"]
+otherProjects: ["dom-s-pavlacou","dom-s-utulnou-terasou","moderna-vila-v-rusovciach"]
 order: 13
 
 vykurovanaPlocha: 126

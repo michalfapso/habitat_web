@@ -2,6 +2,7 @@
 title: Dům se saunou <br>na Pováží
 description: Návrh domu pro mladou čtyřčlennou rodinu. Při spolupráci s klienty jsme nejprve podrobně probrali a zhodnotili potřebu či velikost jednotlivých prostor, abychom společně sladili očekávání a rozpočet stavby. Následně byl celý návrh řešen s ohledem na jednoduchost konstrukčních a architektonických prvků - vznikl tak racionální, ale proporčně a výrazově vkusný rodinný dům.
 tags: ["domov-na-mieru"]
+otherProjects: ["novostavby-na-kysuciach","prakticky-dom-v-lamaci","dom-v-zahrade"]
 order: 18
 
 vykurovanaPlocha: 138

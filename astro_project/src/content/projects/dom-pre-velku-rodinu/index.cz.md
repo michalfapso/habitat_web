@@ -2,6 +2,7 @@
 title: Dům pro <br>velkou rodinu
 description: Návrh dvoupodlažního domu s dostatkem prostoru pro šest a vícečlennou rodinu. V Habitat konfigurátoru jsme vybrali konstrukčně jednoduché detaily a kombinaci hmot s plochou a sedlovou střechou. Díky použití širokého vikýře má dům při pohledu z exteriéru příjemné měřítko a po vstupu dovnitř svou velikostí příjemně překvapí.
 tags: ["habitat-konfigurator"]
+otherProjects: ["moderna-vila-v-rusovciach","dom-l-s-tehlovym-obkladom","usadlost-na-cervenej-hore"]
 order: 8
 
 vykurovanaPlocha: 175

@@ -2,6 +2,7 @@
 title: Dům se šikmými sloupy
 description: Návrh stylového domu pro čtyřčlennou rodinu. V Habitat konfigurátoru jsme zkombinovali optimalizovanou centrální dispozici a luxusní ztvárnění architektury. Všechna prosklení směrem do zahrady mají nadstandardní rozměry, které navazují na výšku stínění a překrytí terasy. Na fasádě je použita kombinace cihlového obkladu s bílou omítkou, doplněnou antracitovými rámy oken.
 tags: ["habitat-konfigurator"]
+otherProjects: ["dom-v-zahrade","dom-za-mestom","dom-so-saunou-na-povazi"]
 order: 23
 
 vykurovanaPlocha: 134

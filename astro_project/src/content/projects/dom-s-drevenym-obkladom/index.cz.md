@@ -2,6 +2,7 @@
 title: Dům s dřevěným obkladem
 description: Návrh domu pro čtyřčlennou rodinu, která preferuje přírodní materiály. Architektura vychází z možností Habitat konfigurátoru – dům je složen z tradiční hmoty se sedlovou střechou a moderního křídla s plochou vegetační střechou. Tyto hmoty jsou odlišeny ztvárněním fasády – velkoplošný dřevěný obklad nebo bílá omítka s jemnou liniovou strukturou. Terasa je krytá bioklimatickou pergolou, která zároveň chrání dům před letním přehříváním.
 tags: ["habitat-konfigurator"]
+otherProjects: ["dom-s-kontrastom","dom-s-otvorenym-krovom","dom-s-vikierom-pri-ruzomberku"]
 order: 10
 
 vykurovanaPlocha: 133

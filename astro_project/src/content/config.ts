@@ -13,6 +13,7 @@ const projectsCollection = defineCollection({
     imageThumbSet: z.string().optional(),
     tags: z.array(z.enum(availableTagKeys as [string, ...string[]])).optional(),
     order: z.number().default(0),
+    otherProjects: z.array(z.string()).optional(),
 
     lokalita: z.string().optional(),
     vykurovanaPlocha: z.number().optional(),

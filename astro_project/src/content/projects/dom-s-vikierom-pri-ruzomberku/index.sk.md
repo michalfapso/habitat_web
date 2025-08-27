@@ -2,6 +2,7 @@
 title: Dom s vikierom <br>pri Ružomberku
 description: Návrh rodinného domu v srdci Slovenska, ktorý pracuje s tradičným i moderným tvaroslovím a nepopiera atmosféru lokality. Určený je pre mladú rodinu, ktorá vďaka našim podrobným realizačným výkresom zrealizovala pasívny dom v spolupráci s miestnymi staviteľmi.
 tags: ["domov-na-mieru"]
+otherProjects: ["dom-s-vyhladom-na-bratislavu","moderna-vila-v-rusovciach","dom-s-kontrastom"]
 order: 7
 
 vykurovanaPlocha: 172

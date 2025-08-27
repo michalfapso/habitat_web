@@ -2,6 +2,7 @@
 title: Dom so saunou <br>na Považí
 description: Návrh domu pre mladú štvorčlennú rodinu. Pri spolupráci s klientmi sme najskôr dopodrobna prebrali a zhodnotili potrebu či veľkosť jednotlivých priestorov, aby sme spoločne zladili očakávania a rozpočet stavby. Následne bol celý návrh riešený s ohľadom na jednoduchosť konštrukčných a architektonických prvkov - vznikol tak racionálny, ale proporčne a výrazovo vkusný rodinný dom.
 tags: ["domov-na-mieru"]
+otherProjects: ["novostavby-na-kysuciach","prakticky-dom-v-lamaci","dom-v-zahrade"]
 order: 18
 
 vykurovanaPlocha: 138

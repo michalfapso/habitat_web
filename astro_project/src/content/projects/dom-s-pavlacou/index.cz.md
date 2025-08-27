@@ -2,6 +2,7 @@
 title: Dům s pavlačí
 description: Návrh domu pro pěti- až šestičlennou rodinu, který kombinuje tradiční tvarosloví s nadstandardními detaily vysokých prosklení a dřevěného obkladu. V Habitat konfigurátoru jsme vytvořili prostorný podélný půdorys, umístěný na širokém pozemku. Dům definuje přesah sedlové střechy před jižní fasádu, který podél terasy vytváří pavlač a stíní prosklení před vysokým letním sluncem.
 tags: ["habitat-konfigurator"]
+otherProjects: ["dom-s-utulnou-terasou","dom-so-sikmymi-stlpmi","dom-s-cortenom-pri-piestanoch"]
 order: 17
 
 vykurovanaPlocha: 131

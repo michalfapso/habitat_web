@@ -2,6 +2,7 @@
 title: Dom pod borovicami
 description: Návrh domu v lukratívnej lokalite vo svahu nad Bratislavou. Zadaním od klienta bolo zhodnotiť a dopracovať existujúcu architektonickú štúdiu. Sústredili sme sa hlavne na optimalizáciu energetiky a dispozície, pri ktorej sa nám podarilo úpravami ušetriť 55 m<sup>2</sup> z vykurovaných priestorov a plochu chodieb zmenšiť na polovicu. Následne sme sa dohodli na ďalšej spolupráci pri projekčnej činnosti a aktuálne je stavba v povoľovacom procese.
 tags: ["domov-na-mieru"]
+otherProjects: ["dom-s-bazenom-v-rusovciach","dom-s-vikierom-pri-ruzomberku","dom-s-dlhou-pergolou"]
 order: 4
 
 vykurovanaPlocha: 156

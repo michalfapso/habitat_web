@@ -2,6 +2,7 @@
 title: Dům L s cihlovým obkladem
 description: Návrh stylového domu pro tříčlennou rodinu. V rámci Habitat konfigurátoru jsme vybrali moderní ztvárnění architektury a luxusní detaily, jako je nadstandardní výška prosklení nebo cihlový obklad. Při konkrétní orientaci a lokalitě pozemku stačilo pro zamezení letního přehřívání částečné vyložení ploché vegetační střechy před jižní fasádu.
 tags: ["habitat-konfigurator"]
+otherProjects: ["dom-s-dlhou-pergolou","dom-s-drevenym-obkladom","dom-pod-borovicami"]
 order: 2
 
 vykurovanaPlocha: 114
