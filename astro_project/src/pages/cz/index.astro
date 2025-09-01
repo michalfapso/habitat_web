@@ -16,7 +16,7 @@ import SlidesProjects from '../../components/SlidesProjects.astro';
 const lang = Astro.currentLocale as keyof typeof import('../../i18n/utils').languages;
 const t = useTranslations(lang);
 
-const selectedProjectSlugs = [
+const selectedProjectDirs = [
 	"dom-s-pavlacou",
 	"usadlost-na-cervenej-hore",
 	"dom-s-mestskym-nadychom",
@@ -27,9 +27,8 @@ const selectedProjectSlugs = [
 ];
 
 const allProjects = await getAugmentedProjects(lang);
-// console.log('allProjects:', allProjects);
-const projectsBySlug = new Map(allProjects.map(p => [p.slug.replace(/\/.*/, ''), p]));
-const selectedProjects = selectedProjectSlugs.map(slug => projectsBySlug.get(slug)).filter(Boolean);
+const projectsByDir = new Map(allProjects.map(p => [p.data.dir, p]));
+const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).filter(Boolean);
 ---
 
 <Layout 

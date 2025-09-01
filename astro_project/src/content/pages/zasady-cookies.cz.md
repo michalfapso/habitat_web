@@ -1,5 +1,6 @@
 ---
 title: 'Zásady zpracování souborů cookie'
+slug: 'zasady-cookies'
 ---
 
 # Zásady zpracování souborů cookie

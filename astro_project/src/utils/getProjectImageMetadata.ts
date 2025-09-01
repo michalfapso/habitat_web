@@ -43,21 +43,23 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
     // The path for import.meta.glob is relative to the project root.
     const allGalleryImageLoaders = import.meta.glob('/src/content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
 
-    const projectSlug = project.slug.replace(/\/.*/, ''); // Remove 'sk/' or 'cz/' prefix
+    const projectDir = project.id.replace(/\/index.*$/, '');
     // console.log('project id:', project.id, ' projectSlug:', projectSlug);
 
     const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, _]) => {
         // Filter images belonging to the current project's gallery
-        return path.includes(`/src/content/projects/${projectSlug}/gallery/`);
+        return path.includes(`/src/content/projects/${projectDir}/gallery/`);
     }).sort(([pathA, _], [pathB, __]) => pathA.localeCompare(pathB)); // Sort to ensure a consistent "first" image
     // console.log('projectImages:', projectImages);
 
     if (projectImages.length === 0) {
-        console.warn(`No gallery images found for project: ${projectSlug} and frontmatter image fields are empty. Using fallback images.`);
+        console.warn(`No gallery images found for project: ${projectDir} and frontmatter image fields are empty. Using fallback images.`);
         return null;
     }
 
-    const [firstImagePath, firstImageLoader] = projectImages[0];
+    project.data.headerImageNumber = Math.min(Math.max(project.data.headerImageNumber || 1, 1), projectImages.length);
+    console.log('headerImageNumber:', project.data.headerImageNumber, ' for project:', projectDir);
+    const [firstImagePath, firstImageLoader] = projectImages[project.data.headerImageNumber - 1];
     const imgModule = await (firstImageLoader as () => Promise<{ default: ImageMetadata }>).call(null);
 
     // Generate optimized images for 'image' and 'imageSet'
@@ -78,6 +80,21 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
     };
     // console.log('res:', res);
     return res;
+}
+
+function slugify(text: string): string {
+    const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+    const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
+    const p = new RegExp(a.split('').join('|'), 'g')
+
+    return text.toString().toLowerCase()
+        .replace(/\s+/g, '-') // Replace spaces with -
+        .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+        .replace(/&/g, '-and-') // Replace & with 'and'
+        .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+        .replace(/\-\-+/g, '-') // Replace multiple - with single -
+        .replace(/^-+/, '') // Trim - from start of text
+        .replace(/-+$/, '') // Trim - from end of text
 }
 
 /**
@@ -101,7 +118,16 @@ export async function getAugmentedProjects(locale: string): Promise<AugmentedPro
         if (!project.data.titleBreak) {
             project.data.titleBreak = project.data.title;
         }
-        project.data.title = project.data.title.replace(/<[^>]*>/g, "");
+        const title = project.data.title.replace(/<[^>]*>/g, "");
+        project.data.title = title;
+
+        // Astro's default slug is `path/to/entry/index.lang`. A custom slug from frontmatter will not have this format.
+        // We slugify the title only if a custom slug is not present.
+        if (/\/index\w\w$/.test(project.slug)) {
+            project.slug = slugify(title);
+        }
+
+        project.data.dir = project.id.replace(/\/index.*$/, '');
         if (imageMetadata) {
             augmentedProjects.push({
                 ...project,

@@ -1,5 +1,6 @@
 ---
 title: 'Zásady zpracování osobních údajů'
+slug: zasady-zpracovani-osobnich-udaju
 ---
 
 # Zásady zpracování osobních údajů

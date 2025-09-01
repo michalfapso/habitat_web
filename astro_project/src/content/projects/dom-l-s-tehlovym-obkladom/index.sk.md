@@ -4,6 +4,8 @@ description: Návrh štýlového domu pre trojčlennú rodinu. V rámci Habitat
 tags: ["habitat-konfigurator"]
 otherProjects: ["dom-s-dlhou-pergolou","dom-s-drevenym-obkladom","dom-pod-borovicami"]
 order: 2
+headerImageNumber: 1
+slug: "dommm"
 
 vykurovanaPlocha: 114
 uzitkovaPlocha: 135

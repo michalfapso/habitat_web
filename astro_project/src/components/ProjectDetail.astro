@@ -15,15 +15,16 @@ interface Props {
 const { project, lang, allProjects } = Astro.props;
 const { Content } = await project.render();
 const t = useTranslations(lang);
-const translatedPath = useTranslatedPath(lang);
+const translatedPath = await useTranslatedPath(lang);
 
 const allGalleryImageLoaders = import.meta.glob('/src/content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
 let galleryImages = [];
 let otherProjects: CollectionEntry<'projects'>[] = [];
 if (project) {
-    const projectSlug = project.slug.replace(/\/index..*$/, '');
+    console.log('project:', project);
+    const projectDir = project.id.replace(/\/index.*$/, '');
     const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, loader]) => {
-        return path.includes(`/src/content/projects/${projectSlug}/gallery/`);
+        return path.includes(`/src/content/projects/${projectDir}/gallery/`);
     });
 
     for (const [path, loader] of projectImages) {
@@ -40,9 +41,9 @@ if (project) {
         });
     }
 
-    const projectsBySlug = new Map(allProjects.map(p => [p.slug.replace(/\/.*/, ''), p]));
+    const projectsByDir = new Map(allProjects.map(p => [p.data.dir, p]));
     if (project.data.otherProjects) {
-        otherProjects = project.data.otherProjects.map(slug => projectsBySlug.get(slug)).filter(Boolean);
+        otherProjects = project.data.otherProjects.map(dir => projectsByDir.get(dir)).filter(Boolean);
     }
 }
 

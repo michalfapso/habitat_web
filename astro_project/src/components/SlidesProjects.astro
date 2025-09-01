@@ -6,7 +6,7 @@ import { useTranslations, useTranslatedPath, defaultLang } from '../i18n/utils';
 
 const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
 const t = useTranslations(lang);
-const path = useTranslatedPath(lang);
+const path = await useTranslatedPath(lang);
 
 export interface Props extends HTMLAttributes<'div'> {
     title: string;

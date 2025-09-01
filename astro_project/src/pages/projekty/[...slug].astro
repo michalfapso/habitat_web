@@ -7,17 +7,20 @@ export async function getStaticPaths() {
   const skProjects = await getAugmentedProjects('sk');
 
   const paths = skProjects.map(project => {
-    const slugForUrl = project.slug.replace(/\/index..*$/, '');
     return {
-      params: { slug: slugForUrl },
-      props: { lang: 'sk', slug: project.slug },
+      params: { slug: project.slug },
+      props: {
+        lang: 'sk',
+        project: project,
+        id: project.id,
+        fullPath: `/projekty/${project.slug}`
+      },
     };
   });
   return paths;
 }
-const { lang, slug } = Astro.props;
+const { lang, project } = Astro.props;
 const allProjects = await getAugmentedProjects(lang);
-const project = allProjects.find(p => p.slug === slug);
 ---
 
 <Layout title={project.data.title}>

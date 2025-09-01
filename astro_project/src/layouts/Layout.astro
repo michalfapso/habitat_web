@@ -7,7 +7,7 @@ import { useTranslations, useTranslatedPath, defaultLang } from '../i18n/utils';
 
 const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
 const t = useTranslations(lang);
-const path = useTranslatedPath(lang);
+const path = await useTranslatedPath(lang);
 
 interface Props {
 	title?: string;
@@ -32,8 +32,11 @@ const titleFull = title ? `${title} | ${siteTitle}` : siteTitle;
 
 const switchLanguageCode = lang == 'sk' ? 'cz' : 'sk';
 const switchLanguageName = lang == 'sk' ? 'Čeština' : 'Slovenčina';
-const switchLanguageUrl  = lang == defaultLang ? '/cz' + Astro.url.pathname : Astro.url.pathname.replace(/^\/cz/, '/').replace(/^\/\//, '/');
-console.log('defaultLang:', defaultLang, ' pathname:', Astro.url.pathname, ' switchLanguageUrl:', switchLanguageUrl, ' lang:', lang);
+const switchLanguagePathFn = await useTranslatedPath(switchLanguageCode);
+// const switchLanguageUrl  = lang == defaultLang ? '/cz' + Astro.url.pathname : Astro.url.pathname.replace(/^\/cz/, '/').replace(/^\/\//, '/');
+// const switchLanguageUrl  = lang == defaultLang ? '/cz' : '/';
+const switchLanguageUrl  = switchLanguagePathFn(Astro.url.pathname);
+console.log('defaultLang:', defaultLang, ' pathname:', Astro.url.pathname, ' switchLanguageUrl:', switchLanguageUrl, ' switchLanguageCode:', switchLanguageCode, ' lang:', lang);
 ---
 
 <!doctype html>

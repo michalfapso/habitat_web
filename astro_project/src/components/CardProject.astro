@@ -4,13 +4,12 @@ import { useTranslations, useTranslatedPath } from '../i18n/utils';
 
 const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
 const t = useTranslations(lang);
-const path = useTranslatedPath(lang);
+const path = await useTranslatedPath(lang);
 
 const { project, className } = Astro.props;
 
-const projectSlug = project.slug.replace(/\/index..$/, '');
 ---
-<a class={`${className} project`} href={path(`/projekty/${projectSlug}/`)}>
+<a class={`${className} project`} href={path(`/projekty/${project.slug}/`)}>
     <div class="project__img">
         <img src={project.data.imageThumb} srcset={project.data.imageThumbSet} alt={project.data.title}>
     </div>

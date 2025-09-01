@@ -14,6 +14,8 @@ const projectsCollection = defineCollection({
     tags: z.array(z.enum(availableTagKeys as [string, ...string[]])).optional(),
     order: z.number().default(0),
     otherProjects: z.array(z.string()).optional(),
+    headerImageNumber: z.number().default(1),
+    dir: z.string().optional(), // Directory where the project is located. This field is generated automatically.
 
     lokalita: z.string().optional(),
     vykurovanaPlocha: z.number().optional(),
