@@ -9364,7 +9364,7 @@ body:not(.home) .topbar__square-logo .overlay {
 }
 .topbar__toggle.lang {
   font-size: 1.5rem;
-  width: 5em;
+  padding-right: 3em;
   border: none;
   -webkit-transition: none;
   transition: none;
@@ -9372,6 +9372,16 @@ body:not(.home) .topbar__square-logo .overlay {
 @media print, screen and (max-width: 74.99875em) {
   .topbar__toggle.lang {
     font-size: 1rem;
+  }
+}
+@media print, screen and (max-width: 25em) {
+  .topbar__toggle.lang {
+    padding-right: 0;
+  }
+}
+@media print, screen and (max-width: 20em) {
+  .topbar__toggle.lang {
+    visibility: hidden !important;
   }
 }
 .topbar .button {
