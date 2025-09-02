@@ -11367,9 +11367,19 @@ body.is-site-nav-open {
   margin-bottom: 1.5rem;
 }
 .section--manifest .grid-x {
-  height: 25rem;
-  height: calc(47rem - 54vw);
+  /* height: 25rem; */
+  height: calc(60rem - 90vw);
   position: relative;
+}
+@media print, screen and (min-width: 20em) {
+  .section--manifest .grid-x {
+    height: calc(50rem - 60vw);
+  }
+}
+@media print, screen and (min-width: 25em) {
+  .section--manifest .grid-x {
+    height: calc(47rem - 54vw);
+  }
 }
 @media print, screen and (min-width: 40em) {
   .section--manifest .grid-x {
