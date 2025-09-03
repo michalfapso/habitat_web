@@ -58,7 +58,7 @@ async function getFirstGalleryImageMetadata(project: CollectionEntry<'projects'>
     }
 
     project.data.headerImageNumber = Math.min(Math.max(project.data.headerImageNumber || 1, 1), projectImages.length);
-    console.log('headerImageNumber:', project.data.headerImageNumber, ' for project:', projectDir);
+    // console.log('headerImageNumber:', project.data.headerImageNumber, ' for project:', projectDir);
     const [firstImagePath, firstImageLoader] = projectImages[project.data.headerImageNumber - 1];
     const imgModule = await (firstImageLoader as () => Promise<{ default: ImageMetadata }>).call(null);
 

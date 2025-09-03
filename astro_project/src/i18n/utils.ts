@@ -3,6 +3,7 @@ import cz from './cz';
 
 export const defaultLang = 'sk';
 export const languages = { sk, cz };
+export const languagesRegex = Object.keys(languages).join('|');
 
 export function useTranslations(lang: keyof typeof languages) {
   return function t(key: keyof (typeof sk)) {
@@ -17,6 +18,7 @@ export function useTranslations(lang: keyof typeof languages) {
  */
 export async function useTranslatedPath(lang: keyof typeof languages) {
   const base = lang === defaultLang ? '' : `/${lang}`;
+  // console.log('useTranslatedPath() base:', base, ' lang:', lang, ' defaultLang:', defaultLang);
 
   // const modules: any[] = await Promise.all(Object.values(import.meta.glob(['../**/*.astro'])).map(fn => fn()));
   const modules: any[] = await Promise.all(Object.values(import.meta.glob(['../pages/**/*.astro'])).map(fn => fn()));
@@ -62,6 +64,11 @@ export async function useTranslatedPath(lang: keyof typeof languages) {
     }
     
     // Fallback for pages without translation
+    path = path.replace(new RegExp(`^\/${languagesRegex}`), '');
+    if (!path.startsWith('/')) {
+      path = `/${path}`;
+    }
+    // console.log('translated path:', path === '/' ? base || '/' : `${base}${path}`);
     return path === '/' ? base || '/' : `${base}${path}`;
   };
 }
