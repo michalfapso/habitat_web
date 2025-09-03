@@ -1,17 +1,7 @@
 ---
 title: Dům s lamelami <br>u Nitry
 description: Návrh rodinného domu pro mladou rodinu - stavbu aktuálně realizují částečně svépomocí. Klienti nás oslovili s hotovým projektem pro stavební povolení, který ale výrazně nesplňoval požadavky na rozpočet a nezohledňoval energetiku v návrhu stavebních konstrukcí. Po analýze jsme se dohodli, že se společně vrátíme o krok zpět a nově jsme zadefinovali materiály i architekturu domu. Po optimalizaci dispozice a přetvoření klíčových prvků návrhu do jednodušší podoby jsme velikost domu ze 170 m<sup>2</sup> vytápěné podlahové plochy zmenšili na 130 m<sup>2</sup> a navzdory rozpočtovým limitům vytvořili zajímavé bydlení s vlastní identitou.
-tags: ["domov-na-mieru"]
-otherProjects: ["dom-so-saunou-na-povazi","novostavby-na-kysuciach","dom-so-sikmymi-stlpmi"]
-order: 15
-
-vykurovanaPlocha: 130
-uzitkovaPlocha: 137
-pocetIzieb: 4
-lokalita: Jelšovce, okres Nitra
 ---
-
-
 Návrh volně navazuje na původní projekt - rozdělením domu na soukromý a denní trakt, kombinací ploché a sedlové střechy s přiznaným krovem v interiéru, využitím dřevěných lamel na fasádě. Při optimalizaci dispozice jsme se rozhodli trakty uspořádat do tvaru L se vstupem a technicko-hygienickým zázemím v místě jejich propojení. Z energetického hlediska atypické umístění domu (kvůli sousední zástavbě a preferovaným výhledům) nám umožnilo orientovat dětské pokoje na jiho-východ do klidové části zahrady a navrhnout celoprosvětlenou chodbu vedoucí podél hlavní terasy. Tímto způsobem jsme z běžně zbytečných metrů čtverečních vytvořili zajímavý moment v dispozici a navodili dojem polo-atria.
 
 Denní trakt je kvůli solárním ziskům otevřen na jiho-západ. Kuchyňo - obývací pokoj je ztvárněn s nadstandardně vysokým stropem, který kopíruje sedlovou střechu na tomto traktu. Díky tomu jsme mohli do tohoto volného prostoru umístit kubus šatní skříně a spíže, na který se dá vylézt, a pod střešními okny si vychutnat místo na hraní nebo odpočinek.

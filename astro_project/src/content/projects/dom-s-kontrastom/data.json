@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "dom-s-otvorenym-krovom",
+    "dom-s-pavlacou",
+    "dom-s-vyhladom-na-bratislavu"
+  ],
+  "order": 12,
+  "vykurovanaPlocha": 118,
+  "uzitkovaPlocha": 118,
+  "pocetIzieb": 4,
+  "rozmeryDomu": "14,725m x 14,8m"
+}

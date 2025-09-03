@@ -1,17 +1,7 @@
 ---
 title: Dům s <br>městským nádechem
 description: Návrh stylového bydlení pro pěti- až šestičlennou rodinu. Pomocí Habitat konfigurátoru jsme vytvořili dvoupodlažní městskou vilu s luxusními detaily a nevšedním půdorysem, který nabízí bohatý výběr výhledů do zahrady a venkovních pobytových ploch. Na fasádě je použita kombinace cihlového obkladu s bílou omítkou, doplněnou antracitovými rámy oken.
-tags: ["habitat-konfigurator"]
-otherProjects: ["dom-so-saunou-na-povazi","dom-s-utulnou-terasou","dom-l-s-tehlovym-obkladom"]
-order: 16
-
-vykurovanaPlocha: 174
-uzitkovaPlocha: 174
-pocetIzieb: 7
-rozmeryDomu: 17,85 x 14,8m
 ---
-
-
 Dům je nakonfigurován ze dvou traktů, které se setkávají ve vstupních prostorách a vytvářejí půdorys ve tvaru L. Na pozemek je osazen v jiho-západní orientaci směřujíc hlavní prosklení na společnou terasu a výhled do zahrady. Dispozice domu je rozdělena na společenskou a soukromou zónu. 
 
 Trakt soukromé zóny je rozvržen částečně na dvou podlažích - s pracovnou, schodištěm a hygienickým zázemím umístěným prakticky v blízkosti vstupních prostor. Obsahuje tři dětské pokoje, pokoj pro hosty a nadstandardní ložnici se samostatnou koupelnou a šatnou. Zatímco pokoj pro hosty a pracovna jsou orientovány do ulice, všechny ostatní prostory mají prosklení směřující na jih do zahrady. Pokoje na druhém podlaží mají přímý přístup na podélný balkon, který prochází před celou jižní fasádou a svou hmotou chrání okna v přízemí před vysokým letním sluncem. 

@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "dom-l-s-tehlovym-obkladom",
+    "dom-s-dlhou-pergolou",
+    "prakticky-dom-v-lamaci"
+  ],
+  "order": 30,
+  "vykurovanaPlocha": 99,
+  "uzitkovaPlocha": 99,
+  "pocetIzieb": 3,
+  "rozmeryDomu": "11,975m x 14,8m"
+}

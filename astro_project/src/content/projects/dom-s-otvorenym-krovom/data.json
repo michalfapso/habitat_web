@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "dom-s-pavlacou",
+    "dom-s-utulnou-terasou",
+    "moderna-vila-v-rusovciach"
+  ],
+  "order": 13,
+  "vykurovanaPlocha": 126,
+  "uzitkovaPlocha": 158,
+  "pocetIzieb": 4,
+  "rozmeryDomu": "16,79m x 11,875m"
+}

@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "dom-v-zahrade",
+    "dom-za-mestom",
+    "dom-so-saunou-na-povazi"
+  ],
+  "order": 23,
+  "vykurovanaPlocha": 134,
+  "uzitkovaPlocha": 134,
+  "pocetIzieb": 5,
+  "rozmeryDomu": "16,875m x 11,875m"
+}

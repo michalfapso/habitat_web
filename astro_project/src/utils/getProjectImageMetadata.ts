@@ -1,6 +1,8 @@
 import { getCollection } from "astro:content";
 import { getImage } from "astro:assets";
 import type { CollectionEntry, ImageMetadata } from "astro:content";
+import fs from 'node:fs';
+import path from 'node:path';
 
 // Define an interface for the augmented project data to include the generated image fields
 interface AugmentedProjectData extends CollectionEntry<'projects'> {
@@ -113,6 +115,20 @@ export async function getAugmentedProjects(locale: string): Promise<AugmentedPro
     const augmentedProjects: AugmentedProjectData[] = [];
 
     for (const project of allProjects) {
+        const projectDir = project.id.replace(/\/index.*$/, '');
+        const dataPath = path.join(process.cwd(), 'src', 'content', 'projects', projectDir, 'data.json');
+
+        let commonData = {};
+        if (fs.existsSync(dataPath)) {
+            try {
+                commonData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+            } catch (e) {
+                console.error(`Error reading or parsing ${dataPath}:`, e);
+            }
+        }
+        // Merge the common data with the project-specific data
+        project.data = { ...commonData, ...project.data };
+
         // console.log('Processing project id:', project.id, " title:", project.data.title);
         const imageMetadata = await getFirstGalleryImageMetadata(project);
         if (!project.data.titleBreak) {

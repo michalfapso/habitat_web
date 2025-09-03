@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "dom-s-kontrastom",
+    "dom-s-otvorenym-krovom",
+    "dom-s-vikierom-pri-ruzomberku"
+  ],
+  "order": 10,
+  "vykurovanaPlocha": 133,
+  "uzitkovaPlocha": 133,
+  "pocetIzieb": 5,
+  "rozmeryDomu": "16,875m x 11,875m"
+}

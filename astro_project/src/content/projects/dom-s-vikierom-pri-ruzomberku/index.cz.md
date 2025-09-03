@@ -1,16 +1,7 @@
 ---
 title: Dům s vikýřem <br>u Ružomberku
 description: Návrh rodinného domu v srdci Slovenska, který pracuje s tradičním i moderním tvaroslovím a nepopírá atmosféru lokality. Určen je pro mladou rodinu, která díky našim podrobným realizačním výkresům zrealizovala pasivní dům ve spolupráci s místními staviteli.
-tags: ["domov-na-mieru"]
-otherProjects: ["dom-s-vyhladom-na-bratislavu","moderna-vila-v-rusovciach","dom-s-kontrastom"]
-order: 7
-
-vykurovanaPlocha: 172
-uzitkovaPlocha: 224
-pocetIzieb: 6
-lokalita: Štiavnička, okres Ružomberok
 ---
-
 Rodinný dům je navržen jako jednopodlažní s obytným podkrovím, které je díky velkému vikýři téměř plnohodnotně využitelné. Dispozice domu je rozdělena vertikálně na noční a denní. Tyto zóny jsou propojeny jednoramenným schodištěm, nacházejícím se v srdci domu - hale otevřené přes dvě podlaží, osvětlené střešními okny.
 
 Architektura je tvořena tradiční hmotou vesnického domu se sedlovou střechou a hrubozrnnou bílou omítkou, která je doplněna jednopodlažním traktem s plochou vegetační střechou. Tento trakt je ztvárněn s dřevěným obkladem a plynule navazuje na dřevěné překrytí terasy, sauny a stínící pergolu před proskleními do jídelny a obývacího pokoje. Průnik mezi tradiční hmotou domu a moderním jednopodlažním traktem se stíněním je akcentován jiným typem omítky - je zde navržena strukturovaná škrábaná omítka v hnědém odstínu.

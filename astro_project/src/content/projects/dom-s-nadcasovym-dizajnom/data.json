@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "vila-s-akvariom-pri-brne",
+    "dom-l-s-tehlovym-obkladom",
+    "dom-pod-borovicami"
+  ],
+  "order": 3,
+  "vykurovanaPlocha": 149,
+  "uzitkovaPlocha": 165,
+  "pocetIzieb": 5,
+  "rozmeryDomu": "10m x 15,685m"
+}

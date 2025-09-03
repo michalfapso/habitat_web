@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "moderna-vila-v-rusovciach",
+    "dom-l-s-tehlovym-obkladom",
+    "usadlost-na-cervenej-hore"
+  ],
+  "order": 8,
+  "vykurovanaPlocha": 175,
+  "uzitkovaPlocha": 175,
+  "pocetIzieb": 7,
+  "rozmeryDomu": "14,475 x 14,8m"
+}

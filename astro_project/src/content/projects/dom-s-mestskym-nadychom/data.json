@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "dom-so-saunou-na-povazi",
+    "dom-s-utulnou-terasou",
+    "dom-l-s-tehlovym-obkladom"
+  ],
+  "order": 16,
+  "vykurovanaPlocha": 174,
+  "uzitkovaPlocha": 174,
+  "pocetIzieb": 7,
+  "rozmeryDomu": "17,85 x 14,8m"
+}

@@ -1,16 +1,7 @@
 ---
 title: Dům pro <br>velkou rodinu
 description: Návrh dvoupodlažního domu s dostatkem prostoru pro šest a vícečlennou rodinu. V Habitat konfigurátoru jsme vybrali konstrukčně jednoduché detaily a kombinaci hmot s plochou a sedlovou střechou. Díky použití širokého vikýře má dům při pohledu z exteriéru příjemné měřítko a po vstupu dovnitř svou velikostí příjemně překvapí.
-tags: ["habitat-konfigurator"]
-otherProjects: ["moderna-vila-v-rusovciach","dom-l-s-tehlovym-obkladom","usadlost-na-cervenej-hore"]
-order: 8
-
-vykurovanaPlocha: 175
-uzitkovaPlocha: 175
-pocetIzieb: 7
-rozmeryDomu: 14,475 x 14,8m
 ---
-
 Dům je nakonfigurován ze dvou traktů, které se setkávají ve vstupních prostorách a vytvářejí půdorys ve tvaru L. Na pozemek je osazen tak, aby hlavní prosklení do obývacího pokoje a pokojů byla orientována na jih, čímž poskytují domu v zimě dostatečné množství solárních zisků.
 
 Dispozice domu je rozdělena na společenskou a soukromou zónu. Trakt soukromé zóny je rozvržen na dvou podlažích, se schodištěm a hygienickým zázemím umístěným prakticky v blízkosti vstupních prostor. Obsahuje šest pokojů, které jsou díky své velikosti variabilně použitelné, ať už pro potřeby ložnice nebo dětských pokojů pro jedno/dvě děti. Pokoje ve druhém podlaží jsou navrženy v obytném podkroví, avšak díky velkému vikýři jsou plnohodnotně využitelné a dostatečně prosvětlené. Společenskou zónu tvoří velký prostor obývacího pokoje s kuchyní a jídelnou, opticky propojený s exteriérem širokými proskleními. Ty jsou orientovány na jih (kvůli výhledu a solárním ziskům) a také na západ, tvořící plynulé propojení mezi jídelnou a velkou terasou.

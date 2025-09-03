@@ -1,16 +1,7 @@
 ---
 title: Usedlost <br>na Červené Hoře
 description: Návrh nového bydlení pro pětičlennou rodinu, která se z města přestěhovala na středoslovenské lazy. Dům citlivě reaguje na místní architekturu a nemá za cíl ji moderními prvky přetvářet, ale dotvářet. S klienty jsme spolupracovali od výběru pozemku, přes architektonickou studii a projekční práce až po autorský dozor při realizaci stavby.
-tags: ["domov-na-mieru"]
-otherProjects: ["dom-pod-borovicami","dom-s-bazenom-v-rusovciach","dom-l-s-tehlovym-obkladom"]
-order: 1
-
-vykurovanaPlocha: 138
-uzitkovaPlocha: 147
-pocetIzieb: 5
-lokalita: Krupina, Červená Hora
 ---
-
 Architektonický koncept domu vychází z dialogu venkovského a moderního. Venkovské je reprezentováno hlavní hmotou domu - je navržena jako klasická stavba s taškovou sedlovou střechou, bílou omítkou, přiznanými dešťovými žlaby a okny olemovanými šambránami. Jediný moderní prvek viditelný od ulice je ztvárnění nevytápěného skladu a překrytí vstupu. Tento moment člověku napoví, že něco zajímavého se bude odehrávat mimo jeho zorné pole.
 
 Překrytí vstupu a sklad je již součástí moderní hmoty domu, která obsahuje obytnou část pro rodiče a velkou pracovnu - novodobé křídlo dispozice, navržené s dřevěnou fasádou a plochou vegetační střechou. Tato střecha překrývá i jihovýchodní terasu, tyčící se nejvýše nad terén a poskytující panoramatický výhled na okolí.

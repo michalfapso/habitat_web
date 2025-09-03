@@ -11,12 +11,12 @@ const projectsCollection = defineCollection({
     imageSet: z.string().optional(), // Optional image path
     imageThumb: z.string().optional(),
     imageThumbSet: z.string().optional(),
+    // Fields from data.json are now optional
     tags: z.array(z.enum(availableTagKeys as [string, ...string[]])).optional(),
-    order: z.number().default(0),
+    order: z.number().default(0).optional(),
     otherProjects: z.array(z.string()).optional(),
-    headerImageNumber: z.number().default(1),
+    headerImageNumber: z.number().default(1).optional(),
     dir: z.string().optional(), // Directory where the project is located. This field is generated automatically.
-
     lokalita: z.string().optional(),
     vykurovanaPlocha: z.number().optional(),
     vykurovanaPlochaSuffix: z.string().optional(),
@@ -25,6 +25,7 @@ const projectsCollection = defineCollection({
     pocetIzieb: z.number().optional(),
     pocetIziebSuffix: z.string().optional(),
     rozmeryDomu: z.string().optional(),
+    slug: z.string().optional(),
   }),
 });
 

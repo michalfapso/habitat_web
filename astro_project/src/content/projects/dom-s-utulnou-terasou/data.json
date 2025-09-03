@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "dom-so-sikmymi-stlpmi",
+    "dom-v-zahrade",
+    "dom-s-lamelami-pri-nitre"
+  ],
+  "order": 20,
+  "vykurovanaPlocha": 134,
+  "uzitkovaPlocha": 170,
+  "pocetIzieb": 5,
+  "rozmeryDomu": "19,1m x 14,8m"
+}

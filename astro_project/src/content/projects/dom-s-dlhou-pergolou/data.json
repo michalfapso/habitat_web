@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "dom-s-drevenym-obkladom",
+    "dom-s-kontrastom",
+    "dom-s-bazenom-v-rusovciach"
+  ],
+  "order": 6,
+  "vykurovanaPlocha": 101,
+  "uzitkovaPlocha": 101,
+  "pocetIzieb": 3,
+  "rozmeryDomu": "14,85m x 8,5m"
+}

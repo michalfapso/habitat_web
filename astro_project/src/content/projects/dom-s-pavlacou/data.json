@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "habitat-konfigurator"
+  ],
+  "otherProjects": [
+    "dom-s-utulnou-terasou",
+    "dom-so-sikmymi-stlpmi",
+    "dom-s-cortenom-pri-piestanoch"
+  ],
+  "order": 17,
+  "vykurovanaPlocha": 131,
+  "uzitkovaPlocha": 167,
+  "pocetIzieb": 5,
+  "rozmeryDomu": "19,465m x 10m"
+}
