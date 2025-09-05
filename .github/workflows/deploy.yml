@@ -47,8 +47,8 @@ jobs:
 
       - name: Deploy built site to SFTP with lftp
         run: |
-          lftp -c "set sftp:auto-confirm yes; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} sftp://${{ secrets.FTP_SERVER }}; mirror -R --delete --verbose --parallel=10 ./dist/ ~/sub/new/"
+          lftp -c "set sftp:auto-confirm yes; open sftp://${{ secrets.FTP_SERVER }}; user '${{ secrets.FTP_USERNAME }}' '${{ secrets.FTP_PASSWORD }}'; mirror -R --delete --verbose --parallel=10 ./dist/ ~/sub/new/"
 
       - name: Deploy PHP app to SFTP with lftp
         run: |
-          lftp -c "set sftp:auto-confirm yes; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} sftp://${{ secrets.FTP_SERVER }}; mirror -R --delete --verbose --parallel=10 --exclude-glob 'inc/config.php.template' --exclude-glob 'composer.json' --exclude-glob 'composer.lock' ./php/ ~/sub/new/php/"
+          lftp -c "set sftp:auto-confirm yes; open sftp://${{ secrets.FTP_SERVER }}; user '${{ secrets.FTP_USERNAME }}' '${{ secrets.FTP_PASSWORD }}'; mirror -R --delete --verbose --parallel=10 --exclude-glob 'inc/config.php.template' --exclude-glob 'composer.json' --exclude-glob 'composer.lock' ./php/ ~/sub/new/php/"
