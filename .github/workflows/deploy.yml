@@ -42,24 +42,28 @@ jobs:
           php/inc/config.php.template > php/inc/config.php
 
 
-      - name: Deploy built site to FTP
-        uses: wangyucode/sftp-upload-action@v2.0.4
+      - name: Deploy built site via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: ${{ secrets.FTP_SERVER }} # Recommended to put the credentials in github secrets.
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          compress: true # Compression
-          # forceUpload: true # Optional, Force uploading all files, Default to false(upload only newer files).
-          localDir: "./dist/" # Required, Absolute or relative to cwd.
-          remoteDir: "~/sub/new/" # Required, Absolute path only.
+          protocol: sftp
+          local-dir: ./dist/
+          server-dir: ~/sub/new/
+          state-name: .ftp-deploy-sync-state-astro.json
 
-      - name: Deploy PHP app to FTP
-        uses: wangyucode/sftp-upload-action@v2.0.4
+      - name: Deploy PHP app via SFTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: ${{ secrets.FTP_SERVER }} # Recommended to put the credentials in github secrets.
+          server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          compress: true # Compression
-          # forceUpload: true # Optional, Force uploading all files, Default to false(upload only newer files).
-          localDir: "./dist/" # Required, Absolute or relative to cwd.
-          remoteDir: "~/sub/new/php/" # Required, Absolute path only.
+          protocol: sftp
+          local-dir: ./php/
+          server-dir: ~/sub/new/php/
+          state-name: .ftp-deploy-sync-state-php.json
+          exclude: |
+            **/inc/config.php.template
+            **/composer.json
+            **/composer.lock
