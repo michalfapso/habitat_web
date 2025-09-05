@@ -37,7 +37,7 @@ const switchLanguagePathFn = await useTranslatedPath(switchLanguageCode);
 // const switchLanguageUrl  = lang == defaultLang ? '/cz' + Astro.url.pathname : Astro.url.pathname.replace(/^\/cz/, '/').replace(/^\/\//, '/');
 // const switchLanguageUrl  = lang == defaultLang ? '/cz' : '/';
 const switchLanguageUrl  = switchLanguagePathFn(Astro.url.pathname);
-console.log('defaultLang:', defaultLang, ' pathname:', Astro.url.pathname, ' switchLanguageUrl:', switchLanguageUrl, ' switchLanguageCode:', switchLanguageCode, ' lang:', lang);
+// console.log('defaultLang:', defaultLang, ' pathname:', Astro.url.pathname, ' switchLanguageUrl:', switchLanguageUrl, ' switchLanguageCode:', switchLanguageCode, ' lang:', lang);
 ---
 
 <!doctype html>

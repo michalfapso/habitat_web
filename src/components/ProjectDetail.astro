@@ -21,7 +21,7 @@ const allGalleryImageLoaders = import.meta.glob('/src/content/projects/**/galler
 let galleryImages = [];
 let otherProjects: CollectionEntry<'projects'>[] = [];
 if (project) {
-    console.log('project:', project);
+    // console.log('project:', project);
     const projectDir = project.id.replace(/\/index.*$/, '');
     const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, loader]) => {
         return path.includes(`/src/content/projects/${projectDir}/gallery/`);
