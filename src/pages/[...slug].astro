@@ -4,7 +4,7 @@ import LayoutMarkdownPage from '../layouts/LayoutMarkdownPage.astro';
 import { defaultLang, languages } from '../i18n/utils';
 
 export async function getStaticPaths() {
-  console.log('pages ...slug getStaticPaths()');
+  // console.log('pages ...slug getStaticPaths()');
   const pages = await getCollection('pages');
   const langKeys = Object.keys(languages);
   const langRegex = new RegExp(`^(.*?)\.(${langKeys.join('|')}).md$`);
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
       props: { lang, page, id: page.id, fullPath: `/${slug}` },
     };
   });
-  console.log('paths:', paths);
+  // console.log('paths:', paths);
   return paths;
 }
 
