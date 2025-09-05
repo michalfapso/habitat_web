@@ -30,10 +30,11 @@ jobs:
 
       - name: Generate PHP config file
         run: |
-          sed -e "s|{{ SMTP_USERNAME }}|${{ secrets.SMTP_USERNAME }}|g" \
-              -e "s|{{ SMTP_PASSWORD }}|${{ secrets.SMTP_PASSWORD }}|g" \
-              -e "s|{{ ECOMAIL_API_KEY }}|${{ secrets.ECOMAIL_API_KEY }}|g" \
-              php/inc/config.php.template > php/inc/config.php
+          SMTP_USERNAME="${{ secrets.SMTP_USERNAME }}" \
+          SMTP_PASSWORD="${{ secrets.SMTP_PASSWORD }}" \
+          ECOMAIL_API_KEY="${{ secrets.ECOMAIL_API_KEY }}" \
+          perl -pe 's|{{ SMTP_USERNAME }}|$ENV{"SMTP_USERNAME"}|g; s|{{ SMTP_PASSWORD }}|$ENV{"SMTP_PASSWORD"}|g; s|{{ ECOMMAIL_API_KEY }}|$ENV{"ECOMAIL_API_KEY"}|g' \
+          php/inc/config.php.template > php/inc/config.php
 
       - name: Deploy built site to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
