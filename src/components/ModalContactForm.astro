@@ -15,7 +15,7 @@ const { id } = Astro.props;
     <h3>{t('contact-form.title')}</h3>
     <p>{t('contact-form.text')}</p>
 
-    <form class="contact-form" action="/inc/post.php" method="post" data-form-type="contact">
+    <form class="contact-form" action="/php/inc/post.php" method="post" data-form-type="contact">
         <input type="text" name="form[name]" placeholder={t('contact-form.placeholder-name')}>
         <div class="group">
             <div>
