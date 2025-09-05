@@ -11,6 +11,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore timestamps
+        uses: chetan/git-restore-mtime-action@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -36,24 +41,25 @@ jobs:
           perl -pe 's|{{ SMTP_USERNAME }}|$ENV{"SMTP_USERNAME"}|g; s|{{ SMTP_PASSWORD }}|$ENV{"SMTP_PASSWORD"}|g; s|{{ ECOMMAIL_API_KEY }}|$ENV{"ECOMAIL_API_KEY"}|g' \
           php/inc/config.php.template > php/inc/config.php
 
+
       - name: Deploy built site to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: wangyucode/sftp-upload-action@v2.0.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }} # Recommended to put the credentials in github secrets.
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          # security: strict
-          local-dir: ./dist/
-          server-dir: ./sub/new/
+          compress: true # Compression
+          # forceUpload: true # Optional, Force uploading all files, Default to false(upload only newer files).
+          localDir: "./dist/" # Required, Absolute or relative to cwd.
+          remoteDir: "~/sub/new/" # Required, Absolute path only.
 
       - name: Deploy PHP app to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: wangyucode/sftp-upload-action@v2.0.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }} # Recommended to put the credentials in github secrets.
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          # security: strict
-          local-dir: ./php/
-          server-dir: ./sub/new/php/
+          compress: true # Compression
+          # forceUpload: true # Optional, Force uploading all files, Default to false(upload only newer files).
+          localDir: "./dist/" # Required, Absolute or relative to cwd.
+          remoteDir: "~/sub/new/php/" # Required, Absolute path only.
