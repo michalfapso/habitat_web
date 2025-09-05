@@ -1,0 +1,15 @@
+<?php
+
+// SMTP Settings for PHPMailer
+define( 'SMTP_HOST', 'smtp.websupport.sk' );
+define( 'SMTP_SMTPAUTH', true );
+define( 'SMTP_FROMNAME', 'Habitat form' );
+define( 'SMTP_USERNAME', '{{ SMTP_USERNAME }}' );
+define( 'SMTP_PASSWORD', '{{ SMTP_PASSWORD }}' );
+define( 'SMTP_SMTPSECURE', 'ssl' );
+define( 'SMTP_PORT', 465 );
+define( 'EMAIL_RECIPIENT', 'info@habitat.sk' );
+
+// Ecomail API Settings
+define( 'ECOMAIL_API_KEY', '{{ ECOMAIL_API_KEY }}' );
+define( 'ECOMAIL_LIST_ID', 1 );

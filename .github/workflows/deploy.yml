@@ -1,0 +1,54 @@
+name: Deploy Astro to FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Astro dependencies
+        run: npm install
+
+      - name: Build Astro project
+        run: npm run build
+
+      - name: Install PHP dependencies
+        run: |
+          cd php
+          composer install --no-dev --optimize-autoloader
+
+      - name: Generate PHP config file
+        run: |
+          sed -e "s|{{ SMTP_USERNAME }}|${{ secrets.SMTP_USERNAME }}|g" \
+              -e "s|{{ SMTP_PASSWORD }}|${{ secrets.SMTP_PASSWORD }}|g" \
+              -e "s|{{ ECOMAIL_API_KEY }}|${{ secrets.ECOMAIL_API_KEY }}|g" \
+              php/inc/config.php.template > php/inc/config.php
+
+      - name: Deploy built site to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./sub/new
+
+      - name: Deploy PHP app to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./php/
+          server-dir: ./sub/new/php/
