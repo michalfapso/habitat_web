@@ -42,28 +42,13 @@ jobs:
           php/inc/config.php.template > php/inc/config.php
 
 
-      - name: Deploy built site via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp
-          local-dir: ./dist/
-          server-dir: ~/sub/new/
-          state-name: .ftp-deploy-sync-state-astro.json
+      - name: Install lftp
+        run: sudo apt-get -y install lftp
 
-      - name: Deploy PHP app via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp
-          local-dir: ./php/
-          server-dir: ~/sub/new/php/
-          state-name: .ftp-deploy-sync-state-php.json
-          exclude: |
-            **/inc/config.php.template
-            **/composer.json
-            **/composer.lock
+      - name: Deploy built site to SFTP with lftp
+        run: |
+          lftp -c "set sftp:auto-confirm yes; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} sftp://${{ secrets.FTP_SERVER }}; mirror -R --delete --verbose --parallel=10 ./dist/ ~/sub/new/"
+
+      - name: Deploy PHP app to SFTP with lftp
+        run: |
+          lftp -c "set sftp:auto-confirm yes; open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} sftp://${{ secrets.FTP_SERVER }}; mirror -R --delete --verbose --parallel=10 --exclude-glob 'inc/config.php.template' --exclude-glob 'composer.json' --exclude-glob 'composer.lock' ./php/ ~/sub/new/php/"
