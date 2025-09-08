@@ -1,61 +1,89 @@
-# Astro Starter Kit: Minimal
+# Návod na úpravu obsahu webstránky
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Tento dokument slúži ako jednoduchý manuál na úpravu obsahu webstránky priamo cez webové rozhranie GitHub. Po uložení zmien sa webstránka automaticky zaktualizuje do niekoľkých minút.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Ako upravovať obsah
 
-## 🚀 Project Structure
+Všetky dôležité súbory pre úpravu textov a projektov sa nachádzajú v adresári `src/`.
 
-Inside of your Astro project, you'll see the following folders and files:
+### 1. Úprava a pridávanie projektov
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Projekty sa nachádzajú v adresári: `src/content/projects/`.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Každý projekt má svoj vlastný podadresár, ktorého názov slúži ako jeho unikátne ID (napr. `dom-pod-borovicami`). Vnútri každého adresára projektu sú nasledujúce súbory:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- `index.sk.md`: Hlavný textový obsah projektu v **slovenčine**.
+- `index.cz.md`: Hlavný textový obsah projektu v **češtine**.
+- `data.json`: Spoločné dáta pre oba jazyky, ako napríklad `order`, `headerImageNumber`, `lokalita`, atď.
+- `gallery/`: Adresár s obrázkami a fotografiami k projektu.
 
-Any static assets, like images, can be placed in the `public/` directory.
+**Dátové polia v projektoch**
+Každý projekt môže mať nasledujúce dátové polia:
+  - `title`: Názov projektu, môžete v ňom pridať `<br/>` na mieste, kde sa má zalomiť riadok
+  - `description`: Popis projektu
+  - `tags`: Pole tagov, povolené sú hodnoty "domov-na-mieru" a "habitat-konfigurator".
+  - `order`: Poradie projektu v celkovom zozname projektov
+  - `otherProjects`: Zoznam projektov, ktoré sa majú zobraziť na stránke tohto projektu na spodu
+  - `headerImageNumber`: Koľký obrázok v galérii má byť hlavným obrázkom projektu (default je prvý).
+  - `lokalita`: Lokalita projektu
+  - `vykurovanaPlocha`: Metre štvorcové
+  - `vykurovanaPlochaSuffix`: Čo má byť ešte za m2, napr. " / dom" pri radovej zástavbe viacerých domov
+  - `uzitkovaPlocha`: Metre štvorcové
+  - `uzitkovaPlochaSuffix`: Čo má byť ešte za m2, napr. " / dom" pri radovej zástavbe viacerých domov
+  - `pocetIzieb`: Počet izieb
+  - `pocetIziebSuffix`: Čo má byť ešte za počtom izieb, napr. " / dom" pri radovej zástavbe viacerých domov
+  - `rozmeryDomu`: Rozmery domu, napr. "20 x 15 m"
+  - `slug`: Čo má byť v URL projektu za "https://habitat.sk/projekty/", napr. "dom-pod-borovicami"
 
-## 🧞 Commands
+Tieto dáta môžu byť uložené:
+  - buď v `index.sk.md` a `index.cz.md`, hlavne v prípade, že ide o prekladané texty,
+  - alebo v `data.json`, hlavne pre polia, ktoré majú rovnaké hodnoty bez ohľadu na jazyk.
 
-All commands are run from the root of the project, from a terminal:
+**Ako upraviť existujúci projekt:**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1.  Prejdite do adresára konkrétneho projektu.
+2.  Kliknite na súbor, ktorý chcete upraviť (`index.sk.md`, `data.json`, ...).
+3.  Kliknite na ikonu ceruzky (Edit this file) vpravo hore.
+4.  Vykonajte zmeny a uložte ich kliknutím na zelené tlačidlo "Commit changes".
 
-## 👀 Want to learn more?
+**Ako pridať nový projekt:**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1.  Prejdite do adresára `src/content/projects/`.
+2.  Vpravo hore kliknite na "Add file" -> "Create new file".
+3.  Do poľa pre názov súboru napíšte názov nového adresára a za neho lomítko, napr. `nazov-noveho-projektu/`. Tým sa vytvorí nový adresár.
+4.  Najjednoduchšie je skopírovať si štruktúru a obsah súborov (`index.sk.md`, `data.json` atď.) z existujúceho projektu a následne ich upraviť.
+5.  Nezabudnite do podadresára `gallery/` nahrať obrázky.
 
-## GitHub Secrets
+### 2. Úprava ostatných častí webu
 
-Add the following secrets to your GitHub repository settings under Settings > Secrets and variables > Actions for the deployment to work:
+Ostatné texty sa upravujú v nasledujúcich súboroch. **Dôležité:** V týchto súboroch upravujte iba samotné texty, dávajte pozor, aby ste nezmenili okolitý kód.
 
-   * FTP_SERVER
-   * FTP_USERNAME
-   * FTP_PASSWORD
-   * SMTP_HOST
-   * SMTP_USERNAME
-   * SMTP_PASSWORD
-   * EMAIL_RECIPIENT
-   * ECOMAIL_API_KEY
-   * ECOMAIL_LIST_ID
+- **Úvodná stránka**
+  - SK: `src/pages/index.astro`
+  - CZ: `src/pages/cz/index.astro`
+- **Hlavné menu**: `src/components/Layout.astro`
+- **Pätička stránky**: `src/components/Footer.astro`
+- **Preklady textov použitých v komponentách**
+  - SK: `src/i18n/sk.ts`
+  - CZ: `src/i18n/cz.ts`
 
-Once you've added these secrets, the next time you push a commit to your main branch, the GitHub Action will automatically build your Astro site, install the PHP dependencies, generate the config.php file with your secrets, and deploy everything to your FTP server.
+### Formátovanie obsahu (Markdown a JSON)
 
+Texty v `.md` súboroch používajú jednoduchý formátovací jazyk Markdown. Dáta v `.json` súboroch majú tiež svoju štruktúru. Nemusíte sa ich učiť naspamäť, stačí sa držať štýlu, akým sú napísané ostatné texty.
 
+-   [Stručný návod na Markdown syntax](https://www.markdownguide.org/cheat-sheet/)
+-   [Stručný návod na JSON syntax](https://www.w3schools.com/js/js_json_syntax.asp)
+
+### Automatické nahrávanie stránky na habitat.sk
+
+Pri každej uloženej zmene sa celá stránka pregeneruje a nahrá na habitat.sk zvyčajne do minúty.
+
+## Lokálne vývojové prostredie
+
+Nie je nutné, stačí používať rozhranie github.com
+
+Ak to ale chcete rozbehať na vlastnom počítači lokálne:
+- Nainštalovať node js
+- `npm install` nainštaluje potrebné balíčky
+- `npm run dev` spustí lokálny webový server s automatickým pregenerovaním stránky pri každej zmene súboru
+- `npm run build` vygeneruje celý web do adresára `dist/`
