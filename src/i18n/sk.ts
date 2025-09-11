@@ -1,4 +1,6 @@
 export default {
+  "site.title": "Habitat - Architekti pasívnych domov",
+  "site.description": "Žiadne prázdne architektonické gestá. Naše domy sú efektívne a zmysluplné.",
   "nav.are-you-interested": "Máte záujem?",
   "nav.iam-interested": "Mám záujem",
   "nav.interest-text": "<strong>Budeme vašim partnerom</strong> a&nbsp;prevedieme vás celým procesom od&nbsp;prvej skice až po&nbsp;odovzdanie stavby. Nenecháme vás v&nbsp;tom, <strong>môžete sa spoľahnúť</strong>.",

@@ -15,9 +15,6 @@ interface Props {
 	topbarClass?: string;
 }
 
-const siteTitle = "Habitat - Architekti pasívnych domov";
-const siteDescription = "Žiadne prázdne architektonické gestá. Naše domy sú efektívne a zmysluplné.";
-
 const {
 	title = "",
 	bodyClass = "",
@@ -28,7 +25,7 @@ const {
 // Astro.url.pathname gives you the path relative to the site's base
 // Astro.site should be configured in astro.config.mjs for production URLs
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const titleFull = title ? `${title} | ${siteTitle}` : siteTitle;
+const titleFull = title ? `${title} | ${t('site.title')}` : t('site.title');
 
 const switchLanguageCode = lang == 'sk' ? 'cz' : 'sk';
 const switchLanguageName = lang == 'sk' ? 'Čeština' : 'Slovenčina';
@@ -49,12 +46,12 @@ const switchLanguageUrl  = switchLanguagePathFn(Astro.url.pathname);
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{titleFull}</title>
-	<meta name="description" content={siteDescription}/>
+	<meta name="description" content={t('site.description')}/>
 	<link rel="canonical" href={canonicalURL}/>
 	<meta property="og:locale" content="sk_SK"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:title" content={siteTitle}/>
-	<meta property="og:description" content={siteDescription}/>
+	<meta property="og:title" content={t('site.title')}/>
+	<meta property="og:description" content={t('site.description')}/>
 	<meta property="og:url" content={canonicalURL}/>
 	<meta property="og:site_name" content="Habitat"/>
 	<meta property="og:image" content="https://habitat.sk/assets/img/og-image-2.jpg"/>
@@ -62,8 +59,8 @@ const switchLanguageUrl  = switchLanguagePathFn(Astro.url.pathname);
 	<meta property="og:image:height" content="628"/>
 	<meta property="og:image:type" content="image/png"/>
 	<meta name="twitter:card" content="summary_large_image"/>
-	<meta name="twitter:title" content={siteTitle}/>
-	<meta name="twitter:description" content={siteDescription}/>
+	<meta name="twitter:title" content={t('site.title')}/>
+	<meta name="twitter:description" content={t('site.description')}/>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
