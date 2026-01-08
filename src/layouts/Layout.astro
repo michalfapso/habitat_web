@@ -35,6 +35,8 @@ const switchLanguagePathFn = await useTranslatedPath(switchLanguageCode);
 // const switchLanguageUrl  = lang == defaultLang ? '/cz' : '/';
 const switchLanguageUrl  = switchLanguagePathFn(Astro.url.pathname);
 // console.log('defaultLang:', defaultLang, ' pathname:', Astro.url.pathname, ' switchLanguageUrl:', switchLanguageUrl, ' switchLanguageCode:', switchLanguageCode, ' lang:', lang);
+// @ts-ignore
+const displayLanguageSwitcher = typeof SHOW_LANGUAGE_SWITCHER !== 'undefined' ? SHOW_LANGUAGE_SWITCHER : false;
 ---
 
 <!doctype html>
@@ -112,9 +114,11 @@ const switchLanguageUrl  = switchLanguagePathFn(Astro.url.pathname);
 			<a href={path("/")} rel="home" class="topbar__logo" title="Úvod">
 				<svg width="142" height="32" viewBox="0 0 142 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M130.43 3.196h5.994v6.169h5.158v5.326h-5.158v11.54h5.29v5.326h-4.982c-4.099 0-6.302-2.087-6.302-6.348V3.196Zm-16.045 23.79c3.66 0 5.643-2.886 5.643-6.525 0-3.639-1.983-6.525-5.643-6.525-3.659 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.641 6.525Zm-1.322-18.064c2.82 0 5.376 1.065 7.052 3.595l.486-3.152h5.422v22.192h-5.422l-.486-3.152c-1.676 2.53-4.232 3.595-7.052 3.595-6.038 0-10.491-4.484-10.491-11.54 0-7.054 4.453-11.538 10.491-11.538Zm-23.14-5.726h5.993v6.169h5.158v5.326h-5.157v11.54h5.289v5.326h-4.982c-4.1 0-6.302-2.087-6.302-6.348V3.196ZM82.162 0c2.027 0   3.527 1.508 3.527 3.552 0 2.043-1.498 3.552-3.527 3.552-2.03 0-3.527-1.509-3.527-3.552C78.636 1.508 80.134 0 82.163 0Zm-6.348 9.365h9.697v22.192h-5.994V14.69h-3.703V9.365Zm-12.87 17.62c3.659 0 5.64-2.885 5.64-6.524 0-3.639-1.984-6.525-5.64-6.525-3.658 0-5.644 2.886-5.644 6.525 0 3.639 1.983 6.525 5.643 6.525ZM51.308 1.376h5.994v11.007c1.676-2.397 4.189-3.463 6.966-3.463 6.037 0 10.49 4.484 10.49 11.54 0 7.055-4.453 11.539-10.49 11.539-2.82 0-5.379-1.066-7.052-3.596l-.486 3.152h-5.422V1.376Zm-16.045 25.61c3.66 0 5.643-2.885 5.643-6.524 0-3.639-1.983-6.525-5.643-6.525-3.66 0-5.641 2.886-5.641 6.525 0 3.639 1.984 6.525 5.64 6.525ZM33.94 8.923c2.82 0 5.38 1.065 7.053 3.595l.485-3.152H46.9v22.192h-5.42l-.485-3.152C39.318 30.935 36.762 32 33.94 32c-6.037 0-10.49-4.484-10.49-11.54 0-7.054 4.453-11.538 10.49-11.538ZM0 1.375h5.994v12.561l6.877-6.924 7.495 7.546v16.999H14.37V14.558H5.994v16.999H0V1.375Z" fill="#023333"/></svg>
 			</a>
+			{displayLanguageSwitcher && (
 			<a href={switchLanguageUrl}>
 				<button class="topbar__toggle lang" title={switchLanguageName}>{switchLanguageCode.toUpperCase()}</button>
 			</a>
+			)}
 			<button class="primary button has-arrow" data-open="contact-modal">
 				<svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
 				{t('nav.iam-interested')}
@@ -177,9 +181,11 @@ const switchLanguageUrl  = switchLanguagePathFn(Astro.url.pathname);
 						</a>
 					</li>
 				</ul>
+				{displayLanguageSwitcher && (
 				<ul class="vertical menu site-nav__contact" style="padding-top: 1.2em;">
 					<li><a href={switchLanguageUrl}>{switchLanguageTextLong}</a></li>
 				</ul>
+				)}
 			</div>
 		</div>
 	</nav>
