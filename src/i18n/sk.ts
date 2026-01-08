@@ -14,7 +14,7 @@ export default {
   "nav.zasady-spracuvania-osobnych-udajov": "Zásady spracúvania osobných údajov",
   "nav.zasady-cookies": "Zásady spracúvania súborov cookie",
   "newsletter.title": "Newsletter",
-  "newsletter.text": "Každý mesiac vám prinesieme zaujímavé témy venujúce sa pasívnym domom a&nbsp;trendom v&nbsp;stavebníctve.",
+  "newsletter.text": "Každý mesiac vám prinesieme zaujímavé témy venujúce sa pasívnym domom a trendom v stavebníctve.",
   "newsletter.subscribe": "Odoberať",
   "newsletter.consent": 'Súhlasím so spracovaním osobných údajov za účelom zasielania noviniek o produktoch a službách HABITAT. Bližšie informácie o ochrane osobných údajov <a href="/zasady-spracuvania-osobnych-udajov" target="_blank">TU</a>.',
   "contact-form.title": "Získajte nezáväznú konzultáciu",
