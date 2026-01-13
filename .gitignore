@@ -23,6 +23,5 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# PHP dependencies and config
-php/vendor/
+# PHP config
 php/inc/config.php
