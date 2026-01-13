@@ -40,14 +40,14 @@ jobs:
           ECOMAIL_API_KEY="${{ secrets.ECOMAIL_API_KEY }}" \
           PHP_SECRET_TOKEN="${{ secrets.PHP_SECRET_TOKEN }}" \
           perl -pe 's|{{ SMTP_USERNAME }}|$ENV{"SMTP_USERNAME"}|g; s|{{ SMTP_PASSWORD }}|$ENV{"SMTP_PASSWORD"}|g; s|{{ ECOMMAIL_API_KEY }}|$ENV{"ECOMAIL_API_KEY"}|g; s|{{ PHP_SECRET_TOKEN }}|$ENV{"PHP_SECRET_TOKEN"}|g' \
-          php/inc/config.php.template > php/inc/config.php
+          dist/php/inc/config.php.template > dist/php/inc/config.php
 
       - name: Install lftp
         run: sudo apt-get -y install lftp
 
       - name: Deploy PHP bridge to SFTP with lftp
         run: |
-          lftp -c "set sftp:auto-confirm yes; open sftp://${{ secrets.FTP_SERVER }}; user '${{ secrets.FTP_USERNAME }}' '${{ secrets.FTP_PASSWORD }}'; put ./php/sync-files.php -o ~/sub/new/php/sync-files.php; mkdir -p ~/sub/new/php/inc; put ./php/inc/config.php -o ~/sub/new/php/inc/config.php"
+          lftp -c "set sftp:auto-confirm yes; open sftp://${{ secrets.FTP_SERVER }}; user '${{ secrets.FTP_USERNAME }}' '${{ secrets.FTP_PASSWORD }}'; put ./dist/php/sync-files.php -o ~/sub/new/php/sync-files.php; mkdir -p ~/sub/new/php/inc; put ./dist/php/inc/config.php -o ~/sub/new/php/inc/config.php"
 
       - name: Smart Sync Deploy
         env:
