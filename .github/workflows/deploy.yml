@@ -51,7 +51,7 @@ jobs:
 
       - name: Smart Sync Deploy
         env:
-          SYNC_URL: https://new.habitat.sk/php/sync-files.php
+          SYNC_URL: https://habitat.sk/php/sync-files.php
           SYNC_TOKEN: ${{ secrets.PHP_SECRET_TOKEN }}
         run: |
           # Syntax: node deploy.cjs <folder_to_deploy> <url> <token>
