@@ -1,4 +1,4 @@
-name: Deploy Astro to FTP
+name: Deploy Astro via SFTP
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install Astro dependencies
+      - name: Install dependencies
         run: npm install
 
       - name: Build Astro project
@@ -38,17 +38,34 @@ jobs:
           SMTP_USERNAME="${{ secrets.SMTP_USERNAME }}" \
           SMTP_PASSWORD="${{ secrets.SMTP_PASSWORD }}" \
           ECOMAIL_API_KEY="${{ secrets.ECOMAIL_API_KEY }}" \
-          perl -pe 's|{{ SMTP_USERNAME }}|$ENV{"SMTP_USERNAME"}|g; s|{{ SMTP_PASSWORD }}|$ENV{"SMTP_PASSWORD"}|g; s|{{ ECOMMAIL_API_KEY }}|$ENV{"ECOMAIL_API_KEY"}|g' \
+          PHP_SECRET_TOKEN="${{ secrets.PHP_SECRET_TOKEN }}" \
+          perl -pe 's|{{ SMTP_USERNAME }}|$ENV{"SMTP_USERNAME"}|g; s|{{ SMTP_PASSWORD }}|$ENV{"SMTP_PASSWORD"}|g; s|{{ ECOMMAIL_API_KEY }}|$ENV{"ECOMAIL_API_KEY"}|g; s|{{ PHP_SECRET_TOKEN }}|$ENV{"PHP_SECRET_TOKEN"}|g' \
           php/inc/config.php.template > php/inc/config.php
-
 
       - name: Install lftp
         run: sudo apt-get -y install lftp
 
-      - name: Deploy built site to SFTP with lftp
+      - name: Deploy PHP bridge to SFTP with lftp
         run: |
-          lftp -c "set sftp:auto-confirm yes; open sftp://${{ secrets.FTP_SERVER }}; user '${{ secrets.FTP_USERNAME }}' '${{ secrets.FTP_PASSWORD }}'; mirror -R --delete --verbose --parallel=10 ./dist/ ~/sub/new/"
+          lftp -c "set sftp:auto-confirm yes; open sftp://${{ secrets.FTP_SERVER }}; user '${{ secrets.FTP_USERNAME }}' '${{ secrets.FTP_PASSWORD }}'; put ./php/sync-files.php -o ~/sub/new/php/sync-files.php; mkdir -p ~/sub/new/php/inc; put ./php/inc/config.php -o ~/sub/new/php/inc/config.php"
 
-      - name: Deploy PHP app to SFTP with lftp
+      - name: Smart Sync Deploy
+        env:
+          SYNC_URL: https://new.habitat.sk/sync-files.php
+          SYNC_TOKEN: ${{ secrets.PHP_SECRET_TOKEN }}
         run: |
-          lftp -c "set sftp:auto-confirm yes; open sftp://${{ secrets.FTP_SERVER }}; user '${{ secrets.FTP_USERNAME }}' '${{ secrets.FTP_PASSWORD }}'; mirror -R --delete --verbose --parallel=10 --exclude-glob 'inc/config.php.template' --exclude-glob 'composer.json' --exclude-glob 'composer.lock' ./php/ ~/sub/new/php/"
+          # Syntax: node deploy.js <folder_to_deploy> <url> <token>
+          node .github/scripts/deploy.js "dist" "$SYNC_URL" "$SYNC_TOKEN"
+
+#     - name: Generate smart lftp sync script
+#       run: node scripts/generate-lftp-script.mjs
+#       env:
+#         PHP_HASH_URL: ${{ secrets.PHP_HASH_URL }}
+#         PHP_SECRET_TOKEN: ${{ secrets.PHP_SECRET_TOKEN }}
+#         FTP_SERVER: ${{ secrets.FTP_SERVER }}
+#         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+#         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+
+#     - name: Deploy built site to SFTP with lftp
+#       run: |
+#         lftp -f ./lftp-upload.script

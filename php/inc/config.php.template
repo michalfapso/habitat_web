@@ -13,3 +13,7 @@ define( 'EMAIL_RECIPIENT', 'info@habitat.sk' );
 // Ecomail API Settings
 define( 'ECOMAIL_API_KEY', '{{ ECOMAIL_API_KEY }}' );
 define( 'ECOMAIL_LIST_ID', 1 );
+
+// Password for remote file hashing (used during deployment sync)
+define( 'PHP_SECRET_TOKEN', '{{ PHP_SECRET_TOKEN }}' );
+
