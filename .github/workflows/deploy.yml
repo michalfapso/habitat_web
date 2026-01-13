@@ -51,11 +51,12 @@ jobs:
 
       - name: Smart Sync Deploy
         env:
-          SYNC_URL: https://new.habitat.sk/sync-files.php
+          SYNC_URL: https://new.habitat.sk/php/sync-files.php
           SYNC_TOKEN: ${{ secrets.PHP_SECRET_TOKEN }}
         run: |
-          # Syntax: node deploy.js <folder_to_deploy> <url> <token>
-          node .github/scripts/deploy.js "dist" "$SYNC_URL" "$SYNC_TOKEN"
+          # Syntax: node deploy.cjs <folder_to_deploy> <url> <token>
+          node .github/scripts/deploy.cjs "dist" "$SYNC_URL" "$SYNC_TOKEN"
+
 
 #     - name: Generate smart lftp sync script
 #       run: node scripts/generate-lftp-script.mjs
