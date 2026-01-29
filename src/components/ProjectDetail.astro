@@ -3,14 +3,15 @@ import { getImage } from 'astro:assets';
 import { projectTags } from '../data/tags';
 import CardProject from './CardProject.astro';
 import { useTranslations, useTranslatedPath } from '../i18n/utils';
-import { getAugmentedProjects } from '../utils/getProjectImageMetadata';
-import type { CollectionEntry } from 'astro:content';
+import { getAugmentedContent } from '../utils/contentAugmentation';
+import type { AugmentedData } from '../utils/contentAugmentation';
 
 interface Props {
-    project: CollectionEntry<'projects'>;
+    project: AugmentedData<'projects'>;
     lang: 'sk' | 'cz';
-    allProjects: CollectionEntry<'projects'>[];
+    allProjects: AugmentedData<'projects'>[];
 }
+
 
 const { project, lang, allProjects } = Astro.props;
 const { Content } = await project.render();

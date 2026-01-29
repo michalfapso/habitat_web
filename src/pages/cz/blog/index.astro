@@ -1,47 +1,43 @@
 ---
-// src/pages/projects/index.astro
-import { getAugmentedProjects } from '../../../utils/contentAugmentation'; // Import the new utility
-
+import { getAugmentedContent } from '../../../utils/contentAugmentation';
 import { useTranslations } from '../../../i18n/utils';
 import Layout from "../../../layouts/Layout.astro";
-import CardProject from '../../../components/CardProject.astro';
+import CardBlog from '../../../components/CardBlog.astro';
 
 const lang = Astro.currentLocale as keyof typeof import('../../../i18n/utils').languages;
 const t = useTranslations(lang);
-const allProjects = await getAugmentedProjects(lang);
-
-// Sort projects by order
-allProjects.sort((a, b) => a.data.order - b.data.order);
+const allPosts = await getAugmentedContent('blog', lang);
 ---
 
-<Layout title={t('projects.title')} bodyClass="home" topbarClass="topbar--bright">
-    <div class="hero hero--projects">
+<Layout title={t('blog.title')} bodyClass="home" topbarClass="topbar--bright">
+    <div class="hero hero--projects hero--blog">
         <div class="grid-x">
             <div class="hero__img cell medium-6 large-7">
                 <img
                     src="/assets/img/hero-projekty-1024w.jpg"
                     srcset="/assets/img/hero-projekty-1024w.jpg 1024w, /assets/img/hero-projekty-1536w.jpg 1536w, /assets/img/hero-projekty-2048w.jpg 2048w, /assets/img/hero-projekty-2800w.jpg 2800w"
                     sizes="(min-width: 40em) 50vw, (min-width: 64em) 58.33333vw, 100vw"
-                    alt={t('projects.title')}
+                    alt={t('blog.title')}
                     style="object-position:50% center"
                 />
                 <div class="overlay"></div>
             </div>
             <div class="hero__content cell medium-6 large-5">
-                <h1>{t('projects.title')}</h1>
+                <h1>{t('blog.title')}</h1>
                 <div class="overlay"></div>
             </div>
         </div>
     </div>
 	<a id="main"></a>
 	
-	<div class="section section--projects">
+	<div class="section section--projects section--blog">
 		<div class="grid-container">
-			<div class="grid-x grid-margin-x projects-list">
+			<div class="grid-x grid-margin-x projects-list blog-list">
             {
-                allProjects.map((project) => (
-                    <CardProject project={project} className="cell medium-6"/>
+                allPosts.map((post) => (
+                    <CardBlog post={post} className="cell medium-6"/>
                 ))
+
             }
 			</div>
 		</div>

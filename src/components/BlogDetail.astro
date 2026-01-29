@@ -1,0 +1,155 @@
+---
+import { getImage } from 'astro:assets';
+import { projectTags } from '../data/tags';
+import CardBlog from './CardBlog.astro';
+import { useTranslations, useTranslatedPath } from '../i18n/utils';
+import type { AugmentedData } from '../utils/contentAugmentation';
+
+interface Props {
+    post: AugmentedData<'blog'>;
+    lang: 'sk' | 'cz';
+    allPosts: AugmentedData<'blog'>[];
+}
+
+const { post, lang, allPosts } = Astro.props;
+const { Content } = await post.render();
+const t = useTranslations(lang);
+const translatedPath = await useTranslatedPath(lang);
+
+const allGalleryImageLoaders = import.meta.glob('/src/content/blog/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
+let galleryImages = [];
+let otherPosts: AugmentedData<'blog'>[] = [];
+
+if (post) {
+    const postDir = post.id.replace(/\/index.*$/, '');
+    const postImages = Object.entries(allGalleryImageLoaders).filter(([path, loader]) => {
+        return path.includes(`/src/content/blog/${postDir}/gallery/`);
+    });
+
+    for (const [path, loader] of postImages) {
+        const imgModule = await (loader as any)();
+        const imgFull = await getImage({ src: imgModule.default, width: 3000, format: 'jpg' });
+        const img480h = await getImage({ src: imgModule.default, height: 480, format: 'jpg' });
+        const img960h = await getImage({ src: imgModule.default, height: 960, format: 'jpg' });
+
+        galleryImages.push({
+            href: imgFull.src,
+            src: img480h.src,
+            srcset: `${img960h.src} 2x`,
+            alt: `${post.data.title || post.slug}`,
+        });
+    }
+
+    // Simplified "other posts" logic - just pick random ones excluding current
+    otherPosts = allPosts.filter(p => p.id !== post.id).sort(() => 0.5 - Math.random()).slice(0, 3);
+}
+---
+
+<div class="hero hero--project hero--blog">
+    <div class="hero__img">
+        <img src={post.data.image} 
+          srcset={post.data.imageSet} 
+          alt={post.data.title}>
+    </div>
+    <div class="hero__content grid-container grid-x">
+        <div class="cell large-8 large-offset-4">
+            <a href={translatedPath('/blog/')} class="backlink hide-for-large">
+                <span class="arrow">
+                    <svg class="icon icon-arrow-prev">
+                        <use xlink:href="#icon-arrow-prev"></use>
+                    </svg>
+                </span>
+                {t('blog.back')}
+            </a>
+            <h1 set:html={post.data.titleBreak}></h1>
+        </div>
+    </div>
+    <a href={translatedPath('/blog/')} class="backlink show-for-large">
+        <span class="arrow">
+            <svg class="icon icon-arrow-prev">
+                <use xlink:href="#icon-arrow-prev"></use>
+            </svg>
+        </span>
+        {t('blog.back')}
+    </a>
+</div>
+<a id="main"></a>
+
+<div class="section section--detail">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-center">
+            <div class="cell medium-9 large-7">
+                <article class="h-article">
+                    <div class="blog-date">{post.data.date}</div>
+                    <Content/>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{galleryImages.length > 0 && (
+<div class="gallery-section" style="overflow-x:hidden">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-justify align-center">
+            <div class="cell medium-6">
+                <h2>{t('projects.gallery')}</h2>
+            </div>
+            <div class="cell shrink hide-for-small">
+                 <div class="swiper-navigation swiper-navigation--square">
+                    <div class="swiper-button swiper-button-prev--gallery">
+                        <svg class="icon icon-arrow-prev"><use xlink:href="#icon-arrow-prev"></use></svg>
+                    </div>
+                    <div class="swiper-button swiper-button-next--gallery">
+                        <svg class="icon icon-arrow-next"><use xlink:href="#icon-arrow-next"></use></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper swiper--gallery">
+            <div class="swiper-wrapper">
+                {galleryImages.map((image) => (
+                    <a class="swiper-slide gallery_item" href={image.href} data-fancybox="gallery">
+                        <img src={image.src} srcset={image.srcset} alt={image.alt}>
+                    </a>
+                ))}
+            </div>
+            <div class="swiper-pagination hide-for-medium"></div>
+        </div>
+    </div>
+</div>
+)}
+
+{otherPosts.length > 0 && (
+<div class="section pt-0" style="overflow-x:hidden">
+    <div class="grid-container">
+        <h2 class="h3">{t('projects.more')}</h2>
+        <div class="swiper swiper--projects-3">
+            <div class="swiper-wrapper">
+            {
+                otherPosts.map((otherPost) => (
+                    <CardBlog post={otherPost} className="swiper-slide"/>
+                ))
+            }
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+)}
+
+<style is:global>
+    .blog-date {
+        font-family: Switzer, sans-serif;
+        font-size: 1rem;
+        color: var(--color-gold);
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+</style>
+
+

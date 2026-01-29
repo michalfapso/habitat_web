@@ -43,4 +43,8 @@ export default {
   "projects.author": "Autor",
   "tags.domov-na-mieru": "Domov na mieru",
   "tags.habitat-konfigurator": "Habitat konfigurátor",
+  "blog.title": "Blog",
+  "blog.all": "Všetky články",
+  "blog.back": "Späť na blog",
 };
+

@@ -29,6 +29,25 @@ const projectsCollection = defineCollection({
   }),
 });
 
+const blogCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    titleBreak: z.string().optional(),
+    description: z.string(),
+    image: z.string().optional(),
+    imageSet: z.string().optional(),
+    imageThumb: z.string().optional(),
+    imageThumbSet: z.string().optional(),
+    tags: z.array(z.enum(availableTagKeys as [string, ...string[]])).optional(),
+    order: z.number().default(0).optional(),
+    date: z.string().optional(), // Adding a date field for blog posts
+    headerImageNumber: z.number().default(1).optional(),
+    dir: z.string().optional(),
+    slug: z.string().optional(),
+  }),
+});
+
 const pagesCollection = defineCollection({
   type: "content",
   schema: z.object({
@@ -40,4 +59,5 @@ const pagesCollection = defineCollection({
 export const collections = {
   projects: projectsCollection,
   pages: pagesCollection,
+  blog: blogCollection,
 };

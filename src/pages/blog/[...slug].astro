@@ -1,0 +1,29 @@
+---
+import { getAugmentedContent } from '../../utils/contentAugmentation';
+import Layout from '../../layouts/Layout.astro';
+import BlogDetail from '../../components/BlogDetail.astro';
+
+export async function getStaticPaths() {
+  const skPosts = await getAugmentedContent('blog', 'sk');
+
+  const paths = skPosts.map(post => {
+    return {
+      params: { slug: post.slug },
+      props: {
+        lang: 'sk',
+        post: post,
+        id: post.id,
+        fullPath: `/blog/${post.slug}`
+      },
+    };
+  });
+  return paths;
+}
+const { lang, post } = Astro.props;
+const allPosts = await getAugmentedContent('blog', lang);
+---
+
+<Layout title={post.data.title} bodyClass="page" topbarClass="topbar--bright topbar--dark">
+    {post && <BlogDetail post={post} lang={lang} allPosts={allPosts} />}
+</Layout>
+
