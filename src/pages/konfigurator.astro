@@ -17,13 +17,13 @@ const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languag
 const t = useTranslations(lang);
 
 const selectedProjectDirs = [
-	"dom-s-pavlacou",
-	"usadlost-na-cervenej-hore",
+	"dom-s-dlhou-pergolou",
+	"dom-s-drevenym-obkladom",
 	"dom-s-mestskym-nadychom",
-	"dom-s-bazenom-v-rusovciach",
-	"dom-za-mestom",
-	"dom-s-cortenom-pri-piestanoch",
-	"dom-so-saunou-na-povazi",
+	"dom-s-utulnou-terasou",
+	"dom-v-zahrade",
+	"dom-s-nadcasovym-dizajnom",
+	"dom-s-otvorenym-krovom",
 ];
 
 const allProjects = await getAugmentedProjects(lang);
