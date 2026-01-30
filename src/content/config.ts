@@ -41,7 +41,7 @@ const blogCollection = defineCollection({
     imageThumbSet: z.string().optional(),
     tags: z.array(z.enum(availableTagKeys as [string, ...string[]])).optional(),
     order: z.number().default(0).optional(),
-    date: z.string().optional(), // Adding a date field for blog posts
+    date: z.coerce.date().optional(), // Coerce and parse date for blog posts
     headerImageNumber: z.number().default(1).optional(),
     dir: z.string().optional(),
     slug: z.string().optional(),

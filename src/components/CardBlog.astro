@@ -1,8 +1,9 @@
 ---
 import { useTranslations, useTranslatedPath } from '../i18n/utils';
 import type { AugmentedData } from '../utils/contentAugmentation';
+import { formatLocalizedDate } from '../utils/date';
 
-const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
+const lang = (Astro.currentLocale || 'sk') as 'sk' | 'cz';
 const t = useTranslations(lang);
 const path = await useTranslatedPath(lang);
 
@@ -12,6 +13,7 @@ interface Props {
 }
 
 const { post, className } = Astro.props;
+const formattedDate = post.data.date ? formatLocalizedDate(new Date(post.data.date), lang) : '';
 ---
 <a class={`${className} blog-card`} href={path(`/blog/${post.slug}/`)}>
     <div class="blog-card__img">
@@ -23,7 +25,7 @@ const { post, className } = Astro.props;
             {post.data.title}
         </h3>
         <p class="blog-card__excerpt">{post.data.description}</p>
-        <div class="blog-card__date">{post.data.date}</div>
+        <div class="blog-card__date">{formattedDate}</div>
     </div>
 
 </a>

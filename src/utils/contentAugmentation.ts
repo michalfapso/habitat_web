@@ -150,11 +150,19 @@ export async function getAugmentedContent<T extends AugmentableCollection>(
         } as any);
     }
 
-    // Sort by order if present, otherwise by title or id
+    // Sort by order primary (ascending), and date secondary (descending - newest first)
     augmentedEntries.sort((a, b) => {
         const orderA = (a.data as any).order ?? 0;
         const orderB = (b.data as any).order ?? 0;
-        return orderA - orderB;
+
+        if (orderA !== orderB) {
+            return orderA - orderB;
+        }
+
+        const dateA = (a.data as any).date ? new Date((a.data as any).date).getTime() : 0;
+        const dateB = (b.data as any).date ? new Date((b.data as any).date).getTime() : 0;
+
+        return dateB - dateA;
     });
 
     return augmentedEntries;

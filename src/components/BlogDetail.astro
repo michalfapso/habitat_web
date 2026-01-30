@@ -5,6 +5,7 @@ import CardBlog from './CardBlog.astro';
 import { useTranslations, useTranslatedPath } from '../i18n/utils';
 import type { AugmentedData } from '../utils/contentAugmentation';
 import BlogImageRow from './BlogImageRow.astro';
+import { formatLocalizedDate } from '../utils/date';
 
 interface Props {
     post: AugmentedData<'blog'>;
@@ -16,6 +17,8 @@ const { post, lang, allPosts } = Astro.props;
 const { Content } = await post.render();
 const t = useTranslations(lang);
 const translatedPath = await useTranslatedPath(lang);
+
+const formattedDate = post.data.date ? formatLocalizedDate(new Date(post.data.date), lang) : '';
 
 const allGalleryImageLoaders = import.meta.glob('/src/content/blog/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
 let galleryImages = [];
@@ -81,7 +84,7 @@ if (post) {
         <div class="grid-x grid-margin-x align-center">
             <div class="cell medium-9 large-7">
                 <article class="h-article">
-                    <div class="blog-date">{post.data.date}</div>
+                    <div class="blog-date">{formattedDate}</div>
                     <Content components={{ BlogImageRow }} />
                 </article>
             </div>
