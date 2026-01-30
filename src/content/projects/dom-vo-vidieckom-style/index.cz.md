@@ -1,0 +1,11 @@
+---
+title: Dům ve venkovském stylu
+description: Návrh prostorného rodinného domu pro čtyřčlennou rodinu. S klientem jsme hledali průnik mezi jeho zálibou v tradiční „provensálské“ architektuře a moderními technickými řešeními – výsledkem je útulné bydlení splňující ty nejvyšší energetické standardy.
+---
+Rodinný dům se skládá z dvoupodlažní části a jednopodlažního obývacího traktu, zastřešen je sedlovými střechami s rozdílným sklonem. Dispoziční koncept vychází z tvaru písmene L, který umožňuje efektivní proslunění denní části, stejně jako zachování klientem preferovaného výhledu na západ.
+
+Vstupuje se ze severu do dvoupodlažní hmoty domu, kde se v přízemí nachází zádveří, ložnice se šatníkem a samostatnou koupelnou, technická místnost, wc, spíž a schodišťový prostor. Chodbou podél schodiště se prochází do jednopodlažní části domu – do denní zóny, která směřuje do zahrady na jih. Zde se nachází kuchyně, jídelna a obývací pokoj, oddělený posuvnými dveřmi. V horním podlaží dvoupodlažní hmoty se nacházejí tři pokoje a hygienické zázemí. V rohovém pokoji, orientovaném na jih i západ, je navržena pracovna. Kvůli podchodným výškám je směrem na západní fasádu navržen vikýř, který pomáhá zlepšit využitelnost místností a akcentuje nejkrásnější výhled na okolní krajinu.
+
+V prostoru mezi rameny půdorysu je umístěna prostorná krytá terasa, přístupná z obývacího pokoje, jídelny i ložnice. Překrytá je pokračováním sedlové střechy obytného traktu. Dřevěné konstrukční prvky krovu jsou přiznané v interiéru i exteriéru, čímž podporují tradiční výraz domu.
+
+Architektonický výraz domu i garáže kombinuje jednoduché tradiční tvarosloví s prvky venkovského charakteru. Barevnost je zvolena v teplých neutrálních tónech – omítka v odstínu beige (pískově-hnědá) v kombinaci s cihlovým obkladem. Střešní krytina je navržena z rustikálních tašek, oplechování vikýře, svody a zábradlí ve světle šedém odstínu. Celkový výraz stavby působí harmonicky, s důrazem na proporce, materiálovou střídmost a přirozené začlenění do prostředí.

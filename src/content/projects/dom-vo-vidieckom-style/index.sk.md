@@ -1,0 +1,11 @@
+---
+title: Dom vo vidieckom štýle
+description: Návrh priestranného rodinného domu pre štvorčlennú rodinu. S klientom sme hľadali prienik medzi jeho záľubou v tradičnej „provensálskej“ architektúre a modernými technickými riešeniami – výsledkom je útulné bývanie spĺňajúce tie najvyššie energetické štandardy.
+---
+Rodinný dom sa skladá z dvojpodlažnej časti a jednopodlažného obývačkového traktu, zastrešený je sedlovými strechami s rozdielnym sklonom. Dispozičný koncept vychádza z tvaru písmena L, ktorý umožňuje efektívne preslnenie dennej časti, ako aj zachovanie klientom preferovaného výhľadu na západ. 
+
+Vstupuje sa zo severu do dvojpodlažnej hmoty domu, kde sa na prízemí nachádza zádverie, spálňa so šatníkom a osobitnou kúpeľňou, technická miestnosť, wc, špajza a schodiskový priestor. Chodbou pozdĺž schodiska sa prechádza do jednopodlažnej časti domu – do dennej zóny, ktorá smeruje do záhrady na juh. Tu sa nachádza kuchyňa, jedáleň a obývacia izba, oddelená posuvnými dverami. Na hornom podlaží dvojpodlažnej hmoty sa nachádzajú tri izby a hygienické zázemie. V rohovej izbe, orientovanej na juh aj západ je navrhnutá pracovňa. Kvôli podchodným výškam je smerom na západnú fasádu navrhnutý vikier, ktorý pomáha zlepšiť využiteľnosť miestností a akcentuje najkrajší výhľad na okolitú krajinu.
+
+V priestore medzi ramenami pôdorysu je umiestnená priestranná krytá terasa, prístupná z obývacej izby, jedálne aj spálne. Prekrytá je pokračovaním sedlovej strechy obytného traktu. Drevené konštrukčné prvky krovu sú priznané v interiéri aj exteriéri, čím podporujú tradičný výraz domu. 
+
+Architektonický výraz domu aj garáže kombinuje jednoduché tradičné tvaroslovie s prvkami vidieckeho charakteru. Farebnosť je zvolená v teplých neutrálnych tónoch – omietka v odtieni beige (pieskovo-hnedá) v kombinácii s tehlovým obkladom. Strešná krytina je navrhnutá z rustikálnych škridiel, oplechovanie vikiera, zvody a zábradlia vo svetlosivom odtieni. Celkový výraz stavby pôsobí harmonicky, s dôrazom na proporcie, materiálovú striedmosť a prirodzené začlenenie do prostredia.
