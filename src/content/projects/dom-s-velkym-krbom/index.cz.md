@@ -1,0 +1,9 @@
+---
+title: Dům s velkým krbem
+description: Návrh rodinného domu na velikostně omezeném prostoru, při kterém jsme museli najít optimální řešení pro dispozici se třemi pokoji a minimem chodeb. Do architektury jsme přirozeně zakomponovali i atypické požadavky klienta – výrazné ztvárnění exteriérového krbu, zešikmené světlíky prosvětlující obývací pokoj či vegetační fasádu.
+---
+Dům je navržen s důrazem na minimální zásah do přírodního prostředí a jeho co nejlepší integraci do okolní zeleně. Většina plochy je řešena vegetační fasádou, díky čemuž dům působí nenápadně a harmonicky splyne s okolím. Výrazným architektonickým prvkem je pouze hlavní obytný trakt, který je vizuálně zvýrazněn štítem sedlové střechy a dřevěným obkladem.
+
+Tvar domu kombinuje ploché vegetační střechy se sedlovou plechovou střechou, přičemž přiznané šikmé roviny střechy jsou součástí interiéru obývacího pokoje. Zvláštností je společné komínové těleso, které integruje interiérový i exteriérový krb, umístěný na hlavní fasádě. Hlavní terasa, situovaná kolem exteriérového krbu, je částečně překryta dřevěnou pergolou, která slouží jako ochrana před povětrnostními vlivy a zároveň jako stínící konstrukce.
+
+Dům je orientován převážně na východní stranu, čímž maximalizuje výhledy do zahrady a lesa. Kromě velkých prosklení jsou navrženy i tvarově atypické podstřešní světlíky, které zvyšují přirozené prosvětlení interiéru a zároveň podporují vzdušnost prostoru. Menší světlík je situován i na západní fasádě, směrem do ulice, což přispívá k optimalizaci energetických zisků a celodennímu prosvětlení hlavního obytného prostoru.
