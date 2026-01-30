@@ -1,0 +1,71 @@
+---
+interface Props {
+    class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class={`blog-image-row ${className || ''}`}>
+    <slot />
+</div>
+
+<style>
+    .blog-image-row {
+        margin: 3rem auto;
+        width: 100vw;
+        max-width: min(900px, 100vw - 2rem);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    /* Breakout logic for larger screens */
+    @media (min-width: 1024px) {
+        .blog-image-row {
+            /*max-width: 1400px;*/
+        }
+    }
+
+    /* Handling MDX-inserted paragraphs and our internal structure */
+    .blog-image-row :global(p) {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        flex: 1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Handling images and gallery links */
+    .blog-image-row :global(img) {
+        flex: 1;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin: 0 !important; /* Override general article image margins */
+    }
+
+    .blog-image-row :global(a) {
+        flex: 1;
+        display: flex;
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    /* Responsive stacking */
+    @media (max-width: 400px) {
+        .blog-image-row {
+            margin: 2rem auto;
+        }
+        .blog-image-row :global(p) {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+</style>

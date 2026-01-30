@@ -4,6 +4,7 @@ import { projectTags } from '../data/tags';
 import CardBlog from './CardBlog.astro';
 import { useTranslations, useTranslatedPath } from '../i18n/utils';
 import type { AugmentedData } from '../utils/contentAugmentation';
+import BlogImageRow from './BlogImageRow.astro';
 
 interface Props {
     post: AugmentedData<'blog'>;
@@ -81,7 +82,7 @@ if (post) {
             <div class="cell medium-9 large-7">
                 <article class="h-article">
                     <div class="blog-date">{post.data.date}</div>
-                    <Content/>
+                    <Content components={{ BlogImageRow }} />
                 </article>
             </div>
         </div>
@@ -150,6 +151,86 @@ if (post) {
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
+    .h-article img,
+    .h-article a:has(> img) {
+        /* display: contents; for image is not good, but for the 'a' wrapper it is essential */
+    }
+    .h-article a:has(> img) {
+        display: contents;
+    }
+
+    .h-article img {
+        display: block;
+        margin-bottom: 2.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        max-width: 100%;
+    }
+
+    /* Robust breakout for single images in paragraphs */
+    @media (min-width: 400px) {
+        /*
+        .h-article > p > a > img,
+        .h-article > p > img {
+            width: 100vw;
+            max-width: min(900px, 100vw - 2rem);
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        */
+
+        .h-article img:hover {
+            transform: scale(1.01);
+        }
+        
+        /* Special case: if image is breakout, hover must preserve transform */
+        .h-article > p > a:hover > img,
+        .h-article > p:hover > img {
+            /* This is tricky because we use translate for centering */
+        }
+        
+        /* Better to just apply scale to the image and let it inherit the translate if needed */
+        /* Actually, if we apply scale(1.01) to an already transformed element, it might conflict */
+        /* Let's use a simpler hover that doesn't conflict with translate if possible, or include translate in hover */
+        
+        /*
+        .h-article > p > a > img:hover,
+        .h-article > p > img:hover {
+            transform: translateX(-50%) scale(1.01);
+        }
+        */
+    }
+
+    @media (max-width: 400px) {
+        .h-article img {
+            max-width: 100%;
+        }
+    }
 </style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const article = document.querySelector('.h-article');
+    if (!article) return;
+
+    const images = article.querySelectorAll('img');
+    images.forEach(img => {
+      // Skip images already wrapped in a link
+      if (img.closest('a')) return;
+
+      // Wrap image in a link to trigger Fancybox
+      const link = document.createElement('a');
+      link.href = img.src;
+      link.dataset.fancybox = 'gallery'; // Join the same gallery as at the bottom
+      
+      img.parentNode.insertBefore(link, img);
+      link.appendChild(img);
+    });
+  });
+</script>
 
 

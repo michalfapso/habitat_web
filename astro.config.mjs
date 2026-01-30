@@ -2,6 +2,8 @@
 import { defineConfig } from 'astro/config';
 import fs from 'node:fs';
 
+import mdx from '@astrojs/mdx';
+
 export default defineConfig({
     site: 'http://localhost:4321',
     compressHTML: false, // Just to see the "View page source" indented properly
@@ -18,6 +20,7 @@ export default defineConfig({
         },
     },
     integrations: [
+        mdx(),
         {
             name: 'copy-php-folder',
             hooks: {

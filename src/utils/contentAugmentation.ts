@@ -101,7 +101,7 @@ export async function getAugmentedContent<T extends AugmentableCollection>(
     locale: string
 ): Promise<AugmentedData<T>[]> {
     const allEntries = await getCollection(collection as any, (entry: any) => {
-        return entry.id.endsWith(`.${locale}.md`);
+        return entry.id.endsWith(`.${locale}.md`) || entry.id.endsWith(`.${locale}.mdx`);
     });
 
     const augmentedEntries: AugmentedData<T>[] = [];
