@@ -1,8 +1,0 @@
----
-title: Tiny House
-description: Návrh komfortného rodinného domu v kompaktnom prevedení, určený na celoročné bývanie alebo rekreáciu. Pre klienta sme hľadali optimálne riešenie vzhľadom na obmedzený rozpočet a regulatívy lokality – vďaka konceptu „Tiny House“ sme vytvorili bývanie na rozlohe vhodnej pre jednoduché povoľovacie procesy a zároveň zachovali požiadavky na výnimočný dizajn a kvalitu detailu. Dom je aktuálne vo výstavbe.
----
-Pre využitie výhľadov a maximalizáciu preslnenia je Tiny House osadený na severo-východnom konci pozemku. Nespevnený chodník nadväzuje na plochu vonkajšej terasy, čiastočne prekrytou drevenou pergolou, ktorá chráni terasu pred poveternostnými vplyvmi a zároveň tieni najväčšie presklenie pred nadmerným prehrievaním v tele. Z terasy je navrhnutý vstup do objektu, spojený s hlavným presklením (panoramatické presklenie s posuvno-zdvižným systémom). Vedie priamo do hlavného obytného priestoru, ktorý spája kuchyňu, jedáleň a obývačkové posedenie s krbom. Z tohto priestoru sú na dve strany sprístupnené ďalšie izby – za kuchyňou je umiestnená praktická kúpeľňa, za obývačkou zase spálňa. 
-
-Architektonicky je Tiny House navrhnutý ako jednoduchý kváder so sedlovou strechou, ktorej šikmé roviny sú priznané v interiéry. Toto tradičné tvaroslovie je opláštené moderným plechovým obkladom v antracitovom odtieni, ktorý zjednocuje steny aj šikmú strechu. V tom istom odtieni sú navrhované aj exteriérové rámy okien. V kontraste s tmavou fasádou vyniká terasa a pergola, ktorá je navrhnutá v prirodzenom odtieni masívneho dreva. Tmavá obálka ukrýva presvelený interiér s bielymi povrchmi a jemným akcentom svetlého dreva.  
-
