@@ -85,7 +85,9 @@ if (post) {
         <div class="grid-x grid-margin-x align-center">
             <div class="cell medium-9 large-7">
                 <article class="h-article">
-                    <div class="blog-date">{formattedDate}</div>
+                    {false && (
+                        <div class="blog-date">{formattedDate}</div>
+                    )}
                     <Content components={{ BlogImageRow, img: BlogImage }} />
                 </article>
             </div>

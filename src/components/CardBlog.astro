@@ -25,7 +25,9 @@ const formattedDate = post.data.date ? formatLocalizedDate(new Date(post.data.da
             {post.data.title}
         </h3>
         <p class="blog-card__excerpt">{post.data.description}</p>
-        <div class="blog-card__date">{formattedDate}</div>
+        {false && (
+            <div class="blog-card__date">{formattedDate}</div>
+        )}
     </div>
 
 </a>
