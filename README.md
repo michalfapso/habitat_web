@@ -2,6 +2,7 @@
 
 Tento dokument slúži ako jednoduchý manuál na úpravu obsahu webstránky priamo cez webové rozhranie GitHub. Po uložení zmien sa webstránka automaticky zaktualizuje do niekoľkých minút.
 
+
 ## Ako upravovať obsah
 
 Všetky dôležité súbory pre úpravu textov a projektov sa nachádzajú v adresári `src/`.
