@@ -1,0 +1,9 @@
+---
+title: Dům na Žitném ostrově
+description: Návrh moderního rodinného domu na atypicky orientovaném pozemku. Výzvou při tomto projektu bylo najít architektonické řešení, které klientům přinese soukromí od vyvýšené hráze a zároveň pustí do domu dostatečné množství světla a solárních zisků. Pro klienty aktuálně zpracováváme projektovou dokumentaci pro povolení stavby.
+---
+Pozemek má atypickou orientaci – zahrada je orientovaná na severovýchod, zatímco ulice s přístupem se nachází na jihozápadě. Z tohoto důvodu byl dům koncipován tak, aby se hlavním prosklením otevíral do zahrady, ale zároveň využíval i světelný potenciál jihozápadní strany.
+
+Navrhovaný dům je jednopodlažní stavba s plochými vegetačními střechami ve třech výškových úrovních. Výškové členění reaguje na funkční rozvržení – nejnižší úroveň nad garáží, standardní nad obytnou částí a zvýšená nad obývacím prostorem. Tato vyšší hmota slouží nejen jako kompoziční akcent, ale i jako zdroj dodatečného denního světla. V obývacím pokoji je umístěn podélný světlík orientovaný směrem k ulici (jihozápad), který umožňuje nadstandardní pronikání přirozeného světla do interiéru a zároveň zlepšuje solární zisky domu v zimním období.
+
+Z architektonického hlediska dům představuje minimalistickou vilu s důrazem na horizontální linie, proporci a práci se světlem. Dynamiku hmoty dotvářejí zešikmené konstrukce mimo tepelnou obálku, které kryjí terasu a parkování. Šikmina nad terasou je tvarována tak, aby zastřešení neubíralo rozptýlené světlo obytným místnostem a šikmina nad exteriérovým parkováním reaguje na geometrii pozemku. Materiálové řešení kombinuje bílou hrubozrnnou omítku s kamenným obkladem, doplněným antracitovými rámy oken a světle šedými oplechováními atik.
