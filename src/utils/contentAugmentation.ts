@@ -128,7 +128,7 @@ export async function getAugmentedContent<T extends AugmentableCollection>(
         const cleanTitle = entry.data.title.replace(/<[^>]*>/g, "");
         entry.data.title = cleanTitle;
 
-        if (/\/index\w\w$/.test(entry.slug)) {
+        if (/\/index\.\w\w$/.test(entry.slug)) {
             entry.slug = slugify(cleanTitle);
         }
 

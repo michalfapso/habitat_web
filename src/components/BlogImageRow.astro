@@ -44,15 +44,14 @@ const { class: className } = Astro.props;
 
     /* Handling images and gallery links */
     .blog-image-row :global(img) {
-        flex: 1;
         width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
         margin: 0 !important; /* Override general article image margins */
+        display: block;
     }
 
     .blog-image-row :global(a) {
-        flex: 1;
         display: flex;
         width: 100%;
         margin: 0 !important;

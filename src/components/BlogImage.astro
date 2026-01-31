@@ -1,0 +1,69 @@
+---
+import { getImage } from 'astro:assets';
+
+interface Props {
+    src: string;
+    alt?: string;
+    postId?: string; // Optional context if needed
+}
+
+const { src, alt } = Astro.props;
+
+// We need to resolve the image metadata to get dimensions.
+// In Astro MDX, 'src' for ![]() is already resolved to a metadata object 
+// if it's a local import, but sometimes it's just a string.
+// Let's handle both or use the glob approach.
+
+// Use current URL to narrow down the post folder
+const currentSlug = Astro.url.pathname.split('/').filter(Boolean).pop();
+const allImages = import.meta.glob<{ default: ImageMetadata }>('/src/content/blog/**/*.{jpg,jpeg,png,webp,gif,heic}');
+
+let imageMetadata: ImageMetadata | undefined;
+
+if (typeof src === 'object' && (src as any).src) {
+    imageMetadata = src as unknown as ImageMetadata;
+} else if (typeof src === 'string') {
+    for (const path in allImages) {
+        // Check if path contains the slug AND ends with our src
+        if (path.includes(currentSlug!) && (path.endsWith(src) || src.includes(path.split('/').pop()!))) {
+            const mod = await allImages[path]();
+            imageMetadata = mod.default;
+            break;
+        }
+    }
+}
+
+let ratio = 1;
+let optimizedImage;
+
+if (imageMetadata) {
+    ratio = imageMetadata.width / imageMetadata.height;
+    optimizedImage = await getImage({ src: imageMetadata, width: 2000 });
+}
+---
+
+{imageMetadata ? (
+    <a 
+        href={optimizedImage?.src} 
+        data-fancybox="gallery" 
+        class="blog-image-link"
+        style={`flex: ${ratio} 1 0%`}
+    >
+        <img src={optimizedImage?.src} alt={alt} />
+    </a>
+) : (
+    <img src={src} alt={alt} />
+)}
+
+<style>
+    .blog-image-link {
+        display: block;
+        height: auto;
+    }
+    .blog-image-link img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+</style>

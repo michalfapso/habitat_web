@@ -5,6 +5,7 @@ import CardBlog from './CardBlog.astro';
 import { useTranslations, useTranslatedPath } from '../i18n/utils';
 import type { AugmentedData } from '../utils/contentAugmentation';
 import BlogImageRow from './BlogImageRow.astro';
+import BlogImage from './BlogImage.astro';
 import { formatLocalizedDate } from '../utils/date';
 
 interface Props {
@@ -85,7 +86,7 @@ if (post) {
             <div class="cell medium-9 large-7">
                 <article class="h-article">
                     <div class="blog-date">{formattedDate}</div>
-                    <Content components={{ BlogImageRow }} />
+                    <Content components={{ BlogImageRow, img: BlogImage }} />
                 </article>
             </div>
         </div>
@@ -214,26 +215,3 @@ if (post) {
         }
     }
 </style>
-
-<script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    const article = document.querySelector('.h-article');
-    if (!article) return;
-
-    const images = article.querySelectorAll('img');
-    images.forEach(img => {
-      // Skip images already wrapped in a link
-      if (img.closest('a')) return;
-
-      // Wrap image in a link to trigger Fancybox
-      const link = document.createElement('a');
-      link.href = img.src;
-      link.dataset.fancybox = 'gallery'; // Join the same gallery as at the bottom
-      
-      img.parentNode.insertBefore(link, img);
-      link.appendChild(img);
-    });
-  });
-</script>
-
-
