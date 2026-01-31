@@ -23,7 +23,7 @@ const { lang, post } = Astro.props;
 const allPosts = await getAugmentedContent('blog', lang);
 ---
 
-<Layout title={post.data.title} bodyClass="page" topbarClass="topbar--bright topbar--dark">
+<Layout title={post.data.title} bodyClass="" topbarClass="topbar--bright">
     {post && <BlogDetail post={post} lang={lang} allPosts={allPosts} />}
 </Layout>
 
