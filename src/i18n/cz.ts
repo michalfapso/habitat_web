@@ -46,5 +46,6 @@ export default {
   "blog.title": "Blog",
   "blog.all": "Všechny články",
   "blog.back": "Zpět na blog",
+  "blog.more": "Další články",
 };
 
