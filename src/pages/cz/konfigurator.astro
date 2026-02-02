@@ -1,0 +1,92 @@
+---
+import { getAugmentedProjects } from '../../utils/contentAugmentation';
+import { useTranslations } from '../../i18n/utils';
+
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import ImgSection from '../../components/ImgSection.astro';
+import SlidesSteps from '../../components/SlidesSteps.astro';
+import SlidesProjects from '../../components/SlidesProjects.astro';
+import Gallery from '../../components/Gallery.astro';
+import { processGalleryImages } from '../../utils/imageUtils';
+
+const lang = 'cz';
+const t = useTranslations(lang);
+
+const selectedProjectDirs = [
+	"dom-s-dlhou-pergolou",
+	"dom-l-s-tehlovym-obkladom",
+	"dom-s-nadcasovym-dizajnom",
+	"dom-s-utulnou-terasou",
+	"dom-v-zahrade",
+	"dom-s-drevenym-obkladom",
+	"dom-s-kontrastom",
+	"dom-s-mestskym-nadychom",
+	"dom-s-otvorenym-krovom",
+	"dom-s-pavlacou",
+	"dom-so-sikmymi-stlpmi",
+	"dom-pre-velku-rodinu",
+	"dom-za-mestom",
+];
+
+const allProjects = await getAugmentedProjects(lang);
+const projectsByDir = new Map(allProjects.map(p => [p.data.dir, p]));
+const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).filter(Boolean);
+
+const galleryImageLoaders = import.meta.glob('../konfigurator/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
+const galleryImages = await processGalleryImages(galleryImageLoaders as any, 'Habitat konfigurátor');
+---
+
+<Layout 
+	bodyClass="home"
+>
+	<Hero className="hero--home">
+		Habitat <br>konfigurátor
+	</Hero>
+	<a id="main"></a>
+	
+	<ImgSection id='preco-habitat'>
+		<Fragment slot="img">
+			<img src="/assets/img/preco-habitat-800w.jpg" srcset="/assets/img/preco-habitat-1200w.jpg 1200w, /assets/img/preco-habitat-2400w.jpg 2400w" sizes="(min-width: 40em) 58vw, 100vw" alt="Vizualizácia domu">
+		</Fragment>
+		<Fragment slot="content">
+			<h2>Prečo? </h2>
+			<p><strong>Habitat Konfigurátor</strong> je našou odpoveďou na neuspokojivú ponuku katalógových domov na trhu. Tie nezohľadňujú špecifiká pozemku a klienta, sú málo dispozične flexibilné a architektonicky ťažko modifikovateľné. V dobe, kedy stále viac záleží na kvalite vnútorného prostredia a energetike sa katalógové domy nekoncepčne umiestňujú na parcely, bez zohľadnenia orientácie na svetové strany, energetickej optimalizácie či účinného tienenia.</p>
+			<p>Zozbierali sme najčastejšie dispozičné a konštrukčné zadania, pridali naše know-how a vytvorili tak inovatívny systém tvorby rodinných domov. Máme pripravedé stovky kombinácií a overených riešení, ktoré následne prispôsobíme presnými výpočtami na váš konkrétny pozemok. Takto vieme ušetriť čas aj peniaze vo fáze architektonického návrhu s istotou, že váš dom bude spĺňať najvyššie nároky na bývanie a energetickú efektívnosť stavby.</p>
+		</Fragment>
+	</ImgSection>
+
+	<SlidesSteps
+		title="Ako to prebieha?"
+		steps={[
+			{
+				title: "Pošlete nám vašu predstavu",
+				text: "Na základe podkladov, pozemku a regulatívov zadarmo zhodnotíme, či je Habitat konfigurátor pre vašu stavbu vhodná voľba a zašleme vám ukážky možných konfigurácií.",
+			},
+			{
+				title: "Spoločne nakonfigurujeme pôdorys",
+				text: "Na kreatívnom trojhodinovom stretnutí s našim architektom si vyskladáte váš dom z optimalizovaných a stavebne premyslených modulov. Vyberiete si vhodný typ dispozície, počet a veľkosť izieb, kúpeľní či šatníkov.",
+			},
+			{
+				title: "Vyberiete si stvárnenie domu",
+				text: "Na každý pôdorys máme pripravené možnosti od najjednoduchšej architektúry po najvyšší štandard, od tradičných domov po moderné vily. Určite si vyberiete.",
+			},
+			{
+				title: "Dom individuálne upravíme na váš pozemok",
+				text: "Overíme orientáciu a veľkosť okien, rozmery tieniacich prvkov a energetický štandard domu. Zapracujeme potrebné opatrenia, aby vás dom fungoval pasívne - v zime s minimom kúrenia a v lete bez klimatizície.",
+			},
+			{
+				title: "Vyexportujeme projektovú dokumentáciu",
+				text: "V krátkom čase získate všetko, čo potrebujete pre povolenie na úradoch a úspešnú stavbu. V kvalite individuálneho projektu a za bezkonkurenčnú cenu.",
+			}
+		]}
+	/>
+
+	<SlidesProjects
+		title="Ukážky konfigurácií"
+		projects={selectedProjects}
+	/>
+
+	<Gallery images={galleryImages} lang={lang} title="Galerie konfiguracií"/>
+
+</Layout>

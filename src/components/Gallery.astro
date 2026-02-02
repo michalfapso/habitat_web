@@ -1,0 +1,51 @@
+---
+import type { GalleryImage } from '../utils/imageUtils';
+import { useTranslations } from '../i18n/utils';
+
+interface Props {
+    images: GalleryImage[];
+    lang: 'sk' | 'cz';
+    title?: string;
+}
+
+const { images, lang, title } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div class="gallery-section" style="overflow-x:hidden">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x align-justify align-center">
+            <div class="cell medium-9">
+                <h2>{title || t('projects.gallery')}</h2>
+            </div>
+                <div class="cell shrink show-for-medium">
+                    <div class="swiper-navigation swiper-navigation--square">
+                        <div class="swiper-button swiper-button-prev--gallery">
+                            <svg class="icon icon-arrow-prev">
+                                <use xlink:href="#icon-arrow-prev"></use>
+                            </svg>
+                        </div>
+                        <div class="swiper-button swiper-button-next--gallery">
+                            <svg class="icon icon-arrow-next">
+                                <use xlink:href="#icon-arrow-next"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="swiper swiper--gallery">
+            <div class="swiper-wrapper">
+                {images.length > 0 ? (
+                    images.map((image) => (
+                        <a class="swiper-slide gallery_item" href={image.href} data-fancybox="gallery">
+                            <img src={image.src} srcset={image.srcset} alt={image.alt}>
+                        </a>
+                    ))
+                ) : (
+                    <p>No gallery images found.</p>
+                )}
+            </div>
+            <div class="swiper-pagination hide-for-medium"></div>
+        </div>
+    </div>
+</div>

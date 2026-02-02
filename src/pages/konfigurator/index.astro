@@ -1,19 +1,21 @@
 ---
-import { getAugmentedProjects } from '../utils/contentAugmentation';
-import { useTranslations } from '../i18n/utils';
+import { getAugmentedProjects } from '../../utils/contentAugmentation';
+import { useTranslations } from '../../i18n/utils';
 
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Services from '../components/Services.astro';
-import Service from '../components/Service.astro';
-import ImgSection from '../components/ImgSection.astro';
-import SlidesPoi from '../components/SlidesPoi.astro';
-import SlidePoi from '../components/SlidePoi.astro';
-import SlidesSteps from '../components/SlidesSteps.astro';
-import SectionExpandable from '../components/SectionExpandable.astro';
-import SlidesProjects from '../components/SlidesProjects.astro';
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import Services from '../../components/Services.astro';
+import Service from '../../components/Service.astro';
+import ImgSection from '../../components/ImgSection.astro';
+import SlidesPoi from '../../components/SlidesPoi.astro';
+import SlidePoi from '../../components/SlidePoi.astro';
+import SlidesSteps from '../../components/SlidesSteps.astro';
+import SectionExpandable from '../../components/SectionExpandable.astro';
+import SlidesProjects from '../../components/SlidesProjects.astro';
+import Gallery from '../../components/Gallery.astro';
+import { processGalleryImages } from '../../utils/imageUtils';
 
-const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
+const lang = Astro.currentLocale as keyof typeof import('../../i18n/utils').languages;
 const t = useTranslations(lang);
 
 const selectedProjectDirs = [
@@ -39,6 +41,9 @@ const selectedProjectDirs = [
 const allProjects = await getAugmentedProjects(lang);
 const projectsByDir = new Map(allProjects.map(p => [p.data.dir, p]));
 const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).filter(Boolean);
+
+const galleryImageLoaders = import.meta.glob('./gallery/*.{jpg,jpeg,png,webp,gif,heic}');
+const galleryImages = await processGalleryImages(galleryImageLoaders as any, 'Habitat konfigurátor');
 ---
 
 <Layout 
@@ -98,5 +103,7 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 		title="Ukážky konfigurácií"
 		projects={selectedProjects}
 	/>
+
+	<Gallery images={galleryImages} lang={lang} title="Galéria konfigurácií"/>
 
 </Layout>

@@ -5,6 +5,8 @@ import CardProject from './CardProject.astro';
 import { useTranslations, useTranslatedPath } from '../i18n/utils';
 import { getAugmentedContent } from '../utils/contentAugmentation';
 import type { AugmentedData } from '../utils/contentAugmentation';
+import { processGalleryImages } from '../utils/imageUtils';
+import Gallery from './Gallery.astro';
 
 interface Props {
     project: AugmentedData<'projects'>;
@@ -19,27 +21,15 @@ const t = useTranslations(lang);
 const translatedPath = await useTranslatedPath(lang);
 
 const allGalleryImageLoaders = import.meta.glob('/src/content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
-let galleryImages = [];
+let galleryImages: any[] = [];
 let otherProjects: AugmentedData<'projects'>[] = [];
 if (project) {
     const projectDir = project.id.replace(/\/index.*$/, '');
-    const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, loader]) => {
-        return path.includes(`/src/content/projects/${projectDir}/gallery/`);
-    });
+    const projectImages = Object.entries(allGalleryImageLoaders)
+        .filter(([path]) => path.includes(`/src/content/projects/${projectDir}/gallery/`))
+        .reduce((acc, [path, loader]) => ({ ...acc, [path]: loader }), {});
 
-    for (const [path, loader] of projectImages) {
-        const imgModule = await loader();
-        const imgFull = await getImage({ src: imgModule.default, width: 3000, format: 'jpg' });
-        const img480h = await getImage({ src: imgModule.default, height: 480, format: 'jpg' });
-        const img960h = await getImage({ src: imgModule.default, height: 960, format: 'jpg' });
-
-        galleryImages.push({
-            href: imgFull.src,
-            src: img480h.src,
-            srcset: `${img960h.src} 2x`,
-            alt: `${project.data.title || project.slug}`,
-        });
-    }
+    galleryImages = await processGalleryImages(projectImages as any, project.data.title || project.slug);
 
     const projectsByDir = new Map(allProjects.map(p => [p.data.dir, p]));
     if (project.data.otherProjects) {
@@ -143,43 +133,7 @@ if (project) {
     </div>
 </div>
 
-<div class="gallery-section" style="overflow-x:hidden">
-    <div class="grid-container">
-        <div class="grid-x grid-margin-x align-justify align-center">
-            <div class="cell medium-6">
-                <h2>{t('projects.gallery')}</h2>
-            </div>
-                <div class="cell shrink show-for-medium">
-                    <div class="swiper-navigation swiper-navigation--square">
-                        <div class="swiper-button swiper-button-prev--gallery">
-                            <svg class="icon icon-arrow-prev">
-                                <use xlink:href="#icon-arrow-prev"></use>
-                            </svg>
-                        </div>
-                        <div class="swiper-button swiper-button-next--gallery">
-                            <svg class="icon icon-arrow-next">
-                                <use xlink:href="#icon-arrow-next"></use>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <div class="swiper swiper--gallery">
-            <div class="swiper-wrapper">
-                {galleryImages.length > 0 ? (
-                    galleryImages.map((image) => (
-                        <a class="swiper-slide gallery_item" href={image.href} data-fancybox="gallery">
-                            <img src={image.src} srcset={image.srcset} alt={image.alt}>
-                        </a>
-                    ))
-                ) : (
-                    <p>No gallery images found for this project.</p>
-                )}
-            </div>
-            <div class="swiper-pagination hide-for-medium"></div>
-        </div>
-    </div>
-</div>
+<Gallery images={galleryImages} lang={lang} />
 
 
 <div class="section section--detail pt-0">

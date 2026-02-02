@@ -7,6 +7,8 @@ import type { AugmentedData } from '../utils/contentAugmentation';
 import BlogImageRow from './BlogImageRow.astro';
 import BlogImage from './BlogImage.astro';
 import { formatLocalizedDate } from '../utils/date';
+import { processGalleryImages } from '../utils/imageUtils';
+import Gallery from './Gallery.astro';
 
 interface Props {
     post: AugmentedData<'blog'>;
@@ -22,28 +24,16 @@ const translatedPath = await useTranslatedPath(lang);
 const formattedDate = post.data.date ? formatLocalizedDate(new Date(post.data.date), lang) : '';
 
 const allGalleryImageLoaders = import.meta.glob('/src/content/blog/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
-let galleryImages = [];
+let galleryImages: any[] = [];
 let otherPosts: AugmentedData<'blog'>[] = [];
 
 if (post) {
     const postDir = post.id.replace(/\/index.*$/, '');
-    const postImages = Object.entries(allGalleryImageLoaders).filter(([path, loader]) => {
-        return path.includes(`/src/content/blog/${postDir}/gallery/`);
-    });
+    const postImages = Object.entries(allGalleryImageLoaders)
+        .filter(([path]) => path.includes(`/src/content/blog/${postDir}/gallery/`))
+        .reduce((acc, [path, loader]) => ({ ...acc, [path]: loader }), {});
 
-    for (const [path, loader] of postImages) {
-        const imgModule = await (loader as any)();
-        const imgFull = await getImage({ src: imgModule.default, width: 3000, format: 'jpg' });
-        const img480h = await getImage({ src: imgModule.default, height: 480, format: 'jpg' });
-        const img960h = await getImage({ src: imgModule.default, height: 960, format: 'jpg' });
-
-        galleryImages.push({
-            href: imgFull.src,
-            src: img480h.src,
-            srcset: `${img960h.src} 2x`,
-            alt: `${post.data.title || post.slug}`,
-        });
-    }
+    galleryImages = await processGalleryImages(postImages as any, post.data.title || post.slug);
 
     const blogsByDir = new Map(allPosts.map(p => [p.data.dir, p]));
     if (post.data.otherBlogPosts) {
@@ -108,35 +98,7 @@ if (post) {
 
 <!-- Galeria je zatial vypnuta -->
 {galleryImages.length > 0 && 0 && (
-<div class="gallery-section" style="overflow-x:hidden">
-    <div class="grid-container">
-        <div class="grid-x grid-margin-x align-justify align-center">
-            <div class="cell medium-6">
-                <h2>{t('projects.gallery')}</h2>
-            </div>
-            <div class="cell shrink hide-for-small">
-                 <div class="swiper-navigation swiper-navigation--square">
-                    <div class="swiper-button swiper-button-prev--gallery">
-                        <svg class="icon icon-arrow-prev"><use xlink:href="#icon-arrow-prev"></use></svg>
-                    </div>
-                    <div class="swiper-button swiper-button-next--gallery">
-                        <svg class="icon icon-arrow-next"><use xlink:href="#icon-arrow-next"></use></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="swiper swiper--gallery">
-            <div class="swiper-wrapper">
-                {galleryImages.map((image) => (
-                    <a class="swiper-slide gallery_item" href={image.href} data-fancybox="gallery">
-                        <img src={image.src} srcset={image.srcset} alt={image.alt}>
-                    </a>
-                ))}
-            </div>
-            <div class="swiper-pagination hide-for-medium"></div>
-        </div>
-    </div>
-</div>
+    <Gallery images={galleryImages} lang={lang} />
 )}
 
 {otherPosts.length > 0 && (
