@@ -2,17 +2,15 @@
 import type { HTMLAttributes } from 'astro/types';
 
 export interface Props extends HTMLAttributes<'div'> {
-    mainTitle: string;
-    subTitle: string;
+    title: string;
 }
 
-const { mainTitle, subTitle } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<div class="section" id="sluzby" style="overflow-x:hidden;">
+<div class="section pt-0" style="overflow-x:hidden;">
     <div class="grid-container">
-        <p class="lead" set:html={mainTitle}></p>
-        <h2 class="small-headline">{subTitle}</h2>
+        <h2 class="small-headline">{title}</h2>
         <div class="swiper swiper--services">
             <div class="swiper-wrapper">
                 <slot/>

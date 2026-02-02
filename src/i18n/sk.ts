@@ -25,9 +25,7 @@ export default {
   "contact-form.placeholder-description": "Popíšte projekt",
   "contact-form.spracovanie-udajov": 'K spracúvaniu osobných údajov dochádza za účelom vybavenia Vašej žiadosti. Bližšie informácie sú dostupné <a href="/zasady-spracuvania-osobnych-udajov" target="_blank">TU</a>.',
   "contact-form.submit": "Odoslať",
-  "services.mainTitle":
-    'Žiadne prázdne architektonické gestá. <br class="show-for-xlarge">Naše domy sú efektívne a&nbsp;zmysluplné.',
-  "services.subTitle": "Naše služby",
+  "services.title": "Naše služby",
   "projects.title": "Projekty pasívnych domov",
   "projects.all": "Všetky projekty",
   "projects.back": "Späť na projekty",

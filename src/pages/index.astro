@@ -13,6 +13,7 @@ import SlidePoi from '../components/SlidePoi.astro';
 import SlidesSteps from '../components/SlidesSteps.astro';
 import SectionExpandable from '../components/SectionExpandable.astro';
 import SlidesProjects from '../components/SlidesProjects.astro';
+import SubTitle from '../components/SubTitle.astro';
 
 const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
 const t = useTranslations(lang);
@@ -40,9 +41,12 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 	</Hero>
 	<a id="main"></a>
 	
+	<SubTitle>
+		Žiadne prázdne architektonické gestá. <br class="show-for-xlarge">Naše domy sú efektívne a&nbsp;zmysluplné.
+	</SubTitle>
+
 	<Services
-		mainTitle={t('services.mainTitle')}
-		subTitle={t('services.subTitle')}
+		title={t('services.title')}
 	>
 		<Service
 			id="service-1"
