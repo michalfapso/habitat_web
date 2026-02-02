@@ -55,7 +55,41 @@ Tieto dáta môžu byť uložené:
 4.  Najjednoduchšie je skopírovať si štruktúru a obsah súborov (`index.sk.md`, `data.json` atď.) z existujúceho projektu a následne ich upraviť.
 5.  Nezabudnite do podadresára `gallery/` nahrať obrázky.
 
-### 2. Úprava ostatných častí webu
+### 2. Úprava a pridávanie blog postov
+
+Blogy sa nachádzajú v adresári: `src/content/blog/`.
+
+Každý blog post má svoj vlastný podadresár, podobne ako projekty. Vnútri každého adresára blogu sú nasledujúce súbory:
+
+- `index.sk.mdx`: Hlavný textový obsah blogu v **slovenčine**.
+- `index.cz.mdx`: Hlavný textový obsah blogu v **češtine**.
+- `data.json`: Spoločné dáta pre oba jazyky, ako napríklad `order`, `date`, `otherBlogPosts`, atď.
+- `gallery/`: Adresár s obrázkami použité v blog poste.
+
+**Dátové polia v blogoch**
+Každý blog môže mať nasledujúce dátové polia (v `data.json` alebo v záhlaví `.mdx` súborov):
+  - `title`: Názov blogu
+  - `description`: Krátky popis (zobrazuje sa v zozname blogov)
+  - `date`: Dátum zverejnenia (formát napr. "2025-01-08")
+  - `otherBlogPosts`: Zoznam blog postov, ktoré sa majú zobraziť na konci článku, napr. `"otherBlogPosts": ["novinky-tri-realizacie-domov-na-mieru", "vzduchotesnost-stavby-strasiak-alebo-ciel"]`
+  - `headerImageNumber`: Poradie obrázku v galérii, ktorý sa má použiť ako náhľadový a titulný.
+  - `order`: Manuálne poradie (ak chcete blog post posunúť hore nezávisle na dátume)
+  - `slug`: URL adresa článku (napr. "ako-sa-stavia-pasivny-dom"). Mal by byť použitý v prekladaných index.cz.mdx, aby bola aj url článku v danom jazyku.
+
+**Pridávanie obrázkov do textu blogu:**
+Do blogov sa dajú pridávať obrázky z galérie priamo do textu:
+- Jeden obrázok: `![](gallery/1.webp)`
+- Viac obrázkov vedľa seba: 
+  ```markdown
+  <BlogImageRow>
+  ![](gallery/2.webp)
+  ![](gallery/3.webp)
+  </BlogImageRow>
+  ```
+
+**Postup úpravy a pridávania** je rovnaký ako pri projektoch, len v adresári `src/content/blog/`.
+
+### 3. Úprava ostatných častí webu
 
 Ostatné texty sa upravujú v nasledujúcich súboroch. **Dôležité:** V týchto súboroch upravujte iba samotné texty, dávajte pozor, aby ste nezmenili okolitý kód.
 

@@ -4,9 +4,9 @@ import { availableTagKeys } from "../data/tags"; // Import your available tag na
 const projectsCollection = defineCollection({
   type: "content", // 'content' for Markdown/MDX, 'data' for JSON/YAML
   schema: z.object({
-    title: z.string(),
+    title: z.string().optional(),
     titleBreak: z.string().optional(),
-    description: z.string(),
+    description: z.string().optional(),
     image: z.string().optional(), // Optional image path
     imageSet: z.string().optional(), // Optional image path
     imageThumb: z.string().optional(),
@@ -32,9 +32,9 @@ const projectsCollection = defineCollection({
 const blogCollection = defineCollection({
   type: "content",
   schema: z.object({
-    title: z.string(),
+    title: z.string().optional(),
     titleBreak: z.string().optional(),
-    description: z.string(),
+    description: z.string().optional(),
     image: z.string().optional(),
     imageSet: z.string().optional(),
     imageThumb: z.string().optional(),
@@ -42,6 +42,7 @@ const blogCollection = defineCollection({
     tags: z.array(z.enum(availableTagKeys as [string, ...string[]])).optional(),
     order: z.number().default(0).optional(),
     date: z.coerce.date().optional(), // Coerce and parse date for blog posts
+    otherBlogPosts: z.array(z.string()).optional(),
     headerImageNumber: z.number().default(1).optional(),
     dir: z.string().optional(),
     slug: z.string().optional(),

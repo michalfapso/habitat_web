@@ -45,8 +45,18 @@ if (post) {
         });
     }
 
-    // Simplified "other posts" logic - just pick random ones excluding current
-    otherPosts = allPosts.filter(p => p.id !== post.id).sort(() => 0.5 - Math.random()).slice(0, 3);
+    const blogsByDir = new Map(allPosts.map(p => [p.data.dir, p]));
+    if (post.data.otherBlogPosts) {
+        otherPosts = post.data.otherBlogPosts.map(dir => blogsByDir.get(dir)).filter(Boolean) as AugmentedData<'blog'>[];
+    }
+
+    if (otherPosts.length < 3) {
+        const remainingPosts = allPosts.filter(p => p.id !== post.id && !otherPosts.find(op => op.id === p.id));
+        // Simple shuffle
+        const shuffled = [...remainingPosts].sort(() => 0.5 - Math.random());
+        const randomPosts = shuffled.slice(0, 3 - otherPosts.length);
+        otherPosts.push(...randomPosts);
+    }
 }
 ---
 

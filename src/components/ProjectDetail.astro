@@ -20,9 +20,8 @@ const translatedPath = await useTranslatedPath(lang);
 
 const allGalleryImageLoaders = import.meta.glob('/src/content/projects/**/gallery/*.{jpg,jpeg,png,webp,gif,heic}');
 let galleryImages = [];
-let otherProjects: CollectionEntry<'projects'>[] = [];
+let otherProjects: AugmentedData<'projects'>[] = [];
 if (project) {
-    // console.log('project:', project);
     const projectDir = project.id.replace(/\/index.*$/, '');
     const projectImages = Object.entries(allGalleryImageLoaders).filter(([path, loader]) => {
         return path.includes(`/src/content/projects/${projectDir}/gallery/`);
@@ -44,21 +43,20 @@ if (project) {
 
     const projectsByDir = new Map(allProjects.map(p => [p.data.dir, p]));
     if (project.data.otherProjects) {
-        otherProjects = project.data.otherProjects.map(dir => projectsByDir.get(dir)).filter(Boolean);
+        otherProjects = project.data.otherProjects.map(dir => projectsByDir.get(dir)).filter(Boolean) as AugmentedData<'projects'>[];
     }
-}
 
-function shuffleArray(array: any[]) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-if (otherProjects.length < 3) {
-    const shuffledProjects = shuffleArray(allProjects);
-    const randomProjects = shuffledProjects.slice(0, 3 - otherProjects.length);
-    otherProjects.push(...randomProjects);
+    if (otherProjects.length < 3) {
+        const remainingProjects = allProjects.filter(p => 
+            p.id !== project.id && 
+            !otherProjects.find(op => op.id === p.id)
+        );
+        
+        // Simple shuffle
+        const shuffled = [...remainingProjects].sort(() => 0.5 - Math.random());
+        const randomProjects = shuffled.slice(0, 3 - otherProjects.length);
+        otherProjects.push(...randomProjects);
+    }
 }
 ---
 
