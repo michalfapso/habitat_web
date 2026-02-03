@@ -36,7 +36,11 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 <Layout 
 	bodyClass="home"
 >
-	<Hero className="hero--home">
+	<Hero 
+		className="hero--home"
+		imgSrc="/assets/img/hero-2800w.jpg"
+		imgAlt="Vizualizácia domu"
+	>
 		Architekti <br>pasívnych <br>domov
 	</Hero>
 	<a id="main"></a>
@@ -91,10 +95,11 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 		</Service>
 	</Services>
 	
-	<ImgSection id='preco-habitat'>
-		<Fragment slot="img">
-			<img src="/assets/img/preco-habitat-800w.jpg" srcset="/assets/img/preco-habitat-1200w.jpg 1200w, /assets/img/preco-habitat-2400w.jpg 2400w" sizes="(min-width: 40em) 58vw, 100vw" alt="Vizualizácia domu">
-		</Fragment>
+	<ImgSection 
+		id='preco-habitat'
+		imgSrc="/assets/img/preco-habitat-2400w.jpg"
+		imgAlt="Vizualizácia domu"
+	>
 		<Fragment slot="content">
 			<h2>Prečo <br>Habitat?</h2>
 			<p>90% nášho času trávime vo&nbsp;vnútri budov. Kvalita vnútorného prostredia stavby je kľúčová. Teplota, vlhkosť, eliminácia vzniku plesní, zdravá hodnota oxidu uhličitého a&nbsp;minimum alergénov vo&nbsp;vzduchu, ktorý dýchame. <strong>Habitat je ZDRAVÉ prostredie</strong>.</p>
@@ -111,8 +116,7 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 			<SlidesPoi>
 				<SlidePoi
 					id="poi-info-01"
-					imgSrc="/assets/img/funkcnost/01-756w.jpg"
-					imgSrcSet="/assets/img/funkcnost/01-756w.jpg 504w, /assets/img/funkcnost/01-1512w.jpg 1008w, /assets/img/funkcnost/01-2268w.jpg 1512w, /assets/img/funkcnost/01-3024w.jpg 2016w"
+					imgSrc="/assets/img/funkcnost/01-3024w.jpg"
 					imgAlt="RD Zečák"
 					points={[
 						{
@@ -134,8 +138,7 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 				/>
 				<SlidePoi
 					id="poi-info-02"
-					imgSrc="/assets/img/funkcnost/02-756w.jpg"
-					imgSrcSet="/assets/img/funkcnost/02-756w.jpg 504w, /assets/img/funkcnost/02-1512w.jpg 1008w, /assets/img/funkcnost/02-2268w.jpg 1512w, /assets/img/funkcnost/02-3024w.jpg 2016w"
+					imgSrc="/assets/img/funkcnost/02-3024w.jpg"
 					imgAlt="RD Zečák"
 					points={[
 						{
@@ -157,8 +160,7 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 				/>
 				<SlidePoi
 					id="poi-info-03"
-					imgSrc="/assets/img/funkcnost/03-756w.jpg"
-					imgSrcSet="/assets/img/funkcnost/03-756w.jpg 504w, /assets/img/funkcnost/03-1512w.jpg 1008w, /assets/img/funkcnost/03-2268w.jpg 1512w, /assets/img/funkcnost/03-3024w.jpg 2016w"
+					imgSrc="/assets/img/funkcnost/03-3024w.jpg"
 					imgAlt="RD Zečák"
 					points={[
 						{
@@ -180,8 +182,7 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 				/>
 				<SlidePoi
 					id="poi-info-04"
-					imgSrc="/assets/img/funkcnost/04-756w.jpg"
-					imgSrcSet="/assets/img/funkcnost/04-756w.jpg 504w, /assets/img/funkcnost/04-1512w.jpg 1008w, /assets/img/funkcnost/04-2268w.jpg 1512w, /assets/img/funkcnost/04-3024w.jpg 2016w"
+					imgSrc="/assets/img/funkcnost/04-3024w.jpg"
 					imgAlt="RD Zečák"
 					points={[
 						{
@@ -203,8 +204,7 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 				/>
 				<SlidePoi
 					id="poi-info-05"
-					imgSrc="/assets/img/funkcnost/05-756w.jpg"
-					imgSrcSet="/assets/img/funkcnost/05-756w.jpg 504w, /assets/img/funkcnost/05-1512w.jpg 1008w, /assets/img/funkcnost/05-2268w.jpg 1512w, /assets/img/funkcnost/05-3024w.jpg 2016w"
+					imgSrc="/assets/img/funkcnost/05-3024w.jpg"
 					imgAlt="RD Zečák"
 					points={[
 						{
@@ -226,8 +226,7 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 				/>
 				<SlidePoi
 					id="poi-info-06"
-					imgSrc="/assets/img/funkcnost/06-756w.jpg"
-					imgSrcSet="/assets/img/funkcnost/06-756w.jpg 504w, /assets/img/funkcnost/06-1512w.jpg 1008w, /assets/img/funkcnost/06-2268w.jpg 1512w, /assets/img/funkcnost/06-3024w.jpg 2016w"
+					imgSrc="/assets/img/funkcnost/06-3024w.jpg"
 					imgAlt="RD Zečák"
 					points={[
 						{
@@ -280,8 +279,7 @@ const selectedProjects = selectedProjectDirs.map(dir => projectsByDir.get(dir)).
 	
 	<SectionExpandable
 		id="manifest"
-		imgSrc="/assets/img/manifest-1600w.jpg"
-		imgSrcSet="/assets/img/manifest-1600w.jpg 1600w, /assets/img/manifest-3200w.jpg 3200w"
+		imgSrc="/assets/img/manifest-3200w.jpg"
 		imgAlt="RD Rusovce"
 		title="Držíme sa <br>svojich zásad"
 		text="Domy plánované ako pasívne od začiatku. <strong>Naschvál.</strong>"

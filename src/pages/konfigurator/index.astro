@@ -49,17 +49,22 @@ const galleryImages = await processGalleryImages(galleryImageLoaders as any, 'Ha
 <Layout 
 	bodyClass="home"
 >
-	<Hero className="hero--home">
+	<Hero 
+		className="hero--home"
+		imgSrc="/assets/img/hero-2800w.jpg"
+		imgAlt="Vizualizácia domu"
+	>
 		Habitat <br>konfigurátor
 	</Hero>
 	<a id="main"></a>
 	
 	
 	
-	<ImgSection id='preco-habitat'>
-		<Fragment slot="img">
-			<img src="/assets/img/preco-habitat-800w.jpg" srcset="/assets/img/preco-habitat-1200w.jpg 1200w, /assets/img/preco-habitat-2400w.jpg 2400w" sizes="(min-width: 40em) 58vw, 100vw" alt="Vizualizácia domu">
-		</Fragment>
+	<ImgSection 
+		id='preco-habitat'
+		imgSrc="/assets/img/preco-habitat-2400w.jpg"
+		imgAlt="Vizualizácia domu"
+	>
 		<Fragment slot="content">
 			<h2>Prečo? </h2>
 			<p><strong>Habitat Konfigurátor</strong> je našou odpoveďou na neuspokojivú ponuku katalógových domov na trhu. Tie nezohľadňujú špecifiká pozemku a klienta, sú málo dispozične flexibilné a architektonicky ťažko modifikovateľné. V dobe, kedy stále viac záleží na kvalite vnútorného prostredia a energetike sa katalógové domy nekoncepčne umiestňujú na parcely, bez zohľadnenia orientácie na svetové strany, energetickej optimalizácie či účinného tienenia.</p>

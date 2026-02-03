@@ -1,5 +1,7 @@
 ---
+import { getOptimizedImageAttributes } from '../utils/imageUtils';
 import type { HTMLAttributes } from 'astro/types';
+import type { ImageMetadata } from 'astro';
 
 interface Point {
     leftPercent: number;
@@ -10,18 +12,25 @@ interface Point {
 
 export interface Props extends HTMLAttributes<'div'> {
     imgSrc: string;
-    imgSrcSet: string;
     imgAlt: string;
     points: Point[];
 }
 
-const { id, imgSrc, imgSrcSet, imgAlt, points } = Astro.props;
+const { id, imgSrc, imgAlt, points } = Astro.props;
+
+const imageLoaders = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/funkcnost/*.{jpeg,jpg,png,gif,webp,heic}');
+const { src: mainSrc, srcset: srcSet } = await getOptimizedImageAttributes(
+    imgSrc,
+    [756, 1512, 2268, 3024],
+    imageLoaders,
+    'SlidePoi.astro'
+);
 ---
 
 <div class="swiper-slide">
     <div class="poi">
         <div class="poi__img">
-            <img src={imgSrc} srcset={imgSrcSet} alt={imgAlt}>
+            <img src={mainSrc} srcset={srcSet} alt={imgAlt}>
             <div class="poi_points show-for-medium">
                 {points.map((point, idx) => (
                     <span class="point" style={`left:${point.leftPercent}%;top:${point.topPercent}%;`} data-toggle={`${id}-${idx}`} data-transform={`translate(-${point.leftPercent}%, -${point.topPercent}%) scale(2)`} data-placement="left"></span>

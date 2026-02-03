@@ -30,3 +30,29 @@ export async function processGalleryImages(
 
     return galleryImages;
 }
+
+export async function getOptimizedImageAttributes(
+    imgSrc: string,
+    widths: number[],
+    imageLoaders: Record<string, () => Promise<{ default: ImageMetadata }>>,
+    componentName: string = 'Component'
+) {
+    const normalizedPath = imgSrc.replace('/assets/img/', '/src/assets/img/');
+    const loader = imageLoaders[normalizedPath];
+
+    if (!loader) {
+        throw new Error(`${componentName}: Image not found at ${normalizedPath}. Make sure it exists in the corresponding assets folder.`);
+    }
+
+    const imageModule = await loader();
+    const imageMetadata = imageModule.default;
+
+    const optimizedImages = await Promise.all(
+        widths.map(w => getImage({ src: imageMetadata, width: w, format: 'jpg' }))
+    );
+
+    const srcSet = optimizedImages.map((img, i) => `${img.src} ${widths[i]}w`).join(', ');
+    const mainSrc = optimizedImages[0].src;
+
+    return { src: mainSrc, srcset: srcSet };
+}

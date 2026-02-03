@@ -1,20 +1,29 @@
 ---
+import { getOptimizedImageAttributes } from '../utils/imageUtils';
 import type { HTMLAttributes } from 'astro/types';
+import type { ImageMetadata } from 'astro';
 
 export interface Props extends HTMLAttributes<'div'> {
     imgSrc: string;
-    imgSrcSet: string;
     imgAlt: string;
     title: string;
     text: string;
     button: string;
 }
 
-const { id, imgSrc, imgSrcSet, imgAlt, title, text, button } = Astro.props;
+const { id, imgSrc, imgAlt, title, text, button } = Astro.props;
+
+const imageLoaders = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{jpeg,jpg,png,gif,webp,heic}');
+const { src: mainSrc, srcset: srcSet } = await getOptimizedImageAttributes(
+    imgSrc,
+    [1600, 3200],
+    imageLoaders,
+    'SectionExpandable.astro'
+);
 ---
 
 <div class="bg-section section--manifest grid-container" id={id} data-toggler=".is-expanded">
-    <img class="bg-section__img" src={imgSrc} srcset={imgSrcSet} alt={imgAlt}>
+    <img class="bg-section__img" src={mainSrc} srcset={srcSet} alt={imgAlt}>
     <div class="grid-x grid-margin-x">
         <div class="cell large-6 cell--content">
             <h2 set:html={title}></h2>
