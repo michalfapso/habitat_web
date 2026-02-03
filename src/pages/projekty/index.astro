@@ -4,6 +4,7 @@ import { getAugmentedProjects } from '../../utils/contentAugmentation'; // Impor
 
 import { useTranslations } from '../../i18n/utils';
 import Layout from "../../layouts/Layout.astro";
+import Hero from '../../components/Hero.astro';
 import CardProject from '../../components/CardProject.astro';
 
 const lang = Astro.currentLocale as keyof typeof import('../../i18n/utils').languages;
@@ -15,24 +16,13 @@ allProjects.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout title={t('projects.title')} bodyClass="home" topbarClass="topbar--bright">
-    <div class="hero hero--projects">
-        <div class="grid-x">
-            <div class="hero__img cell medium-6 large-7">
-                <img
-                    src="/assets/img/hero-projekty-1024w.jpg"
-                    srcset="/assets/img/hero-projekty-1024w.jpg 1024w, /assets/img/hero-projekty-1536w.jpg 1536w, /assets/img/hero-projekty-2048w.jpg 2048w, /assets/img/hero-projekty-2800w.jpg 2800w"
-                    sizes="(min-width: 40em) 50vw, (min-width: 64em) 58.33333vw, 100vw"
-                    alt={t('projects.title')}
-                    style="object-position:50% center"
-                />
-                <div class="overlay"></div>
-            </div>
-            <div class="hero__content cell medium-6 large-5">
-                <h1>{t('projects.title')}</h1>
-                <div class="overlay"></div>
-            </div>
-        </div>
-    </div>
+    <Hero 
+        className="hero--projects"
+        imgSrc="/assets/img/hero-projekty-2800w.jpg"
+        imgAlt={t('projects.title')}
+    >
+        {t('projects.title')}
+    </Hero>
 	<a id="main"></a>
 	
 	<div class="section section--projects">
