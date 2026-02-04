@@ -11866,7 +11866,7 @@ body.is-site-nav-open {
 }
 .section--detail p {
   font-size: 1.5rem;
-  line-height: 1.2;
+  line-height: 1.5;
   margin-bottom: 1em;
 }
 @media print, screen and (min-width: 40em) {
@@ -12345,7 +12345,7 @@ body.is-site-nav-open {
 .h-article p,
 .h-article ul {
   font-size: clamp(18px, 1.25vw, 24px);
-  line-height: 130%;
+  line-height: 1.5;
   margin-bottom: 2.5rem;
 }
 .h-article ol li,
