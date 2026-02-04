@@ -1,5 +1,7 @@
 ---
 title: 'Zásady spracúvania súborov cookie'
+showSquareLogo: false
+topbarTheme: dark
 ---
 
 # Zásady spracúvania súborov cookie

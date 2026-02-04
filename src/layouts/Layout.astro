@@ -12,14 +12,18 @@ const path = await useTranslatedPath(lang);
 interface Props {
 	title?: string;
 	bodyClass?: string;
-	topbarClass?: string;
+	topbarTheme?: string;
+	showSquareLogo?: boolean;
 }
 
 const {
 	title = "",
-	bodyClass = "",
-	topbarClass = ""
+	bodyClass = "page",
+	topbarTheme = "bright",
+	showSquareLogo = true,
 } = Astro.props;
+
+const topbarClass = topbarTheme ? `topbar--${topbarTheme}` : "";
 
 // Construct the canonical URL
 // Astro.url.pathname gives you the path relative to the site's base

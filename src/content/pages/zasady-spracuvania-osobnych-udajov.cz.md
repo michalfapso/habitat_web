@@ -1,6 +1,8 @@
 ---
 title: 'Zásady zpracování osobních údajů'
 slug: zasady-zpracovani-osobnich-udaju
+showSquareLogo: false
+topbarTheme: dark
 ---
 
 # Zásady zpracování osobních údajů

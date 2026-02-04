@@ -4,13 +4,14 @@ import Layout from '../layouts/Layout.astro';
 // When used as a layout for a markdown file, Astro passes a `frontmatter` prop.
 // When used as a component, props can be passed directly. This handles both cases.
 const { frontmatter } = Astro.props;
-const allProps = frontmatter || Astro.props;
+const allProps = { ...Astro.props, ...frontmatter };
 ---
 
 <Layout
     title={allProps.title}
-	bodyClass=""
-    topbarClass="topbar--bright"
+    bodyClass={allProps.bodyClass || "page"}
+    topbarTheme={allProps.topbarTheme}
+    showSquareLogo={allProps.showSquareLogo}
 >
 
 	<div class="section">

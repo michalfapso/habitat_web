@@ -15,7 +15,7 @@ const allProjects = await getAugmentedProjects(lang);
 allProjects.sort((a, b) => a.data.order - b.data.order);
 ---
 
-<Layout title={t('projects.title')} bodyClass="home" topbarClass="topbar--bright">
+<Layout title={t('projects.title')} bodyClass="home" topbarTheme="bright">
     <Hero 
         className="hero--projects"
         imgSrc="/assets/img/hero-projekty-2800w.jpg"

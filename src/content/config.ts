@@ -26,6 +26,7 @@ const projectsCollection = defineCollection({
     pocetIziebSuffix: z.string().optional(),
     rozmeryDomu: z.string().optional(),
     slug: z.string().optional(),
+    topbarTheme: z.string().default("bright").optional(),
   }),
 });
 
@@ -46,6 +47,7 @@ const blogCollection = defineCollection({
     headerImageNumber: z.number().default(1).optional(),
     dir: z.string().optional(),
     slug: z.string().optional(),
+    topbarTheme: z.string().default("bright").optional(),
   }),
 });
 
@@ -53,6 +55,8 @@ const pagesCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
+    showSquareLogo: z.boolean().default(true).optional(),
+    topbarTheme: z.string().default("bright").optional(),
   }),
 });
 

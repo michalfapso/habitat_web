@@ -1,6 +1,8 @@
 ---
 title: 'Zásady zpracování souborů cookie'
 slug: 'zasady-cookies'
+showSquareLogo: false
+topbarTheme: dark
 ---
 
 # Zásady zpracování souborů cookie

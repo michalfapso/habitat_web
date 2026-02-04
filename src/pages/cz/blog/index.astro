@@ -10,7 +10,7 @@ const t = useTranslations(lang);
 const allPosts = await getAugmentedContent('blog', lang);
 ---
 
-<Layout title={t('blog.title')} bodyClass="home" topbarClass="topbar--bright">
+<Layout title={t('blog.title')} bodyClass="home" topbarTheme="bright">
     <Hero 
         className="hero--projects hero--blog"
         imgSrc="/assets/img/hero-projekty-2800w.jpg"

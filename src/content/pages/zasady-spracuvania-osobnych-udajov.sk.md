@@ -1,5 +1,7 @@
 ---
 title: 'Zásady spracúvania osobných údajov'
+showSquareLogo: false
+topbarTheme: dark
 ---
 
 # Zásady spracúvania osobných údajov
