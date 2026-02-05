@@ -11870,7 +11870,7 @@ body.is-site-nav-open {
 }
 .section--detail-project p { /* toto sa pouziva na strankach jednotlivych projektov */
   font-family: "At Hauss Aero", sans-serif;
-  line-height: 1.3; 
+  line-height: 1.2; 
 }
 @media print, screen and (min-width: 40em) {
   .section--detail p {
