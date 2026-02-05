@@ -11872,6 +11872,13 @@ body.is-site-nav-open {
   font-family: "At Hauss Aero", sans-serif;
   line-height: 1.2; 
 }
+.section--detail-blog h1,
+.section--detail-blog h2,
+.section--detail-blog h3,
+.section--detail-blog h4,
+.section--detail-blog h5 {
+  font-family: "At Hauss Aero", sans-serif;
+}
 @media print, screen and (min-width: 40em) {
   .section--detail p {
     font-size: 1.625rem;
