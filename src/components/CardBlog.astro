@@ -15,7 +15,7 @@ interface Props {
 const { post, className } = Astro.props;
 const formattedDate = post.data.date ? formatLocalizedDate(new Date(post.data.date), lang) : '';
 ---
-<a class={`${className} project`} href={path(`/blog/${post.slug}/`)}>
+<a class={`${className} project blog-card`} href={path(`/blog/${post.slug}/`)}>
     <div class="blog-card__img">
         <img src={post.data.imageThumb} srcset={post.data.imageThumbSet} alt={post.data.title}>
     </div>
@@ -33,6 +33,9 @@ const formattedDate = post.data.date ? formatLocalizedDate(new Date(post.data.da
 </a>
 
 <style>
+    .blog-card h3 {
+        margin-bottom: 1rem;
+    }
     .blog-card__img {
         position: relative;
         aspect-ratio: 16 / 6;
