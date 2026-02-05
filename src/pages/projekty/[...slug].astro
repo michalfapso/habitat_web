@@ -24,6 +24,6 @@ const { lang, project } = Astro.props;
 const allProjects = await getAugmentedProjects(lang);
 ---
 
-<Layout title={project.data.title}>
+<Layout title={project.data.title} topbarTheme={project.data.topbarTheme} showSquareLogo={true} bodyClass="">
     {project && <ProjectDetail project={project} lang={lang} allProjects={allProjects} />}
 </Layout>
