@@ -15,15 +15,15 @@ interface Props {
 const { post, className } = Astro.props;
 const formattedDate = post.data.date ? formatLocalizedDate(new Date(post.data.date), lang) : '';
 ---
-<a class={`${className} blog-card`} href={path(`/blog/${post.slug}/`)}>
+<a class={`${className} project`} href={path(`/blog/${post.slug}/`)}>
     <div class="blog-card__img">
         <img src={post.data.imageThumb} srcset={post.data.imageThumbSet} alt={post.data.title}>
     </div>
-    <div class="blog-card__content">
-        <h3 class="blog-card__title">
+        <h3>
             <svg class="icon icon-arrow"><use xlink:href="#icon-arrow"></use></svg>
             {post.data.title}
         </h3>
+    <div class="blog-card__content">
         <p class="blog-card__excerpt">{post.data.description}</p>
         {false && (
             <div class="blog-card__date">{formattedDate}</div>
@@ -33,16 +33,6 @@ const formattedDate = post.data.date ? formatLocalizedDate(new Date(post.data.da
 </a>
 
 <style>
-    .blog-card {
-        display: block;
-        /* margin-bottom: 3rem; */
-        text-decoration: none;
-        color: #023333;
-        position: relative;
-    }
-    .blog-card:hover .blog-card__title {
-        color: var(--color-gold);
-    }
     .blog-card__img {
         position: relative;
         aspect-ratio: 16 / 6;
@@ -55,54 +45,10 @@ const formattedDate = post.data.date ? formatLocalizedDate(new Date(post.data.da
         object-fit: cover;
         transition: transform 0.5s ease;
     }
-    .blog-card:hover img {
-        transform: scale(1.05);
-    }
-    .blog-card__title {
-        font-family: "At Hauss Aero", sans-serif;
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-        transition: all 0.3s ease;
-        color: #023333;
-        position: relative;
-        padding-left: 0;
-    }
-    
-    .blog-card .icon-arrow {
-        display: none;
-    }
-
-    @media print, screen and (min-width: 64em) {
-        .blog-card:hover .blog-card__title {
-            padding-left: 3rem;
-        }
-        .blog-card .icon-arrow {
-            display: block;
-            width: 2rem;
-            height: 2rem;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            position: absolute;
-            top: 0.15em; /* Align with first line of text */
-            left: 0;
-            color: var(--color-gold);
-        }
-        .blog-card:hover .icon-arrow {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-
     .blog-card__excerpt {
-        font-size: 1.5rem;
-        color: #666;
-        margin-bottom: 1rem;
-        display: -webkit-box;
-        /*-webkit-line-clamp: 2;*/
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        line-height: 1.5;
+        font-size: 1.125rem;
+        line-height: 1.3;
+        margin-bottom: 2rem;
     }
     .blog-card__date {
         font-size: 1rem;
