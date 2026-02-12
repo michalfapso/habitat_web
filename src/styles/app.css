@@ -9919,6 +9919,10 @@ body.is-site-nav-open {
   margin: 0;
   color: #b4ff00;
   font-size: 4rem;
+  /*font-size: clamp(2.5rem, 12vw, 4rem);*/
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 @media print, screen and (min-width: 40em) {
   .hero h1 {
