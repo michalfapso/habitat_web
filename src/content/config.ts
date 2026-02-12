@@ -16,6 +16,7 @@ const projectsCollection = defineCollection({
     order: z.number().default(0).optional(),
     otherProjects: z.array(z.string()).optional(),
     headerImageNumber: z.number().default(1).optional(),
+    headerImageName: z.string().optional(),
     dir: z.string().optional(), // Directory where the project is located. This field is generated automatically.
     lokalita: z.string().optional(),
     vykurovanaPlocha: z.number().optional(),
@@ -45,6 +46,7 @@ const blogCollection = defineCollection({
     date: z.coerce.date().optional(), // Coerce and parse date for blog posts
     otherBlogPosts: z.array(z.string()).optional(),
     headerImageNumber: z.number().default(1).optional(),
+    headerImageName: z.string().optional(),
     dir: z.string().optional(),
     slug: z.string().optional(),
     topbarTheme: z.string().default("bright").optional(),

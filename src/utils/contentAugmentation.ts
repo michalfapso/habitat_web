@@ -18,6 +18,7 @@ export type AugmentedData<T extends AugmentableCollection> = CollectionEntry<T> 
         dir?: string;
         titleBreak?: string;
         headerImageNumber?: number;
+        headerImageName?: string;
         order: number;
         tags: string[];
     };
@@ -52,14 +53,23 @@ async function getFirstGalleryImageMetadata(
 
     const entryImages = Object.entries(allGalleryImageLoaders).filter(([path, _]) => {
         return path.includes(entryGalleryPath);
-    }).sort(([pathA, _], [pathB, __]) => pathA.localeCompare(pathB));
+    }).sort(([pathA, _], [pathB, __]) => pathA.localeCompare(pathB, undefined, { numeric: true }));
 
     if (entryImages.length === 0) {
         return null;
     }
 
-    const headerImageNumber = Math.min(Math.max(data.headerImageNumber || 1, 1), entryImages.length);
-    const [_, imageLoader] = entryImages[headerImageNumber - 1];
+    let selectedImageEntry;
+    if (data.headerImageName) {
+        selectedImageEntry = entryImages.find(([path]) => path.endsWith(`/${data.headerImageName}`));
+    }
+
+    if (!selectedImageEntry) {
+        const headerImageNumber = Math.min(Math.max(data.headerImageNumber || 1, 1), entryImages.length);
+        selectedImageEntry = entryImages[headerImageNumber - 1];
+    }
+
+    const [_, imageLoader] = selectedImageEntry;
     const imgModule = await (imageLoader as () => Promise<{ default: ImageMetadata }>).call(null);
 
     const img1024w = await getImage({ src: imgModule.default, width: 1024, format: 'jpg' });
