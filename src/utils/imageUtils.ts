@@ -14,7 +14,8 @@ export async function processGalleryImages(
 ): Promise<GalleryImage[]> {
     const galleryImages: GalleryImage[] = [];
 
-    for (const [path, loader] of Object.entries(imageLoaders)) {
+    const sortedEntries = Object.entries(imageLoaders).sort(([pathA], [pathB]) => pathA.localeCompare(pathB, undefined, { numeric: true }));
+    for (const [path, loader] of sortedEntries) {
         const imgModule = await loader();
         const imgFull = await getImage({ src: imgModule.default, width: 3000, format: 'jpg' });
         const img480h = await getImage({ src: imgModule.default, height: 480, format: 'jpg' });
