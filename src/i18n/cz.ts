@@ -11,6 +11,7 @@ export default {
   "nav.projekty": "Projekty",
   "nav.kontakt": "Kontakt",
   "nav.blog": "Blog",
+  "nav.konfigurator": "Habitat Konfigurátor"
   "nav.zasady-spracuvania-osobnych-udajov": "Zásady zpracování osobních údajů",
   "nav.zasady-cookies": "Zásady zpracování souborů cookie",
   "newsletter.title": "Newsletter",
