@@ -155,7 +155,7 @@ const displayLanguageSwitcher = typeof SHOW_LANGUAGE_SWITCHER !== 'undefined' ? 
 					<li><a href={path("/#manifest")}>{t('nav.manifest')}</a></li>
 					<li><a href={path("/projekty/")}>{t('nav.projekty')}</a></li>
 					<li><a href={path("/#kontakt")}>{t('nav.kontakt')}</a></li>
-					{0 && (
+					{false && (
 						<li><a href={path("/blog/")}>{t('nav.blog')}</a></li>
 					)}
 					<li><a href="https://medium.com/@habitat_architekti" target="_blank">{t('nav.blog')}</a></li>
