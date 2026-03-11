@@ -31,6 +31,7 @@ const topbarClass = topbarTheme ? `topbar--${topbarTheme}` : "";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const titleFull = title ? `${title} | ${t('site.title')}` : t('site.title');
 
+const htmlLang = lang == 'cz' ? 'cs' : lang;
 const switchLanguageCode = lang == 'sk' ? 'cz' : 'sk';
 const switchLanguageName = lang == 'sk' ? 'Čeština' : 'Slovenčina';
 const switchLanguageTextLong = lang == 'sk' ? 'Prepnúť na češtinu' : 'Prepnúť na slovenčinu';
@@ -44,7 +45,7 @@ const displayLanguageSwitcher = typeof SHOW_LANGUAGE_SWITCHER !== 'undefined' ? 
 ---
 
 <!doctype html>
-<html class="no-js" lang={lang}>
+<html class="no-js" lang={htmlLang}>
 
 <head>
 	<meta charset="utf-8">
