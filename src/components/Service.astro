@@ -8,22 +8,32 @@ export interface Props extends HTMLAttributes<'div'> {
     text: string;
     button1: string;
     button2: string;
+    url?: string;
 }
 
-const { id, icon, title, text, button1, button2 } = Astro.props;
+const { id, icon, title, text, button1, button2, url } = Astro.props;
 ---
 
-<a class="swiper-slide card card--service" data-open={`modal-${id}`}>
-    <div class="service-icon" set:html={icon}></div>
-    <h3 set:html={title}></h3>
-    <p set:html={text}></p>
-    <span class="primary button">{button1}</span>
+{url ? (
+    <a href={url} class="swiper-slide card card--service">
+        <div class="service-icon" set:html={icon}></div>
+        <h3 set:html={title}></h3>
+        <p set:html={text}></p>
+        <span class="primary button">{button1}</span>
+    </a>
+) : (
+    <a class="swiper-slide card card--service" data-open={`modal-${id}`}>
+        <div class="service-icon" set:html={icon}></div>
+        <h3 set:html={title}></h3>
+        <p set:html={text}></p>
+        <span class="primary button">{button1}</span>
 
-	<Modal id={`modal-${id}`} title={title} button={button2} close="Zavrieť okno">
-		<Fragment slot="icon" set:html={icon}>
-		</Fragment>
-		<Fragment slot="content">
-            <slot/>
-		</Fragment>
-	</Modal>
-</a>
+        <Modal id={`modal-${id}`} title={title} button={button2} close="Zavrieť okno">
+            <Fragment slot="icon" set:html={icon}>
+            </Fragment>
+            <Fragment slot="content">
+                <slot/>
+            </Fragment>
+        </Modal>
+    </a>
+)}
