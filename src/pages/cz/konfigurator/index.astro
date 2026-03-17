@@ -77,10 +77,6 @@ const galleryImages = await processGalleryImages(galleryImageLoaders as any, 'Ha
 		</Fragment>
 	</ImgSection>
 
-<CallToAction title={t('nav.are-you-interested')} button={t('nav.iam-interested')}>
-		<p set:html={t('nav.interest-text')}></p>
-	</CallToAction>
-
 	<Gallery images={galleryImages} lang={lang} title="Galerie"/>
 	
 	<SlidesSteps
