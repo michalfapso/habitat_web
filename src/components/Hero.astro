@@ -3,28 +3,95 @@ import { getOptimizedImageAttributes } from '../utils/imageUtils';
 import type { HTMLAttributes } from 'astro/types';
 import type { ImageMetadata } from 'astro';
 
+// Slideshow configuration
+const SLIDE_DURATION = 5000; // milliseconds per slide
+const FADE_DURATION = 0.9;   // seconds for CSS transition
+
+// Fisher-Yates shuffle algorithm
+function shuffleArray<T>(array: T[]): T[] {
+	const shuffled = [...array];
+	for (let i = shuffled.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+	}
+	return shuffled;
+}
+
 export interface Props extends HTMLAttributes<'div'> {
 	className?: string;
-	imgSrc?: string;
+	imgSrc?: string | string[];
 	imgAlt?: string;
 }
 
 const { id, className="", imgSrc="/assets/img/hero-2800w.jpg", imgAlt="Vizualizácia domu" } = Astro.props;
 
+// Normalize imgSrc: handle single string or array
+let imageSources: string[] = [];
+let isSlideshow = false;
+
+if (typeof imgSrc === 'string') {
+	// Single image mode: wrap in array for uniform processing
+	imageSources = [imgSrc];
+	isSlideshow = false;
+} else if (Array.isArray(imgSrc) && imgSrc.length > 0) {
+	// Multiple images: will be shuffled at page load for fresh randomization
+	imageSources = imgSrc;
+	isSlideshow = imageSources.length > 1;
+} else {
+	// Fallback to default if no images provided
+	imageSources = ["/assets/img/hero-2800w.jpg"];
+	isSlideshow = false;
+}
+
+const firstImageSrc = imageSources[0];
+
 const imageLoaders = import.meta.glob<{ default: ImageMetadata }>('/src/assets/img/*.{jpeg,jpg,png,gif,webp,heic}');
 const { src: mainSrc, srcset: srcSet } = await getOptimizedImageAttributes(
-    imgSrc,
+    firstImageSrc,
     [768, 1024, 1400, 2100, 2800],
     imageLoaders,
     'Hero.astro'
 );
+
+// For slideshow mode: prepare optimization data for ALL images (including first, used by client-side script)
+let slideshowImagesMetadata: Array<{ src: string; srcset: string }> = [];
+
+if (isSlideshow) {
+	// Pre-compute optimization metadata for ALL images (including first)
+	for (let i = 0; i < imageSources.length; i++) {
+		const { src, srcset } = await getOptimizedImageAttributes(
+			imageSources[i],
+			[768, 1024, 1400, 2100, 2800],
+			imageLoaders,
+			'Hero.astro'
+		);
+		slideshowImagesMetadata.push({ src, srcset });
+	}
+}
+
+// Convert to JSON string for embedding in HTML (will be used by client script)
+const slideshowMetadataJson = JSON.stringify({
+	isSlideshow,
+	images: imageSources, // Include ALL images (including first) for client-side shuffle
+	metadata: slideshowImagesMetadata, // Now includes first image metadata too
+	slideDuration: SLIDE_DURATION,
+	fadeDuration: FADE_DURATION,
+});
 ---
 <div class={`hero ${className}`}>
 	<div class="grid-x">
-		<div class="hero__img cell medium-6 large-7">
-			<img src={mainSrc} 
-				srcset={srcSet} 
-				sizes="(min-width: 40em) 58vw, (min-width: 35em) 110vw, 38.75rem" alt={imgAlt}>
+		<div class="hero__img cell medium-6 large-7" data-slideshow={isSlideshow} data-slideshow-config={slideshowMetadataJson}>
+			<img
+				id="hero-image"
+				src={mainSrc}
+				srcset={srcSet}
+				sizes="(min-width: 40em) 58vw, (min-width: 35em) 110vw, 38.75rem"
+				alt={imgAlt}
+				data-slideshow-index="0">
+			<img
+				id="hero-image-next"
+				sizes="(min-width: 40em) 58vw, (min-width: 35em) 110vw, 38.75rem"
+				alt={imgAlt}>
 			<div class="overlay"></div>
 			<a class="hero__arrow" href="#main" data-smooth-scroll data-animation-easing="swing" data-offset="-24" title="Prejsť na obsah">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none"><path d="m38.562 28.061-13.5 13.5a1.498 1.498 0 0 1-2.122 0l-13.5-13.5a1.501 1.501 0 0 1 2.122-2.122l10.939 10.94V7.5a1.5 1.5 0 0 1 3 0v29.38L36.44 25.938a1.5 1.5 0 0 1 2.122 2.122Z" fill="#023333"/></svg>
@@ -35,4 +102,127 @@ const { src: mainSrc, srcset: srcSet } = await getOptimizedImageAttributes(
 			<div class="overlay"></div>
 		</div>
 	</div>
+	<script is:inline define:vars={{ SLIDE_DURATION, FADE_DURATION }}>
+(function() {
+	// Fisher-Yates shuffle algorithm (client-side copy)
+	function shuffleArray(array) {
+		const shuffled = [...array];
+		for (let i = shuffled.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+		}
+		return shuffled;
+	}
+
+	// Initialize slideshow with randomization and cross-fade
+	function initSlideshow() {
+		const imageContainer = document.querySelector('[data-slideshow="true"]');
+		if (!imageContainer) return;
+
+		const configJson = imageContainer.getAttribute('data-slideshow-config');
+		if (!configJson) return;
+
+		let config;
+		try {
+			config = JSON.parse(configJson);
+		} catch (error) {
+			console.error('Invalid slideshow config:', error);
+			return;
+		}
+
+		const imgCurrent = imageContainer.querySelector('#hero-image');
+		const imgNext = imageContainer.querySelector('#hero-image-next');
+		if (!imgCurrent || !imgNext) return;
+
+		let { isSlideshow, images, metadata, slideDuration, fadeDuration } = config;
+		if (!isSlideshow || images.length === 0) return;
+
+		// Randomize image order (fresh on each page load)
+		images = shuffleArray(images);
+		metadata = shuffleArray(metadata);
+
+		// Update first image if it changed due to shuffle
+		if (images.length > 0 && metadata.length > 0) {
+			const firstMeta = metadata[0];
+			imgCurrent.src = firstMeta.src;
+			imgCurrent.srcset = firstMeta.srcset;
+			imgCurrent.setAttribute('data-slideshow-index', '0');
+		}
+
+		let currentIndex = 0;
+		let visibleElement = imgCurrent; // Track which element is currently visible
+		let hiddenElement = imgNext;     // Track which element is currently hidden
+
+		// Preload image into a specific element
+		function preloadIntoElement(element, metadata) {
+			if (metadata) {
+				element.src = metadata.src;
+				element.srcset = metadata.srcset;
+			}
+		}
+
+		// Cross-fade to the next image
+		function rotateImage() {
+			const nextIndex = (currentIndex + 1) % images.length;
+			const nextMetadata = metadata[nextIndex];
+
+			// Pre-load next image into hidden element BEFORE fade starts
+			preloadIntoElement(hiddenElement, nextMetadata);
+
+			// Simultaneous cross-fade: fade out visible, fade in hidden
+			visibleElement.style.opacity = '0';
+			hiddenElement.style.opacity = '1';
+
+			// Update data attributes
+			hiddenElement.setAttribute('data-slideshow-index', nextIndex.toString());
+
+			// After fade completes, swap element roles
+			setTimeout(() => {
+				// Disable transition temporarily
+				visibleElement.style.transition = 'none';
+				hiddenElement.style.transition = 'none';
+
+				// Swap which element is visible and which is hidden
+				[visibleElement, hiddenElement] = [hiddenElement, visibleElement];
+
+				// Reset opacities to match their new roles (without animation)
+				visibleElement.style.opacity = '1';
+				hiddenElement.style.opacity = '0';
+
+				// Pre-load the image after next into the newly hidden element
+				const futureIndex = (nextIndex + 1) % images.length;
+				const futureMetadata = metadata[futureIndex];
+				preloadIntoElement(hiddenElement, futureMetadata);
+
+				// Re-enable transition for next fade
+				setTimeout(() => {
+					visibleElement.style.transition = 'opacity ' + fadeDuration + 's ease-in-out';
+					hiddenElement.style.transition = 'opacity ' + fadeDuration + 's ease-in-out';
+				}, 10);
+
+				currentIndex = nextIndex;
+			}, fadeDuration * 1000);
+		}
+
+		// Start slideshow after page fully loads
+		window.addEventListener('load', function onLoad() {
+			window.removeEventListener('load', onLoad);
+
+			// Pre-load first next image into hidden element
+			const firstNextIndex = (currentIndex + 1) % images.length;
+			preloadIntoElement(hiddenElement, metadata[firstNextIndex]);
+
+			// Start rotation timer
+			setInterval(rotateImage, slideDuration);
+		});
+	}
+
+	// Initialize when DOM is ready
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initSlideshow);
+	} else {
+		initSlideshow();
+	}
+})();
+</script>
 </div>
