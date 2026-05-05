@@ -3,11 +3,12 @@ import '/src/styles/app.css';
 import CallToAction from '../components/CallToAction.astro';
 import Footer from '../components/Footer.astro';
 import ModalContactForm from '../components/ModalContactForm.astro';
-import { useTranslations, useTranslatedPath, defaultLang } from '../i18n/utils';
+import { useTranslations, useTranslatedPath, defaultLang, getTranslationNamespace } from '../i18n/utils';
 
 const lang = Astro.currentLocale as keyof typeof import('../i18n/utils').languages;
 const t = useTranslations(lang);
 const path = await useTranslatedPath(lang);
+const cookieI18n = getTranslationNamespace(lang, 'cookie');
 
 interface Props {
 	title?: string;
@@ -89,7 +90,7 @@ const displayLanguageSwitcher = typeof SHOW_LANGUAGE_SWITCHER !== 'undefined' ? 
 	
 	<link rel="stylesheet" id="silktide-consent-manager-css" href="/assets/silktide_cookies_consent/silktide-consent-manager.css">
 	<script is:inline src="/assets/silktide_cookies_consent/silktide-consent-manager.js"></script>
-	<script>
+	<script is:inline define:vars={{ cookieI18n }}>
 	// Define gtag as a dataLayer wrapper (required for GTM-based consent mode)
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
@@ -104,16 +105,16 @@ const displayLanguageSwitcher = typeof SHOW_LANGUAGE_SWITCHER !== 'undefined' ? 
 	  cookieTypes: [
 	    {
 	      id: "necessary",
-	      name: "Necessary",
-	      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+	      name: cookieI18n.necessary.name,
+	      description: cookieI18n.necessary.description,
 	      required: true,
 	      onAccept: function() {
 	      }
 	    },
 	    {
 	      id: "analytics",
-	      name: "Analytics",
-	      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+	      name: cookieI18n.analytics.name,
+	      description: cookieI18n.analytics.description,
 	      defaultValue: true,
 	      onAccept: function() {
 		gtag('consent', 'update', {
@@ -131,8 +132,8 @@ const displayLanguageSwitcher = typeof SHOW_LANGUAGE_SWITCHER !== 'undefined' ? 
 	    },
 	    {
 	      id: "advertising",
-	      name: "Advertising",
-	      description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
+	      name: cookieI18n.advertising.name,
+	      description: cookieI18n.advertising.description,
 	      onAccept: function() {
 		gtag('consent', 'update', {
 		  ad_storage: 'granted',
@@ -154,19 +155,19 @@ const displayLanguageSwitcher = typeof SHOW_LANGUAGE_SWITCHER !== 'undefined' ? 
 	  ],
 	  text: {
 	    banner: {
-	      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"/cookie-policy/\" target=\"_blank\">Cookie Policy.</a></p>",
-	      acceptAllButtonText: "Accept all",
-	      acceptAllButtonAccessibleLabel: "Accept all cookies",
-	      rejectNonEssentialButtonText: "Reject non-essential",
-	      rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
-	      preferencesButtonText: "Preferences",
-	      preferencesButtonAccessibleLabel: "Toggle preferences"
+	      description: cookieI18n.banner.description,
+	      acceptAllButtonText: cookieI18n.banner.acceptAllButtonText,
+	      acceptAllButtonAccessibleLabel: cookieI18n.banner.acceptAllButtonAccessibleLabel,
+	      rejectNonEssentialButtonText: cookieI18n.banner.rejectNonEssentialButtonText,
+	      rejectNonEssentialButtonAccessibleLabel: cookieI18n.banner.rejectNonEssentialButtonAccessibleLabel,
+	      preferencesButtonText: cookieI18n.banner.preferencesButtonText,
+	      preferencesButtonAccessibleLabel: cookieI18n.banner.preferencesButtonAccessibleLabel,
 	    },
 	    preferences: {
-	      title: "Customize your cookie preferences",
-	      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
-	      creditLinkText: "Get this banner for free",
-	      creditLinkAccessibleLabel: "Get this banner for free"
+	      title: cookieI18n.preferences.title,
+	      description: cookieI18n.preferences.description,
+	      creditLinkText: cookieI18n.creditLinkText,
+	      creditLinkAccessibleLabel: cookieI18n.creditLinkAccessibleLabel
 	    }
 	  }
 	});

@@ -46,5 +46,23 @@ export default {
   "blog.all": "Všechny články",
   "blog.back": "Zpět na blog",
   "blog.more": "Další články",
+  // Cookie consent translations
+  "cookie.necessary.name": "Nezbytné",
+  "cookie.necessary.description": "<p>Tyto cookies jsou nezbytné pro správné fungování webu a nelze je vypnout. Pomáhají při přihlášení a nastavení vašich předvoleb ochrany osobních údajů.</p>",
+  "cookie.analytics.name": "Analytika",
+  "cookie.analytics.description": "<p>Tyto cookies nám pomáhají zlepšovat web sledováním nejpopulárnějších stránek a pohybu návštěvníků na webu.</p>",
+  "cookie.advertising.name": "Reklama",
+  "cookie.advertising.description": "<p>Tyto cookies poskytují další funkce a personalizaci pro zlepšení vašich zkušeností. Mohou být nastaveny námi nebo našimi partnery, jejichž služby používáme.</p>",
+  "cookie.banner.acceptAllButtonText": "Přijmout vše",
+  "cookie.banner.acceptAllButtonAccessibleLabel": "Přijmout všechny cookies",
+  "cookie.banner.rejectNonEssentialButtonText": "Odmítnout nepodstatné",
+  "cookie.banner.rejectNonEssentialButtonAccessibleLabel": "Odmítnout nepodstatné",
+  "cookie.banner.preferencesButtonText": "Předvolby",
+  "cookie.banner.preferencesButtonAccessibleLabel": "Přepnout předvolby",
+  "cookie.banner.description": "<p>Na našem webu používáme cookies pro zlepšení vašich zkušeností, poskytování personalizovaného obsahu a analýzu našeho provozu. <a href=\"/cz/zasady-cookies/\">Zásady cookies.</a></p>",
+  "cookie.preferences.title": "Přizpůsobte si předvolby cookies",
+  "cookie.preferences.description": "<p>Respektujeme vaše právo na soukromí. Můžete si vybrat, aby se nepovolily některé typy cookies. Vaše předvolby cookies se budou vztahovat na celý náš web.</p>",
+  "cookie.creditLinkText": "Získejte tento banner zdarma",
+  "cookie.creditLinkAccessibleLabel": "Získejte tento banner zdarma",
 };
 

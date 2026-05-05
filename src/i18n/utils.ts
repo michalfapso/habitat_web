@@ -51,7 +51,7 @@ export async function useTranslatedPath(lang: keyof typeof languages) {
   return (path: string) => {
     // console.log('path:', path);
     path = path.replace(/\/$/, ''); // Remove trailing slash for consistency
-    
+
     // console.log('slug2id:', slug2id);
     const id = slug2id[path];
     // console.log('id:', id);
@@ -59,10 +59,10 @@ export async function useTranslatedPath(lang: keyof typeof languages) {
     // console.log('id2langslug[id]:', id2lang2slug[id]);
 
     if (id && id2lang2slug[id] && id2lang2slug[id][lang]) {
-      // console.log('id2langslug[id][lang]:', id2lang2slug[id][lang]);
+      // console.log('id2langslug[id][lang]:', i2langslug[id][lang]);
       return id2lang2slug[id][lang]; // Return the correct full path
     }
-    
+
     // Fallback for pages without translation
     path = path.replace(new RegExp(`^\/${languagesRegex}`), '');
     if (!path.startsWith('/')) {
@@ -71,4 +71,25 @@ export async function useTranslatedPath(lang: keyof typeof languages) {
     // console.log('translated path:', path === '/' ? base || '/' : `${base}${path}`);
     return path === '/' ? base || '/' : `${base}${path}`;
   };
+}
+
+export function getTranslationNamespace(lang: keyof typeof languages, namespace: string) {
+  const prefix = namespace + '.';
+  const translations = languages[lang] || languages[defaultLang];
+  const result: Record<string, any> = {};
+
+  for (const [key, value] of Object.entries(translations)) {
+    if (key.startsWith(prefix)) {
+      const subKey = key.slice(prefix.length);
+      const parts = subKey.split('.');
+      let current = result;
+      for (let i = 0; i < parts.length - 1; i++) {
+        current[parts[i]] = current[parts[i]] || {};
+        current = current[parts[i]];
+      }
+      current[parts[parts.length - 1]] = value;
+    }
+  }
+
+  return result;
 }
