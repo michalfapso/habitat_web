@@ -5,10 +5,10 @@ export interface Props extends HTMLAttributes<'div'> {
     title: string;
 }
 
-const { title } = Astro.props;
+const { title, ...rest } = Astro.props;
 ---
 
-<div class="section pt-0" style="overflow-x:hidden;">
+<div class="section pt-0" style="overflow-x:hidden;" {...rest}>
     <div class="grid-container">
         <h2 class="small-headline">{title}</h2>
         <div class="swiper swiper--services">
