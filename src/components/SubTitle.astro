@@ -1,12 +1,14 @@
 ---
-interface Props {
+import type { HTMLAttributes } from 'astro/types';
+
+export interface Props extends HTMLAttributes<'div'> {
     className?: string;
 }
 
-const { className = "" } = Astro.props;
+const { className = "", ...rest } = Astro.props;
 ---
 
-<div class={`section pb-0 ${className}`} style="overflow-x:hidden;">
+<div class={`section pb-0 ${className}`} style="overflow-x:hidden;" {...rest}>
     <div class="grid-container">
 		<div class="lead">
             <slot />
