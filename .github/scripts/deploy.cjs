@@ -43,6 +43,76 @@ function scanDirectory(dir, rootDir = dir) {
     return results;
 }
 
+/**
+ * The hosting's reverse proxy (openresty) intermittently answers 429 Too Many
+ * Requests before the request ever reaches PHP. That is a "retry later", so
+ * back off and retry rather than treating it as a finished deploy.
+ */
+const RETRY_STATUSES = [429, 500, 502, 503, 504];
+const RETRY_DELAYS_MS = [5000, 15000, 30000, 60000];
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+async function fetchWithRetry(label, url, init) {
+    let lastInfo = '';
+
+    for (let attempt = 0; attempt <= RETRY_DELAYS_MS.length; attempt++) {
+        if (attempt > 0) {
+            const delay = RETRY_DELAYS_MS[attempt - 1];
+            console.log(`   ⏳ ${label}: ${lastInfo} - retrying in ${delay / 1000}s (attempt ${attempt + 1}/${RETRY_DELAYS_MS.length + 1})...`);
+            await sleep(delay);
+        }
+
+        let res;
+        try {
+            res = await fetch(url, init);
+        } catch (e) {
+            lastInfo = `network error: ${e.message}`;
+            continue;
+        }
+
+        if (!RETRY_STATUSES.includes(res.status)) return res;
+
+        // Respect Retry-After when the server supplies one.
+        const retryAfter = parseInt(res.headers.get('retry-after') || '', 10);
+        if (Number.isFinite(retryAfter) && retryAfter > 0 && attempt < RETRY_DELAYS_MS.length) {
+            RETRY_DELAYS_MS[attempt] = Math.max(RETRY_DELAYS_MS[attempt], retryAfter * 1000);
+        }
+        lastInfo = `HTTP ${res.status}`;
+    }
+
+    throw new Error(`${label} failed after ${RETRY_DELAYS_MS.length + 1} attempts (${lastInfo})`);
+}
+
+/**
+ * Fetch the server's path -> sha1 manifest. Throws on anything unusable so a
+ * broken deploy fails loudly instead of silently syncing nothing.
+ */
+async function fetchManifest(serverUrl, token) {
+    const res = await fetchWithRetry('Manifest fetch', serverUrl, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'User-Agent': USER_AGENT
+        }
+    });
+
+    if (!res.ok) throw new Error(`Server returned ${res.status} fetching manifest`);
+
+    const text = await res.text();
+    let manifest;
+    try {
+        manifest = JSON.parse(text);
+    } catch (e) {
+        throw new Error(`Manifest is not valid JSON (${text.slice(0, 200)})`);
+    }
+    if (manifest === null || typeof manifest !== 'object' || Array.isArray(manifest)) {
+        throw new Error(`Manifest is not an object: ${JSON.stringify(manifest).slice(0, 200)}`);
+    }
+    console.log(`   Server reports ${Object.keys(manifest).length} files.`);
+    return manifest;
+}
+
 (async () => {
     try {
         console.log(`🔍 Scanning local directory: ${localDir}...`);
@@ -51,16 +121,7 @@ function scanDirectory(dir, rootDir = dir) {
 
         // 2. Fetch Server State
         console.log(`📡 Fetching server state...`);
-        const serverRes = await fetch(serverUrl, {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${token}`,
-                'User-Agent': USER_AGENT
-            }
-        });
-
-        if (!serverRes.ok) throw new Error(`Server returned ${serverRes.status}`);
-        const serverFiles = await serverRes.json();
+        const serverFiles = await fetchManifest(serverUrl, token);
 
         // 3. Calculate Diff
         const toUpload = [];
@@ -112,7 +173,7 @@ function scanDirectory(dir, rootDir = dir) {
         // 5. Upload via JSON POST
         console.log(`🚀 Sending changes to server (JSON mode)...`);
 
-        const uploadRes = await fetch(serverUrl, {
+        const uploadRes = await fetchWithRetry('Upload', serverUrl, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -123,14 +184,49 @@ function scanDirectory(dir, rootDir = dir) {
         });
 
         const responseText = await uploadRes.text();
-        if (uploadRes.status === 200) {
-            console.log(`✅ Server response: ${responseText}`);
-        } else {
-            console.error(`❌ Server Error (${uploadRes.status}): ${responseText}`);
-        }
+        console.log(`   Server response: ${responseText}`);
 
         // Cleanup
         if (fs.existsSync(TMP_ZIP)) fs.unlinkSync(TMP_ZIP);
+
+        if (uploadRes.status !== 200) {
+            throw new Error(`Server rejected the update (${uploadRes.status}): ${responseText}`);
+        }
+
+        let result;
+        try {
+            result = JSON.parse(responseText);
+        } catch (e) {
+            throw new Error(`Server response is not valid JSON: ${responseText.slice(0, 200)}`);
+        }
+        if (result.status !== 'success') {
+            throw new Error(`Server reported failure: ${responseText}`);
+        }
+
+        // 6. Verify: re-read the server manifest and confirm every file we meant
+        // to upload now has the hash we sent. Without this the deploy can report
+        // success while the server quietly wrote nothing.
+        console.log(`🔎 Verifying ${toUpload.length} uploaded file(s) against the server...`);
+        const afterFiles = await fetchManifest(serverUrl, token);
+
+        const notLanded = toUpload.filter(f => afterFiles[f] !== localFiles[f]);
+        const notDeleted = toDelete.filter(f => Object.prototype.hasOwnProperty.call(afterFiles, f));
+
+        if (notDeleted.length > 0) {
+            console.error(`❌ ${notDeleted.length} file(s) were not deleted, e.g.: ${notDeleted.slice(0, 10).join(', ')}`);
+        }
+        if (notLanded.length > 0) {
+            console.error(`❌ ${notLanded.length} of ${toUpload.length} file(s) did NOT land on the server:`);
+            for (const f of notLanded.slice(0, 10)) {
+                console.error(`     ${f}: expected ${localFiles[f]}, server has ${afterFiles[f] || '(missing)'}`);
+            }
+            throw new Error(`Deploy verification failed: ${notLanded.length} file(s) not updated on the server.`);
+        }
+        if (notDeleted.length > 0) {
+            throw new Error(`Deploy verification failed: ${notDeleted.length} file(s) not deleted on the server.`);
+        }
+
+        console.log(`✅ Verified: all ${toUpload.length} file(s) updated and ${toDelete.length} deleted.`);
 
     } catch (err) {
         console.error("❌ Error:", err.message);

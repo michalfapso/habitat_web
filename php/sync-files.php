@@ -76,30 +76,89 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         http_response_code(400); die(json_encode(['error' => 'Invalid JSON']));
     }
 
+    $errors = array();
+
     // 1. Handle Deletions
     if (isset($input['d']) && is_array($input['d'])) {
         foreach ($input['d'] as $file) {
             $path = "$base_dir/$file";
             if (file_exists($path) && strpos($file, '..') === false) {
-                unlink($path);
-                $response['deleted']++;
+                if (unlink($path)) {
+                    $response['deleted']++;
+                } else {
+                    $errors[] = "Could not delete $file";
+                }
             }
         }
     }
 
     // 2. Handle Updates (Unzip from Base64)
     if (!empty($input['u'])) {
-        $zip_data = base64_decode($input['u']);
-        $tmp_file = tempnam(sys_get_temp_dir(), 'update');
-        file_put_contents($tmp_file, $zip_data);
-        
-        $zip = new ZipArchive;
-        if ($zip->open($tmp_file) === TRUE) {
-            $zip->extractTo($base_dir);
-            $response['updated'] = $zip->numFiles;
-            $zip->close();
+        // strict mode: reject a payload that was truncated or corrupted in transit
+        // instead of unzipping garbage and reporting success.
+        $zip_data = base64_decode($input['u'], true);
+        if ($zip_data === false) {
+            http_response_code(400);
+            die(json_encode(['error' => 'Update payload is not valid base64 (truncated upload?)']));
         }
+
+        $tmp_file = tempnam(sys_get_temp_dir(), 'update');
+        $written  = file_put_contents($tmp_file, $zip_data);
+        if ($written !== strlen($zip_data)) {
+            unlink($tmp_file);
+            http_response_code(500);
+            die(json_encode(['error' => 'Could not buffer the update zip (disk full?)', 'wrote' => $written, 'expected' => strlen($zip_data)]));
+        }
+
+        $zip     = new ZipArchive;
+        $open_rc = $zip->open($tmp_file);
+        if ($open_rc !== TRUE) {
+            unlink($tmp_file);
+            http_response_code(500);
+            die(json_encode(['error' => 'Could not open the update zip', 'zip_code' => $open_rc, 'zip_bytes' => strlen($zip_data)]));
+        }
+
+        // Remember what the archive claims to contain, so we can check afterwards
+        // that the files really appeared on disk.
+        $num_files = $zip->numFiles;
+        $entries   = array();
+        for ($i = 0; $i < $num_files; $i++) {
+            $entries[] = $zip->getNameIndex($i);
+        }
+
+        $extracted = $zip->extractTo($base_dir);
+        $zip->close();
         unlink($tmp_file);
+
+        if (!$extracted) {
+            http_response_code(500);
+            die(json_encode([
+                'error'      => 'Could not extract the update zip into the document root',
+                'base_dir'   => $base_dir,
+                'writable'   => is_writable($base_dir),
+                'free_space' => @disk_free_space($base_dir),
+            ]));
+        }
+
+        // Confirm the extracted files are really on disk before claiming success.
+        $missing = array();
+        foreach ($entries as $entry) {
+            if (substr($entry, -1) === '/') continue; // directory entry
+            if (!file_exists("$base_dir/$entry")) {
+                $missing[] = $entry;
+            }
+        }
+
+        $response['updated'] = $num_files - count($missing);
+        if (!empty($missing)) {
+            $errors[] = count($missing) . ' extracted file(s) missing from disk, e.g.: '
+                      . implode(', ', array_slice($missing, 0, 10));
+        }
+    }
+
+    if (!empty($errors)) {
+        http_response_code(500);
+        die(json_encode(['status' => 'error', 'errors' => $errors, 'stats' => $response]));
     }
 
     echo json_encode(['status' => 'success', 'stats' => $response]);
