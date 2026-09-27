@@ -39,7 +39,7 @@ jobs:
           SMTP_PASSWORD="${{ secrets.SMTP_PASSWORD }}" \
           ECOMAIL_API_KEY="${{ secrets.ECOMAIL_API_KEY }}" \
           PHP_SECRET_TOKEN="${{ secrets.PHP_SECRET_TOKEN }}" \
-          perl -pe 's|{{ SMTP_USERNAME }}|$ENV{"SMTP_USERNAME"}|g; s|{{ SMTP_PASSWORD }}|$ENV{"SMTP_PASSWORD"}|g; s|{{ ECOMMAIL_API_KEY }}|$ENV{"ECOMAIL_API_KEY"}|g; s|{{ PHP_SECRET_TOKEN }}|$ENV{"PHP_SECRET_TOKEN"}|g' \
+          perl -pe 's|{{ SMTP_USERNAME }}|$ENV{"SMTP_USERNAME"}|g; s|{{ SMTP_PASSWORD }}|$ENV{"SMTP_PASSWORD"}|g; s|{{ ECOMAIL_API_KEY }}|$ENV{"ECOMAIL_API_KEY"}|g; s|{{ PHP_SECRET_TOKEN }}|$ENV{"PHP_SECRET_TOKEN"}|g' \
           dist/php/inc/config.php.template > dist/php/inc/config.php
 
       - name: Install lftp
